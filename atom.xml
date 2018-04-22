@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HeiLiu</title>
+  
+  <subtitle>有一句Hello World想要对你说</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-04-19T07:06:09.551Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>刘江龙</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/04/19/heihei/"/>
+    <id>http://yoursite.com/2018/04/19/heihei/</id>
+    <published>2018-04-19T07:05:10.983Z</published>
+    <updated>2018-04-19T07:06:09.551Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="想把我唱给你听-趁年轻尽情地爱吧"><a href="#想把我唱给你听-趁年轻尽情地爱吧" class="headerlink" title="想把我唱给你听 趁年轻尽情地爱吧"></a>想把我唱给你听 趁年轻尽情地爱吧</h4><h4 id="最最亲爱的人啊-路途遥远我们在一起吧"><a href="#最最亲爱的人啊-路途遥远我们在一起吧" class="headerlink" title="最最亲爱的人啊 路途遥远我们在一起吧"></a>最最亲爱的人啊 路途遥远我们在一起吧</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;想把我唱给你听-趁年轻尽情地爱吧&quot;&gt;&lt;a href=&quot;#想把我唱给你听-趁年轻尽情地爱吧&quot; class=&quot;headerlink&quot; title=&quot;想把我唱给你听 趁年轻尽情地爱吧&quot;&gt;&lt;/a&gt;想把我唱给你听 趁年轻尽情地爱吧&lt;/h4&gt;&lt;h4 id=&quot;最最亲爱的人啊-路
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/04/19/hexo/"/>
+    <id>http://yoursite.com/2018/04/19/hexo/</id>
+    <published>2018-04-19T00:15:55.856Z</published>
+    <updated>2018-04-19T00:19:01.238Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Hexo-是开源的npm的博客包"><a href="#Hexo-是开源的npm的博客包" class="headerlink" title="Hexo 是开源的npm的博客包"></a>Hexo 是开源的npm的博客包</h4><pre><code>使用markdown语法写博客 结合github page 服务，有一个免费的开源博客</code></pre><ul><li><p>git配置过程  </p><ul><li>全局配置 username email ssh<br>   在git bash中执行代码：  <pre><code>1. git config global user.name &quot;gitname&quot;  2.git config global user.email &quot;email&quot;  3.ssh-keygen -t rsa -C &quot;git@email&quot;  一路回车  </code></pre>   找到.ssh文件夹 打开id_rsa.pub复制内容   <pre><code>4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中  </code></pre></li><li>验证一下是否成功<br>   1.在hexo目录下将<br><a href="https://https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://https://github.com/HeiLiu/HeiLiu.github.io.git</a></li></ul></li></ul><ul><li><p>hexo init 初始化博客  </p><ol><li>执行一下初始化命令系统会去github clone一个博客来到本地  <ol start="2"><li>./node_modules是以来文件夹，npm包 项目所有依赖都在这里。<br>3.博客存放地址 source/_post/**.md<br>4.markdown 语法 更简捷的写html<br>5.theme主题文件夹</li></ol></li></ol></li><li><p>hexo clean   </p></li><li><p>hexo generate  </p><ul><li>博客的产生<br>   hexo generate 将markdown语法编译成public/*.html</li></ul></li><li>hexo server  <pre><code>打开本地服务器  </code></pre></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Hexo-是开源的npm的博客包&quot;&gt;&lt;a href=&quot;#Hexo-是开源的npm的博客包&quot; class=&quot;headerlink&quot; title=&quot;Hexo 是开源的npm的博客包&quot;&gt;&lt;/a&gt;Hexo 是开源的npm的博客包&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;使用mark
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/04/19/hello-world/"/>
+    <id>http://yoursite.com/2018/04/19/hello-world/</id>
+    <published>2018-04-19T00:04:04.288Z</published>
+    <updated>2018-04-19T00:04:04.289Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
