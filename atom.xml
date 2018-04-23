@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-23T02:38:51.976Z</updated>
+  <updated>2018-04-23T03:04:59.438Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/04/19/hexo/"/>
     <id>http://yoursite.com/2018/04/19/hexo/</id>
     <published>2018-04-19T13:46:12.000Z</published>
-    <updated>2018-04-23T02:38:51.976Z</updated>
+    <updated>2018-04-23T03:04:59.438Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Hexo-是开源的npm的博客包"><a href="#Hexo-是开源的npm的博客包" class="headerlink" title="Hexo 是开源的npm的博客包"></a>Hexo 是开源的npm的博客包</h4><pre><code>使用markdown语法写博客 结合github page 服务，有一个免费的开源博客</code></pre><ul><li><p>git配置过程  </p><ul><li>全局配置 username email ssh<br>   在git bash中执行代码：  <pre><code>1. git config global user.name &quot;gitname&quot;  2.git config global user.email &quot;email&quot;  3.ssh-keygen -t rsa -C &quot;git@email&quot;  一路回车  </code></pre>   找到.ssh文件夹 打开id_rsa.pub复制内容   <pre><code>4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中  </code></pre></li><li>验证一下是否成功<br>   1.在hexo目录下将<br>   <a href="https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://github.com/HeiLiu/HeiLiu.github.io.git</a></li></ul></li></ul><ul><li><p>hexo init 初始化博客  </p><ol><li>执行一下初始化命令系统会去github clone一个博客来到本地  <ol start="2"><li>./node_modules是以来文件夹，npm包 项目所有依赖都在这里。<br>3.博客存放地址 source/_post/**.md<br>4.markdown 语法 更简捷的写html<br>5.theme主题文件夹</li></ol></li></ol></li><li><p>hexo clean   </p></li><li><p>hexo generate  </p><ul><li>博客的产生<br>   hexo generate 将markdown语法编译成public/*.html</li></ul></li><li>hexo server  <pre><code>打开本地服务器  </code></pre></li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="Hexo-是开源的npm的博客包"><a href="#Hexo-是开源的npm的博客包" class="headerlink" title="Hexo 是开源的npm的博客包"></a>Hexo 是开源的npm的博客包</h4><pre><code>使用markdown语法写博客 结合github page 服务，有一个免费的开源博客</code></pre><ul><li><p>git配置过程  </p><ul><li>全局配置 username email ssh<br>   在git bash中执行代码：  <pre><code>1. git config global user.name &quot;gitname&quot;  2.git config global user.email &quot;email&quot;  3.ssh-keygen -t rsa -C &quot;git@email&quot;  一路回车  </code></pre>   找到.ssh文件夹 打开id_rsa.pub复制内容   <pre><code>4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中  </code></pre></li><li>验证一下是否成功<br>   1.在hexo目录下将<br>   <a href="https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://github.com/HeiLiu/HeiLiu.github.io.git</a></li></ul></li></ul><ul><li><p>hexo init 初始化博客  </p><ol><li>执行一下初始化命令系统会去github clone一个博客来到本地  <ol start="2"><li>./node_modules是以来文件夹，npm包 项目所有依赖都在这里。<br>3.博客存放地址 source/_post/**.md<br>4.markdown 语法 更简捷的写html<br>5.theme主题文件夹</li></ol></li></ol></li><li><p>hexo clean </p><ul><li>清空生成的站点博客文件  </li></ul></li><li><p>hexo generate  </p><ul><li>博客的产生<br>   hexo generate 将markdown语法编译成public/*.html</li></ul></li><li><p>hexo server  </p><pre><code>打开本地服务器  </code></pre></li><li><p>hexo deploy</p><ul><li>将本地生成的public文件内容发布到github      </li></ul></li></ul>]]></content>
     
     <summary type="html">
     
