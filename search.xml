@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
-    <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧]]></content>
-  </entry>
-  <entry>
-    <title></title>
+    <title><![CDATA[自己搭建博客]]></title>
     <url>%2F2018%2F04%2F19%2Fhexo%2F</url>
-    <content type="text"><![CDATA[#自己搭建博客 Hexo 是开源的npm的博客包使用markdown语法写博客 结合github page 服务，有一个免费的开源博客 git配置过程 全局配置 username email ssh 在git bash中执行代码： 1. git config global user.name &quot;gitname&quot; 2.git config global user.email &quot;email&quot; 3.ssh-keygen -t rsa -C &quot;git@email&quot; 一路回车 找到.ssh文件夹 打开id_rsa.pub复制内容 4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中 验证一下是否成功 1.在hexo目录下将 https://github.com/HeiLiu/HeiLiu.github.io.git hexo init 初始化博客 执行一下初始化命令系统会去github clone一个博客来到本地 ./node_modules是以来文件夹，npm包 项目所有依赖都在这里。3.博客存放地址 source/_post/**.md4.markdown 语法 更简捷的写html5.theme主题文件夹 hexo clean hexo generate 博客的产生 hexo generate 将markdown语法编译成public/*.html hexo server 打开本地服务器]]></content>
+    <content type="text"><![CDATA[Hexo 是开源的npm的博客包使用markdown语法写博客 结合github page 服务，有一个免费的开源博客 git配置过程 全局配置 username email ssh 在git bash中执行代码： 1. git config global user.name &quot;gitname&quot; 2.git config global user.email &quot;email&quot; 3.ssh-keygen -t rsa -C &quot;git@email&quot; 一路回车 找到.ssh文件夹 打开id_rsa.pub复制内容 4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中 验证一下是否成功 1.在hexo目录下将 https://github.com/HeiLiu/HeiLiu.github.io.git hexo init 初始化博客 执行一下初始化命令系统会去github clone一个博客来到本地 ./node_modules是以来文件夹，npm包 项目所有依赖都在这里。3.博客存放地址 source/_post/**.md4.markdown 语法 更简捷的写html5.theme主题文件夹 hexo clean hexo generate 博客的产生 hexo generate 将markdown语法编译成public/*.html hexo server 打开本地服务器]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[想把我唱歌你听]]></title>
+    <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
+    <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧]]></content>
+      <categories>
+        <category>有感</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
   </entry>
 </search>

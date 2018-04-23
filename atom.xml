@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-19T07:06:09.551Z</updated>
+  <updated>2018-04-23T02:38:51.976Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,45 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/04/19/heihei/"/>
-    <id>http://yoursite.com/2018/04/19/heihei/</id>
-    <published>2018-04-19T07:05:10.983Z</published>
-    <updated>2018-04-19T07:06:09.551Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="想把我唱给你听-趁年轻尽情地爱吧"><a href="#想把我唱给你听-趁年轻尽情地爱吧" class="headerlink" title="想把我唱给你听 趁年轻尽情地爱吧"></a>想把我唱给你听 趁年轻尽情地爱吧</h4><h4 id="最最亲爱的人啊-路途遥远我们在一起吧"><a href="#最最亲爱的人啊-路途遥远我们在一起吧" class="headerlink" title="最最亲爱的人啊 路途遥远我们在一起吧"></a>最最亲爱的人啊 路途遥远我们在一起吧</h4>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;想把我唱给你听-趁年轻尽情地爱吧&quot;&gt;&lt;a href=&quot;#想把我唱给你听-趁年轻尽情地爱吧&quot; class=&quot;headerlink&quot; title=&quot;想把我唱给你听 趁年轻尽情地爱吧&quot;&gt;&lt;/a&gt;想把我唱给你听 趁年轻尽情地爱吧&lt;/h4&gt;&lt;h4 id=&quot;最最亲爱的人啊-路
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
+    <title>自己搭建博客</title>
     <link href="http://yoursite.com/2018/04/19/hexo/"/>
     <id>http://yoursite.com/2018/04/19/hexo/</id>
-    <published>2018-04-19T00:15:55.856Z</published>
-    <updated>2018-04-22T16:06:24.890Z</updated>
+    <published>2018-04-19T13:46:12.000Z</published>
+    <updated>2018-04-23T02:38:51.976Z</updated>
     
-    <content type="html"><![CDATA[<p>#自己搭建博客</p><h4 id="Hexo-是开源的npm的博客包"><a href="#Hexo-是开源的npm的博客包" class="headerlink" title="Hexo 是开源的npm的博客包"></a>Hexo 是开源的npm的博客包</h4><pre><code>使用markdown语法写博客 结合github page 服务，有一个免费的开源博客</code></pre><ul><li><p>git配置过程  </p><ul><li>全局配置 username email ssh<br>   在git bash中执行代码：  <pre><code>1. git config global user.name &quot;gitname&quot;  2.git config global user.email &quot;email&quot;  3.ssh-keygen -t rsa -C &quot;git@email&quot;  一路回车  </code></pre>   找到.ssh文件夹 打开id_rsa.pub复制内容   <pre><code>4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中  </code></pre></li><li>验证一下是否成功<br>   1.在hexo目录下将<br>   <a href="https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://github.com/HeiLiu/HeiLiu.github.io.git</a></li></ul></li></ul><ul><li><p>hexo init 初始化博客  </p><ol><li>执行一下初始化命令系统会去github clone一个博客来到本地  <ol start="2"><li>./node_modules是以来文件夹，npm包 项目所有依赖都在这里。<br>3.博客存放地址 source/_post/**.md<br>4.markdown 语法 更简捷的写html<br>5.theme主题文件夹</li></ol></li></ol></li><li><p>hexo clean   </p></li><li><p>hexo generate  </p><ul><li>博客的产生<br>   hexo generate 将markdown语法编译成public/*.html</li></ul></li><li>hexo server  <pre><code>打开本地服务器  </code></pre></li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="Hexo-是开源的npm的博客包"><a href="#Hexo-是开源的npm的博客包" class="headerlink" title="Hexo 是开源的npm的博客包"></a>Hexo 是开源的npm的博客包</h4><pre><code>使用markdown语法写博客 结合github page 服务，有一个免费的开源博客</code></pre><ul><li><p>git配置过程  </p><ul><li>全局配置 username email ssh<br>   在git bash中执行代码：  <pre><code>1. git config global user.name &quot;gitname&quot;  2.git config global user.email &quot;email&quot;  3.ssh-keygen -t rsa -C &quot;git@email&quot;  一路回车  </code></pre>   找到.ssh文件夹 打开id_rsa.pub复制内容   <pre><code>4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中  </code></pre></li><li>验证一下是否成功<br>   1.在hexo目录下将<br>   <a href="https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://github.com/HeiLiu/HeiLiu.github.io.git</a></li></ul></li></ul><ul><li><p>hexo init 初始化博客  </p><ol><li>执行一下初始化命令系统会去github clone一个博客来到本地  <ol start="2"><li>./node_modules是以来文件夹，npm包 项目所有依赖都在这里。<br>3.博客存放地址 source/_post/**.md<br>4.markdown 语法 更简捷的写html<br>5.theme主题文件夹</li></ol></li></ol></li><li><p>hexo clean   </p></li><li><p>hexo generate  </p><ul><li>博客的产生<br>   hexo generate 将markdown语法编译成public/*.html</li></ul></li><li>hexo server  <pre><code>打开本地服务器  </code></pre></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#自己搭建博客&lt;/p&gt;
-&lt;h4 id=&quot;Hexo-是开源的npm的博客包&quot;&gt;&lt;a href=&quot;#Hexo-是开源的npm的博客包&quot; class=&quot;headerlink&quot; title=&quot;Hexo 是开源的npm的博客包&quot;&gt;&lt;/a&gt;Hexo 是开源的npm的博客包&lt;/h4&gt;&lt;p
+        &lt;h4 id=&quot;Hexo-是开源的npm的博客包&quot;&gt;&lt;a href=&quot;#Hexo-是开源的npm的博客包&quot; class=&quot;headerlink&quot; title=&quot;Hexo 是开源的npm的博客包&quot;&gt;&lt;/a&gt;Hexo 是开源的npm的博客包&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;使用mark
       
     
     </summary>
     
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   
@@ -77,6 +59,31 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>想把我唱歌你听</title>
+    <link href="http://yoursite.com/2018/04/19/heihei/"/>
+    <id>http://yoursite.com/2018/04/19/heihei/</id>
+    <published>2018-04-18T16:00:00.000Z</published>
+    <updated>2018-04-23T02:40:11.178Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="想把我唱给你听-趁年轻尽情地爱吧"><a href="#想把我唱给你听-趁年轻尽情地爱吧" class="headerlink" title="想把我唱给你听 趁年轻尽情地爱吧"></a>想把我唱给你听 趁年轻尽情地爱吧</h4><h4 id="最最亲爱的人啊-路途遥远我们在一起吧"><a href="#最最亲爱的人啊-路途遥远我们在一起吧" class="headerlink" title="最最亲爱的人啊 路途遥远我们在一起吧"></a>最最亲爱的人啊 路途遥远我们在一起吧</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;想把我唱给你听-趁年轻尽情地爱吧&quot;&gt;&lt;a href=&quot;#想把我唱给你听-趁年轻尽情地爱吧&quot; class=&quot;headerlink&quot; title=&quot;想把我唱给你听 趁年轻尽情地爱吧&quot;&gt;&lt;/a&gt;想把我唱给你听 趁年轻尽情地爱吧&lt;/h4&gt;&lt;h4 id=&quot;最最亲爱的人啊-路
+      
+    
+    </summary>
+    
+      <category term="有感" scheme="http://yoursite.com/categories/%E6%9C%89%E6%84%9F/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
