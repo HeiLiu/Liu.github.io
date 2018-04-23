@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-23T05:03:19.095Z</updated>
+  <updated>2018-04-23T05:17:14.362Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>next主题个性化配置</title>
+    <link href="http://yoursite.com/2018/04/23/categories-%20hexo/"/>
+    <id>http://yoursite.com/2018/04/23/categories- hexo/</id>
+    <published>2018-04-23T05:17:10.513Z</published>
+    <updated>2018-04-23T05:17:14.362Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>看到一些大神的next博客站点很酷 那到底是怎么实现的呢 经过一番的倒腾，终于将一些使用且比较酷的功能添加到自己的博客中  </p></blockquote><h3 id="主要添加的功能有："><a href="#主要添加的功能有：" class="headerlink" title="主要添加的功能有："></a>主要添加的功能有：</h3><ul><li>在右上角或者左上角实现fork me on github</li><li>添加RSS</li><li>添加动态背景</li><li>在每篇文章末尾统一添加“本文结束”标记</li><li>修改作者头像并旋转</li><li>主页文章添加阴影效果</li><li>在网站底部加上访问量</li><li>网站底部字数统计</li><li>添加 README.md 文件</li><li>隐藏网页底部powered By Hexo / 强力驱动</li><li>添加来必力评论 Livere</li><li>DaoVoice 在线联系</li><li>添加站内搜索</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;看到一些大神的next博客站点很酷 那到底是怎么实现的呢 经过一番的倒腾，终于将一些使用且比较酷的功能添加到自己的博客中  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;主要添加的功能有：&quot;&gt;&lt;a href=&quot;#主要添加的功能有：&quot; cla
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>在hexo中安装next主题</title>
