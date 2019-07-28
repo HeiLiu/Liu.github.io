@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
+    <url>%2F2018%2F05%2F09%2FcssCenter%2F</url>
+    <content type="text"><![CDATA[html代码如下： &lt;div class="book"&gt; &lt;div class="front-cover"&gt; &lt;/div&gt; &lt;/div&gt; Css居中方法 （敲黑板）重点 首先将元素设置成为绝对定位，然后距顶部和左各50%，此时的元素还不是居中的，因此需要通过一定的偏移将其移到理想位置，两种方法的主要思想都是一样的，第一种通过margin-left和margin-top移动元素自身宽高的一半，另一种通过css3的属性transform的translate方法平移元素自身宽高的一半， 代码展示如下： body { color: #ffffff; background: #444444; } .book { width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; /* 第一种 */ /* 兼容性 未使用css3, ie678 */ /* margin-left: -150px; */ /* margin-top: -150px; */ /*第二种*/ -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } 两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javascript函数]]></title>
+    <url>%2F2018%2F05%2F09%2Ffunction_note%2F</url>
+    <content type="text"><![CDATA[函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。 函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有constructor属性且值即为该函数对象。1234567891011121314151617181920212223242526272829 function add(a,b)&#123; return a+b; &#125;``` 因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。函数的与众不同之处在于可以被调用。 ### 函数字面量 函数对象通过函数字面量来创建。函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。```js var add = function(a, b) &#123; return a + b &#125; ``` ### 调用 调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，还有两个附加参数：`this`和`arguments`。参数this在面向对象编程中非常重要，它的值取决于调用的模式。实参和形参个数不匹配时，不会有运行时错误。实参过多时，超出的实参被忽略。形参过多时，缺失的值被替换为undefined。 - 方法调用模式 当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，`this被绑定到该对象`,通过this可以对该对象的属性和方法进行调用和操作。 ```js var myObject = &#123; text: hello, say:function(msg)&#123; console.log(this.text + msg); &#125; &#125; myObject.say(world); 函数调用模式当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。此时this被绑定到全局对象。即时是内部函数也会将this绑定到全局对象。this的指向问题 作用域不一样 this的指向就不一样,可以在函数内创建一个属性并赋值为this来解决这个问题,一般通过var that = this; 1234567891011121314var add = function(a, b) &#123; return a + b&#125;myObject.double = function() &#123; var that = this var helper = function() &#123; that.value = add(that.value, that.value) &#125; helper()&#125;myObject.double()console.log(myObject.value) //8 12345678910111213141516171819202122232425 attachEvent: function () &#123; // attachEvent函数的作用域 // js 里面this总会指向什么 // 对象的方法被执行时 this指向对象 // console.log(this); var that = this; this.staticElement.addEventListener('click', function () &#123; // 这个函数被执行时，并不是对象的方法，而是匿名函数，作为事件处理函数来执行，this会指向事件发生元素 // this的指向跟函数的调用方式有关 // this的指向问题 作用域不一样 this的指向就不一样 // 作用域 事件的回调函数 // console.log(this); // alert(that.value); that.convertToEdit(); &#125;, false); this.filedElement.addEventListener('keydown', function (evt) &#123; // 在事件发生的一刹那 会产生一个临时事件对象 console.log(evt); if (evt.keyCode == 13) &#123; that.staticElement.innerHTML = this.value; console.log(that.staticElement.innerHTML); that.convertToText(); &#125; &#125;, false)&#125; 构造器调用模式JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。如果在一个函数前面带上new来调用，那么背地里将会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到那个新对象上。 1234567891011121314//创建构造器函数var Quo = function(string) &#123; this.status = string&#125;//给Que的所有实例提供一个公共方法Quo.prototype.getStatus = function() &#123; return this.status&#125;//实例化var myQuo = new Quo('confused')console.log(myQuo.getStatus()) //confused Apply 调用模式apply方法让我们构建一个参数数组传递给调用函数。他也允许我们选择this的值。apply方法接受两个参数，第一个是要绑定给this的值，第二个是参数数组。 123456789101112131415161718192021222324 var arr = [3, 4] var sum = add.apply(null, arr) console.log(sum) //7 var statusObject = &#123; status: 'hello' &#125; var status = Quo.prototype.getStatus.apply(statusObject) console.log(status) //hello``` ### 参数 当函数被调用时，会得到一个`arguments`数组。通过此参数可以访问所有它被调用时传递给它的`参数列表`，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。```js var sum = function() &#123; var i, sum = 0 for (i = 0; i &lt; arguments.length; i++) &#123; sum += arguments[i] &#125; return sum &#125; console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9)//45 因语言的设计错误，arguments并不是一个真正的数组。是一个“类似数组”的对象。有length属性，但没有任何数组的方法。 返回函数执行时遇到关闭函数体的}时结束。然后把控制权交还给调用该函数的程序。 return可以使函数提前返回，当return语句执行时函数立即返回不在执行余下的语句。 函数总是会返回一个值，若没有指定，则返回undefined。 若函数调用时在前面加上了new前缀，且返回值不是一个对象的时候，则返回this（该新对象）。 闭包作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了this和arguments）。12345678910var quo = function(status) &#123; return &#123; get_status: function() &#123; return status; &#125; &#125;&#125;var myQuo = quo('amazed')console.log(myQuo.get_status()) //amazed 狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。status访问的就说对象中的status属性本身,通过闭包可以让一个局部变量驻留在内存中 避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前i值的函数，这样就不会导致混淆了。 回调将一个函数作为参数，一旦接收到响应，再调用这个函数。12345 fs.readFile('demo/02.js','utf8',(error,data)=&gt;&#123; if(error) throw error; //在异步中的错误不能被捕获 通过throw error进行错误的捕获 console.log(data) &gt;&gt;a.txt;&#125;); 模块可以用函数和闭包构造模块。模块是一个提供接口却隐藏与实现的函数或者对象 模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。123456789101112131415161718192021var numberCal = (function() &#123; var half = function(n) &#123; return n / 2 &#125; var double = function(n) &#123; return n * 2 &#125; var tribble = function(n) &#123; return n * 3 &#125; return &#123; half: half, double: double, tribble: tribble &#125;&#125;())console.log(numberCal.half(5)) //2.5console.log(numberCal.half(6)) //3console.log(numberCal.double(7)) //14console.log(numberCal.tribble(7)) //21 级联如果让方法返回this而不是默认的undefined，就可以启用级联，即连续调用。 记忆函数可以将先前操作的结果记录在某个对象或者数组里，从而避免无谓的重复运算。这种优化被称为记忆（memoization）。]]></content>
+      <categories>
+        <category>js语言精粹</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在hexo中安装next主题]]></title>
+    <url>%2F2018%2F05%2F09%2Fnext_install%2F</url>
+    <content type="text"><![CDATA[倒腾了一天半终于自己实现了一个还不错的博客，在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。如果没有搭建好自己的hexo+git pages博客界面可以看我另外一篇经验分享 **说明**：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo本身的配置；另一份位于主题next目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。 下载主题 下载方式： 1.在theme文件夹中将主题包克隆到本地，并将文件名`hexo-theme-next`改成`next` git clone https://github.com/iissnan/hexo-theme-next themes/next 2.前往Next[发布页面][1]将`sourcecode`下载到本地，解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（`hexo-theme-next-0.4.0`）更改为 `next`。 启用Next 当 克隆/下载 完成后，打开 站点配置文件， 找到 `theme` 字段，并将其值更改为`next`。 验证主题是否应用 1. NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 最好使用 `hexo clean` 来清除 Hexo 的缓存。 2. 执行`hexo generate` 生成博客 3. 执行`hexo server`启用本地服务器 在本地可以直接查看修改以后的效果 &gt;`INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to` 使用浏览器进行访问http://0.0.0.0:4000/ 修改主题样式scheme Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。 #Schemes #scheme: Mist scheme: Muse #scheme: Pisces #scheme: Gemini 其他基本配置 打开站点配置文件 可以像我一样进行基本设置 每个冒号后面必须与内容用空格分割 #Sitetitle: HeiLiu //站点titlesubtitle: 有一句Hello World想要对你说description: 程序员 大学本科keywords:author: 刘江龙language: zh-Hans //设置语言timezone: Asia/Shanghai //时间 #Deployment Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/HeiLiu/HeiLiu.github.io.git branch: master]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F09%2FURL%2F</url>
+    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[stylus之变量与mixin]]></title>
+    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
+    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Css3属性]]></title>
+    <url>%2F2018%2F05%2F04%2FCss3%2F</url>
+    <content type="text"><![CDATA[text-shadow属性介绍: `text-shadow`属性可以给页面上的文字增添阴影效果，`text-shadow`在Css2.1的时候是 被删除了的一个属性，但是呢在3.0的Css中又恢复了使用 使用方法 1&gt; text-shadow : length length length color 注：前两个参数在使用的时候必须给定 第一个length表示阴影离开文字横方向的距离 第二个length表示阴影离开文字纵方向的距离 第二个length表示阴影模糊半径 即模糊范围 color 表示阴影颜色 可以放在三个length之前 也可以放在之后 如果不给值 则使用元素默认color $ 指定多个阴影： 每个阴影用逗号隔开 1text-shadow : 15px 15px 5px #000,30px,30px,5px #f60; background-size属性介绍: 在Css3中可以使用background-size来指定背景图像的尺寸 使用方法 1background-size: auto || length || percentage || cover || contain auto: 默认值 保持背景图片的原始宽高比 length: 设置背景图片的宽度和高度，如果只设置一个值，则第二个值会被设置为auto 按宽高比进行放大缩小 percentage: 以父元素的百分比来设置宽度和高度，如果只设置一个值 同上 cover: 此值是将图片放大，以适合铺满整个容器，这个主要用在当图片小于容器又无法使用background-repeat来实现，就可以采用cover将背景图片放大到适合容器的大小，但是会使图片失真 contain: 与cover相反，将背景图片缩小以适合铺满整个容器，这个主要用在当背景图片大于元素容器时，而又需要将背景图片全部显示出来，就可以用contain将图片缩小到适合容器的大小，这种方法同样会使图片失真 在一个元素中显示多个背景图片介绍:在Css3一个元素可以显示多个背景图像，还可以将多个背景图像进行重叠显示，这样对背景中所用素材调整变得更加容易。使用方法 background-image:url(1.png),url(2,png),url(3.png); 图层的排序方法: 浏览器中显示时叠放的顺序是从上往下指定的，第一个图片放在最上面，最后指定的放在下面 Css3的变形功能transform属性介绍: 在Css3中可以利用transform属性来实现文字或图像的旋转、缩放、倾斜、和移动。但是需要做兼容性处理，如下 1234-webkit-transform: rotateX(60deg);-moz-transform: rotateX(60deg);-ms-transform: rotateX(60deg); /*IE9*/-o-transform: rotateX(60deg); rotate(旋转)： rotate(60deg);顺时针旋转 deg是Css3中的角度单位 1-webkit-transform: rotateX(60deg); rotateX(angle) rotateY(angle) rotateZ(angle) 绕对应的轴进行3D旋转 rotate3D(X,Y,Z,deg) 定义 3D 旋转 scale(缩放)：transform:scale(值) 值所指的是缩(小)放(大)倍率 如果值为负数并没有效果 纯属无聊 scale(x,y) 使元素在x轴 y轴方向同时缩放 scaleX(.5) 你应该懂得 scaleY(.5) 同上 skew(倾斜)transform:skew(deg) 倾斜角度 skew(x,y) 元素在水平和垂直方向上同时倾斜 只有一个参数时，只在水平方向上倾斜 skewX(x) 元素仅在水平方向倾斜 skewY(y) 元素在垂直方向倾斜 translate(值) 指定移动的距离 负值即反方向移动 translate(x,y);在x轴和y轴同时移动，只有一个参数时，仅在水平方向移动; translateX(x);x轴方向移动-translateY(y);y轴方向移动 transform-origin 改变元素基点 属性使用：transform-origin:bottom; 各个基点参考如图： 对一个元素使用多种变形的方法： transform：方法一，方法二，方法三..; 12 /*同样也需要做兼容性处理*/transform: translate(50px),rotate(60deg),scale(2); Css3的动画功能demo transition 支持从一个属性平滑过渡到另外一个属性 语法: 1transition: property duration timing-function delay; transition 主要包含四个属性值: 执行变换的属性: transition-property,属性规定应用过渡效果的CSS属性的名称。(当指定的CSS属性改变时，过渡效果将开始)值有三个类型: A、`none` 没有属性会获得过渡效果。 B、`all`所有属性都将获得过渡效果。 C、`property`定义应用过渡效果的CSS 属性名称列表，列表以逗号分隔。 变换延续的时间: transition-duration规定完成过渡效果需妻花费的时间(以秒或毫秒计》，默认值0没有效果 在延续时间段，变换的速率变化transition-timing-function值:123456A 、ease: (逐渐变慢) 默认值，ease函数等同于贝塞尔曲线(0.25,0.1,0.25,1.0). B、linear: (匀速)，linear 函数等同于贝塞尔曲线(0.0,0.0,1.0,1.0). C、ease-in: (加速)，ease-in 函数等同于贝塞尔曲线(0.42,0,1.0,1.0). D、ease-out: (减速)，ease-out 函数等同于贝塞尔曲线(0,0,0.58,1.0). E 、ease-in-out : (加速然后减速)，ease-in-out 函数等同于贝塞尔曲线(0.42,0,0.58,1.0) F、cubic-bezier(n,n,n,n)在cubic-bezier 函数中定义自己的值。可能的值是0 至1之间的数值。 animation 支持通过关键帧的指定来在页面上产生更复杂的动画效果用 transition和Animations的区别 : 1`transition`和`Animations`的区别在于，`transition`只能通过指定属性的开始值与结束值，然后通过两属性值之间进行垂滑过渡的方式来实现动画效果，所以transition不能实现复杂的动画效果，而Animations功能是是通过关键幀以及每个关键帧中的属性值来实现更为复杂的动画效果。 Animations的使用方法:参考我的飞机Demo更好哦@-webkit-keyframes 关键帧合集名称{ 创建关键帧的代码 } 0%~100%{本关键帧中的样式}关键帧创建好了之后，还要在元素的样式中使用该关键帧。方法如下: 123456789101112131415161718192021 元素&#123; - webkit-animation-name :关键帧合集名称 ; - webkit-animation-duration:5s ; - webkit-animation-timing-function :linear;-webkit-animation-iteration-count:infnite &#125; ``` `-webkit-animation-name`指定合集名称， `-webkit-animation-duration`整个动画执行完成所需的时司、需要的时间， `-webkit-animation-timing-function`实现动画的方法 `-webkit-animation-iteration-count`属性的属性值设定为某个整数值，那么这个动画播放的次数就等于这个整数值(infinite是无限循环播放)。 3、实现动画的方法: A、linear: 匀速进行. B、ease-in: 开始速度很慢，然后沿曲线进行加快， C、ease-out: 开始速度很快，然后沿着曲线进行减速. D、ease: 开始时速度很快，然后沿着曲线进行减速，然后再沿着曲线加速， E、ease-in-out: 开始时速度很慢，然后沿着曲线进行加速，然后再沿着曲线减速.也可以以合集的形式进行样式书写： ```animation: name duration timing-function delay iteration-count direction;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Css3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Css3之Flex布局]]></title>
+    <url>%2F2018%2F05%2F02%2Fflexbox%2F</url>
+    <content type="text"><![CDATA[Flex(flexible box) 弹性布局传统的布局解决方案，基于盒模型，通过 css中的display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。 概念 任何容器都可以设为flex布局 采用flex布局的元素即为flex container，其子元素为容器成员(flex item) 设为flex布局以后，子元素的float/clear/vertical-align属性将会失效 主轴和交叉轴 容器默认存在水平主轴main axis和垂直的交叉轴cross axis flex-item排列的方向是主轴 flex-container容器属性 flex-direction决定主轴的方向(同时也是flex-item的排列方向) flex-direction: row | row-reverse | column | column-reverse; row（默认值）：主轴是水平方向，flex-item水平从左往右排列 column : 主轴呈垂直方向,从上边沿向下排列 reverse参数: 将起始与终点进行互换 flex-wrap 属性定义如果在一条轴线上排不下，换行的规则 flex-wrap：nowrap | wrap | wrap-reverse nowrap（默认值）：不换行 wrap : 自然换行 直接将多余的元素从下一行开始排列 wrap-reverse: 将第一行排列到下方 flex-flow 是flex-direction和flex-wrap的简写，默认值为row nowrap justify-content:定义flex-item在主轴main-axis上的对齐方式 justify-content: flex-start | flex-end | center | space-between | space-around flex-start（默认值）：左对齐； flex-end右对齐； center居中； space-between：两端对其，flex-item间的间隔距离相等 space-around：每个flex-item两侧的间隔相等，相当于设置左右margin值相等 align-items: 定义flex-item在交叉轴的对齐方式 align-items: flex-start | flex-end | center | baseline | strecth。五个取值与交叉轴方向有关 flex-start|flex-end|center和flex-direction一样，只不过是在交叉轴起点、终点、中点对齐； baseline：flex-item的第一行文字的基线对齐 stretch（默认值）：如果flex-item没有设置高度或者值为auto，将占满整个容器高度 align-content：如果容器内出现多跟轴线（即出现wrap），定义主轴在交叉轴上的对齐方式，只有一根轴线时不起作用 align-content: flex-start | flex-end | center | space-between | space-around | stretch stretch（默认值）：轴线沾满整个交叉轴 space-between：与交叉轴两端对齐，轴线间的间隔平均分布 space-around：每根轴线两侧的间隔相等 flex-start：与交叉轴起点对其 flex-item项目的属性 order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。 flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大.&nbsp; &nbsp; &nbsp;如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。 flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。负值对该属性无效。 flex 属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 flex: none | [ &lt;’flex-grow’&gt; &lt;’flex-shrink’&gt;? || &lt;’flex-basis’&gt; ] flex-basis align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。 align-self: auto | flex-start | flex-end | center | baseline | stretch;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[next主题个性化配置]]></title>
+    <url>%2F2018%2F04%2F26%2Fnextconfig%2F</url>
+    <content type="text"><![CDATA[看到一些大神的next博客站点很酷 那到底是怎么实现的呢 经过一番的倒腾，终于将一些使用且比较酷的功能添加到自己的博客中 主要添加的功能有： 在右上角或者左上角实现fork me on github 添加RSS· 添加动态背景· 在每篇文章末尾统一添加“本文结束”标记 修改作者头像并旋转 主页文章添加阴影效果 在网站底部加上访问量 添加菜单分类页面· 首页实现文章内容截断（展示阅读全文） 网站底部字数统计 添加 README.md 文件· 隐藏网页底部powered By Hexo / 强力驱动 添加来必力评论 Livere· DaoVoice 在线联系 添加站内搜索0 实现fork me on github 1.修改头像并配置头像样式 编辑 ·主题配置文件·， 修改字段 `avatar， 值设置成头像的链接地址。其中，头像的链接地址可以是： 将头像图片放置在 source/images/ 目录下 配置为：avatar: /images/avatar.png 或者使用图片的在线地址 2.设置博客背景动画NexT 自带两种背景动画效果：编辑 主题配置文件， 搜索 canvas_nest 或 three_waves，根据您的需求设置值为 true 或者 false 即可：如下、 #canvas_nest canvas_nest: true //开启动画 #three_waves three_waves: false //关闭动画 3.添加RSS在blog目录下安装hexo-generate-feed 然后打开z主题配置文件,在里面配置为如下样子：(就是在rss:的后面加上/atom.xml,注意在冒号后面要加一个空格) #Set rss to false to disable feed link. #Leave rss as empty to use site&apos;s feed link. # Set rss to specific value if you have burned your feed already. rss: /atom.xml 4.在网站底部加上访问量 有点不想写了 5.网站底部字数统计&nbsp; 修改如下部分 #Post wordcount display settings # Dependencies: https://github.com/willin/hexo-wordcount post_wordcount: item_text: true wordcount: true min2read: true totalcount: false separated_meta: true 在适当的位置添加以下页面代码 6.添加README.md 每个项目下一般都有一个 README.md 文件，但是使用 hexo 部署到仓库后，项目下是没有 README.md 文件的。 在 Hexo 目录下的 source 根目录下添加一个 README.md 文件，修改站点配置文件 _config.yml，将 skip_render 参数的值设置为skip_render:README.md 保存退出即可。再次使用 hexo d 命令部署博客的时候就不会在渲染 README.md 这个文件了。 7.添加菜单分类/标签页面&nbsp; 在hexo站点目录下 使用hexo new page 新建一个页面 命名为tags 如下： hexo new page tags 此时会在hexo &gt; source文件夹中会生成一个tags文件夹。 编辑tags文件夹下面的.md文件 &nbsp; 在菜单中添加链接。编辑 主题配置文件 ， 添加 tags 到 menu 中，如下: menu:home: / || homearchives: /archives/ || archivetags: /tags/ || tags &nbsp; 注：||之前的值是目标链接，之后的是页面的图标，图标名称来自于FontAwesome icon。若没有配置图标，默认会使用问号图标。 8.添加livere来必力评论模块注意：最新版 hexo-theme-next 已经包含 LiveRe 插件，下载最新版本，配置 livere_uid 即可使用 获取livere_uid步骤 注册 LiveRe 进入 LiveRe，注册账号。 LiveRe 有两个版本： City 版：是一款适合所有人使用的免费版本；Premium 版：是一款能够帮助企业实现自动化管理的多功能收费版本。City版就够了。安装，获取 uid： 填写完成后，进入到 管理页面 -&gt; 代码管理 -&gt; 一般网站 代码中，data-uid 即为所需 uid 添加 LiveRe 插件 首先在 _config.yml 文件中添加如下配置： #Support for LiveRe comments system. #You can get your uid from https://livere.com/insight/myCode (General web site)livere_uid: your uid 其中 livere_uid 即上一步获取到的 uid。其他的设置在最新版中都不需要配置啦 所以说程序员还是要用新的潮的东西 9.设置网站图标 具体方法实现 找一张（32*32）的ico图标，并将图标名称改为favicon.ico，然后把图标放在/themes/next/source/images里，并且修改`主题配置文件`,下面就是图标配置代码修改即可： favicon: small: /images/favicon-16x16-next.png medium: /images/favicon-32x32-next.png apple_touch_icon: /images/apple-touch-icon-next.png safari_pinned_tab: /images/logo.svg 10.站内博客搜索添加百度/谷歌/本地 自定义站点内容搜索. 1.安装 hexo-generator-searchdb，在站点的根目录下执行以下命令： npm install hexo-generator-searchdb –save 2.编辑 站点配置文件，新增以下内容到任意位置： search: path: search.xml field: post format: html limit: 10000 3.编辑 主题配置文件，启用本地搜索功能： &gt; #Local search local_search: enable: true 11.首页文章内容截断编辑主题配置文件 如下设置则会开启自动截断功能 #Automatically Excerpt. Not recommend. # Please use &lt;!-- more --&gt; in the post to control excerpt accurately. auto_excerpt: enable: true length: 150]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git 操作常用命令]]></title>
+    <url>%2F2018%2F04%2F21%2FgitCommand%2F</url>
+    <content type="text"><![CDATA[git所有的命令都是以git开头 后面为所要做的操作 再后面即为参数 初始化 git init 初始化后会生成.git文件 git clone URL 将URL地址下的资源clone到本地 git add . 将当前目录下面的文件提交到暂存区 git commit -m ‘你所做的修改，利于以后维护和回退’ 会得到一个指针 git push origin master 上传代码到github master分支 git branch 查看所有分支 git branch hexo 新建名为hexo的分支 git checkout hexo 切换到hexo分支 git merge 合并指定分支到当前分支 ##git合并分支&nbsp;git支持很多种工作流程，在进行合作开发时一般是这样，远程创建一个主分支，本地每人创建功能分支，日常工作流程如下： 去自己的工作分支 git checkout work 工作…. 提交工作分支的修改 git commit -a 4.回到主分支 git checkout master 5.获取远程最新的修改，此时不会产生冲突 git pull 6.回到工作分支 git checkout work 7.用rebase合并主干的修改，如果有冲突在此时解决 git rebase master 8.回到主分支 git checkout master 9.合并工作分支的修改，此时不会产生冲突。 git merge work 10.提交到远程主干 git push origin master 这样做的好处是，远程主干上的历史永远是线性的。每个人在本地分支解决冲突，不会在主干上产生冲突. 可以在一条分支上一起开发，你有变更的时候，在提交前，使用 git stash 这样将本地的修改全部缓存在一个堆栈中了，然后把别人的修改同步过来 git pull –rebase 下一步是将自己的变更恢复到最新的节点上 git stash pop 然后再使用git commit提交，这样就会让一个分支的版本按顺序继续发展]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自己搭建博客]]></title>
+    <url>%2F2018%2F04%2F19%2Fhexo%2F</url>
+    <content type="text"><![CDATA[Hexo 是开源的npm的博客包使用markdown语法写博客 结合github page 服务，有一个免费的开源博客 git配置过程 全局配置 username email ssh 在git bash中执行代码： 1. git config global user.name &quot;gitname&quot; 2.git config global user.email &quot;email&quot; 3.ssh-keygen -t rsa -C &quot;git@email&quot; 一路回车 找到.ssh文件夹 打开id_rsa.pub复制内容 4.到github上 setting 中ssh key添加 title为空 粘贴ssh至内容中 验证一下是否成功 1.在hexo目录下将 https://github.com/HeiLiu/HeiLiu.github.io.git hexo init 初始化博客 执行一下初始化命令系统会去github clone一个博客来到本地 ./node_modules是以来文件夹，npm包 项目所有依赖都在这里。3.博客存放地址 source/_post/**.md4.markdown 语法 更简捷的写html5.theme主题文件夹 hexo clean 清空生成的站点博客文件 hexo generate 博客的产生 hexo generate 将markdown语法编译成public/*.html hexo server 打开本地服务器 hexo deploy 将本地生成的public文件内容发布到github]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[想把我唱给你听]]></title>
+    <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
+    <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧]]></content>
+      <categories>
+        <category>有感</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+</search>
