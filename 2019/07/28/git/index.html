@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。">
+<meta name="description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。   本地分支重命名  git branch -m old new  git checkout的用法 git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 //">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="规范git提交">
 <meta property="og:url" content="http://yoursite.com/2019/07/28/git/index.html">
 <meta property="og:site_name" content="HeiLiu">
-<meta property="og:description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。">
+<meta property="og:description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。   本地分支重命名  git branch -m old new  git checkout的用法 git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 //">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-28T15:48:46.875Z">
+<meta property="og:updated_time" content="2019-07-29T08:14:01.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="规范git提交">
-<meta name="twitter:description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。">
+<meta name="twitter:description" content="规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。   本地分支重命名  git branch -m old new  git checkout的用法 git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 //">
 
 
 
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  27
+                  433
                 </span>
               
 
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -435,7 +435,36 @@
       
 
       
-        <h2 id="规范-commit-message-并根据-commit-自动生成-CHANGELOG-md"><a href="#规范-commit-message-并根据-commit-自动生成-CHANGELOG-md" class="headerlink" title="规范 commit message 并根据 commit 自动生成 CHANGELOG.md"></a>规范 commit message 并根据 commit 自动生成 CHANGELOG.md</h2><p>Commitizen是一个撰写合格 Commit message 的工具。  </p>
+        <h2 id="规范-commit-message-并根据-commit-自动生成-CHANGELOG-md"><a href="#规范-commit-message-并根据-commit-自动生成-CHANGELOG-md" class="headerlink" title="规范 commit message 并根据 commit 自动生成 CHANGELOG.md"></a>规范 commit message 并根据 commit 自动生成 CHANGELOG.md</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p>
+<ul>
+<li>本地分支重命名</li>
+</ul>
+<p>git branch -m old new</p>
+<ul>
+<li><p>git checkout的用法</p>
+<p>git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态<br>git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支<br>git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖<br>git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针）<br>  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</p>
+<p><a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p>
+</li>
+<li><p>撤回 add/commit</p>
+<ul>
+<li><p>将add到暂存区后的提交撤回<br>git reset head 文件名</p>
+</li>
+<li><p>修改commit标注<br>commit -m “aaaa” // 提交一个commit<br>git commit –amend =&gt; 开启vim编辑器 编辑后保存退出</p>
+</li>
+<li>撤回commit<br>git reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改<br>git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</li>
+</ul>
+</li>
+<li><p>添加/删除远程分支</p>
+<ul>
+<li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p>
+<p>git push origin 本地分支名:远程分支名</p>
+<p>$ git push origin test:master         // 提交本地test分支作为远程的master分支<br>$ git push origin test:test           // 提交本地test分支作为远程的test分支<br>//好像只写这一句，远程的github就会自动创建一个test分支</p>
+</li>
+<li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。<br>git push origin :远程分支名(你要删除的远程分支名)</p>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -489,6 +518,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/29/serverless/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,7 +605,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -707,7 +740,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.5k字</span>
+  <span class="post-count">博客全站共18.9k字</span>
 </div>
 
         
