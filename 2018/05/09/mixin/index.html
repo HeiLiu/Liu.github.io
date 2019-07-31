@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="HeiLiu">
 <meta property="og:description" content="混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box    background-color bg_color    width box_size    height box_size   编译后： 123">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T15:33:46.000Z">
+<meta property="og:updated_time" content="2019-07-31T05:33:42.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="stylus之变量与mixin">
 <meta name="twitter:description" content="混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box    background-color bg_color    width box_size    height box_size   编译后： 123">
@@ -440,7 +440,7 @@
 <li><p>在<code>stylus</code>中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*进行变量的声明*/</span></span><br><span class="line">bg_color = #123456;</span><br><span class="line">box_size = 100px;</span><br><span class="line"><span class="comment">/* 使用 */</span></span><br><span class="line"><span class="selector-class">.box</span></span><br><span class="line">    <span class="selector-tag">background-color</span> <span class="selector-tag">bg_color</span></span><br><span class="line">    <span class="selector-tag">width</span> <span class="selector-tag">box_size</span></span><br><span class="line">    <span class="selector-tag">height</span> <span class="selector-tag">box_size</span></span><br></pre></td></tr></table></figure>
 <p>  编译后：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">   <span class="attribute">background-color</span>: <span class="number">#123456</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">   <span class="attribute">background-color</span>: <span class="number">#123456</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>属性查找<br>Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#logo</span></span><br><span class="line">    <span class="selector-tag">position</span>: <span class="selector-tag">absolute</span></span><br><span class="line">    <span class="selector-tag">top</span>: 50%</span><br><span class="line">    <span class="selector-tag">left</span>: 50%</span><br><span class="line">    width: w = 150px</span><br><span class="line">    height: h = 80px</span><br><span class="line">    margin-left: -(w / 2)</span><br><span class="line">    margin-top: -(h / 2)</span><br></pre></td></tr></table></figure>
@@ -594,7 +594,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -605,7 +605,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -729,7 +729,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.3k字</span>
+  <span class="post-count">博客全站共20.5k字</span>
 </div>
 
         
