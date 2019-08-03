@@ -79,20 +79,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/31/export/export/index/</loc>
-    
-    <lastmod>2019-07-31T05:31:18.790Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/31/export/index/</loc>
-    
-    <lastmod>2019-07-31T05:28:18.744Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/07/15/sorts/</loc>
     
     <lastmod>2019-07-31T03:49:57.922Z</lastmod>
@@ -170,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
@@ -184,7 +163,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
+    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/09/URL/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -205,21 +191,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/URL/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/05/04/Css3/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -233,7 +205,21 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
