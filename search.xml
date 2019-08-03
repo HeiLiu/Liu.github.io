@@ -2,6 +2,11 @@
 <search>
   <entry>
     <title></title>
+    <url>%2F2019%2F08%2F01%2FnpmParams%2F</url>
+    <content type="text"><![CDATA[title: npm 参数tag: nodecatagories: skill 前端 npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>%2F2019%2F07%2F31%2Fexport%2Fexport%2Fmarkdown%2F</url>
     <content type="text"><![CDATA[RegRxp(正则表达式) 简化对字符串的操作正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等 什么是正则？规则、模式; 强大的字符串匹配的工具 风格js风格: const reg = new RegExp(‘a’, i)perl风格: const reg = /a/i 转义字符 | 转义字符 | 说明 || ———- | — || \d | 数字 [0-9]||\|斜杠 ||\n|换行 ||\w|英文 数字 下划线 [a-z0-9_]||\s|空格||\D|除了数字 [^0-9]||\W|非数字 字母 下划线 [^z-a0-9_]||\S|非空白字符| 特殊字符(元字符) [] 方括号 12345// [abc] 表示a或者b或者c const re = /[abc]pc/g// 范围匹配[a-z] [0-9] [^a-z] // 匹配非英文部分 限定符(量词) 基本形式： {n}表示出现的次数 12// 8位电话号码 /[1-9]\d&#123;7&#125;/ // 以非零数字开头后面八位随意 表示出现次数范围： {n, m} 表示出现最少n次 最多m次 12345678910// QQ 正则/[1-9]\d&#123;4, 10&#125;/``` - 不限次数：&#123;n, &#125; 表示最少n次， 最多不限 . 任意字符*: =&gt; &#123;0, &#125; 任意次+: 若干 =&gt; &#123;1, &#125; 最少一次 最多不限 ?: 最少零次 最多一次 =&gt; &#123;0, 1&#125; ^: 行首 $: 行尾 固话区号 010-2473544(0\d{2,3}-)?[1-9]\d{7} 1234567891011121314- 方法 - search 返回匹配的位置 - match 把所有匹配的东西都提取出来 - replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串 - test 检验字符串是否符合正则 返回Boolean &gt; 特性 只要字符串一部分符合要求就返回true ```js // 校验邮箱 const email = &apos;你好啊heiliu@Gmail.com&apos; const re = /\w+@[a-z0-9]+\.[a-z]+/ re.test(email) // 后半部分符合 返回 true const re1 = /^\w+@[a-z0-9]+\.[a-z]+$/ // 限制首尾 应用例子 查找字符串中的数字并返回 1234567891011 // 查找字符串中的数字 const str = '123ask32lks,alf21lksa12e45l3' const reg = /\d+/g // global console.log(str.match(reg))``` - 敏感词过滤 ```js // replace 的用例 const reg = /匹配|出来/; const str = '把所有匹配的东西都提取出来 ' console.log(str.replace(reg, '***')) // 把所有***的东西都提取***]]></content>
   </entry>
@@ -31,6 +36,11 @@
     <content type="text"><![CDATA[title: react-redux中Provider、connectdate: 2019-07-29tags: ‘倒腾’ categories: redux react-redux中Provider详情]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>%2F2019%2F07%2F29%2FgitNote%2F</url>
+    <content type="text"><![CDATA[title: Git 笔记date: 2019-07-28tags: ‘git’categories: Skill Note Git Git 常用的命令笔记Commitizen是一个撰写合格 Commit message 的工具。 本地分支重命名 git branch -m old new git checkout的用法 git checkout // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支 checkout命令详解参考 撤回 add/commit 将add到暂存区后的提交撤回git reset head 文件名 修改commit标注commit -m “aaaa” // 提交一个commitgit commit –amend =&gt; 开启vim编辑器 编辑后保存退出 撤回commitgit reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退 添加/删除远程分支 将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支 git push origin 本地分支名:远程分支名 $ git push origin test:master // 提交本地test分支作为远程的master分支$ git push origin test:test // 提交本地test分支作为远程的test分支//好像只写这一句，远程的github就会自动创建一个test分支 如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。git push origin :远程分支名(你要删除的远程分支名)]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[serverless了解]]></title>
     <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
     <content type="text"><![CDATA[serverless了解]]></content>
@@ -39,17 +49,6 @@
       </categories>
       <tags>
         <tag>倒腾</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[规范git提交]]></title>
-    <url>%2F2019%2F07%2F28%2Fgit%2F</url>
-    <content type="text"><![CDATA[规范 commit message 并根据 commit 自动生成 CHANGELOG.mdCommitizen是一个撰写合格 Commit message 的工具。 本地分支重命名 git branch -m old new git checkout的用法 git checkout // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支 checkout命令详解参考 撤回 add/commit 将add到暂存区后的提交撤回git reset head 文件名 修改commit标注commit -m “aaaa” // 提交一个commitgit commit –amend =&gt; 开启vim编辑器 编辑后保存退出 撤回commitgit reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退 添加/删除远程分支 将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支 git push origin 本地分支名:远程分支名 $ git push origin test:master // 提交本地test分支作为远程的master分支$ git push origin test:test // 提交本地test分支作为远程的test分支//好像只写这一句，远程的github就会自动创建一个test分支 如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。git push origin :远程分支名(你要删除的远程分支名)]]></content>
-      <categories>
-        <category>skill</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -76,13 +75,14 @@
   </entry>
   <entry>
     <title><![CDATA[RegExp(正则表达式)]]></title>
-    <url>%2F2018%2F07%2F16%2FregExp%2F</url>
+    <url>%2F2018%2F07%2F18%2FregExp%2F</url>
     <content type="text"><![CDATA[RegRxp(正则表达式) 简化对字符串的操作正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等 什么是正则？规则、模式; 强大的字符串匹配的工具 风格js风格: const reg = new RegExp(‘a’, i)perl风格: const reg = /a/i 转义字符 | 转义字符 | 说明 || ———- | — || \d | 数字 [0-9]||\|斜杠 ||\n|换行 ||\w|英文 数字 下划线 [a-z0-9_]||\s|空格||\D|除了数字 [^0-9]||\W|非数字 字母 下划线 [^z-a0-9_]||\S|非空白字符| 特殊字符(元字符) [] 方括号 12345// [abc] 表示a或者b或者c const re = /[abc]pc/g// 范围匹配[a-z] [0-9] [^a-z] // 匹配非英文部分 限定符(量词) 基本形式： {n}表示出现的次数 12// 8位电话号码 /[1-9]\d&#123;7&#125;/ // 以非零数字开头后面八位随意 表示出现次数范围： {n, m} 表示出现最少n次 最多m次 12345678910// QQ 正则/[1-9]\d&#123;4, 10&#125;/``` - 不限次数：&#123;n, &#125; 表示最少n次， 最多不限 . 任意字符*: =&gt; &#123;0, &#125; 任意次+: 若干 =&gt; &#123;1, &#125; 最少一次 最多不限 ?: 最少零次 最多一次 =&gt; &#123;0, 1&#125; ^: 行首 $: 行尾 固话区号 010-2473544(0\d{2,3}-)?[1-9]\d{7} 1234567891011121314- 方法 - search 返回匹配的位置 - match 把所有匹配的东西都提取出来 - replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串 - test 检验字符串是否符合正则 返回Boolean &gt; 特性 只要字符串一部分符合要求就返回true ```js // 校验邮箱 const email = &apos;你好啊heiliu@Gmail.com&apos; const re = /\w+@[a-z0-9]+\.[a-z]+/ re.test(email) // 后半部分符合 返回 true const re1 = /^\w+@[a-z0-9]+\.[a-z]+$/ // 限制首尾 应用例子 查找字符串中的数字并返回 1234567891011 // 查找字符串中的数字 const str = '123ask32lks,alf21lksa12e45l3' const reg = /\d+/g // global console.log(str.match(reg))``` - 敏感词过滤 ```js // replace 的用例 const reg = /匹配|出来/; const str = '把所有匹配的东西都提取出来 ' console.log(str.replace(reg, '***')) // 把所有***的东西都提取***]]></content>
       <categories>
         <category>前端</category>
+        <category>Note</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>javaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -164,17 +164,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[在hexo中安装next主题]]></title>
-    <url>%2F2018%2F05%2F09%2Fnext_install%2F</url>
-    <content type="text"><![CDATA[倒腾了一天半终于自己实现了一个还不错的博客，在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。如果没有搭建好自己的hexo+git pages博客界面可以看我另外一篇经验分享 **说明**：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo本身的配置；另一份位于主题next目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。 下载主题 下载方式： 1.在theme文件夹中将主题包克隆到本地，并将文件名`hexo-theme-next`改成`next` git clone https://github.com/iissnan/hexo-theme-next themes/next 2.前往Next[发布页面][1]将`sourcecode`下载到本地，解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（`hexo-theme-next-0.4.0`）更改为 `next`。 启用Next 当 克隆/下载 完成后，打开 站点配置文件， 找到 `theme` 字段，并将其值更改为`next`。 验证主题是否应用 1. NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 最好使用 `hexo clean` 来清除 Hexo 的缓存。 2. 执行`hexo generate` 生成博客 3. 执行`hexo server`启用本地服务器 在本地可以直接查看修改以后的效果 &gt;`INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to` 使用浏览器进行访问http://0.0.0.0:4000/ 修改主题样式scheme Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。 #Schemes #scheme: Mist scheme: Muse #scheme: Pisces #scheme: Gemini 其他基本配置 打开站点配置文件 可以像我一样进行基本设置 每个冒号后面必须与内容用空格分割 #Sitetitle: HeiLiu //站点titlesubtitle: 有一句Hello World想要对你说description: 程序员 大学本科keywords:author: 刘江龙language: zh-Hans //设置语言timezone: Asia/Shanghai //时间 #Deployment Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/HeiLiu/HeiLiu.github.io.git branch: master]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>倒腾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[javascript函数]]></title>
     <url>%2F2018%2F05%2F09%2Ffunction_note%2F</url>
     <content type="text"><![CDATA[函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。 函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有constructor属性且值即为该函数对象。1234567891011121314151617181920212223242526272829 function add(a,b)&#123; return a+b; &#125;``` 因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。函数的与众不同之处在于可以被调用。 ### 函数字面量 函数对象通过函数字面量来创建。函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。```js var add = function(a, b) &#123; return a + b &#125; ``` ### 调用 调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，还有两个附加参数：`this`和`arguments`。参数this在面向对象编程中非常重要，它的值取决于调用的模式。实参和形参个数不匹配时，不会有运行时错误。实参过多时，超出的实参被忽略。形参过多时，缺失的值被替换为undefined。 - 方法调用模式 当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，`this被绑定到该对象`,通过this可以对该对象的属性和方法进行调用和操作。 ```js var myObject = &#123; text: hello, say:function(msg)&#123; console.log(this.text + msg); &#125; &#125; myObject.say(world); 函数调用模式当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。此时this被绑定到全局对象。即时是内部函数也会将this绑定到全局对象。this的指向问题 作用域不一样 this的指向就不一样,可以在函数内创建一个属性并赋值为this来解决这个问题,一般通过var that = this; 1234567891011121314var add = function(a, b) &#123; return a + b&#125;myObject.double = function() &#123; var that = this var helper = function() &#123; that.value = add(that.value, that.value) &#125; helper()&#125;myObject.double()console.log(myObject.value) //8 12345678910111213141516171819202122232425 attachEvent: function () &#123; // attachEvent函数的作用域 // js 里面this总会指向什么 // 对象的方法被执行时 this指向对象 // console.log(this); var that = this; this.staticElement.addEventListener('click', function () &#123; // 这个函数被执行时，并不是对象的方法，而是匿名函数，作为事件处理函数来执行，this会指向事件发生元素 // this的指向跟函数的调用方式有关 // this的指向问题 作用域不一样 this的指向就不一样 // 作用域 事件的回调函数 // console.log(this); // alert(that.value); that.convertToEdit(); &#125;, false); this.filedElement.addEventListener('keydown', function (evt) &#123; // 在事件发生的一刹那 会产生一个临时事件对象 console.log(evt); if (evt.keyCode == 13) &#123; that.staticElement.innerHTML = this.value; console.log(that.staticElement.innerHTML); that.convertToText(); &#125; &#125;, false)&#125; 构造器调用模式JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。如果在一个函数前面带上new来调用，那么背地里将会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到那个新对象上。 1234567891011121314//创建构造器函数var Quo = function(string) &#123; this.status = string&#125;//给Que的所有实例提供一个公共方法Quo.prototype.getStatus = function() &#123; return this.status&#125;//实例化var myQuo = new Quo('confused')console.log(myQuo.getStatus()) //confused Apply 调用模式apply方法让我们构建一个参数数组传递给调用函数。他也允许我们选择this的值。apply方法接受两个参数，第一个是要绑定给this的值，第二个是参数数组。 123456789101112131415161718192021222324 var arr = [3, 4] var sum = add.apply(null, arr) console.log(sum) //7 var statusObject = &#123; status: 'hello' &#125; var status = Quo.prototype.getStatus.apply(statusObject) console.log(status) //hello``` ### 参数 当函数被调用时，会得到一个`arguments`数组。通过此参数可以访问所有它被调用时传递给它的`参数列表`，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。```js var sum = function() &#123; var i, sum = 0 for (i = 0; i &lt; arguments.length; i++) &#123; sum += arguments[i] &#125; return sum &#125; console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9)//45 因语言的设计错误，arguments并不是一个真正的数组。是一个“类似数组”的对象。有length属性，但没有任何数组的方法。 返回函数执行时遇到关闭函数体的}时结束。然后把控制权交还给调用该函数的程序。 return可以使函数提前返回，当return语句执行时函数立即返回不在执行余下的语句。 函数总是会返回一个值，若没有指定，则返回undefined。 若函数调用时在前面加上了new前缀，且返回值不是一个对象的时候，则返回this（该新对象）。 闭包作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了this和arguments）。12345678910var quo = function(status) &#123; return &#123; get_status: function() &#123; return status; &#125; &#125;&#125;var myQuo = quo('amazed')console.log(myQuo.get_status()) //amazed 狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。status访问的就说对象中的status属性本身,通过闭包可以让一个局部变量驻留在内存中 避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前i值的函数，这样就不会导致混淆了。 回调将一个函数作为参数，一旦接收到响应，再调用这个函数。12345 fs.readFile('demo/02.js','utf8',(error,data)=&gt;&#123; if(error) throw error; //在异步中的错误不能被捕获 通过throw error进行错误的捕获 console.log(data) &gt;&gt;a.txt;&#125;); 模块可以用函数和闭包构造模块。模块是一个提供接口却隐藏与实现的函数或者对象 模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。123456789101112131415161718192021var numberCal = (function() &#123; var half = function(n) &#123; return n / 2 &#125; var double = function(n) &#123; return n * 2 &#125; var tribble = function(n) &#123; return n * 3 &#125; return &#123; half: half, double: double, tribble: tribble &#125;&#125;())console.log(numberCal.half(5)) //2.5console.log(numberCal.half(6)) //3console.log(numberCal.double(7)) //14console.log(numberCal.tribble(7)) //21 级联如果让方法返回this而不是默认的undefined，就可以启用级联，即连续调用。 记忆函数可以将先前操作的结果记录在某个对象或者数组里，从而避免无谓的重复运算。这种优化被称为记忆（memoization）。]]></content>
@@ -186,9 +175,15 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F09%2FURL%2F</url>
-    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
+    <title><![CDATA[在hexo中安装next主题]]></title>
+    <url>%2F2018%2F05%2F09%2Fnext_install%2F</url>
+    <content type="text"><![CDATA[倒腾了一天半终于自己实现了一个还不错的博客，在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。如果没有搭建好自己的hexo+git pages博客界面可以看我另外一篇经验分享 **说明**：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo本身的配置；另一份位于主题next目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。 下载主题 下载方式： 1.在theme文件夹中将主题包克隆到本地，并将文件名`hexo-theme-next`改成`next` git clone https://github.com/iissnan/hexo-theme-next themes/next 2.前往Next[发布页面][1]将`sourcecode`下载到本地，解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（`hexo-theme-next-0.4.0`）更改为 `next`。 启用Next 当 克隆/下载 完成后，打开 站点配置文件， 找到 `theme` 字段，并将其值更改为`next`。 验证主题是否应用 1. NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 最好使用 `hexo clean` 来清除 Hexo 的缓存。 2. 执行`hexo generate` 生成博客 3. 执行`hexo server`启用本地服务器 在本地可以直接查看修改以后的效果 &gt;`INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to` 使用浏览器进行访问http://0.0.0.0:4000/ 修改主题样式scheme Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。 #Schemes #scheme: Mist scheme: Muse #scheme: Pisces #scheme: Gemini 其他基本配置 打开站点配置文件 可以像我一样进行基本设置 每个冒号后面必须与内容用空格分割 #Sitetitle: HeiLiu //站点titlesubtitle: 有一句Hello World想要对你说description: 程序员 大学本科keywords:author: 刘江龙language: zh-Hans //设置语言timezone: Asia/Shanghai //时间 #Deployment Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/HeiLiu/HeiLiu.github.io.git branch: master]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
@@ -211,6 +206,11 @@
       <tags>
         <tag>Css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F09%2FURL%2F</url>
+    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
   </entry>
   <entry>
     <title><![CDATA[Css3属性]]></title>

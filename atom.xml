@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-31T05:31:18.865Z</updated>
+  <updated>2019-08-01T03:06:46.742Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/08/01/npmParams/"/>
+    <id>http://yoursite.com/2019/08/01/npmParams/</id>
+    <published>2019-08-01T00:54:04.800Z</published>
+    <updated>2019-08-01T03:06:46.742Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: npm 参数<br>tag: node<br>catagories:</p><ul><li>skill</li><li>前端  </li></ul><hr><h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: npm 参数&lt;br&gt;tag: node&lt;br&gt;catagories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;skill&lt;/li&gt;
+&lt;li&gt;前端  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -149,7 +177,7 @@
     <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
     <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
     <published>2019-07-29T15:17:01.159Z</published>
-    <updated>2019-07-31T05:41:15.214Z</updated>
+    <updated>2019-07-31T05:53:43.890Z</updated>
     
     <content type="html"><![CDATA[<hr><p>title: react-redux中Provider、connect<br>date: 2019-07-29<br>tags: ‘倒腾’  </p><h2 id="categories-redux"><a href="#categories-redux" class="headerlink" title="categories: redux  "></a>categories: redux  </h2><h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
     
@@ -160,6 +188,35 @@
         &lt;hr&gt;
 &lt;p&gt;title: react-redux中Provider、connect&lt;br&gt;date: 2019-07-29&lt;br&gt;tags: ‘倒腾’  &lt;/p&gt;
 &lt;h2 id=&quot;categories-redux&quot;&gt;&lt;a href=&quot;#categories-redux&quot; cl
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/29/gitNote/"/>
+    <id>http://yoursite.com/2019/07/29/gitNote/</id>
+    <published>2019-07-29T08:14:01.741Z</published>
+    <updated>2019-08-03T08:52:06.082Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: Git 笔记<br>date: 2019-07-28<br>tags: ‘git’<br>categories:</p><ul><li>Skill</li><li>Note</li><li>Git</li></ul><hr><h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><ul><li>本地分支重命名</li></ul><p>git branch -m old new</p><ul><li><p>git checkout的用法</p><p>git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态<br>git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支<br>git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖<br>git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针）<br>  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</p><p><a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p></li><li><p>撤回 add/commit</p><ul><li><p>将add到暂存区后的提交撤回<br>git reset head 文件名</p></li><li><p>修改commit标注<br>commit -m “aaaa” // 提交一个commit<br>git commit –amend =&gt; 开启vim编辑器 编辑后保存退出</p></li><li>撤回commit<br>git reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改<br>git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</li></ul></li><li><p>添加/删除远程分支</p><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><p>git push origin 本地分支名:远程分支名</p><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支<br>$ git push origin test:test           // 提交本地test分支作为远程的test分支<br>//好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。<br>git push origin :远程分支名(你要删除的远程分支名)</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: Git 笔记&lt;br&gt;date: 2019-07-28&lt;br&gt;tags: ‘git’&lt;br&gt;categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skill&lt;/li&gt;
+&lt;li&gt;Note&lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id
       
     
     </summary>
@@ -189,31 +246,6 @@
     
     
       <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>规范git提交</title>
-    <link href="http://yoursite.com/2019/07/28/git/"/>
-    <id>http://yoursite.com/2019/07/28/git/</id>
-    <published>2019-07-27T16:00:00.000Z</published>
-    <updated>2019-07-29T08:14:01.741Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="规范-commit-message-并根据-commit-自动生成-CHANGELOG-md"><a href="#规范-commit-message-并根据-commit-自动生成-CHANGELOG-md" class="headerlink" title="规范 commit message 并根据 commit 自动生成 CHANGELOG.md"></a>规范 commit message 并根据 commit 自动生成 CHANGELOG.md</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><ul><li>本地分支重命名</li></ul><p>git branch -m old new</p><ul><li><p>git checkout的用法</p><p>git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态<br>git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支<br>git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖<br>git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针）<br>  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</p><p><a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p></li><li><p>撤回 add/commit</p><ul><li><p>将add到暂存区后的提交撤回<br>git reset head 文件名</p></li><li><p>修改commit标注<br>commit -m “aaaa” // 提交一个commit<br>git commit –amend =&gt; 开启vim编辑器 编辑后保存退出</p></li><li>撤回commit<br>git reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改<br>git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</li></ul></li><li><p>添加/删除远程分支</p><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><p>git push origin 本地分支名:远程分支名</p><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支<br>$ git push origin test:test           // 提交本地test分支作为远程的test分支<br>//好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。<br>git push origin :远程分支名(你要删除的远程分支名)</p></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;规范-commit-message-并根据-commit-自动生成-CHANGELOG-md&quot;&gt;&lt;a href=&quot;#规范-commit-message-并根据-commit-自动生成-CHANGELOG-md&quot; class=&quot;headerlink&quot; title=&quot;
-      
-    
-    </summary>
-    
-      <category term="skill" scheme="http://yoursite.com/categories/skill/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
@@ -270,10 +302,10 @@
   
   <entry>
     <title>RegExp(正则表达式)</title>
-    <link href="http://yoursite.com/2018/07/16/regExp/"/>
-    <id>http://yoursite.com/2018/07/16/regExp/</id>
-    <published>2018-07-16T01:41:38.000Z</published>
-    <updated>2018-07-16T01:41:38.000Z</updated>
+    <link href="http://yoursite.com/2018/07/18/regExp/"/>
+    <id>http://yoursite.com/2018/07/18/regExp/</id>
+    <published>2018-07-18T01:47:21.000Z</published>
+    <updated>2019-08-03T08:56:00.401Z</updated>
     
     <content type="html"><![CDATA[<h1 id="RegRxp-正则表达式"><a href="#RegRxp-正则表达式" class="headerlink" title="RegRxp(正则表达式)"></a>RegRxp(正则表达式)</h1><blockquote><p>简化对字符串的操作<br>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等</p></blockquote><h2 id="什么是正则？"><a href="#什么是正则？" class="headerlink" title="什么是正则？"></a>什么是正则？</h2><p>规则、模式; 强大的字符串匹配的工具  </p><ul><li><p>风格<br>js风格: const reg = new RegExp(‘a’, i)<br>perl风格: const reg = /a/i  </p></li><li><p>转义字符  </p><p>|    转义字符    | 说明 |<br>| ———- | — |<br>| \d |  数字 [0-9]|<br>|\|斜杠 |<br>|\n|换行 |<br>|\w|英文 数字 下划线 [a-z0-9_]|<br>|\s|空格|<br>|\D|除了数字 [^0-9]|<br>|\W|非数字 字母 下划线 [^z-a0-9_]|<br>|\S|非空白字符|</p></li></ul><ul><li><p>特殊字符(元字符)  </p><ul><li><p>[] 方括号   </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  [abc] 表示a或者b或者c </span></span><br><span class="line"><span class="keyword">const</span> re = <span class="regexp">/[abc]pc/g</span></span><br><span class="line"><span class="comment">// 范围匹配</span></span><br><span class="line">[a-z] [<span class="number">0</span><span class="number">-9</span>] </span><br><span class="line">[^a-z]  <span class="comment">// 匹配非英文部分</span></span><br></pre></td></tr></table></figure></li></ul></li><li><p>限定符(量词)  </p><ul><li><p>基本形式： {n}表示出现的次数  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 8位电话号码  </span><br><span class="line">/[1-9]\d&#123;7&#125;/        // 以非零数字开头后面八位随意</span><br></pre></td></tr></table></figure></li><li><p>表示出现次数范围： {n, m}  表示出现最少n次 最多m次  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// QQ 正则</span><br><span class="line">/[1-9]\d&#123;4, 10&#125;/</span><br><span class="line">```  </span><br><span class="line">- 不限次数：&#123;n, &#125; 表示最少n次， 最多不限  </span><br><span class="line">. 任意字符</span><br><span class="line">*:  =&gt; &#123;0, &#125; 任意次</span><br><span class="line">+: 若干 =&gt; &#123;1, &#125; 最少一次 最多不限   </span><br><span class="line">?: 最少零次 最多一次 =&gt; &#123;0, 1&#125;    </span><br><span class="line">^: 行首  </span><br><span class="line">$: 行尾</span><br></pre></td></tr></table></figure><p>固话区号  010-2473544<br>(0\d{2,3}-)?[1-9]\d{7}</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- 方法  </span><br><span class="line"></span><br><span class="line">  - search  返回匹配的位置</span><br><span class="line">  - match 把所有匹配的东西都提取出来  </span><br><span class="line">  - replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串  </span><br><span class="line">  - test   检验字符串是否符合正则 返回Boolean </span><br><span class="line">    &gt; 特性 只要字符串一部分符合要求就返回true</span><br><span class="line">    ```js</span><br><span class="line">      // 校验邮箱</span><br><span class="line">      const email = &apos;你好啊heiliu@Gmail.com&apos;</span><br><span class="line">      const re = /\w+@[a-z0-9]+\.[a-z]+/</span><br><span class="line">      re.test(email)  // 后半部分符合 返回 true  </span><br><span class="line"></span><br><span class="line">      const re1 = /^\w+@[a-z0-9]+\.[a-z]+$/ // 限制首尾</span><br></pre></td></tr></table></figure></li></ul></li></ul><h2 id="应用例子"><a href="#应用例子" class="headerlink" title="应用例子"></a>应用例子</h2><ul><li>查找字符串中的数字并返回  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//  查找字符串中的数字  </span></span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'123ask32lks,alf21lksa12e45l3'</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/\d+/g</span>    <span class="comment">// global</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.match(reg))</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">- 敏感词过滤  </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  <span class="comment">// replace 的用例</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/匹配|出来/</span>;</span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'把所有匹配的东西都提取出来 '</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.replace(reg, <span class="string">'***'</span>))  <span class="comment">// 把所有***的东西都提取***</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -289,8 +321,10 @@
     
       <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
+      <category term="Note" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/Note/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="javaScript" scheme="http://yoursite.com/tags/javaScript/"/>
     
   </entry>
   
@@ -481,34 +515,6 @@
     
     
       <category term="WXApp" scheme="http://yoursite.com/tags/WXApp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在hexo中安装next主题</title>
-    <link href="http://yoursite.com/2018/05/09/next_install/"/>
-    <id>http://yoursite.com/2018/05/09/next_install/</id>
-    <published>2018-05-09T15:33:46.000Z</published>
-    <updated>2018-05-09T15:33:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><pre><code>倒腾了一天半终于自己实现了一个还不错的博客，在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。如果没有搭建好自己的hexo+git pages博客界面可以看我另外一篇经验分享**说明**：在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo本身的配置；另一份位于主题next目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 站点配置文件， 后者称为 主题配置文件。  </code></pre><hr><ul><li>下载主题 <ul><li>下载方式：</li></ul></li></ul><pre><code>1.在theme文件夹中将主题包克隆到本地，并将文件名`hexo-theme-next`改成`next`          git clone https://github.com/iissnan/hexo-theme-next themes/next    2.前往Next[发布页面][1]将`sourcecode`下载到本地，解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（`hexo-theme-next-0.4.0`）更改为 `next`。</code></pre><ul><li><p>启用Next  </p><pre><code>当 克隆/下载 完成后，打开 站点配置文件， 找到 `theme` 字段，并将其值更改为`next`。</code></pre></li><li><p>验证主题是否应用</p><pre><code>1. NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 最好使用 `hexo clean` 来清除 Hexo 的缓存。2. 执行`hexo generate` 生成博客3. 执行`hexo server`启用本地服务器 在本地可以直接查看修改以后的效果     &gt;`INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to`       使用浏览器进行访问http://0.0.0.0:4000/</code></pre></li></ul><ul><li>修改主题样式scheme<br> Scheme 的切换通过更改 主题配置文件，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</li></ul><blockquote><p> #Schemes</p></blockquote><pre><code>#scheme: Mistscheme: Muse#scheme: Pisces#scheme: Gemini</code></pre><ul><li>其他基本配置<br> 打开<code>站点配置文件</code> 可以像我一样进行基本设置 <code>每个冒号后面必须与内容用空格分割</code></li></ul><blockquote><p> #Site<br>title: HeiLiu //站点title<br>subtitle: 有一句Hello World想要对你说<br>description: 程序员 大学本科<br>keywords:<br>author: 刘江龙<br>language: zh-Hans   //设置语言<br>timezone: Asia/Shanghai  //时间</p><p> #Deployment</p></blockquote><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/HeiLiu/HeiLiu.github.io.git" target="_blank" rel="noopener">https://github.com/HeiLiu/HeiLiu.github.io.git</a><br>  branch: master</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;倒腾了一天半终于自己实现了一个还不错的博客，在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。如果没有搭建好自己的hexo+git pages博客界面可以看我另外一篇经验分享
-
-**说明**：在 Hexo 中
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   
