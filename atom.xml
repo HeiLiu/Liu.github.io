@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-01T03:06:46.742Z</updated>
+  <updated>2019-07-31T05:31:18.865Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/08/01/npmParams/"/>
-    <id>http://yoursite.com/2019/08/01/npmParams/</id>
-    <published>2019-08-01T00:54:04.800Z</published>
-    <updated>2019-08-01T03:06:46.742Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>title: npm 参数<br>tag: node<br>catagories:</p><ul><li>skill</li><li>前端  </li></ul><hr><h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: npm 参数&lt;br&gt;tag: node&lt;br&gt;catagories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;skill&lt;/li&gt;
-&lt;li&gt;前端  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title></title>
@@ -145,82 +117,33 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>同一台电脑配置多个SSH</title>
     <link href="http://yoursite.com/2019/07/31/multiSSH/"/>
     <id>http://yoursite.com/2019/07/31/multiSSH/</id>
-    <published>2019-07-31T03:25:06.794Z</published>
-    <updated>2019-07-31T05:40:22.525Z</updated>
+    <published>2019-07-30T16:00:00.000Z</published>
+    <updated>2019-08-03T09:21:30.877Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: 同一台电脑配置多个SSH<br>date: 2019-07-31<br>tags: ‘倒腾’<br>categories:  </p><ul><li>git  </li><li>skill  </li></ul><hr><h2 id="配置多个SSH"><a href="#配置多个SSH" class="headerlink" title="配置多个SSH"></a>配置多个SSH</h2><p>在工作中多访问公司的gitlab仓库，而在生活中又有自己的gayhub仓库<br>记录一下方便日后查找</p><hr><p>一般电脑中的SSH key 存放在 <code>～/.ssh</code>目录中 如果有配置过的话存在 <code>id_rsa</code> \ <code>id_rsa.pub</code> 私钥和公钥, 将公钥配置到需要的代码平台</p><p>生成SSH key</p><h3 id="本地配置多个ssh-key"><a href="#本地配置多个ssh-key" class="headerlink" title="本地配置多个ssh key"></a>本地配置多个ssh key</h3><ul><li><p>1、为公司生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br></pre></td></tr></table></figure></li><li><p>2、为github生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  ssh-keygen -t rsa -C <span class="string">'yourEmail2@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 3、在~/.ssh目录下新建名称为`</span>config<span class="string">`的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  # gitlab</span><br><span class="line">  Host gitlab.planetmeican.com</span><br><span class="line">      HostName gitlab.planetmeican.com</span><br><span class="line">      Port <span class="number">2345</span></span><br><span class="line">      User git</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br><span class="line">  # github</span><br><span class="line">  Host github.com</span><br><span class="line">      HostName github.com</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br></pre></td></tr></table></figure></li></ul><h1 id="配置文件参数"><a href="#配置文件参数" class="headerlink" title="配置文件参数"></a>配置文件参数</h1><h1 id="Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"><a href="#Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件" class="headerlink" title="Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"></a>Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</h1><h1 id="port-端口号，一般不需要配置"><a href="#port-端口号，一般不需要配置" class="headerlink" title="port: 端口号，一般不需要配置"></a>port: 端口号，一般不需要配置</h1><h1 id="HostName-要登录主机的主机名"><a href="#HostName-要登录主机的主机名" class="headerlink" title="HostName : 要登录主机的主机名"></a>HostName : 要登录主机的主机名</h1><p>#PreferredAuthentications: 授权验证方式</p><h1 id="User-登录名"><a href="#User-登录名" class="headerlink" title="User : 登录名"></a>User : 登录名</h1><h1 id="IdentityFile-指明上面User对应的identityFile路径"><a href="#IdentityFile-指明上面User对应的identityFile路径" class="headerlink" title="IdentityFile : 指明上面User对应的identityFile路径"></a>IdentityFile : 指明上面User对应的identityFile路径</h1><p><code>`</code></p><ul><li>4、分别往gitlab和github上添加生成的公钥</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: 同一台电脑配置多个SSH&lt;br&gt;date: 2019-07-31&lt;br&gt;tags: ‘倒腾’&lt;br&gt;categories:  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;git  &lt;/li&gt;
-&lt;li&gt;skill  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;配
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
-    <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
-    <published>2019-07-29T15:17:01.159Z</published>
-    <updated>2019-07-31T05:53:43.890Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>title: react-redux中Provider、connect<br>date: 2019-07-29<br>tags: ‘倒腾’  </p><h2 id="categories-redux"><a href="#categories-redux" class="headerlink" title="categories: redux  "></a>categories: redux  </h2><h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="配置多个SSH"><a href="#配置多个SSH" class="headerlink" title="配置多个SSH"></a>配置多个SSH</h2><p>在工作中多访问公司的gitlab仓库，而在生活中又有自己的gayhub仓库<br>记录一下方便日后查找</p><hr><p>一般电脑中的SSH key 存放在 <code>～/.ssh</code>目录中 如果有配置过的话存在 <code>id_rsa</code> \ <code>id_rsa.pub</code> 私钥和公钥, 将公钥配置到需要的代码平台</p><p>生成SSH key</p><h3 id="本地配置多个ssh-key"><a href="#本地配置多个ssh-key" class="headerlink" title="本地配置多个ssh key"></a>本地配置多个ssh key</h3><ul><li><p>1、为公司生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br></pre></td></tr></table></figure></li><li><p>2、为github生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  ssh-keygen -t rsa -C <span class="string">'yourEmail2@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 3、在~/.ssh目录下新建名称为`</span>config<span class="string">`的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  # gitlab</span><br><span class="line">  Host gitlab.planetmeican.com</span><br><span class="line">      HostName gitlab.planetmeican.com</span><br><span class="line">      Port <span class="number">2345</span></span><br><span class="line">      User git</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br><span class="line">  # github</span><br><span class="line">  Host github.com</span><br><span class="line">      HostName github.com</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br></pre></td></tr></table></figure></li></ul><h1 id="配置文件参数"><a href="#配置文件参数" class="headerlink" title="配置文件参数"></a>配置文件参数</h1><h1 id="Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"><a href="#Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件" class="headerlink" title="Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"></a>Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</h1><h1 id="port-端口号，一般不需要配置"><a href="#port-端口号，一般不需要配置" class="headerlink" title="port: 端口号，一般不需要配置"></a>port: 端口号，一般不需要配置</h1><h1 id="HostName-要登录主机的主机名"><a href="#HostName-要登录主机的主机名" class="headerlink" title="HostName : 要登录主机的主机名"></a>HostName : 要登录主机的主机名</h1><p>#PreferredAuthentications: 授权验证方式</p><h1 id="User-登录名"><a href="#User-登录名" class="headerlink" title="User : 登录名"></a>User : 登录名</h1><h1 id="IdentityFile-指明上面User对应的identityFile路径"><a href="#IdentityFile-指明上面User对应的identityFile路径" class="headerlink" title="IdentityFile : 指明上面User对应的identityFile路径"></a>IdentityFile : 指明上面User对应的identityFile路径</h1><p><code>`</code></p><ul><li>4、分别往gitlab和github上添加生成的公钥</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;p&gt;title: react-redux中Provider、connect&lt;br&gt;date: 2019-07-29&lt;br&gt;tags: ‘倒腾’  &lt;/p&gt;
-&lt;h2 id=&quot;categories-redux&quot;&gt;&lt;a href=&quot;#categories-redux&quot; cl
+        &lt;h2 id=&quot;配置多个SSH&quot;&gt;&lt;a href=&quot;#配置多个SSH&quot; class=&quot;headerlink&quot; title=&quot;配置多个SSH&quot;&gt;&lt;/a&gt;配置多个SSH&lt;/h2&gt;&lt;p&gt;在工作中多访问公司的gitlab仓库，而在生活中又有自己的gayhub仓库&lt;br&gt;记录一下方便日后查
       
     
     </summary>
     
+      <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/29/gitNote/"/>
-    <id>http://yoursite.com/2019/07/29/gitNote/</id>
-    <published>2019-07-29T08:14:01.741Z</published>
-    <updated>2019-08-03T08:52:06.082Z</updated>
+      <category term="Skill" scheme="http://yoursite.com/categories/Git/Skill/"/>
     
-    <content type="html"><![CDATA[<hr><p>title: Git 笔记<br>date: 2019-07-28<br>tags: ‘git’<br>categories:</p><ul><li>Skill</li><li>Note</li><li>Git</li></ul><hr><h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><ul><li>本地分支重命名</li></ul><p>git branch -m old new</p><ul><li><p>git checkout的用法</p><p>git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态<br>git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支<br>git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖<br>git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针）<br>  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</p><p><a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p></li><li><p>撤回 add/commit</p><ul><li><p>将add到暂存区后的提交撤回<br>git reset head 文件名</p></li><li><p>修改commit标注<br>commit -m “aaaa” // 提交一个commit<br>git commit –amend =&gt; 开启vim编辑器 编辑后保存退出</p></li><li>撤回commit<br>git reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改<br>git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</li></ul></li><li><p>添加/删除远程分支</p><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><p>git push origin 本地分支名:远程分支名</p><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支<br>$ git push origin test:test           // 提交本地test分支作为远程的test分支<br>//好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。<br>git push origin :远程分支名(你要删除的远程分支名)</p></li></ul></li></ul>]]></content>
     
-    <summary type="html">
+      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
     
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: Git 笔记&lt;br&gt;date: 2019-07-28&lt;br&gt;tags: ‘git’&lt;br&gt;categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Skill&lt;/li&gt;
-&lt;li&gt;Note&lt;/li&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id
-      
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
-    </summary>
-    
+      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
     
   </entry>
   
@@ -246,6 +169,91 @@
     
     
       <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-redux中Provider、connect</title>
+    <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
+    <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:45:33.792Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    
+      <category term="Note" scheme="http://yoursite.com/categories/React/Note/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NPM 参数</title>
+    <link href="http://yoursite.com/2019/07/29/npmParams/"/>
+    <id>http://yoursite.com/2019/07/29/npmParams/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:43:44.955Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
+      
+    
+    </summary>
+    
+      <category term="Skill" scheme="http://yoursite.com/categories/Skill/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 笔记</title>
+    <link href="http://yoursite.com/2019/07/28/gitNote/"/>
+    <id>http://yoursite.com/2019/07/28/gitNote/</id>
+    <published>2019-07-27T16:00:00.000Z</published>
+    <updated>2019-08-03T09:19:28.276Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><ul><li>本地分支重命名</li></ul><p>git branch -m old new</p><ul><li><p>git checkout的用法</p><p>git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态<br>git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支<br>git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖<br>git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针）<br>  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</p><p><a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p></li><li><p>撤回 add/commit</p><ul><li><p>将add到暂存区后的提交撤回<br>git reset head 文件名</p></li><li><p>修改commit标注<br>commit -m “aaaa” // 提交一个commit<br>git commit –amend =&gt; 开启vim编辑器 编辑后保存退出</p></li><li>撤回commit<br>git reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改<br>git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</li></ul></li><li><p>添加/删除远程分支</p><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><p>git push origin 本地分支名:远程分支名</p><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支<br>$ git push origin test:test           // 提交本地test分支作为远程的test分支<br>//好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。<br>git push origin :远程分支名(你要删除的远程分支名)</p></li></ul></li><li><p>git reflog<br>可以显示已删除的操作</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Git-常用的命令笔记&quot;&gt;&lt;a href=&quot;#Git-常用的命令笔记&quot; class=&quot;headerlink&quot; title=&quot;Git 常用的命令笔记&quot;&gt;&lt;/a&gt;Git 常用的命令笔记&lt;/h2&gt;&lt;p&gt;Commitizen是一个撰写合格 Commit message 的
+      
+    
+    </summary>
+    
+      <category term="Skill" scheme="http://yoursite.com/categories/Skill/"/>
+    
+      <category term="Note" scheme="http://yoursite.com/categories/Skill/Note/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/categories/Skill/Note/Git/"/>
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
@@ -301,20 +309,20 @@
   </entry>
   
   <entry>
-    <title>RegExp(正则表达式)</title>
+    <title>RegExp 正则表达式</title>
     <link href="http://yoursite.com/2018/07/18/regExp/"/>
     <id>http://yoursite.com/2018/07/18/regExp/</id>
     <published>2018-07-18T01:47:21.000Z</published>
-    <updated>2019-08-03T08:56:00.401Z</updated>
+    <updated>2019-08-03T09:40:57.089Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="RegRxp-正则表达式"><a href="#RegRxp-正则表达式" class="headerlink" title="RegRxp(正则表达式)"></a>RegRxp(正则表达式)</h1><blockquote><p>简化对字符串的操作<br>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等</p></blockquote><h2 id="什么是正则？"><a href="#什么是正则？" class="headerlink" title="什么是正则？"></a>什么是正则？</h2><p>规则、模式; 强大的字符串匹配的工具  </p><ul><li><p>风格<br>js风格: const reg = new RegExp(‘a’, i)<br>perl风格: const reg = /a/i  </p></li><li><p>转义字符  </p><p>|    转义字符    | 说明 |<br>| ———- | — |<br>| \d |  数字 [0-9]|<br>|\|斜杠 |<br>|\n|换行 |<br>|\w|英文 数字 下划线 [a-z0-9_]|<br>|\s|空格|<br>|\D|除了数字 [^0-9]|<br>|\W|非数字 字母 下划线 [^z-a0-9_]|<br>|\S|非空白字符|</p></li></ul><ul><li><p>特殊字符(元字符)  </p><ul><li><p>[] 方括号   </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  [abc] 表示a或者b或者c </span></span><br><span class="line"><span class="keyword">const</span> re = <span class="regexp">/[abc]pc/g</span></span><br><span class="line"><span class="comment">// 范围匹配</span></span><br><span class="line">[a-z] [<span class="number">0</span><span class="number">-9</span>] </span><br><span class="line">[^a-z]  <span class="comment">// 匹配非英文部分</span></span><br></pre></td></tr></table></figure></li></ul></li><li><p>限定符(量词)  </p><ul><li><p>基本形式： {n}表示出现的次数  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 8位电话号码  </span><br><span class="line">/[1-9]\d&#123;7&#125;/        // 以非零数字开头后面八位随意</span><br></pre></td></tr></table></figure></li><li><p>表示出现次数范围： {n, m}  表示出现最少n次 最多m次  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// QQ 正则</span><br><span class="line">/[1-9]\d&#123;4, 10&#125;/</span><br><span class="line">```  </span><br><span class="line">- 不限次数：&#123;n, &#125; 表示最少n次， 最多不限  </span><br><span class="line">. 任意字符</span><br><span class="line">*:  =&gt; &#123;0, &#125; 任意次</span><br><span class="line">+: 若干 =&gt; &#123;1, &#125; 最少一次 最多不限   </span><br><span class="line">?: 最少零次 最多一次 =&gt; &#123;0, 1&#125;    </span><br><span class="line">^: 行首  </span><br><span class="line">$: 行尾</span><br></pre></td></tr></table></figure><p>固话区号  010-2473544<br>(0\d{2,3}-)?[1-9]\d{7}</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- 方法  </span><br><span class="line"></span><br><span class="line">  - search  返回匹配的位置</span><br><span class="line">  - match 把所有匹配的东西都提取出来  </span><br><span class="line">  - replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串  </span><br><span class="line">  - test   检验字符串是否符合正则 返回Boolean </span><br><span class="line">    &gt; 特性 只要字符串一部分符合要求就返回true</span><br><span class="line">    ```js</span><br><span class="line">      // 校验邮箱</span><br><span class="line">      const email = &apos;你好啊heiliu@Gmail.com&apos;</span><br><span class="line">      const re = /\w+@[a-z0-9]+\.[a-z]+/</span><br><span class="line">      re.test(email)  // 后半部分符合 返回 true  </span><br><span class="line"></span><br><span class="line">      const re1 = /^\w+@[a-z0-9]+\.[a-z]+$/ // 限制首尾</span><br></pre></td></tr></table></figure></li></ul></li></ul><h2 id="应用例子"><a href="#应用例子" class="headerlink" title="应用例子"></a>应用例子</h2><ul><li>查找字符串中的数字并返回  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//  查找字符串中的数字  </span></span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'123ask32lks,alf21lksa12e45l3'</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/\d+/g</span>    <span class="comment">// global</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.match(reg))</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">- 敏感词过滤  </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  <span class="comment">// replace 的用例</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/匹配|出来/</span>;</span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'把所有匹配的东西都提取出来 '</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.replace(reg, <span class="string">'***'</span>))  <span class="comment">// 把所有***的东西都提取***</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="RegRxp-正则表达式"><a href="#RegRxp-正则表达式" class="headerlink" title="RegRxp(正则表达式)"></a>RegRxp(正则表达式)</h1><blockquote><p>简化对字符串的操作  </p></blockquote><p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等</p><h2 id="什么是正则？"><a href="#什么是正则？" class="headerlink" title="什么是正则？"></a>什么是正则？</h2><p>规则、模式; 强大的字符串匹配的工具  </p><ul><li><p>风格<br>js风格: const reg = new RegExp(‘a’, i)<br>perl风格: const reg = /a/i  </p></li><li><p>转义字符  </p><p>|    转义字符    | 说明 |<br>| ———- | — |<br>| \d |  数字 [0-9]|<br>|\|斜杠 |<br>|\n|换行 |<br>|\w|英文 数字 下划线 [a-z0-9_]|<br>|\s|空格|<br>|\D|除了数字 [^0-9]|<br>|\W|非数字 字母 下划线 [^z-a0-9_]|<br>|\S|非空白字符|</p></li></ul><ul><li><p>特殊字符(元字符)  </p><ul><li><p>[] 方括号   </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//  [abc] 表示a或者b或者c </span></span><br><span class="line"><span class="keyword">const</span> re = <span class="regexp">/[abc]pc/g</span></span><br><span class="line"><span class="comment">// 范围匹配</span></span><br><span class="line">[a-z] [<span class="number">0</span><span class="number">-9</span>] </span><br><span class="line">[^a-z]  <span class="comment">// 匹配非英文部分</span></span><br></pre></td></tr></table></figure></li></ul></li><li><p>限定符(量词)  </p><ul><li>基本形式： {n}表示出现的次数  </li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 8位电话号码  </span><br><span class="line">/[1-9]\d&#123;7&#125;/        // 以非零数字开头后面八位随意</span><br></pre></td></tr></table></figure><ul><li><p>表示出现次数范围： {n, m}  表示出现最少n次 最多m次  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">      /[<span class="number">1</span><span class="number">-9</span>]\d&#123;<span class="number">4</span>, <span class="number">10</span>&#125;/  <span class="comment">// QQ 正则</span></span><br><span class="line">    <span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  - 不限次数：&#123;n, &#125; 表示最少n次， 最多不限  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    . 任意字符  </span></span><br><span class="line"><span class="string">    *:  =&gt; &#123;0, &#125; 任意次  </span></span><br><span class="line"><span class="string">    +: 若干 =&gt; &#123;1, &#125; 最少一次 最多不限  </span></span><br><span class="line"><span class="string">    ?: 最少零次 最多一次 =&gt; &#123;0, 1&#125;  </span></span><br><span class="line"><span class="string">    ^: 行首  </span></span><br><span class="line"><span class="string">    $: 行尾  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br><span class="line">    (<span class="number">0</span>\d&#123;<span class="number">2</span>,<span class="number">3</span>&#125;-)?[<span class="number">1</span><span class="number">-9</span>]\d&#123;<span class="number">7</span>&#125;  <span class="comment">// 固话区号  010-2473544</span></span><br><span class="line">  <span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 方法  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  - search  返回匹配的位置</span></span><br><span class="line"><span class="string">  - match 把所有匹配的东西都提取出来  </span></span><br><span class="line"><span class="string">  - replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串  </span></span><br><span class="line"><span class="string">  - test   检验字符串是否符合正则 返回Boolean </span></span><br><span class="line"><span class="string">    &gt; 特性 只要字符串一部分符合要求就返回true  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    `</span><span class="string">``</span>js</span><br><span class="line">      <span class="comment">// 校验邮箱</span></span><br><span class="line">      <span class="keyword">const</span> email = <span class="string">'你好啊heiliu@Gmail.com'</span></span><br><span class="line">      <span class="keyword">const</span> re = <span class="regexp">/\w+@[a-z0-9]+\.[a-z]+/</span></span><br><span class="line">      re.test(email)  <span class="comment">// 后半部分符合 返回 true  </span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">const</span> re1 = <span class="regexp">/^\w+@[a-z0-9]+\.[a-z]+$/</span> <span class="comment">// 限制首尾</span></span><br></pre></td></tr></table></figure></li></ul></li></ul><h2 id="应用例子"><a href="#应用例子" class="headerlink" title="应用例子"></a>应用例子</h2><ul><li>查找字符串中的数字并返回  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//  查找字符串中的数字  </span></span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'123ask32lks,alf21lksa12e45l3'</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/\d+/g</span>    <span class="comment">// global</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.match(reg))</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">- 敏感词过滤  </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  <span class="comment">// replace 的用例</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/匹配|出来/</span>;</span><br><span class="line">  <span class="keyword">const</span> str = <span class="string">'把所有匹配的东西都提取出来 '</span></span><br><span class="line">  <span class="built_in">console</span>.log(str.replace(reg, <span class="string">'***'</span>))  <span class="comment">// 把所有***的东西都提取***</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h1 id=&quot;RegRxp-正则表达式&quot;&gt;&lt;a href=&quot;#RegRxp-正则表达式&quot; class=&quot;headerlink&quot; title=&quot;RegRxp(正则表达式)&quot;&gt;&lt;/a&gt;RegRxp(正则表达式)&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;简化对字符串的操作&lt;br&gt;正则
+&lt;p&gt;简化对字符串的操作  &lt;/p&gt;
       
     
     </summary>
@@ -519,29 +527,29 @@
   </entry>
   
   <entry>
-    <title>javascript函数</title>
-    <link href="http://yoursite.com/2018/05/09/function_note/"/>
-    <id>http://yoursite.com/2018/05/09/function_note/</id>
+    <title>让div在屏幕上居中（水平居中+垂直居中）的方法总结</title>
+    <link href="http://yoursite.com/2018/05/09/cssCenter/"/>
+    <id>http://yoursite.com/2018/05/09/cssCenter/</id>
     <published>2018-05-09T15:33:46.000Z</published>
     <updated>2018-05-09T15:33:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><hr><p>函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。  </p><h3 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h3><p>JavaScript 中的函数就是对象。函数对象连接到<code>Function.prototype</code>（该原型对象本身连接到<code>Object.prototype</code>）。每个函数对象在创建时会附加两个隐藏属性：<code>函数的上下文</code>和<code>实现函数行为的代码</code>。</p><p>函数对象在创建时也随配有一个<code>prototype</code>属性。它的值是一个拥有constructor属性且值即为该函数对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">函数的与众不同之处在于可以被调用。  </span></span><br><span class="line"><span class="string">### 函数字面量  </span></span><br><span class="line"><span class="string">函数对象通过函数字面量来创建。</span></span><br><span class="line"><span class="string">函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">    <span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b</span><br><span class="line">    &#125;  </span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">### 调用  </span></span><br><span class="line"><span class="string">调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，还有两个附加参数：`</span><span class="keyword">this</span><span class="string">`和`</span><span class="built_in">arguments</span><span class="string">`。参数this在面向对象编程中非常重要，它的值取决于调用的模式。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">实参和形参个数不匹配时，不会有运行时错误。实参过多时，超出的实参被忽略。形参过多时，缺失的值被替换为undefined。  </span></span><br><span class="line"><span class="string">- 方法调用模式  </span></span><br><span class="line"><span class="string">    当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，`</span><span class="keyword">this</span>被绑定到该对象<span class="string">`,通过this可以对该对象的属性和方法进行调用和操作。  </span></span><br><span class="line"><span class="string">    `</span><span class="string">``</span>js</span><br><span class="line">    <span class="keyword">var</span> myObject = &#123;</span><br><span class="line">        text: hello,</span><br><span class="line">        say:<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.text + msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    myObject.say(world);</span><br></pre></td></tr></table></figure></p><ul><li>函数调用模式<br>当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。<br>此时this被绑定到全局对象。即时是内部函数也会将this绑定到全局对象。this的指向问题 作用域不一样 this的指向就不一样,可以在函数内创建一个属性并赋值为this来解决这个问题,一般通过<code>var that = this</code>;  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myObject.double = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        that.value = add(that.value, that.value)</span><br><span class="line">    &#125;</span><br><span class="line">    helper()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myObject.double()</span><br><span class="line"><span class="built_in">console</span>.log(myObject.value) <span class="comment">//8</span></span><br></pre></td></tr></table></figure></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">    attachEvent: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// attachEvent函数的作用域</span></span><br><span class="line">    <span class="comment">// js 里面this总会指向什么</span></span><br><span class="line">    <span class="comment">// 对象的方法被执行时 this指向对象</span></span><br><span class="line">    <span class="comment">// console.log(this);</span></span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.staticElement.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 这个函数被执行时，并不是对象的方法，而是匿名函数，作为事件处理函数来执行，this会指向事件发生元素</span></span><br><span class="line">        <span class="comment">// this的指向跟函数的调用方式有关</span></span><br><span class="line">        <span class="comment">// this的指向问题 作用域不一样 this的指向就不一样</span></span><br><span class="line">        <span class="comment">// 作用域 事件的回调函数</span></span><br><span class="line">        <span class="comment">// console.log(this);</span></span><br><span class="line">        <span class="comment">// alert(that.value);</span></span><br><span class="line">        that.convertToEdit();</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">this</span>.filedElement.addEventListener(<span class="string">'keydown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 在事件发生的一刹那 会产生一个临时事件对象</span></span><br><span class="line">        <span class="built_in">console</span>.log(evt);</span><br><span class="line">        <span class="keyword">if</span> (evt.keyCode == <span class="number">13</span>) &#123;</span><br><span class="line">            that.staticElement.innerHTML = <span class="keyword">this</span>.value;</span><br><span class="line">            <span class="built_in">console</span>.log(that.staticElement.innerHTML);</span><br><span class="line">            that.convertToText();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>构造器调用模式<br>JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。<br>如果在一个函数前面带上new来调用，那么背地里将会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到那个新对象上。  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建构造器函数</span></span><br><span class="line"><span class="keyword">var</span> Quo = <span class="function"><span class="keyword">function</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.status = string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//给Que的所有实例提供一个公共方法</span></span><br><span class="line">Quo.prototype.getStatus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.status</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化</span></span><br><span class="line"><span class="keyword">var</span> myQuo = <span class="keyword">new</span> Quo(<span class="string">'confused'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myQuo.getStatus()) <span class="comment">//confused</span></span><br></pre></td></tr></table></figure></li><li><p>Apply 调用模式<br><code>apply</code>方法让我们构建一个参数数组传递给调用函数。他也允许我们选择<code>this</code>的值。apply方法接受两个参数，第一个是要绑定给<code>this</code>的值，第二个是参数数组。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">        <span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">        <span class="keyword">var</span> sum = add.apply(<span class="literal">null</span>, arr)</span><br><span class="line">        <span class="built_in">console</span>.log(sum) <span class="comment">//7</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> statusObject = &#123;</span><br><span class="line">            status: <span class="string">'hello'</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> status = Quo.prototype.getStatus.apply(statusObject)</span><br><span class="line">        <span class="built_in">console</span>.log(status) <span class="comment">//hello</span></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### 参数  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">当函数被调用时，会得到一个`</span><span class="built_in">arguments</span><span class="string">`数组。通过此参数可以访问所有它被调用时传递给它的`</span>参数列表<span class="string">`，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js    </span><br><span class="line"> <span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> i, sum = <span class="number">0</span></span><br><span class="line">     <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">         sum += <span class="built_in">arguments</span>[i]</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> sum</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>)<span class="comment">//45</span></span><br></pre></td></tr></table></figure></li></ul><p>因语言的设计错误，<code>arguments</code>并不是一个真正的数组。是一个“类似数组”的对象。有<code>length</code>属性，但没有任何数组的方法。</p><h3 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h3><p>函数执行时遇到关闭函数体的<code>}</code>时结束。然后把控制权交还给调用该函数的程序。</p><p><code>return</code>可以使函数提前返回，当return语句执行时函数立即返回不在执行余下的语句。</p><p>函数总是会返回一个值，若没有指定，则返回<code>undefined</code>。</p><p>若函数调用时在前面加上了<code>new</code>前缀，且返回值不是一个对象的时候，则返回<code>this</code>（该新对象）。  </p><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了<code>this</code>和<code>arguments</code>）。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> quo = <span class="function"><span class="keyword">function</span>(<span class="params">status</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        get_status: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> status;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myQuo = quo(<span class="string">'amazed'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(myQuo.get_status()) <span class="comment">//amazed</span></span><br></pre></td></tr></table></figure></p><p>狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。<code>status</code>访问的就说<code>对象中的status</code>属性本身,通过闭包可以让一个局部变量驻留在内存中</p><p>避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前i值的函数，这样就不会导致混淆了。  </p><h3 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h3><p>将一个函数作为参数，一旦接收到响应，再调用这个函数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> fs.readFile(<span class="string">'demo/02.js'</span>,<span class="string">'utf8'</span>,(error,data)=&gt;&#123;</span><br><span class="line"> <span class="keyword">if</span>(error) <span class="keyword">throw</span> error;</span><br><span class="line"> <span class="comment">//在异步中的错误不能被捕获 通过throw error进行错误的捕获</span></span><br><span class="line"> <span class="built_in">console</span>.log(data) &gt;&gt;a.txt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>可以用函数和闭包构造模块。模块是一个提供接口却隐藏与实现的函数或者对象</p><p>模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numberCal = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> half = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n / <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> double = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n * <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> tribble = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n * <span class="number">3</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        half: half,</span><br><span class="line">        double: double,</span><br><span class="line">        tribble: tribble</span><br><span class="line">    &#125;</span><br><span class="line">&#125;())</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.half(<span class="number">5</span>)) <span class="comment">//2.5</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.half(<span class="number">6</span>)) <span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.double(<span class="number">7</span>)) <span class="comment">//14</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.tribble(<span class="number">7</span>)) <span class="comment">//21</span></span><br></pre></td></tr></table></figure></p><h3 id="级联"><a href="#级联" class="headerlink" title="级联"></a>级联</h3><p>如果让方法返回this而不是默认的undefined，就可以启用级联，即连续调用。</p><h3 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h3><p>函数可以将先前操作的结果记录在某个对象或者数组里，从而避免无谓的重复运算。这种优化被称为记忆（memoization）。</p>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>html代码如下：</p><pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"book"</span>&gt;</span>        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"front-cover"</span>&gt;</span>        <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></code></pre></li><li><p>Css居中方法 （敲黑板）重点  </p><ul><li><p>首先将元素设置成为<code>绝对定位</code>，然后<code>距顶部和左各50%</code>，此时的元素还不是居中的，因此需要<code>通过一定的偏移</code>将其移到理想位置，两种方法的<code>主要思想</code>都是一样的，第一种通过margin-left和margin-top<code>移动元素自身宽高的一半</code>，另一种通过<code>css3</code>的属性transform的<code>translate方法</code>平移元素自身宽高的一半， 代码展示如下：  </p><pre><code class="css"><span class="selector-tag">body</span> {  <span class="attribute">color</span>: <span class="number">#ffffff</span>;  <span class="attribute">background</span>: <span class="number">#444444</span>;}<span class="selector-class">.book</span> {  <span class="attribute">width</span>: <span class="number">300px</span>;  <span class="attribute">height</span>: <span class="number">300px</span>;  <span class="attribute">position</span>: absolute;  <span class="attribute">top</span>: <span class="number">50%</span>;  <span class="attribute">left</span>: <span class="number">50%</span>;  <span class="comment">/* 第一种 */</span>  <span class="comment">/* 兼容性 未使用css3, ie678 */</span>  <span class="comment">/* margin-left: -150px; */</span>  <span class="comment">/* margin-top: -150px; */</span>  <span class="comment">/*第二种*/</span>  <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(-50%, -50%);  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);}</code></pre><p>两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好</p></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。  &lt;/p&gt;
-&lt;h3 id=&quot;函数对象&quot;&gt;&lt;a h
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;html代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span 
       
     
     </summary>
     
-      <category term="js语言精粹" scheme="http://yoursite.com/categories/js%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="Css" scheme="http://yoursite.com/tags/Css/"/>
     
   </entry>
   

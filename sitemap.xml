@@ -2,30 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/07/18/regExp/</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     
-    <lastmod>2019-08-03T08:56:00.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/29/gitNote/</loc>
-    
-    <lastmod>2019-08-03T08:52:06.082Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/08/01/npmParams/</loc>
-    
-    <lastmod>2019-08-01T03:06:46.742Z</lastmod>
+    <lastmod>2019-08-03T09:46:10.187Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/07/29/provider&&connect/</loc>
     
-    <lastmod>2019-07-31T05:53:43.890Z</lastmod>
+    <lastmod>2019-08-03T09:45:33.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/29/npmParams/</loc>
+    
+    <lastmod>2019-08-03T09:43:44.955Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/18/regExp/</loc>
+    
+    <lastmod>2019-08-03T09:40:57.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/25/next_install/</loc>
+    
+    <lastmod>2019-08-03T09:23:39.736Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/31/multiSSH/</loc>
+    
+    <lastmod>2019-08-03T09:21:30.877Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/07/28/gitNote/</loc>
+    
+    <lastmod>2019-08-03T09:19:28.276Z</lastmod>
     
   </url>
   
@@ -40,13 +61,6 @@
     <loc>http://yoursite.com/2019/07/29/serverless/</loc>
     
     <lastmod>2019-07-31T05:41:00.565Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/31/multiSSH/</loc>
-    
-    <lastmod>2019-07-31T05:40:22.525Z</lastmod>
     
   </url>
   
@@ -170,21 +184,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/09/next_install/</loc>
+    <loc>http://yoursite.com/2018/04/19/hexo/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -198,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/19/hexo/</loc>
+    <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -219,21 +226,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -247,7 +240,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
