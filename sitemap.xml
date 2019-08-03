@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
+    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/function_note/</loc>
+    <loc>http://yoursite.com/2018/04/19/hexo/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -212,14 +212,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/09/URL/</loc>
+    <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -233,6 +226,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2018/05/09/URL/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/19/hexo/</loc>
+    <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2018/05/09/function_note/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
