@@ -144,31 +144,6 @@
   </entry>
   
   <entry>
-    <title>serverless了解</title>
-    <link href="http://yoursite.com/2019/07/29/serverless/"/>
-    <id>http://yoursite.com/2019/07/29/serverless/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-07-31T05:41:00.565Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="serverless了解"><a href="#serverless了解" class="headerlink" title="serverless了解"></a>serverless了解</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;serverless了解&quot;&gt;&lt;a href=&quot;#serverless了解&quot; class=&quot;headerlink&quot; title=&quot;serverless了解&quot;&gt;&lt;/a&gt;serverless了解&lt;/h2&gt;
-      
-    
-    </summary>
-    
-      <category term="server" scheme="http://yoursite.com/categories/server/"/>
-    
-    
-      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>react-redux中Provider、connect</title>
     <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
     <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
@@ -221,6 +196,31 @@
     
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>serverless了解</title>
+    <link href="http://yoursite.com/2019/07/29/serverless/"/>
+    <id>http://yoursite.com/2019/07/29/serverless/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-07-31T05:41:00.565Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="serverless了解"><a href="#serverless了解" class="headerlink" title="serverless了解"></a>serverless了解</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;serverless了解&quot;&gt;&lt;a href=&quot;#serverless了解&quot; class=&quot;headerlink&quot; title=&quot;serverless了解&quot;&gt;&lt;/a&gt;serverless了解&lt;/h2&gt;
+      
+    
+    </summary>
+    
+      <category term="server" scheme="http://yoursite.com/categories/server/"/>
+    
+    
+      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   
@@ -523,28 +523,25 @@
   </entry>
   
   <entry>
-    <title>stylus之变量与mixin</title>
-    <link href="http://yoursite.com/2018/05/09/mixin/"/>
-    <id>http://yoursite.com/2018/05/09/mixin/</id>
+    <title></title>
+    <link href="http://yoursite.com/2018/05/09/URL/"/>
+    <id>http://yoursite.com/2018/05/09/URL/</id>
     <published>2018-05-09T15:33:46.000Z</published>
-    <updated>2019-07-31T05:33:42.647Z</updated>
+    <updated>2018-05-09T15:33:46.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="混合书写-Mixins"><a href="#混合书写-Mixins" class="headerlink" title="混合书写(Mixins)"></a>混合书写(Mixins)</h2><hr><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul><li><p>在<code>stylus</code>中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*进行变量的声明*/</span></span><br><span class="line">bg_color = #123456;</span><br><span class="line">box_size = 100px;</span><br><span class="line"><span class="comment">/* 使用 */</span></span><br><span class="line"><span class="selector-class">.box</span></span><br><span class="line">    <span class="selector-tag">background-color</span> <span class="selector-tag">bg_color</span></span><br><span class="line">    <span class="selector-tag">width</span> <span class="selector-tag">box_size</span></span><br><span class="line">    <span class="selector-tag">height</span> <span class="selector-tag">box_size</span></span><br></pre></td></tr></table></figure><p>  编译后：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">   <span class="attribute">background-color</span>: <span class="number">#123456</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li><li><p>属性查找<br>Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#logo</span></span><br><span class="line">    <span class="selector-tag">position</span>: <span class="selector-tag">absolute</span></span><br><span class="line">    <span class="selector-tag">top</span>: 50%</span><br><span class="line">    <span class="selector-tag">left</span>: 50%</span><br><span class="line">    width: w = 150px</span><br><span class="line">    height: h = 80px</span><br><span class="line">    margin-left: -(w / 2)</span><br><span class="line">    margin-top: -(h / 2)</span><br></pre></td></tr></table></figure></li></ul><p>在<code>stylus</code>中可以不使用这里的变量w和h, 而是简单地前置<code>@</code>字符在属性名前来访问该属性名对应的值：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#logo</span></span><br><span class="line">    <span class="selector-tag">position</span>: <span class="selector-tag">absolute</span></span><br><span class="line">    <span class="selector-tag">top</span>: 50%</span><br><span class="line">    <span class="selector-tag">left</span>: 50%</span><br><span class="line">    <span class="selector-tag">width</span>: 150<span class="selector-tag">px</span></span><br><span class="line">    <span class="selector-tag">height</span>: 80<span class="selector-tag">px</span></span><br><span class="line">    <span class="selector-tag">margin-left</span>: <span class="selector-tag">-</span>(@<span class="keyword">width</span> / <span class="number">2</span>)</span><br><span class="line">    margin-top: -(@height / <span class="number">2</span>)</span><br></pre></td></tr></table></figure></p><h3 id="混合书写"><a href="#混合书写" class="headerlink" title="混合书写"></a>混合书写</h3><ul><li>混合书写和函数定义方法一致，但是应用却大相径庭。</li></ul><p>例如，在书写<code>Css3</code>样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">    bg_color = #123456;</span><br><span class="line">    box_size = 100px;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*定义mixin*/</span></span><br><span class="line">    <span class="selector-tag">border-radius</span>(<span class="selector-tag">n</span>)</span><br><span class="line">        <span class="selector-tag">-webkit-border-radius</span> <span class="selector-tag">n</span></span><br><span class="line">        <span class="selector-tag">-moz-border-radius</span> <span class="selector-tag">n</span></span><br><span class="line">        <span class="selector-tag">-ms-border-radius</span> <span class="selector-tag">n</span></span><br><span class="line">        <span class="selector-tag">-o-border-radius</span> <span class="selector-tag">n</span></span><br><span class="line">        <span class="selector-tag">border-radius</span> <span class="selector-tag">n</span></span><br><span class="line">    <span class="selector-class">.box</span></span><br><span class="line">        <span class="selector-tag">background-color</span> <span class="selector-tag">bg_color</span></span><br><span class="line">        <span class="selector-tag">width</span> <span class="selector-tag">box_size</span></span><br><span class="line">        <span class="selector-tag">height</span> <span class="selector-tag">box_size</span></span><br><span class="line">        <span class="selector-tag">border-radius</span>(5<span class="selector-tag">px</span>)</span><br><span class="line">```  </span><br><span class="line">进一步，我们可以利用<span class="selector-tag">arguments</span>这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。  </span><br><span class="line">```<span class="selector-tag">css</span></span><br><span class="line"><span class="selector-tag">border-radius</span>()</span><br><span class="line">        <span class="selector-tag">-webkit-border-radius</span> <span class="selector-tag">arguments</span></span><br><span class="line">        <span class="selector-tag">-moz-border-radius</span> <span class="selector-tag">arguments</span></span><br><span class="line">        <span class="selector-tag">-ms-border-radius</span> <span class="selector-tag">arguments</span></span><br><span class="line">        <span class="selector-tag">-o-border-radius</span> <span class="selector-tag">arguments</span></span><br><span class="line">        <span class="selector-tag">border-radius</span> <span class="selector-tag">arguments</span></span><br></pre></td></tr></table></figure></p><p><code>Stylus</code>支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于<code>-webkit-border-radius</code>. </p><p>再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作):<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-tag">vendor</span>(<span class="selector-tag">prop</span>,<span class="selector-tag">args</span>)</span><br><span class="line">    -webkit-&#123;prop&#125; args</span><br><span class="line">    -moz-&#123;prop&#125; args</span><br><span class="line">    -ms-&#123;prop&#125; args</span><br><span class="line">    -o-&#123;prop&#125; args</span><br><span class="line">    &#123;prop&#125; args</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-radius</span>(<span class="selector-tag">n</span>)</span><br><span class="line">    vendor('border-radius',arguments)</span><br><span class="line"><span class="selector-tag">box-shadow</span>(<span class="selector-tag">n</span>)</span><br><span class="line">    vendor('boa-shadow',arguments)</span><br><span class="line"><span class="selector-class">.box</span></span><br><span class="line">    <span class="selector-tag">background-color</span> <span class="selector-tag">bg_color</span></span><br><span class="line">    <span class="selector-tag">width</span> <span class="selector-tag">box_size</span></span><br><span class="line">    <span class="selector-tag">height</span> <span class="selector-tag">box_size</span></span><br><span class="line">    <span class="selector-tag">border-radius</span>(5<span class="selector-tag">px</span>)</span><br></pre></td></tr></table></figure></p><p> 编译后：<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#123456</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-ms-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-o-border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">  <span class="attribute">-moz-box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">  <span class="attribute">-ms-box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">  <span class="attribute">-o-box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">10px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>title: 输入URL之后<br>date: 2018-05-03<br>tags: ‘’</p><h2 id="categories-前端"><a href="#categories-前端" class="headerlink" title="categories: 前端"></a>categories: <code>前端</code></h2><h3 id="有的研究"><a href="#有的研究" class="headerlink" title="有的研究"></a>有的研究</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;混合书写-Mixins&quot;&gt;&lt;a href=&quot;#混合书写-Mixins&quot; class=&quot;headerlink&quot; title=&quot;混合书写(Mixins)&quot;&gt;&lt;/a&gt;混合书写(Mixins)&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; clas
+        &lt;hr&gt;
+&lt;p&gt;title: 输入URL之后&lt;br&gt;date: 2018-05-03&lt;br&gt;tags: ‘’&lt;/p&gt;
+&lt;h2 id=&quot;categories-前端&quot;&gt;&lt;a href=&quot;#categories-前端&quot; class=&quot;headerlink&quot; title=&quot;categor
       
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Css" scheme="http://yoursite.com/tags/Css/"/>
     
   </entry>
   
