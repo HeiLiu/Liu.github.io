@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/07/18/regExp/</loc>
+    
+    <lastmod>2019-08-05T15:30:14.974Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/05/Array/</loc>
+    
+    <lastmod>2019-08-05T11:55:19.606Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/04/19/hexo/</loc>
     
     <lastmod>2019-08-03T10:45:45.972Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>http://yoursite.com/2019/07/29/npmParams/</loc>
     
     <lastmod>2019-08-03T09:43:44.955Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/07/18/regExp/</loc>
-    
-    <lastmod>2019-08-03T09:40:57.089Z</lastmod>
     
   </url>
   
@@ -156,14 +163,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -191,7 +191,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
+    <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -219,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
+    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
