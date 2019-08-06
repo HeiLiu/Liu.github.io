@@ -71,33 +71,6 @@
   </entry>
   
   <entry>
-    <title>react-redux中Provider、connect</title>
-    <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
-    <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:45:33.792Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
-    
-      <category term="Note" scheme="http://yoursite.com/categories/React/Note/"/>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>serverless了解</title>
     <link href="http://yoursite.com/2019/07/29/serverless/"/>
     <id>http://yoursite.com/2019/07/29/serverless/</id>
@@ -145,6 +118,33 @@
       <category term="前端" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="Node" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-redux中Provider、connect</title>
+    <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
+    <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:45:33.792Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+    
+      <category term="Note" scheme="http://yoursite.com/categories/React/Note/"/>
     
     
       <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>

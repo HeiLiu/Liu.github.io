@@ -25,18 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[react-redux中Provider、connect]]></title>
-    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
-    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
-      <categories>
-        <category>React</category>
-        <category>Note</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[serverless了解]]></title>
     <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
     <content type="text"><![CDATA[serverless了解]]></content>
@@ -55,6 +43,18 @@
         <category>Skill</category>
         <category>前端</category>
         <category>Node</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react-redux中Provider、connect]]></title>
+    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
+    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
+      <categories>
+        <category>React</category>
+        <category>Note</category>
       </categories>
       <tags>
         <tag>前端</tag>
