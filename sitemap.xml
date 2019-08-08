@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/07/28/gitNote/</loc>
+    
+    <lastmod>2019-08-08T10:22:30.245Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/08/05/Array/</loc>
+    
+    <lastmod>2019-08-07T03:04:27.332Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-08-06T03:23:47.232Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://yoursite.com/2018/07/18/regExp/</loc>
     
     <lastmod>2019-08-05T15:30:14.974Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/08/05/Array/</loc>
-    
-    <lastmod>2019-08-05T11:55:19.606Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>http://yoursite.com/2018/04/25/next_install/</loc>
     
     <lastmod>2019-08-03T09:23:39.736Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/07/28/gitNote/</loc>
-    
-    <lastmod>2019-08-03T09:19:28.276Z</lastmod>
     
   </url>
   
@@ -177,35 +177,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/09/URL/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/09/function_note/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -219,14 +191,42 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
+    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
+    <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/09/function_note/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/09/URL/</loc>
+    
+    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     

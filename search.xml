@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[数组]]></title>
     <url>%2F2019%2F08%2F05%2FArray%2F</url>
-    <content type="text"><![CDATA[数组笔记定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。 数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数 123456&lt;!-- 传入一组元素进行数组初始化 --&gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.length); // 5&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 undefined --&gt;var arr1 = new Array(10);print(arr1.length); // 10 通过字面量 [] 创建 123var arr1 = [];var arr2 = [1, 2, 3, 4];print(arr2.length); // 4]]></content>
+    <content type="text"><![CDATA[数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。 数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数 123456&lt;!-- 传入一组元素进行数组初始化 --&gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.length); // 5&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 undefined --&gt;var arr1 = new Array(10);print(arr1.length); // 10 通过字面量 [] 创建 123var arr1 = [];var arr2 = [1, 2, 3, 4];print(arr2.length); // 4 数组方法isArray 存取函数 用来访问数组元素的函数，返回目标数组的某种变体 indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1 lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1 数组的字符串表示 join() toString()12345var names = ["David","Cynthia","Raymond","Clayton","Mike","Jennifer"];var namestr = names.join();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifernamestr = names.toString();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifer 由已有数组创建新的数组 concat() 合并多个数组创建一个新数组splice() 截取一个数组的子集创建一个新数组slice() 使用 splice() 方法为数组添加元素，需提供如下参数：• 起始索引（也就是你希望开始添加元素的地方）；• 需要删除的元素个数（添加元素时该参数设为 0）；• 想要添加进数组的元素。1234var nums = [1,2,3,7,8,9];var newElements = [4,5,6];nums.splice(3,0,newElements);print(nums); // 1,2,3,4,5,6,7,8,9 可变函数 能够改变数组的内容的函数 push() 在末尾添加元素pop() 删除末尾的元素 shift()unshift() 添加元素到数组的开头 reverse() 翻转数组sort()对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：123var names = ["David","Mike","Cynthia","Clayton","Bryan","Raymond"];names.sort();print(names); // Bryan,Clayton,Cynthia,David,Mike,Raymond 但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：1var nums = [3,1,2,100,4,200];nums.sort();print(nums); // 1,100,2,200,3,4sort() 方法是按照字典顺序对元素进行排序的，因此它 假定元素都是字符串类型，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。12345function compare(num1, num2) &#123; return num1 - num2;&#125;var nums = [3,1,2,100,4,200];nums.sort(compare);print(nums); // 1,2,3,4,100,200 sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。 迭代器方法 forEach() every() some() map() filter()]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -36,6 +36,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[react-redux中Provider、connect]]></title>
+    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
+    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
+      <categories>
+        <category>React</category>
+        <category>Note</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[NPM 参数]]></title>
     <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
     <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
@@ -49,21 +61,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[react-redux中Provider、connect]]></title>
-    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
-    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
-      <categories>
-        <category>React</category>
-        <category>Note</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Git 笔记]]></title>
     <url>%2F2019%2F07%2F28%2FgitNote%2F</url>
-    <content type="text"><![CDATA[Git 常用的命令笔记Commitizen是一个撰写合格 Commit message 的工具。 本地分支重命名 git branch -m old new git checkout的用法 git checkout // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支 checkout命令详解参考 撤回 add/commit 将add到暂存区后的提交撤回git reset head 文件名 修改commit标注commit -m “aaaa” // 提交一个commitgit commit –amend =&gt; 开启vim编辑器 编辑后保存退出 撤回commitgit reset –soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改git reset –hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退 添加/删除远程分支 将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支 git push origin 本地分支名:远程分支名 $ git push origin test:master // 提交本地test分支作为远程的master分支$ git push origin test:test // 提交本地test分支作为远程的test分支//好像只写这一句，远程的github就会自动创建一个test分支 如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。git push origin :远程分支名(你要删除的远程分支名) git reflog可以显示已删除的操作]]></content>
+    <content type="text"><![CDATA[Git 常用的命令笔记Commitizen是一个撰写合格 Commit message 的工具。 本地分支重命名git branch -m old new 链接远程仓库123git remote add origin 仓库地址仓库地址：https://git.coding.net/xxxxxxxxxxxxx/my-project.git git push -u orgin master 删除远程仓库1git remote remove origin 修改远程仓库名1git remote set-url origin [] 如下： 1234567891011Project mctDev/cafeteria-supplier-desktop was moved to another locationThe project is now located under cafereria-fe / cafeteria-supplier-desktopTo update the remote url in your local repository run (for ssh):git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.gitor for http(s):git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git git checkout的用法12345git checkout // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支 checkout命令详解参考 撤销本地修改的文件12git checkout [filename] // 撤销某个文件的修改git checkout . // 撤销所有修改的文件 撤回 add/commit将add到暂存区后的提交撤回 git reset head 文件名 修改commit标注12commit -m &quot;aaaa&quot; // 提交一个commitgit commit --amend =&gt; 开启vim编辑器 编辑后保存退出 撤回commit 12git reset --soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改git reset --hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退 拉取远程分支1git pull origin [分支名] 添加/删除远程分支 将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支 12345git push origin 本地分支名:远程分支名$ git push origin test:master // 提交本地test分支作为远程的master分支 $ git push origin test:test // 提交本地test分支作为远程的test分支//好像只写这一句，远程的github就会自动创建一个test分支 如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。 1git push origin :远程分支名(你要删除的远程分支名) git reflog 可以显示已删除的操作]]></content>
       <categories>
         <category>Skill</category>
         <category>Note</category>
@@ -197,11 +197,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F09%2FURL%2F</url>
-    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[stylus之变量与mixin]]></title>
     <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
     <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
@@ -211,6 +206,11 @@
       <tags>
         <tag>Css</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F09%2FURL%2F</url>
+    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
   </entry>
   <entry>
     <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>

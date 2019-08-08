@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="数组笔记定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.len">
+<meta name="description" content="数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.lengt">
 <meta name="keywords" content="Note,javaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/Array/index.html">
 <meta property="og:site_name" content="HeiLiu">
-<meta property="og:description" content="数组笔记定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.len">
+<meta property="og:description" content="数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.lengt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-05T11:55:19.606Z">
+<meta property="og:updated_time" content="2019-08-07T03:04:27.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组">
-<meta name="twitter:description" content="数组笔记定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.len">
+<meta name="twitter:description" content="数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.lengt">
 
 
 
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  182
+                  881
                 </span>
               
 
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -435,7 +435,7 @@
       
 
       
-        <h2 id="数组笔记"><a href="#数组笔记" class="headerlink" title="数组笔记"></a>数组笔记</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
+        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
 <p>一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。  </p>
 </blockquote>
 <p>数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象</p>
@@ -446,6 +446,37 @@
 <li><p>通过字面量 <code>[]</code> 创建  </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p>isArray </p>
+<p>存取函数  </p>
+<blockquote>
+<p>用来访问数组元素的函数，返回目标数组的某种变体  </p>
+</blockquote>
+<p>indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1</p>
+<p>lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1</p>
+<p>数组的字符串表示  </p>
+<p>join()</p>
+<p>toString()<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Raymond"</span>,<span class="string">"Clayton"</span>,<span class="string">"Mike"</span>,<span class="string">"Jennifer"</span>];</span><br><span class="line"><span class="keyword">var</span> namestr = names.join();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br><span class="line">namestr = names.toString();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br></pre></td></tr></table></figure></p>
+<p>由已有数组创建新的数组  </p>
+<p>concat()  合并多个数组创建一个新数组<br>splice()  截取一个数组的子集创建一个新数组<br>slice() </p>
+<p>使用 splice() 方法为数组添加元素，需提供如下参数：<br>• 起始索引（也就是你希望开始添加元素的地方）；<br>• 需要删除的元素个数（<code>添加元素时该参数设为 0</code>）；<br>• 想要添加进数组的元素。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> newElements = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">nums.splice(<span class="number">3</span>,<span class="number">0</span>,newElements);</span><br><span class="line">print(nums); <span class="comment">// 1,2,3,4,5,6,7,8,9</span></span><br></pre></td></tr></table></figure></p>
+<p>可变函数  </p>
+<blockquote>
+<p>能够改变数组的内容的函数  </p>
+</blockquote>
+<p>push() 在末尾添加元素<br>pop() 删除末尾的元素</p>
+<p>shift()<br>unshift() 添加元素到数组的开头</p>
+<p>reverse() 翻转数组<br>sort()<br>对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Mike"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Clayton"</span>,<span class="string">"Bryan"</span>,<span class="string">"Raymond"</span>];</span><br><span class="line">names.sort();</span><br><span class="line">print(names); <span class="comment">// Bryan,Clayton,Cynthia,David,Mike,Raymond</span></span><br></pre></td></tr></table></figure></p>
+<p>但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];nums.sort();print(nums); <span class="comment">// 1,100,2,200,3,4sort()</span></span><br></pre></td></tr></table></figure></p>
+<p>方法是按照<code>字典顺序</code>对元素进行排序的，因此它 <code>假定元素都是字符串类型</code>，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。<br><code>对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];</span><br><span class="line">nums.sort(compare);print(nums); <span class="comment">// 1,2,3,4,100,200</span></span><br></pre></td></tr></table></figure></p>
+<p>sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。</p>
+<p>迭代器方法  </p>
+<ul>
+<li>forEach()  </li>
+<li>every()  </li>
+<li>some()  </li>
+<li>map()  </li>
+<li>filter()  </li>
 </ul>
 
       
@@ -669,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组笔记"><span class="nav-number">1.</span> <span class="nav-text">数组笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数组"><span class="nav-number">1.2.</span> <span class="nav-text">创建数组</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数组"><span class="nav-number">1.2.</span> <span class="nav-text">创建数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组方法"><span class="nav-number">1.3.</span> <span class="nav-text">数组方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -725,7 +756,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共19.4k字</span>
+  <span class="post-count">博客全站共20.3k字</span>
 </div>
 
         
