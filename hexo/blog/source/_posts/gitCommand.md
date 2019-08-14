@@ -2,8 +2,10 @@
 ---
 title: git 操作常用命令
 date: 2018-4-21
-tags: 'git'
-categories: Skill
+tags: 'Git'
+categories: 
+  - Skill
+  - Git
 ---
 
 

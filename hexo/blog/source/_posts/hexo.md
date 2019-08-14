@@ -38,4 +38,8 @@ categories: hexo
         打开本地服务器  
 
   + hexo deploy
-      - 将本地生成的public文件内容发布到github      
+      - 将本地生成的public文件内容发布到github    
+
+
+[hexo 不蒜子统计不显示的问题](https://www.jianshu.com/p/fd3accaa2ae0)
+ 

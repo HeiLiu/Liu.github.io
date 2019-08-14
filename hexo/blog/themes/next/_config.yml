@@ -26,7 +26,7 @@ override: false
 
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
-favicon: 
+favicon:
   small: /images/favicon-16.ico
   medium: /images/favicon-32.ico
   apple_touch_icon: image/apple-touch-icon-next.png
@@ -557,16 +557,17 @@ busuanzi_count:
   enable: false
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  site_uv_header: 访客数 <i class="fa fa-user"></i>
+  site_uv_footer: 人
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_header: 总访问量 <i class="fa fa-eye"></i>
+  site_pv_footer: 次
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
+
 
 
 # Tencent analytics ID
@@ -818,9 +819,9 @@ images: images
 passage_end_tag:
   enabled: true
 
-# Online contact 
+# Online contact
 daovoice: true
 
-daovoice_app_id: 7ff5c34b 
+daovoice_app_id: 7ff5c34b
 # Theme version
 version: 5.1.4

@@ -1,6 +1,6 @@
 ﻿---
 title: 在hexo中安装next主题  
-date: 
+date: 2018-04-25
 tags: '倒腾'
 categories: hexo
 ---
