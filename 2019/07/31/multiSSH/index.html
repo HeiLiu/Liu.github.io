@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="HeiLiu">
 <meta property="og:description" content="配置多个SSH在工作中多访问公司的gitlab仓库，而在生活中又有自己的gayhub仓库记录一下方便日后查找  一般电脑中的SSH key 存放在 ～/.ssh目录中 如果有配置过的话存在 id_rsa \ id_rsa.pub 私钥和公钥, 将公钥配置到需要的代码平台 生成SSH key 本地配置多个ssh key 1、为公司生成一对秘钥ssh key   1ssh-keygen -t rsa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-03T09:59:35.726Z">
+<meta property="og:updated_time" content="2019-08-15T05:37:10.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同一台电脑配置多个SSH">
 <meta name="twitter:description" content="配置多个SSH在工作中多访问公司的gitlab仓库，而在生活中又有自己的gayhub仓库记录一下方便日后查找  一般电脑中的SSH key 存放在 ～/.ssh目录中 如果有配置过的话存在 id_rsa \ id_rsa.pub 私钥和公钥, 将公钥配置到需要的代码平台 生成SSH key 本地配置多个ssh key 1、为公司生成一对秘钥ssh key   1ssh-keygen -t rsa">
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  334
+                  333
                 </span>
               
 
@@ -455,11 +455,13 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2、为github生成一对秘钥ssh key  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  ssh-keygen -t rsa -C <span class="string">'yourEmail2@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 3、在~/.ssh目录下新建名称为`</span>config<span class="string">`的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  # gitlab</span><br><span class="line">  Host gitlab.planetmeican.com</span><br><span class="line">      HostName gitlab.planetmeican.com</span><br><span class="line">      Port <span class="number">2345</span></span><br><span class="line">      User git</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br><span class="line">  # github</span><br><span class="line">  Host github.com</span><br><span class="line">      HostName github.com</span><br><span class="line">      PreferredAuthentications publickey</span><br><span class="line">      IdentityFile ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail2@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、在~/.ssh目录下新建名称为<code>config</code>的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># gitlab</span><br><span class="line">Host gitlab.planetmeican.com</span><br><span class="line">    HostName gitlab.planetmeican.com</span><br><span class="line">    Port <span class="number">2345</span></span><br><span class="line">    User git</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="配置文件参数"><a href="#配置文件参数" class="headerlink" title="配置文件参数"></a>配置文件参数</h1><h1 id="Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"><a href="#Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件" class="headerlink" title="Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"></a>Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</h1><h1 id="port-端口号，一般不需要配置"><a href="#port-端口号，一般不需要配置" class="headerlink" title="port: 端口号，一般不需要配置"></a>port: 端口号，一般不需要配置</h1><h1 id="HostName-要登录主机的主机名"><a href="#HostName-要登录主机的主机名" class="headerlink" title="HostName : 要登录主机的主机名"></a>HostName : 要登录主机的主机名</h1><p>#PreferredAuthentications: 授权验证方式</p>
-<h1 id="User-登录名"><a href="#User-登录名" class="headerlink" title="User : 登录名"></a>User : 登录名</h1><h1 id="IdentityFile-指明上面User对应的identityFile路径"><a href="#IdentityFile-指明上面User对应的identityFile路径" class="headerlink" title="IdentityFile : 指明上面User对应的identityFile路径"></a>IdentityFile : 指明上面User对应的identityFile路径</h1><p><code>`</code></p>
+<h3 id="配置文件参数"><a href="#配置文件参数" class="headerlink" title="配置文件参数"></a>配置文件参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</span><br><span class="line"># port: 端口号，一般不需要配置</span><br><span class="line"># HostName : 要登录主机的主机名</span><br><span class="line">#PreferredAuthentications: 授权验证方式</span><br><span class="line"># User : 登录名</span><br><span class="line"># IdentityFile : 指明上面User对应的identityFile路径</span><br></pre></td></tr></table></figure>
 <ul>
 <li>4、分别往gitlab和github上添加生成的公钥</li>
 </ul>
@@ -507,8 +509,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/29/serverless/" rel="next" title="serverless了解">
-                <i class="fa fa-chevron-left"></i> serverless了解
+              <a href="/2019/07/29/provider&&connect/" rel="next" title="react-redux中Provider、connect">
+                <i class="fa fa-chevron-left"></i> react-redux中Provider、connect
               </a>
             
           </div>
@@ -603,7 +605,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -614,7 +616,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -687,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置多个SSH"><span class="nav-number">1.</span> <span class="nav-text">配置多个SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地配置多个ssh-key"><span class="nav-number">1.1.</span> <span class="nav-text">本地配置多个ssh key</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#配置文件参数"><span class="nav-number"></span> <span class="nav-text">配置文件参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Host-Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件"><span class="nav-number"></span> <span class="nav-text">Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#port-端口号，一般不需要配置"><span class="nav-number"></span> <span class="nav-text">port: 端口号，一般不需要配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HostName-要登录主机的主机名"><span class="nav-number"></span> <span class="nav-text">HostName : 要登录主机的主机名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-登录名"><span class="nav-number"></span> <span class="nav-text">User : 登录名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IdentityFile-指明上面User对应的identityFile路径"><span class="nav-number"></span> <span class="nav-text">IdentityFile : 指明上面User对应的identityFile路径</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置多个SSH"><span class="nav-number">1.</span> <span class="nav-text">配置多个SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地配置多个ssh-key"><span class="nav-number">1.1.</span> <span class="nav-text">本地配置多个ssh key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件参数"><span class="nav-number">1.2.</span> <span class="nav-text">配置文件参数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -743,7 +745,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.3k字</span>
+  <span class="post-count">博客全站共22.2k字</span>
 </div>
 
         

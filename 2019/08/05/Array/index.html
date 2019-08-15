@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="HeiLiu">
 <meta property="og:description" content="数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.lengt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-07T03:04:27.332Z">
+<meta property="og:updated_time" content="2019-08-15T03:57:42.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组">
 <meta name="twitter:description" content="数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。    数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数  123456&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.lengt">
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  881
+                  1,244
                 </span>
               
 
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -442,9 +442,15 @@
 <h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><ul>
 <li><p>通过<code>构造函数</code> </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 传入一组元素进行数组初始化 --&gt;</span><br><span class="line"><span class="keyword">var</span> arr = New <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">print(arr.length); <span class="comment">// 5</span></span><br><span class="line">&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 <span class="literal">undefined</span> --&gt;</span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br><span class="line">print(arr1.length); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a></li>
+<li>通过字面量 <code>[]</code> 创建  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>通过字面量 <code>[]</code> 创建  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+</ul>
+<ul>
+<li><p>区别<br>虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'using[]'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = []&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using[]'</span>)  <span class="comment">// using[]: 29.630859375ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'using new'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using new'</span>)  <span class="comment">// using new: 39.93798828125ms</span></span><br></pre></td></tr></table></figure>
+<p>通过对比会发现使用new关键字来创建数组花费的时间更长，<code>实际上</code>使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然<code>只有在大批量数据的情况下才会有影响</code>.</p>
+<p>创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。</p>
 </li>
 </ul>
 <h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p>isArray </p>
@@ -534,6 +540,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/08/12/setPerformance/" rel="prev" title="利用set提高性能">
+                利用set提高性能 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -616,7 +626,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -627,7 +637,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -756,7 +766,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.3k字</span>
+  <span class="post-count">博客全站共22.2k字</span>
 </div>
 
         
