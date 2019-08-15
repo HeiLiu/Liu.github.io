@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="笔记,">
+  <meta name="keywords" content="前端,">
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。   函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有cons">
-<meta name="keywords" content="笔记">
+<meta name="description" content="早点写">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript函数">
-<meta property="og:url" content="http://yoursite.com/2018/05/09/function_note/index.html">
+<meta property="og:title" content="$(document).ready()与window.onload">
+<meta property="og:url" content="https://heiliu.github.io/2018/05/03/jquery/index.html">
 <meta property="og:site_name" content="HeiLiu">
-<meta property="og:description" content="函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。   函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有cons">
+<meta property="og:description" content="早点写">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T15:33:46.000Z">
+<meta property="og:updated_time" content="2019-08-15T05:57:33.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript函数">
-<meta name="twitter:description" content="函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。   函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有cons">
+<meta name="twitter:title" content="$(document).ready()与window.onload">
+<meta name="twitter:description" content="早点写">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/09/function_note/">
+  <link rel="canonical" href="https://heiliu.github.io/2018/05/03/jquery/">
 
 
 
@@ -145,7 +145,7 @@
   </script>
 
 
-  <title>javascript函数 | HeiLiu</title>
+  <title>$(document).ready()与window.onload | HeiLiu</title>
   
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/function_note/">
+    <link itemprop="mainEntityOfPage" href="https://heiliu.github.io/2018/05/03/jquery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘江龙">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">javascript函数</h1>
+          <h1 class="post-title" itemprop="name headline">$(document).ready()与window.onload</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T23:33:46+08:00">
-                2018-05-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T23:21:53+08:00">
+                2018-05-03
               </time>
             
 
@@ -367,8 +367,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js语言精粹/" itemprop="url" rel="index">
-                    <span itemprop="name">js语言精粹</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/javaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript</span>
                   </a>
                 </span>
 
@@ -398,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,004
+                  3
                 </span>
               
 
@@ -414,7 +425,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  1
                 </span>
               
             </div>
@@ -435,37 +446,7 @@
       
 
       
-        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><hr>
-<p>函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。  </p>
-<h3 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h3><p>JavaScript 中的函数就是对象。函数对象连接到<code>Function.prototype</code>（该原型对象本身连接到<code>Object.prototype</code>）。每个函数对象在创建时会附加两个隐藏属性：<code>函数的上下文</code>和<code>实现函数行为的代码</code>。</p>
-<p>函数对象在创建时也随配有一个<code>prototype</code>属性。它的值是一个拥有constructor属性且值即为该函数对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">函数的与众不同之处在于可以被调用。  </span></span><br><span class="line"><span class="string">### 函数字面量  </span></span><br><span class="line"><span class="string">函数对象通过函数字面量来创建。</span></span><br><span class="line"><span class="string">函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">    <span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b</span><br><span class="line">    &#125;  </span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">### 调用  </span></span><br><span class="line"><span class="string">调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，还有两个附加参数：`</span><span class="keyword">this</span><span class="string">`和`</span><span class="built_in">arguments</span><span class="string">`。参数this在面向对象编程中非常重要，它的值取决于调用的模式。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">实参和形参个数不匹配时，不会有运行时错误。实参过多时，超出的实参被忽略。形参过多时，缺失的值被替换为undefined。  </span></span><br><span class="line"><span class="string">- 方法调用模式  </span></span><br><span class="line"><span class="string">    当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，`</span><span class="keyword">this</span>被绑定到该对象<span class="string">`,通过this可以对该对象的属性和方法进行调用和操作。  </span></span><br><span class="line"><span class="string">    `</span><span class="string">``</span>js</span><br><span class="line">    <span class="keyword">var</span> myObject = &#123;</span><br><span class="line">        text: hello,</span><br><span class="line">        say:<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.text + msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    myObject.say(world);</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>函数调用模式<br>当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。<br>此时this被绑定到全局对象。即时是内部函数也会将this绑定到全局对象。this的指向问题 作用域不一样 this的指向就不一样,可以在函数内创建一个属性并赋值为this来解决这个问题,一般通过<code>var that = this</code>;  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myObject.double = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        that.value = add(that.value, that.value)</span><br><span class="line">    &#125;</span><br><span class="line">    helper()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myObject.double()</span><br><span class="line"><span class="built_in">console</span>.log(myObject.value) <span class="comment">//8</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">    attachEvent: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// attachEvent函数的作用域</span></span><br><span class="line">    <span class="comment">// js 里面this总会指向什么</span></span><br><span class="line">    <span class="comment">// 对象的方法被执行时 this指向对象</span></span><br><span class="line">    <span class="comment">// console.log(this);</span></span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.staticElement.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 这个函数被执行时，并不是对象的方法，而是匿名函数，作为事件处理函数来执行，this会指向事件发生元素</span></span><br><span class="line">        <span class="comment">// this的指向跟函数的调用方式有关</span></span><br><span class="line">        <span class="comment">// this的指向问题 作用域不一样 this的指向就不一样</span></span><br><span class="line">        <span class="comment">// 作用域 事件的回调函数</span></span><br><span class="line">        <span class="comment">// console.log(this);</span></span><br><span class="line">        <span class="comment">// alert(that.value);</span></span><br><span class="line">        that.convertToEdit();</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">this</span>.filedElement.addEventListener(<span class="string">'keydown'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">evt</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 在事件发生的一刹那 会产生一个临时事件对象</span></span><br><span class="line">        <span class="built_in">console</span>.log(evt);</span><br><span class="line">        <span class="keyword">if</span> (evt.keyCode == <span class="number">13</span>) &#123;</span><br><span class="line">            that.staticElement.innerHTML = <span class="keyword">this</span>.value;</span><br><span class="line">            <span class="built_in">console</span>.log(that.staticElement.innerHTML);</span><br><span class="line">            that.convertToText();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>构造器调用模式<br>JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。<br>如果在一个函数前面带上new来调用，那么背地里将会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到那个新对象上。  </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建构造器函数</span></span><br><span class="line"><span class="keyword">var</span> Quo = <span class="function"><span class="keyword">function</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.status = string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//给Que的所有实例提供一个公共方法</span></span><br><span class="line">Quo.prototype.getStatus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.status</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化</span></span><br><span class="line"><span class="keyword">var</span> myQuo = <span class="keyword">new</span> Quo(<span class="string">'confused'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myQuo.getStatus()) <span class="comment">//confused</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Apply 调用模式<br><code>apply</code>方法让我们构建一个参数数组传递给调用函数。他也允许我们选择<code>this</code>的值。apply方法接受两个参数，第一个是要绑定给<code>this</code>的值，第二个是参数数组。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">        <span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">        <span class="keyword">var</span> sum = add.apply(<span class="literal">null</span>, arr)</span><br><span class="line">        <span class="built_in">console</span>.log(sum) <span class="comment">//7</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> statusObject = &#123;</span><br><span class="line">            status: <span class="string">'hello'</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> status = Quo.prototype.getStatus.apply(statusObject)</span><br><span class="line">        <span class="built_in">console</span>.log(status) <span class="comment">//hello</span></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### 参数  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">当函数被调用时，会得到一个`</span><span class="built_in">arguments</span><span class="string">`数组。通过此参数可以访问所有它被调用时传递给它的`</span>参数列表<span class="string">`，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js    </span><br><span class="line"> <span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> i, sum = <span class="number">0</span></span><br><span class="line">     <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">         sum += <span class="built_in">arguments</span>[i]</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> sum</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>)<span class="comment">//45</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>因语言的设计错误，<code>arguments</code>并不是一个真正的数组。是一个“类似数组”的对象。有<code>length</code>属性，但没有任何数组的方法。</p>
-<h3 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h3><p>函数执行时遇到关闭函数体的<code>}</code>时结束。然后把控制权交还给调用该函数的程序。</p>
-<p><code>return</code>可以使函数提前返回，当return语句执行时函数立即返回不在执行余下的语句。</p>
-<p>函数总是会返回一个值，若没有指定，则返回<code>undefined</code>。</p>
-<p>若函数调用时在前面加上了<code>new</code>前缀，且返回值不是一个对象的时候，则返回<code>this</code>（该新对象）。  </p>
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了<code>this</code>和<code>arguments</code>）。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> quo = <span class="function"><span class="keyword">function</span>(<span class="params">status</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        get_status: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> status;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myQuo = quo(<span class="string">'amazed'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(myQuo.get_status()) <span class="comment">//amazed</span></span><br></pre></td></tr></table></figure></p>
-<p>狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。<code>status</code>访问的就说<code>对象中的status</code>属性本身,通过闭包可以让一个局部变量驻留在内存中</p>
-<p>避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前i值的函数，这样就不会导致混淆了。  </p>
-<h3 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h3><p>将一个函数作为参数，一旦接收到响应，再调用这个函数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> fs.readFile(<span class="string">'demo/02.js'</span>,<span class="string">'utf8'</span>,(error,data)=&gt;&#123;</span><br><span class="line"> <span class="keyword">if</span>(error) <span class="keyword">throw</span> error;</span><br><span class="line"> <span class="comment">//在异步中的错误不能被捕获 通过throw error进行错误的捕获</span></span><br><span class="line"> <span class="built_in">console</span>.log(data) &gt;&gt;a.txt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>可以用函数和闭包构造模块。模块是一个提供接口却隐藏与实现的函数或者对象</p>
-<p>模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numberCal = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> half = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n / <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> double = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n * <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> tribble = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n * <span class="number">3</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        half: half,</span><br><span class="line">        double: double,</span><br><span class="line">        tribble: tribble</span><br><span class="line">    &#125;</span><br><span class="line">&#125;())</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.half(<span class="number">5</span>)) <span class="comment">//2.5</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.half(<span class="number">6</span>)) <span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.double(<span class="number">7</span>)) <span class="comment">//14</span></span><br><span class="line"><span class="built_in">console</span>.log(numberCal.tribble(<span class="number">7</span>)) <span class="comment">//21</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="级联"><a href="#级联" class="headerlink" title="级联"></a>级联</h3><p>如果让方法返回this而不是默认的undefined，就可以启用级联，即连续调用。</p>
-<h3 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h3><p>函数可以将先前操作的结果记录在某个对象或者数组里，从而避免无谓的重复运算。这种优化被称为记忆（memoization）。</p>
-
+        <h3 id="早点写"><a href="#早点写" class="headerlink" title="早点写"></a>早点写</h3>
       
     </div>
     
@@ -496,7 +477,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
           
         </div>
       
@@ -509,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/09/mixin/" rel="next" title="stylus之变量与mixin">
-                <i class="fa fa-chevron-left"></i> stylus之变量与mixin
+              <a href="/2018/05/03/URL2/" rel="next" title="完整的URL请求页面过程">
+                <i class="fa fa-chevron-left"></i> 完整的URL请求页面过程
               </a>
             
           </div>
@@ -519,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/16/wxNote/" rel="prev" title="微信小程序笔记总结">
-                微信小程序笔记总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/04/Css3/" rel="prev" title="Css3属性">
+                Css3属性 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,7 +576,7 @@
               <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/29034936?s=400&u=568e2bb8e4bb03a573e9138e715699e492fbe399&v=4" alt="刘江龙">
             
               <p class="site-author-name" itemprop="name">刘江龙</p>
-              <p class="site-description motion-element" itemprop="description">程序员 大学本科</p>
+              <p class="site-description motion-element" itemprop="description">一直在路上的程序员</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -605,7 +586,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -616,7 +597,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -627,7 +608,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -689,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数对象"><span class="nav-number">1.1.</span> <span class="nav-text">函数对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回"><span class="nav-number">1.2.</span> <span class="nav-text">返回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">1.3.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回调"><span class="nav-number">1.4.</span> <span class="nav-text">回调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块"><span class="nav-number">1.5.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#级联"><span class="nav-number">1.6.</span> <span class="nav-text">级联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#记忆"><span class="nav-number">1.7.</span> <span class="nav-text">记忆</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#早点写"><span class="nav-number">1.</span> <span class="nav-text">早点写</span></a></li></ol></div>
             
 
           </div>

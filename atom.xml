@@ -5,9 +5,9 @@
   <subtitle>有一句Hello World想要对你说</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2019-08-15T05:31:33.047Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://heiliu.github.io/"/>
+  <updated>2019-08-15T05:56:40.198Z</updated>
+  <id>https://heiliu.github.io/</id>
   
   <author>
     <name>刘江龙</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Axios</title>
-    <link href="http://yoursite.com/2019/08/15/Axios/"/>
-    <id>http://yoursite.com/2019/08/15/Axios/</id>
+    <link href="https://heiliu.github.io/2019/08/15/Axios/"/>
+    <id>https://heiliu.github.io/2019/08/15/Axios/</id>
     <published>2019-08-14T16:00:00.000Z</published>
-    <updated>2019-08-15T05:31:33.047Z</updated>
+    <updated>2019-08-15T05:56:40.198Z</updated>
     
     <content type="html"><![CDATA[<h2 id="先从fetch讲起"><a href="#先从fetch讲起" class="headerlink" title="先从fetch讲起"></a>先从fetch讲起</h2><p>一个简单的fetch例子如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'./api/person.json'</span>)</span><br><span class="line">  .then(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (response.status !== <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Looks like there was a problem. Status Code: '</span> +</span><br><span class="line">          response.status);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// Examine the text in the response</span></span><br><span class="line">      <span class="comment">// 将返回数据 Json 化</span></span><br><span class="line">      response.json().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Fetch Error :-S'</span>, err);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="number">1.</span> .json()返回一个被解析为<span class="built_in">JSON</span>格式的<span class="string">`promise`</span>对象，当获取成功时，我们使用 json() 读取并解析数据</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="使用async-await简化"><a href="#使用async-await简化" class="headerlink" title="使用async/await简化"></a>使用async/await简化</h3><p>由于Fetch底层是用Promise实现，我们可以直接用async来优化上面的代码，减少回调，使其更加语义化、容易理解， 代码如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">geturl</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line"><span class="keyword">let</span> res = <span class="keyword">await</span> fetch(<span class="string">'./api/some.json'</span>)</span><br><span class="line"><span class="keyword">if</span>(res.status == <span class="number">200</span>)&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> res.text())</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="keyword">catch</span>(err)&#123;</span><br><span class="line"><span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// response 其他返回数据</span></span><br><span class="line">fetch(<span class="string">'users.json'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response.headers.get(<span class="string">'Content-Type'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(response.headers.get(<span class="string">'Date'</span>));</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(response.status);</span><br><span class="line">    <span class="built_in">console</span>.log(response.statusText);</span><br><span class="line">    <span class="built_in">console</span>.log(response.type);</span><br><span class="line">    <span class="built_in">console</span>.log(response.url);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h4 id="Response-类型"><a href="#Response-类型" class="headerlink" title="Response 类型"></a>Response 类型</h4><p>当我们发起一个Fetch请求时，返回的response响应会自带一个response.type属性（basic、cors、opaque）。response.type属性说明了异步资源的来源，同时还有相应的处理方式。<br>当我们发起一个同源请求时，response.type为basic，而且你可以从response读取全部信息。<br>如果我们访问一个非同源域名，并且有返回相应的CORs响应头时，那么该请求类型是cors。  cors和basic很相似，就除了cors响应里你无法访问Cache-Control，Content-Language，Content-Type，Expires，Last-Modified和Pragma<br>当我们对一个不同源的域名发起请求时，如果返回的响应头部没有CORS信息，那么这个response对应的类型就是opaque类型。一个opaque响应是无法读取返回的数据、状态，甚至无法确定这个请求是否成功。<br>我们可以自定义Fetch请求的模式，要求返回对应类型的响应，有以下几种响应：</p><ul><li>1.same-origin 只返回同源请求，其他类型会被reject  </li><li>2.cors 接收同源、非同源请求，返回有CORs头部的响应  </li><li>3.cors-with-forced-preflight 在发出请求前会先做一次安全性检查  </li><li>4.no-cors 用来发起没有CORS头部并且非同源请求，并且会返回opaque响应。但是目前这种类型只能在Service Worker里使用，在window.fetch里不能用  </li></ul><h3 id="POST请求类型"><a href="#POST请求类型" class="headerlink" title="POST请求类型"></a>POST请求类型</h3><p>使用Fetch发起Post请求时，需要手动设置method参数和body参数，如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, &#123;</span><br><span class="line">    method: <span class="string">'post'</span>,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">"Content-type"</span>: <span class="string">"application/x-www-form-urlencoded; charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    body: <span class="string">'foo=bar&amp;lorem=ipsum'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(json)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Request succeeded with JSON response'</span>, data);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Request failed'</span>, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p><h3 id="带-COOKIE-发送请求"><a href="#带-COOKIE-发送请求" class="headerlink" title="带 COOKIE 发送请求"></a>带 COOKIE 发送请求</h3><p>在异步请求中带上cookie参数，那么需要显式指定credentials参数：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, &#123;</span><br><span class="line">  credentials: <span class="string">'include'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h2><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul><li>从浏览器中创建 XMLHttpRequests  </li><li>从 node.js 创建 http 请求  </li><li>支持 Promise API  </li><li>拦截请求和响应  </li><li>转换请求数据和响应数据  </li><li>取消请求  </li><li>自动转换 JSON 数据  </li><li>客户端支持防御 XSRF  </li></ul><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>npm 安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install axios</span><br></pre></td></tr></table></figure></p><p>使用cdn:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h3 id="GET-请求"><a href="#GET-请求" class="headerlink" title="GET 请求"></a>GET 请求</h3><h3 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h3><h3 id="响应结构"><a href="#响应结构" class="headerlink" title="响应结构"></a>响应结构</h3><p>响应返回包含信息：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// `data` 由服务器提供的响应</span></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `status` 来自服务器响应的 HTTP 状态码</span></span><br><span class="line">  status: <span class="number">200</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `statusText` 来自服务器响应的 HTTP 状态信息</span></span><br><span class="line">  statusText: <span class="string">'OK'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `headers` 服务器响应的头</span></span><br><span class="line">  headers: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `config` 是为请求提供的配置信息</span></span><br><span class="line">  config: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener">文档传送门</a></p>]]></content>
     
@@ -32,17 +32,19 @@
     
     </summary>
     
-      <category term="skill" scheme="http://yoursite.com/categories/skill/"/>
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+    
+      <category term="javaScript" scheme="https://heiliu.github.io/categories/Skill/javaScript/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>E2E 测试</title>
-    <link href="http://yoursite.com/2019/08/14/E2ETest/"/>
-    <id>http://yoursite.com/2019/08/14/E2ETest/</id>
+    <link href="https://heiliu.github.io/2019/08/14/E2ETest/"/>
+    <id>https://heiliu.github.io/2019/08/14/E2ETest/</id>
     <published>2019-08-13T16:00:00.000Z</published>
     <updated>2019-08-14T05:53:24.168Z</updated>
     
@@ -57,17 +59,17 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="https://heiliu.github.io/categories/test/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="test" scheme="https://heiliu.github.io/tags/test/"/>
     
   </entry>
   
   <entry>
     <title>去除 inline 元素之间的间距</title>
-    <link href="http://yoursite.com/2019/08/13/spaceBetweenInlineBlock/"/>
-    <id>http://yoursite.com/2019/08/13/spaceBetweenInlineBlock/</id>
+    <link href="https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/"/>
+    <id>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</id>
     <published>2019-08-12T16:00:00.000Z</published>
     <updated>2019-08-13T04:15:23.819Z</updated>
     
@@ -83,23 +85,23 @@
     
     </summary>
     
-      <category term="Note" scheme="http://yoursite.com/categories/Note/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/Note/"/>
     
-      <category term="面试" scheme="http://yoursite.com/categories/Note/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="https://heiliu.github.io/categories/Note/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="Css" scheme="http://yoursite.com/categories/Note/%E9%9D%A2%E8%AF%95/Css/"/>
+      <category term="Css" scheme="https://heiliu.github.io/categories/Note/%E9%9D%A2%E8%AF%95/Css/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>利用set提高性能</title>
-    <link href="http://yoursite.com/2019/08/12/setPerformance/"/>
-    <id>http://yoursite.com/2019/08/12/setPerformance/</id>
+    <link href="https://heiliu.github.io/2019/08/12/setPerformance/"/>
+    <id>https://heiliu.github.io/2019/08/12/setPerformance/</id>
     <published>2019-08-12T03:48:34.349Z</published>
-    <updated>2019-08-12T03:50:11.288Z</updated>
+    <updated>2019-08-15T05:59:00.013Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://blog.51cto.com/13957060/2419632" target="_blank" rel="noopener">详情</a></p>]]></content>
     
@@ -113,13 +115,19 @@
     
     </summary>
     
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="javaScript" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/javaScript/"/>
+    
+    
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>数组</title>
-    <link href="http://yoursite.com/2019/08/05/Array/"/>
-    <id>http://yoursite.com/2019/08/05/Array/</id>
+    <link href="https://heiliu.github.io/2019/08/05/Array/"/>
+    <id>https://heiliu.github.io/2019/08/05/Array/</id>
     <published>2019-08-04T23:42:00.000Z</published>
     <updated>2019-08-15T03:57:42.577Z</updated>
     
@@ -137,19 +145,19 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
+      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
     
-      <category term="javaScript" scheme="http://yoursite.com/tags/javaScript/"/>
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>同一台电脑配置多个SSH</title>
-    <link href="http://yoursite.com/2019/07/31/multiSSH/"/>
-    <id>http://yoursite.com/2019/07/31/multiSSH/</id>
+    <link href="https://heiliu.github.io/2019/07/31/multiSSH/"/>
+    <id>https://heiliu.github.io/2019/07/31/multiSSH/</id>
     <published>2019-07-30T16:00:00.000Z</published>
     <updated>2019-08-15T05:37:10.143Z</updated>
     
@@ -164,19 +172,19 @@
     
     </summary>
     
-      <category term="倒腾" scheme="http://yoursite.com/categories/%E5%80%92%E8%85%BE/"/>
+      <category term="倒腾" scheme="https://heiliu.github.io/categories/%E5%80%92%E8%85%BE/"/>
     
-      <category term="Note" scheme="http://yoursite.com/categories/%E5%80%92%E8%85%BE/Note/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/%E5%80%92%E8%85%BE/Note/"/>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>react-redux中Provider、connect</title>
-    <link href="http://yoursite.com/2019/07/29/provider&amp;&amp;connect/"/>
-    <id>http://yoursite.com/2019/07/29/provider&amp;&amp;connect/</id>
+    <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
+    <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
     <published>2019-07-28T16:00:00.000Z</published>
     <updated>2019-08-03T09:45:33.792Z</updated>
     
@@ -191,48 +199,19 @@
     
     </summary>
     
-      <category term="React" scheme="http://yoursite.com/categories/React/"/>
+      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
     
-      <category term="Note" scheme="http://yoursite.com/categories/React/Note/"/>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NPM 参数</title>
-    <link href="http://yoursite.com/2019/07/29/npmParams/"/>
-    <id>http://yoursite.com/2019/07/29/npmParams/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:43:44.955Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
-      
-    
-    </summary>
-    
-      <category term="Skill" scheme="http://yoursite.com/categories/Skill/"/>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Node" scheme="http://yoursite.com/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/React/Note/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>serverless了解</title>
-    <link href="http://yoursite.com/2019/07/29/serverless/"/>
-    <id>http://yoursite.com/2019/07/29/serverless/</id>
+    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
+    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
     <published>2019-07-28T16:00:00.000Z</published>
     <updated>2019-08-14T09:56:46.041Z</updated>
     
@@ -248,17 +227,46 @@
     
     </summary>
     
-      <category term="server" scheme="http://yoursite.com/categories/server/"/>
+      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
     
     
-      <category term="倒腾" scheme="http://yoursite.com/tags/%E5%80%92%E8%85%BE/"/>
+      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NPM 参数</title>
+    <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
+    <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:43:44.955Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
+      
+    
+    </summary>
+    
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+    
+      <category term="前端" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+    
+    
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/2019/07/28/0722/"/>
-    <id>http://yoursite.com/2019/07/28/0722/</id>
+    <link href="https://heiliu.github.io/2019/07/28/0722/"/>
+    <id>https://heiliu.github.io/2019/07/28/0722/</id>
     <published>2019-07-28T13:29:50.981Z</published>
     <updated>2019-08-14T10:39:34.911Z</updated>
     
@@ -278,8 +286,8 @@
   
   <entry>
     <title>Git 笔记</title>
-    <link href="http://yoursite.com/2019/07/28/gitNote/"/>
-    <id>http://yoursite.com/2019/07/28/gitNote/</id>
+    <link href="https://heiliu.github.io/2019/07/28/gitNote/"/>
+    <id>https://heiliu.github.io/2019/07/28/gitNote/</id>
     <published>2019-07-27T16:00:00.000Z</published>
     <updated>2019-08-13T04:17:03.374Z</updated>
     
@@ -294,23 +302,23 @@
     
     </summary>
     
-      <category term="Skill" scheme="http://yoursite.com/categories/Skill/"/>
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
     
-      <category term="Note" scheme="http://yoursite.com/categories/Skill/Note/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/Skill/Note/"/>
     
-      <category term="Git" scheme="http://yoursite.com/categories/Skill/Note/Git/"/>
+      <category term="Git" scheme="https://heiliu.github.io/categories/Skill/Note/Git/"/>
     
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>js基本数据类型和引用类型的区别</title>
-    <link href="http://yoursite.com/2018/07/30/type/"/>
-    <id>http://yoursite.com/2018/07/30/type/</id>
+    <link href="https://heiliu.github.io/2018/07/30/type/"/>
+    <id>https://heiliu.github.io/2018/07/30/type/</id>
     <published>2018-07-30T07:01:13.000Z</published>
-    <updated>2018-08-09T08:59:30.000Z</updated>
+    <updated>2019-08-15T05:59:31.949Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Js-基本数据类型"><a href="#Js-基本数据类型" class="headerlink" title="Js 基本数据类型"></a>Js 基本数据类型</h2><p>js基本数据类型包括：undefined,null,number,boolean,string.基本数据类型是按值访问的，就是说我们可以操作保存在变量中的实际的值  </p><h3 id="1-基本数据类型的值是不可改变的"><a href="#1-基本数据类型的值是不可改变的" class="headerlink" title="1.基本数据类型的值是不可改变的"></a>1.基本数据类型的值是不可改变的</h3><p> 任何方法都无法改变一个基本类型的值是不可改变的，比如一个字符串：<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"change"</span>;</span><br><span class="line">name.substr();<span class="comment">//hang</span></span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//change</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;</span><br><span class="line">s.toUpperCase()<span class="comment">//HELLO;</span></span><br><span class="line"><span class="built_in">console</span>.log(s)<span class="comment">//hello</span></span><br></pre></td></tr></table></figure></p><p> 通过这两个例子， 我们原来发现定义的变量name 的值始终没有发生改变，而调用substr() 和 toUpperCase() 方法后返回的是一个新的字符串，跟原先定义的变量name 并没有关系  </p><p> 或许有人会有一下的疑问， 看代码：   </p>]]></content>
     
@@ -323,17 +331,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>性能优化之浏览器篇</title>
-    <link href="http://yoursite.com/2018/07/20/Better/"/>
-    <id>http://yoursite.com/2018/07/20/Better/</id>
+    <link href="https://heiliu.github.io/2018/07/20/Better/"/>
+    <id>https://heiliu.github.io/2018/07/20/Better/</id>
     <published>2018-07-20T01:20:38.000Z</published>
     <updated>2018-07-21T00:52:10.000Z</updated>
     
@@ -349,17 +357,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="性能优化" scheme="http://yoursite.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="https://heiliu.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>RegExp 正则表达式</title>
-    <link href="http://yoursite.com/2018/07/18/regExp/"/>
-    <id>http://yoursite.com/2018/07/18/regExp/</id>
+    <link href="https://heiliu.github.io/2018/07/18/regExp/"/>
+    <id>https://heiliu.github.io/2018/07/18/regExp/</id>
     <published>2018-07-18T01:47:21.000Z</published>
     <updated>2019-08-05T15:30:14.974Z</updated>
     
@@ -375,21 +383,21 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Note" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/Note/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/Note/"/>
     
     
-      <category term="javaScript" scheme="http://yoursite.com/tags/javaScript/"/>
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>Vue组件通信</title>
-    <link href="http://yoursite.com/2018/07/15/VueComponentsConnect-md/"/>
-    <id>http://yoursite.com/2018/07/15/VueComponentsConnect-md/</id>
+    <link href="https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/"/>
+    <id>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</id>
     <published>2018-07-15T01:47:21.000Z</published>
-    <updated>2019-07-31T05:51:14.717Z</updated>
+    <updated>2019-08-15T06:02:05.200Z</updated>
     
     <content type="html"><![CDATA[<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><blockquote><p>(Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。</p></blockquote><h1 id="通信类型"><a href="#通信类型" class="headerlink" title="通信类型"></a>通信类型</h1><h2 id="父组件与子组件通信"><a href="#父组件与子组件通信" class="headerlink" title="父组件与子组件通信"></a>父组件与子组件通信</h2><ul><li><p>父组件给子组件传递数据  </p><p>  <code>props</code>: 使用props，父组件可以使用props向子组件传递数据  </p></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件 </span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child :msg=<span class="string">"message"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    </span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">    components: &#123;</span></span><br><span class="line"><span class="string">        child</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    data () &#123;</span></span><br><span class="line"><span class="string">        return &#123;</span></span><br><span class="line"><span class="string">            message: '</span>father message<span class="string">';</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line">  &lt;template&gt;</span><br><span class="line">      &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">    </span><br><span class="line">  &lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// props 另一种写法, 不声明类型与默认值</span></span><br><span class="line">  <span class="comment">// props: ['msg']</span></span><br><span class="line">      props: &#123;</span><br><span class="line">          msg: &#123;</span><br><span class="line">              type: <span class="built_in">String</span>,</span><br><span class="line">              required: <span class="literal">true</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">```  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">- 子组件向父组件通信  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&gt; 在Vue 中子组件一般不具有操作数据和处理事件的权利，所有的数据和事件的处理都要交给父组件进行操作  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">**方法一 :** 在子组件中通过$emit()将组件内部的时间传递给父组件的事件进行   </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">```js  </span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 父组件</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">&lt;child @msgFunc="func"&gt;&lt;/</span>child&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">components: &#123;</span></span><br><span class="line"><span class="string">    child</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="string">methods: &#123;</span></span><br><span class="line"><span class="string">    func (msg) &#123;</span></span><br><span class="line"><span class="string">        console.log(msg);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// 子组件  </span></span><br><span class="line"><span class="string">&lt;template&gt;</span></span><br><span class="line"><span class="string">&lt;button @click="handleClick"&gt;点我&lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">props: &#123;</span></span><br><span class="line"><span class="string">    msg: &#123;</span></span><br><span class="line"><span class="string">        type: String,</span></span><br><span class="line"><span class="string">        required: true</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="string">methods () &#123;</span></span><br><span class="line"><span class="string">    handleClick () &#123;</span></span><br><span class="line"><span class="string">        // 提交出去的处理方法的名称与父组件接收的需一致</span></span><br><span class="line"><span class="string">        this.$emit('</span>msgFunc<span class="string">');</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;  </span></span><br><span class="line"><span class="string">```  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">**方法二:** 通过修改父组件传递的props来修改父组件数据  </span></span><br><span class="line"><span class="string">&gt; 这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">---  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## 兄弟组件进行通信  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 刚开始学习使用Vue时, 在Vue项目中的两个兄弟组件之间如果要进行通信， 通常会通过一个父组件进行数据请求再给子组件传递数据。    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Vuex 是官方推荐的状态管理方案, 不过如果只是中小型项目，状态管理也没有很复杂的话，使用 Vuex 有种杀鸡用牛刀的感觉    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Vue 官方推荐使用一个 Vue 实例作为中央事件总线, 即 `EventBus`  ,在需要使用的地方import该Bus   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &gt; EventBus 解决了兄弟组件之间的事件传递问题，它的本质是订阅发布者模式，同一个事件发布组件发布了，订阅组件就能获得事件的改变摆脱了兄弟组件之间传值需要父组件转达，Vue事件实例，作为中间者不在页面上显示且具有vue的API 如 emit on   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">```js  </span></span><br><span class="line"><span class="string">    // bus.js =&gt; new 一个 Vue 实例</span></span><br><span class="line"><span class="string">    import Vue from '</span>vue<span class="string">'</span></span><br><span class="line"><span class="string">    export default new Vue()  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    // clickComponent.vue 相当于发布者, 在需要的组件中订阅就能进行通信</span></span><br><span class="line"><span class="string">    &lt;template&gt;</span></span><br><span class="line"><span class="string">      &lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;a href="#"class="click" :data-index="index" @click.prevent="doClick($event)"&gt;点我&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;script&gt;</span></span><br><span class="line"><span class="string">    import Bus from '</span>@/common/bus.js<span class="string">'</span></span><br><span class="line"><span class="string">    export default &#123;</span></span><br><span class="line"><span class="string">      props: &#123;</span></span><br><span class="line"><span class="string">        index: Number</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      methods: &#123;</span></span><br><span class="line"><span class="string">        doClick (event) &#123;</span></span><br><span class="line"><span class="string">           // console.log(event.target.dataset.index)</span></span><br><span class="line"><span class="string">           Bus.$emit('</span>getTarget<span class="string">', event.target.dataset.index)</span></span><br><span class="line"><span class="string">          //  this.$emit('</span>global: getTarget<span class="string">', event.target.dataset.index)</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    // showComponents.vue 另一个兄弟组件 进行订阅</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;template&gt;</span></span><br><span class="line"><span class="string">      &lt;div&gt;</span></span><br><span class="line"><span class="string">        &#123;&#123;html&#125;&#125;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;script&gt;</span></span><br><span class="line"><span class="string">    import Bus from '</span>@/common/bus.js<span class="string">'</span></span><br><span class="line"><span class="string">    export default &#123;</span></span><br><span class="line"><span class="string">      data () &#123;</span></span><br><span class="line"><span class="string">        return &#123;</span></span><br><span class="line"><span class="string">          html: '</span>还没有点击<span class="string">'</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      created () &#123;</span></span><br><span class="line"><span class="string">         Bus.$on('</span>getTarget<span class="string">', index =&gt; &#123;</span></span><br><span class="line"><span class="string">           this.html = `第$&#123;index&#125;个元素`</span></span><br><span class="line"><span class="string">         &#125;)</span></span><br><span class="line"><span class="string">        //this.$on('</span>global: getTarget<span class="string">', index =&gt; &#123;</span></span><br><span class="line"><span class="string">       //   this.html = `第$&#123;index&#125;个元素`</span></span><br><span class="line"><span class="string">       // &#125;)</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string">```  </span></span><br><span class="line"><span class="string">  在node中有一个 `vue-event-proxy` npm包能够实现与EventBus同样的功能，需要安装该npm包, 并且在main.js中进行`引入 `  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">```js</span></span><br><span class="line"><span class="string">  import EventProxy from '</span>vue-event-proxy<span class="string">'</span></span><br><span class="line"><span class="string">  Vue.use(EventProxy)   // 激活使用</span></span><br><span class="line"><span class="string">  // 完成后即可以使用上面组件中js注释部分的代码代替Bus代码</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -403,21 +411,21 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="vue" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/vue/"/>
+      <category term="Vue" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
     
     
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+      <category term="Vue" scheme="https://heiliu.github.io/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>排序</title>
-    <link href="http://yoursite.com/2018/07/15/sorts/"/>
-    <id>http://yoursite.com/2018/07/15/sorts/</id>
+    <link href="https://heiliu.github.io/2018/07/15/sorts/"/>
+    <id>https://heiliu.github.io/2018/07/15/sorts/</id>
     <published>2018-07-15T01:47:21.000Z</published>
-    <updated>2019-07-31T03:49:57.922Z</updated>
+    <updated>2019-08-15T05:59:17.137Z</updated>
     
     <content type="html"><![CDATA[<h1 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h1><pre><code>如下数字: 35 99 18 76 12  </code></pre><ul><li><p>桶排序<br>  有[100] for初始化数组<br>  将数字放到相应的位置  </p><p>  <strong>思想</strong>： </p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">    利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时</span><br><span class="line">    用待排序的数字坐桶的下标 给相应项+1 类似于做标记的</span><br><span class="line">    myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 </span><br><span class="line">    ```  </span><br><span class="line"></span><br><span class="line">    **时间复杂度:**  </span><br><span class="line">       时间复杂度 循环  </span><br><span class="line">       O(M+N) 一重循环最大值99 100，又一重循环N，  </span><br><span class="line">       之后又有一层循环M 有值的桶子  </span><br><span class="line">       嵌套循环 &gt;= 0 1 2 3有限的，&lt;N   M+N  </span><br><span class="line">         多层循环是最花时间M+N  </span><br><span class="line">         O(M+N+M+N)=O(2*(M+N))  O(M+N)</span><br><span class="line"> </span><br><span class="line">    **缺点:** 占物理内存，因为要分配M个元素的数组  </span><br><span class="line">        </span><br><span class="line">- 冒泡排序  </span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">// 冒泡排序 </span><br><span class="line">// 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序  </span><br><span class="line">const source_arr = [35,18, 99, 18, 76, 12];</span><br><span class="line">function bubbleSort(arr) &#123;</span><br><span class="line">    const len = arr.length;</span><br><span class="line">    for (let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">        for (let j = 0; j &lt; len - 1 - i; j++) &#123;</span><br><span class="line">            if (arr[j] &gt; arr[j+1]) &#123;        // 相邻元素两两对比</span><br><span class="line">                let temp = arr[j+1];        // 元素交换</span><br><span class="line">                arr[j+1] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">console.log(bubbleSort(source_arr));</span><br></pre></td></tr></table></figure></li><li><p>选择排序  </p><blockquote><p>第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// n^2</span></span><br><span class="line"><span class="comment">// 找到数组中最小的值放在第一位，第二小的放在第二位...</span></span><br><span class="line"><span class="comment">// 基址查询</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SelectSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.length</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> minIndex = i</span><br><span class="line">    <span class="comment">// 如果已经选择了， 前面的就一定是有序的</span></span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">let</span> j = i; j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>( arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">        <span class="comment">// 循环和默认的最小值进行比较， 如果更小纪录下标</span></span><br><span class="line">        minIndex = j</span><br><span class="line">        <span class="built_in">console</span>.log(i, j)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(minIndex !== i) &#123;</span><br><span class="line">      [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(SelectSort([<span class="number">45</span>,<span class="number">21</span>,<span class="number">45</span>,<span class="number">12</span>,<span class="number">56</span>,<span class="number">12</span>,<span class="number">67</span>,<span class="number">32</span>,<span class="number">98</span>]))</span><br></pre></td></tr></table></figure></blockquote></li><li><p>快排排序  </p><blockquote><p>因为采用了分治思想，所以快  形象的例子 三个数之间进行排序 a b c 再加递归  </p></blockquote></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2</span></span><br><span class="line"><span class="comment">// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n</span></span><br><span class="line"><span class="comment">// 分治</span></span><br><span class="line"><span class="comment">// 快排 log2(n)* n for循环 n次</span></span><br><span class="line">  <span class="comment">// 1. 随机选择一个数组中的一个数作为一个基准 一般是中点</span></span><br><span class="line">  <span class="comment">// 2. 其余数字跟他比较， 小的放左边 大的放右边</span></span><br><span class="line">  <span class="comment">// 3. 利用递归的思想， 将左右两边的数重复以上两步</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">QuickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 这里是出口 当数组长度小于等于1的时候结束递归</span></span><br><span class="line">  <span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length /<span class="number">2</span>)</span><br><span class="line">  <span class="comment">// 把中间基准值从数组提出来</span></span><br><span class="line">  pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>]  <span class="comment">// 选出相应位置的值</span></span><br><span class="line">  <span class="built_in">console</span>.log(pivot)</span><br><span class="line">  <span class="keyword">let</span> left = [], right = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, len = arr.length ; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>( arr[i] &lt; pivot) &#123;</span><br><span class="line">      left.push(arr[i])</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.push(arr[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> QuickSort(left).concat(pivot, QuickSort(right))</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(QuickSort([<span class="number">85</span>, <span class="number">24</span>, <span class="number">63</span>, <span class="number">45</span>, <span class="number">17</span>, <span class="number">31</span>, <span class="number">78</span>, <span class="number">56</span>]))</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -432,17 +440,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>【轻松集赞】写了个涉嫌混淆微信官方服务的小程序</title>
-    <link href="http://yoursite.com/2018/06/13/thumbsUp/"/>
-    <id>http://yoursite.com/2018/06/13/thumbsUp/</id>
+    <link href="https://heiliu.github.io/2018/06/13/thumbsUp/"/>
+    <id>https://heiliu.github.io/2018/06/13/thumbsUp/</id>
     <published>2018-06-13T07:27:26.000Z</published>
     <updated>2018-06-13T07:27:26.000Z</updated>
     
@@ -459,19 +467,19 @@
     
     </summary>
     
-      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://heiliu.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://heiliu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>BFC 浅谈</title>
-    <link href="http://yoursite.com/2018/06/13/BFC/"/>
-    <id>http://yoursite.com/2018/06/13/BFC/</id>
+    <link href="https://heiliu.github.io/2018/06/13/BFC/"/>
+    <id>https://heiliu.github.io/2018/06/13/BFC/</id>
     <published>2018-06-13T02:58:18.000Z</published>
-    <updated>2018-06-13T02:58:18.000Z</updated>
+    <updated>2019-08-15T05:56:21.088Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><hr><blockquote><p>Block formatting context （块级格式化上下文）  </p></blockquote><p>页面文档由块<code>block</code>构成 每个<code>block</code>在页面上占据自己的位置<br>使用新的元素构建BFC overflow：hidden | auto | scroll； 只要不为<code>visible</code>新的空间<br>告诉浏览器，外面的环境影响不到我了 我重新来进行Block formatting 布局和定位  </p><p><strong>核心：</strong><br>    新的BFC，给出了新的不受外界影响的块级格式化环境<br>    block 块级-&gt; 页面的基础<br>    formatting context 格式化-&gt; 渲染</p><h3 id="浏览器构建文档树的时候-布局和定位元素"><a href="#浏览器构建文档树的时候-布局和定位元素" class="headerlink" title="浏览器构建文档树的时候 布局和定位元素"></a>浏览器构建文档树的时候 布局和定位元素</h3><p>网页的定位（大） 文档流正常，浮动，定位，flex，table<br>广义的定位 块级元素的定位 垂直的定位；行内元素 左右定位 通过内容来确定<br>狭义的定位：<br>float 浮动元素，在一行的开始或者结束<br>flex 弹性布局<br>position</p><p>BFC 在正常的文档流里面重建一个新的上下文环境  </p><h3 id="BFC的约束规则"><a href="#BFC的约束规则" class="headerlink" title="BFC的约束规则"></a>BFC的约束规则</h3><ul><li><p>一、在浏览器进行页面元素布局的时候 同一个BFC的两个相邻的Box的margin 会重叠，与方向无关  </p><blockquote><p>破坏规则 创建新的BFC Context上下文的概念   </p></blockquote><p>  如何创建BFC？=&gt;重新规划一个（独立）渲染区域</p><ul><li>根元素body，天然是一个BFC    </li><li>overflow:hidden;  </li><li>float 不为none  </li><li>display:inline-block | table-cell |table-caption  </li><li>position:absolute | fixed 只要不为static  <blockquote><p>好像只剩块级元素和行内元素不是BFC</p></blockquote></li></ul></li><li><p>二、<code>BFC</code>的高度，浮动元素也要参与计算  </p><blockquote><p>在元素<code>float</code>之后脱离了文档流没有办法计算确切高度，这种情况我们称之为高度塌陷。解决高度塌陷的前提就是<code>能识</code>别并<code>包含</code>到浮动元素。<strong>而<code>BFC</code>就有这个特性</strong>，所以BFC也可以计算浮动元素的高度。新建BFC让浮动元素也参与计算 </p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        *&#123;padding: 0;margin: 0;&#125;</span><br><span class="line">        .par&#123;</span><br><span class="line">            border: 5px solid #fcc;</span><br><span class="line">            width: 300px;</span><br><span class="line">            /*这里的overflow并不是为了超出则隐藏，而是为了创建一个BFC*/</span><br><span class="line">            /* overflow: hidden; */</span><br><span class="line">            display: inline-block;</span><br><span class="line">        &#125;</span><br><span class="line">        .child&#123;</span><br><span class="line">            border: 5px solid #f66;  </span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            float: left;</span><br><span class="line">            /* clear: both; */</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 网页的定位（大） 文档流正常，浮动，定位，flex，table --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"par"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line">- 三、每个元素的左边，要与包含盒子的左边相接触</span><br><span class="line">- 四、BFC的区域不会与float box重叠  </span><br><span class="line">```html</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        *&#123;padding: 0;margin: 0;&#125;</span><br><span class="line">        .aside&#123;</span><br><span class="line">            float: left;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 150px;</span><br><span class="line">            background-color: #ff6666;</span><br><span class="line">        &#125;</span><br><span class="line">        .main&#123;</span><br><span class="line">            height: 200px;</span><br><span class="line">            background: #ffcccc;</span><br><span class="line">            /* clear: left; */</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自适应两栏式布局 类似于flex：1；</span></span><br><span class="line"><span class="comment">    aside 和 main 处于同一BFC（body）下 </span></span><br><span class="line"><span class="comment">    BFC布局规则3 规则4 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"aside"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```   </span><br><span class="line">```html</span><br><span class="line">/*BFC在三栏式布局中的应用*/</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        *&#123;padding: 0;margin: 0;&#125;</span><br><span class="line">        .container&#123;</span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        .left,.right,.center&#123;</span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        .left&#123;</span><br><span class="line">            background: pink;</span><br><span class="line">            float: left;</span><br><span class="line">            width: 180px;</span><br><span class="line">        &#125;</span><br><span class="line">        .right&#123;</span><br><span class="line">            background: lightblue;</span><br><span class="line">            width: 180px;</span><br><span class="line">            float: right;</span><br><span class="line">        &#125;</span><br><span class="line">        .center&#123;</span><br><span class="line">            background: yellow;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 三栏式布局 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 页面的结构与呈现效果不一致？想一下 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>Right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>Center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">**注意：**  </span><br><span class="line">&gt; 通过 overflow:hidden将元素转换为BFC，固然可以解决高度塌陷的问题，但是大范围的应用在布局上是肯定是行不通的，毕竟overflow会造成溢出隐藏的问题，特别是与JS交互的效果时。  </span><br><span class="line"></span><br><span class="line">那有没有一个更好的高度检测方法呢？</span><br><span class="line">答案是有的，就是我们经常用到的clearfix。  </span><br><span class="line">```css</span><br><span class="line">.clearfix:after&#123;</span><br><span class="line">    content:'';</span><br><span class="line">    display:table;</span><br><span class="line">    clear:both</span><br><span class="line">&#125;</span><br><span class="line">.clearfix&#123;</span><br><span class="line">    *zoom:1;/* IE6,7不支持BFC，所以需要通过专有的CSS属性，触发hasLayout。*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></li></ul><p><a href="https://www.cnblogs.com/meierbao/p/6526247.html" target="_blank" rel="noopener">关于zoom:1</a></p>]]></content>
     
@@ -487,19 +495,19 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
+      <category term="css" scheme="https://heiliu.github.io/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>如何手动实现一个New操作</title>
-    <link href="http://yoursite.com/2018/06/13/new/"/>
-    <id>http://yoursite.com/2018/06/13/new/</id>
+    <link href="https://heiliu.github.io/2018/06/13/new/"/>
+    <id>https://heiliu.github.io/2018/06/13/new/</id>
     <published>2018-06-13T02:57:40.000Z</published>
-    <updated>2018-06-13T02:57:40.000Z</updated>
+    <updated>2019-08-15T05:58:04.702Z</updated>
     
     <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><hr><p>在所有的前端面试中常常喜欢考面试者如何手写一个new操作符，作为在准备秋招的大三党，我也要考虑这些。<br>那么我们先看看new操作符都干了什么事情，有哪些操作？通过下面的代码来进行思考：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新建一个类（构造函数）</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Otaku</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="comment">// 自身的属性</span></span><br><span class="line">    <span class="keyword">this</span>.habit = <span class="string">'pk'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 给类的原型上添加属性和方法</span></span><br><span class="line">Otaku.prototype.strength = <span class="number">60</span>;</span><br><span class="line">Otaku.prototype.sayYourName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'I am '</span> + <span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 实例化一个person对象</span></span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Otaku(<span class="string">'乔峰'</span>,<span class="number">5000</span>);</span><br><span class="line">person.sayYourName();</span><br><span class="line"><span class="built_in">console</span>.log(person);<span class="comment">//打印出构造出来的实例</span></span><br><span class="line"><span class="string">``</span><span class="string">`    </span></span><br><span class="line"><span class="string">![控制台打印结果](http://p9utic4op.bkt.clouddn.com/new.png)   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## 解析  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">从控制台打印出来的结果我们可以看出new操作符大概做了一下几件事情：  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> 1. 返回（产生）了一个新的对象  </span></span><br><span class="line"><span class="string"> 2. 访问到了类Otaku构造函数里的属性  </span></span><br><span class="line"><span class="string"> 3. 访问到Otaku原型上的属性和方法  并且设置了this的指向（指向新生成的实例对象）</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">通过上面的分析展示，可以知道new团伙里面一定有Object的参与，不然对象的产生就有点说不清了。 先来边写写：  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="comment">// 需要返回一个对象 借助函数来实现new操作 </span></span><br><span class="line"><span class="comment">// 传入需要的参数： 类 + 属性</span></span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Otaku(<span class="string">'乔峰'</span>,<span class="number">5000</span>);</span><br><span class="line"><span class="keyword">const</span> person1 = objectFactory(Otaku, <span class="string">'鸠摩智'</span>, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开始来实现objectFactory 方法 </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">objectFactory</span>(<span class="params">obj, name, age</span>) </span>&#123;&#125;</span><br><span class="line"><span class="comment">// 这种方法将自身写死了 如此他只能构造以obj为原型，并且只有name 和 age 属性的 obj</span></span><br><span class="line"><span class="comment">// 在js中 函数因为arguments 使得函数参数的写法异常灵活，在函数内部可以通过arguments来获得函数的参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">objectFactory</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arguements); <span class="comment">//&#123; '0': [Function: Otaku], '1': '鸠摩智', '2': 5000 &#125;</span></span><br><span class="line">     <span class="comment">// 通过arguments类数组打印出的结果，我们可以看到其中包含了构造函数以及我们调用objectfactory时传入的其他参数</span></span><br><span class="line">    <span class="comment">// 接下来就是要想如何得到其中这个构造函数和其他的参数</span></span><br><span class="line">    <span class="comment">// 由于arguments是类数组，没有直接的方法可以供其使用，我们可以有以下两种方法:</span></span><br><span class="line">    <span class="comment">// 1. Array.from(arguments).shift(); //转换成数组 使用数组的方法shift将第一项弹出</span></span><br><span class="line">    <span class="comment">// 2.[].shift().call(arguments); // 通过call() 让arguments能够借用shift方法</span></span><br><span class="line">    <span class="keyword">const</span> Constructor = [].shift.call(<span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">const</span> args = <span class="built_in">arguments</span>;</span><br><span class="line">    <span class="comment">// 新建一个空对象 纯洁无邪</span></span><br><span class="line">    <span class="keyword">let</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    <span class="comment">// 接下来的想法 给obj这个新生对象的原型指向它的构造函数的原型  </span></span><br><span class="line">    <span class="comment">// 给构造函数传入属性，注意：构造函数的this属性</span></span><br><span class="line">    <span class="comment">// 参数传进Constructor对obj的属性赋值，this要指向obj对象</span></span><br><span class="line">    <span class="comment">// 在Coustructor内部手动指定函数执行时的this 使用call、apply实现</span></span><br><span class="line">    Constructor.call(obj,...args);</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- 上面的代码注释太多，剔除注释以后的代码：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">objectFactory</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> Constructor = [].shift.call(<span class="built_in">arguments</span>);</span><br><span class="line">        <span class="keyword">const</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">        obj.__proto__ = Conctructor.prototype;</span><br><span class="line">        Constructor.call(obj,...arguments);</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="string">``</span><span class="string">`    </span></span><br><span class="line"><span class="string">- 还有另外一种操作： </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myNew</span>(<span class="params">Obj,...args</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(Obj.prototype);<span class="comment">//使用指定的原型对象及其属性去创建一个新的对象</span></span><br><span class="line">  Obj.apply(obj,args); <span class="comment">// 绑定 this 到obj, 设置 obj 的属性</span></span><br><span class="line">  <span class="keyword">return</span> obj; <span class="comment">// 返回实例</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -513,19 +521,19 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>WePY  上手</title>
-    <link href="http://yoursite.com/2018/06/04/wepy/"/>
-    <id>http://yoursite.com/2018/06/04/wepy/</id>
+    <link href="https://heiliu.github.io/2018/06/04/wepy/"/>
+    <id>https://heiliu.github.io/2018/06/04/wepy/</id>
     <published>2018-06-04T10:25:56.000Z</published>
-    <updated>2018-06-04T10:25:56.000Z</updated>
+    <updated>2019-08-15T05:59:58.580Z</updated>
     
     <content type="html"><![CDATA[<h1 id="来自微信官方的小程序组件开发框架"><a href="#来自微信官方的小程序组件开发框架" class="headerlink" title="来自微信官方的小程序组件开发框架"></a>来自微信官方的小程序组件开发框架</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><pre><code>WePY (发音: /&apos;wepi/)是一款让小程序支持组件化开发的框架，通过预编译的手段让开发者可以选择自己喜欢的开发风格去开发小程序。  </code></pre><ul><li>类Vue开发风格</li><li>支持自定义组件开发</li><li>支持引入NPM包</li><li>支持Promise</li><li>支持ES2015+特性，如Async Functions</li><li>支持多种编译器，Less/Sass/Stylus/PostCSS、Babel/Typescript、Pug</li><li>支持多种插件处理，文件压缩，图片压缩，内容替换等</li><li>支持 Sourcemap，ESLint等</li><li>小程序细节优化，如请求列队，事件优化等</li></ul><h2 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h2><h3 id="安装（更新）wepy命令行工具"><a href="#安装（更新）wepy命令行工具" class="headerlink" title="安装（更新）wepy命令行工具"></a>安装（更新）wepy命令行工具</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install wepy-cli -g</span><br></pre></td></tr></table></figure><h3 id="生成开发实例"><a href="#生成开发实例" class="headerlink" title="生成开发实例"></a>生成开发实例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">npm init standard projectName</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">生成src的目录 开发在此目录进行开发</span></span><br><span class="line"><span class="string">### 安装依赖  </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">npm install</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">将所有项目和开发时（package.json）所需要的依赖进行安装</span></span><br><span class="line"><span class="string">### 开启实时编译</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">wepy build --watch</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">生成dist目录、并实时监听src目录下的修改且编译到dist目录中     </span></span><br><span class="line"><span class="string">### WePY项目目录结构</span></span><br></pre></td></tr></table></figure><blockquote><p>├── dist                   小程序运行代码目录（该目录由WePY的build指令自动编译生成，请不要直接修改该目录下的文件）<br>├── node_modules<br>├── src                    代码编写的目录（该目录为使用WePY后的开发目录）<br>|   ├── components       WePY组件目录（组件不属于完整页面，仅供完整页面或其他组件引用）<br>|   |   ├── com_a.wpy      可复用的WePY组件a<br>|   |   └── com_b.wpy      可复用的WePY组件b<br>|   ├── pages              WePY页面目录（属于完整页面）<br>|   |   ├── index.wpy      index页面（经build后，会在dist目录下的pages目录生成index.js、index.json、index.wxml和index.wxss文件）<br>|   |   └── other.wpy      other页面（经build后，会在dist目录下的pages目录生成other.js、other.json、other.wxml和other.wxss文件）<br>|        └── app.wpy            小程序配置项（全局数据、样式、声明钩子等；经build后，会在dist目录下生成app.js、app.json和app.wxss文件）<br>└── package.json           项目的package配置<br><code>`</code></p></blockquote><h3 id="开发者工具导入项目"><a href="#开发者工具导入项目" class="headerlink" title="开发者工具导入项目"></a>开发者工具导入项目</h3><p>使用微信开发者工具新建项目，本地开发选择生成的dist目录，会自动导入项目目录配置  </p><p><a href="https://tencent.github.io/wepy/document.html#/" target="_blank" rel="noopener">WePY官方文档</a></p>]]></content>
     
@@ -538,10 +546,10 @@
     
     </summary>
     
-      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://heiliu.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://heiliu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   

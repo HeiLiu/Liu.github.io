@@ -2,266 +2,273 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2019/07/31/multiSSH/</loc>
+    <loc>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</loc>
+    
+    <lastmod>2019-08-15T06:02:05.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/05/09/cssCenter/</loc>
+    
+    <lastmod>2019-08-15T06:01:42.198Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/05/01/function_note/</loc>
+    
+    <lastmod>2019-08-15T06:01:29.564Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/06/04/wepy/</loc>
+    
+    <lastmod>2019-08-15T05:59:58.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/07/30/type/</loc>
+    
+    <lastmod>2019-08-15T05:59:31.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/07/15/sorts/</loc>
+    
+    <lastmod>2019-08-15T05:59:17.137Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/08/12/setPerformance/</loc>
+    
+    <lastmod>2019-08-15T05:59:00.013Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/06/13/new/</loc>
+    
+    <lastmod>2019-08-15T05:58:04.702Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/05/03/jquery/</loc>
+    
+    <lastmod>2019-08-15T05:57:33.313Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/08/15/Axios/</loc>
+    
+    <lastmod>2019-08-15T05:56:40.198Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/06/13/BFC/</loc>
+    
+    <lastmod>2019-08-15T05:56:21.088Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/07/31/multiSSH/</loc>
     
     <lastmod>2019-08-15T05:37:10.143Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/15/Axios/</loc>
-    
-    <lastmod>2019-08-15T05:31:33.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/08/05/Array/</loc>
+    <loc>https://heiliu.github.io/2019/08/05/Array/</loc>
     
     <lastmod>2019-08-15T03:57:42.577Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/28/0722/</loc>
+    <loc>https://heiliu.github.io/2019/07/28/0722/</loc>
     
     <lastmod>2019-08-14T10:39:34.911Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/29/serverless/</loc>
+    <loc>https://heiliu.github.io/2019/07/29/serverless/</loc>
     
     <lastmod>2019-08-14T09:56:46.041Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/14/E2ETest/</loc>
+    <loc>https://heiliu.github.io/2019/08/14/E2ETest/</loc>
     
     <lastmod>2019-08-14T05:53:24.168Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/28/gitNote/</loc>
+    <loc>https://heiliu.github.io/2019/07/28/gitNote/</loc>
     
     <lastmod>2019-08-13T04:17:03.374Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/21/gitCommand/</loc>
+    <loc>https://heiliu.github.io/2018/04/21/gitCommand/</loc>
     
     <lastmod>2019-08-13T04:16:58.744Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/13/spaceBetweenInlineBlock/</loc>
+    <loc>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</loc>
     
     <lastmod>2019-08-13T04:15:23.819Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/08/12/setPerformance/</loc>
-    
-    <lastmod>2019-08-12T03:50:11.288Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>https://heiliu.github.io/about/index.html</loc>
     
     <lastmod>2019-08-06T03:23:47.232Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>https://heiliu.github.io/tags/index.html</loc>
     
     <lastmod>2019-08-06T03:22:21.376Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>https://heiliu.github.io/categories/index.html</loc>
     
     <lastmod>2019-08-06T03:21:59.287Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/18/regExp/</loc>
+    <loc>https://heiliu.github.io/2018/07/18/regExp/</loc>
     
     <lastmod>2019-08-05T15:30:14.974Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/19/hexo/</loc>
+    <loc>https://heiliu.github.io/2018/04/19/hexo/</loc>
     
     <lastmod>2019-08-03T10:45:45.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/29/provider&&connect/</loc>
+    <loc>https://heiliu.github.io/2019/07/29/provider&&connect/</loc>
     
     <lastmod>2019-08-03T09:45:33.792Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/07/29/npmParams/</loc>
+    <loc>https://heiliu.github.io/2019/07/29/npmParams/</loc>
     
     <lastmod>2019-08-03T09:43:44.955Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/04/25/next_install/</loc>
+    <loc>https://heiliu.github.io/2018/04/25/next_install/</loc>
     
     <lastmod>2019-08-03T09:23:39.736Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/15/VueComponentsConnect-md/</loc>
-    
-    <lastmod>2019-07-31T05:51:14.717Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/09/mixin/</loc>
+    <loc>https://heiliu.github.io/2018/05/09/mixin/</loc>
     
     <lastmod>2019-07-31T05:33:42.647Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/15/sorts/</loc>
-    
-    <lastmod>2019-07-31T03:49:57.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/19/heihei/</loc>
+    <loc>https://heiliu.github.io/2018/04/19/heihei/</loc>
     
     <lastmod>2019-07-28T15:54:41.566Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/03/URL2/</loc>
+    <loc>https://heiliu.github.io/2018/05/03/URL2/</loc>
     
     <lastmod>2018-08-09T10:38:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/30/type/</loc>
-    
-    <lastmod>2018-08-09T08:59:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/22/ArrayUnique/</loc>
+    <loc>https://heiliu.github.io/2018/04/22/ArrayUnique/</loc>
     
     <lastmod>2018-07-28T15:15:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/07/20/Better/</loc>
+    <loc>https://heiliu.github.io/2018/07/20/Better/</loc>
     
     <lastmod>2018-07-21T00:52:10.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/06/13/thumbsUp/</loc>
+    <loc>https://heiliu.github.io/2018/06/13/thumbsUp/</loc>
     
     <lastmod>2018-06-13T07:27:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/06/13/BFC/</loc>
-    
-    <lastmod>2018-06-13T02:58:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/06/13/new/</loc>
-    
-    <lastmod>2018-06-13T02:57:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/06/04/wepy/</loc>
-    
-    <lastmod>2018-06-04T10:25:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/16/wxNote/</loc>
+    <loc>https://heiliu.github.io/2018/05/16/wxNote/</loc>
     
     <lastmod>2018-05-16T08:15:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/cssCenter/</loc>
+    <loc>https://heiliu.github.io/2018/05/09/URL/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/function_note/</loc>
+    <loc>https://heiliu.github.io/2018/05/04/Css3/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/02/flexbox/</loc>
+    <loc>https://heiliu.github.io/2018/04/26/nextconfig/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/04/Css3/</loc>
+    <loc>https://heiliu.github.io/2018/04/19/hello-world/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/09/URL/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/19/hello-world/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/26/nextconfig/</loc>
+    <loc>https://heiliu.github.io/2018/05/02/flexbox/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
