@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://heiliu.github.io/2018/05/04/Css3/</loc>
+    
+    <lastmod>2019-08-15T10:38:18.994Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/08/15/webpack/</loc>
+    
+    <lastmod>2019-08-15T09:48:26.285Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/08/15/DesignPatterns/</loc>
+    
+    <lastmod>2019-08-15T06:24:07.867Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</loc>
     
     <lastmod>2019-08-15T06:02:05.200Z</lastmod>
@@ -247,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://heiliu.github.io/2018/05/04/Css3/</loc>
+    <loc>https://heiliu.github.io/2018/05/02/flexbox/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     
@@ -262,13 +283,6 @@
   
   <url>
     <loc>https://heiliu.github.io/2018/04/19/hello-world/</loc>
-    
-    <lastmod>2018-05-09T15:33:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heiliu.github.io/2018/05/02/flexbox/</loc>
     
     <lastmod>2018-05-09T15:33:46.000Z</lastmod>
     

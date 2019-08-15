@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WebPack 相关]]></title>
+    <url>%2F2019%2F08%2F15%2Fwebpack%2F</url>
+    <content type="text"><![CDATA[及时补一篇篇都是欠下的债 参考链接官方文档传送门]]></content>
+      <categories>
+        <category>前端</category>
+        <category>webPack</category>
+      </categories>
+      <tags>
+        <tag>webPack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式学习与整理]]></title>
+    <url>%2F2019%2F08%2F15%2FDesignPatterns%2F</url>
+    <content type="text"><![CDATA[设计模式]]></content>
+      <categories>
+        <category>Skill</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+        <tag>Skill</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Axios]]></title>
     <url>%2F2019%2F08%2F15%2FAxios%2F</url>
     <content type="text"><![CDATA[先从fetch讲起一个简单的fetch例子如下： 123456789101112131415161718192021fetch('./api/person.json') .then( function(response) &#123; if (response.status !== 200) &#123; console.log('Looks like there was a problem. Status Code: ' + response.status); return; &#125; // Examine the text in the response // 将返回数据 Json 化 response.json().then(function(data) &#123; console.log(data); &#125;); &#125; ) .catch(function(err) &#123; console.log('Fetch Error :-S', err); &#125;); 1. .json()返回一个被解析为JSON格式的`promise`对象，当获取成功时，我们使用 json() 读取并解析数据 使用async/await简化由于Fetch底层是用Promise实现，我们可以直接用async来优化上面的代码，减少回调，使其更加语义化、容易理解， 代码如下： 12345678910async function geturl()&#123; try&#123; let res = await fetch('./api/some.json') if(res.status == 200)&#123; console.log(await res.text()) &#125; &#125; catch(err)&#123; console.log(err) &#125;&#125; 12345678910// response 其他返回数据fetch('users.json').then(function(response) &#123; console.log(response.headers.get('Content-Type')); console.log(response.headers.get('Date')); console.log(response.status); console.log(response.statusText); console.log(response.type); console.log(response.url);&#125;); Response 类型当我们发起一个Fetch请求时，返回的response响应会自带一个response.type属性（basic、cors、opaque）。response.type属性说明了异步资源的来源，同时还有相应的处理方式。当我们发起一个同源请求时，response.type为basic，而且你可以从response读取全部信息。如果我们访问一个非同源域名，并且有返回相应的CORs响应头时，那么该请求类型是cors。 cors和basic很相似，就除了cors响应里你无法访问Cache-Control，Content-Language，Content-Type，Expires，Last-Modified和Pragma当我们对一个不同源的域名发起请求时，如果返回的响应头部没有CORS信息，那么这个response对应的类型就是opaque类型。一个opaque响应是无法读取返回的数据、状态，甚至无法确定这个请求是否成功。我们可以自定义Fetch请求的模式，要求返回对应类型的响应，有以下几种响应： 1.same-origin 只返回同源请求，其他类型会被reject 2.cors 接收同源、非同源请求，返回有CORs头部的响应 3.cors-with-forced-preflight 在发出请求前会先做一次安全性检查 4.no-cors 用来发起没有CORS头部并且非同源请求，并且会返回opaque响应。但是目前这种类型只能在Service Worker里使用，在window.fetch里不能用 POST请求类型使用Fetch发起Post请求时，需要手动设置method参数和body参数，如下：1234567891011121314fetch(url, &#123; method: 'post', headers: &#123; "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" &#125;, body: 'foo=bar&amp;lorem=ipsum' &#125;) .then(json) .then(function (data) &#123; console.log('Request succeeded with JSON response', data); &#125;) .catch(function (error) &#123; console.log('Request failed', error); &#125;); 带 COOKIE 发送请求在异步请求中带上cookie参数，那么需要显式指定credentials参数： 123fetch(url, &#123; credentials: 'include'&#125;) AxiosAxios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 特性 从浏览器中创建 XMLHttpRequests 从 node.js 创建 http 请求 支持 Promise API 拦截请求和响应 转换请求数据和响应数据 取消请求 自动转换 JSON 数据 客户端支持防御 XSRF 安装npm 安装：1$ npm install axios 使用cdn:1&lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt; GET 请求POST 请求响应结构响应返回包含信息：12345678910111213141516&#123; // `data` 由服务器提供的响应 data: &#123;&#125;, // `status` 来自服务器响应的 HTTP 状态码 status: 200, // `statusText` 来自服务器响应的 HTTP 状态信息 statusText: 'OK', // `headers` 服务器响应的头 headers: &#123;&#125;, // `config` 是为请求提供的配置信息 config: &#123;&#125;&#125; 文档传送门]]></content>
@@ -85,17 +109,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[serverless了解]]></title>
-    <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
-    <content type="text"><![CDATA[serverless 根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。]]></content>
-      <categories>
-        <category>server</category>
-      </categories>
-      <tags>
-        <tag>倒腾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[NPM 参数]]></title>
     <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
     <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
@@ -106,6 +119,17 @@
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[serverless了解]]></title>
+    <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
+    <content type="text"><![CDATA[serverless 根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。]]></content>
+      <categories>
+        <category>server</category>
+      </categories>
+      <tags>
+        <tag>倒腾</tag>
       </tags>
   </entry>
   <entry>
@@ -161,6 +185,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[排序]]></title>
+    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
+    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n// 分治// 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>javaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue组件通信]]></title>
     <url>%2F2018%2F07%2F15%2FVueComponentsConnect-md%2F</url>
     <content type="text"><![CDATA[组件 (Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。 通信类型父组件与子组件通信 父组件给子组件传递数据 props: 使用props，父组件可以使用props向子组件传递数据 1234567891011121314151617181920// 父组件 &lt;template&gt; &lt;child :msg="message"&gt;&lt;/child&gt;&lt;/template&gt; &lt;script&gt; import child from './child.vue'; export default &#123; components: &#123; child &#125;, data () &#123; return &#123; message: 'father message'; &#125; &#125;&#125;&lt;/script&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150// 子组件 &lt;template&gt; &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt; &lt;/template&gt; &lt;script&gt; export default &#123; // props 另一种写法, 不声明类型与默认值 // props: ['msg'] props: &#123; msg: &#123; type: String, required: true &#125; &#125; &#125; &lt;/script&gt;``` - 子组件向父组件通信 &gt; 在Vue 中子组件一般不具有操作数据和处理事件的权利，所有的数据和事件的处理都要交给父组件进行操作 **方法一 :** 在子组件中通过$emit()将组件内部的时间传递给父组件的事件进行 ```js // 父组件&lt;template&gt;&lt;child @msgFunc="func"&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt;import child from './child.vue';export default &#123;components: &#123; child&#125;,methods: &#123; func (msg) &#123; console.log(msg); &#125;&#125;&#125;&lt;/script&gt;// 子组件 &lt;template&gt;&lt;button @click="handleClick"&gt;点我&lt;/button&gt;&lt;/template&gt;&lt;script&gt;export default &#123;props: &#123; msg: &#123; type: String, required: true &#125;&#125;,methods () &#123; handleClick () &#123; // 提交出去的处理方法的名称与父组件接收的需一致 this.$emit('msgFunc'); &#125;&#125;&#125;&lt;/script&gt; ``` **方法二:** 通过修改父组件传递的props来修改父组件数据 &gt; 这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。&gt; 但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理 --- ## 兄弟组件进行通信 &gt; 刚开始学习使用Vue时, 在Vue项目中的两个兄弟组件之间如果要进行通信， 通常会通过一个父组件进行数据请求再给子组件传递数据。 - Vuex 是官方推荐的状态管理方案, 不过如果只是中小型项目，状态管理也没有很复杂的话，使用 Vuex 有种杀鸡用牛刀的感觉 - Vue 官方推荐使用一个 Vue 实例作为中央事件总线, 即 `EventBus` ,在需要使用的地方import该Bus &gt; EventBus 解决了兄弟组件之间的事件传递问题，它的本质是订阅发布者模式，同一个事件发布组件发布了，订阅组件就能获得事件的改变摆脱了兄弟组件之间传值需要父组件转达，Vue事件实例，作为中间者不在页面上显示且具有vue的API 如 emit on ```js // bus.js =&gt; new 一个 Vue 实例 import Vue from 'vue' export default new Vue() // clickComponent.vue 相当于发布者, 在需要的组件中订阅就能进行通信 &lt;template&gt; &lt;div&gt; &lt;a href="#"class="click" :data-index="index" @click.prevent="doClick($event)"&gt;点我&lt;/a&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; props: &#123; index: Number &#125;, methods: &#123; doClick (event) &#123; // console.log(event.target.dataset.index) Bus.$emit('getTarget', event.target.dataset.index) // this.$emit('global: getTarget', event.target.dataset.index) &#125; &#125; &#125; &lt;/script&gt; // showComponents.vue 另一个兄弟组件 进行订阅 &lt;template&gt; &lt;div&gt; &#123;&#123;html&#125;&#125; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; data () &#123; return &#123; html: '还没有点击' &#125; &#125;, created () &#123; Bus.$on('getTarget', index =&gt; &#123; this.html = `第$&#123;index&#125;个元素` &#125;) //this.$on('global: getTarget', index =&gt; &#123; // this.html = `第$&#123;index&#125;个元素` // &#125;) &#125; &#125; &lt;/script&gt;``` 在node中有一个 `vue-event-proxy` npm包能够实现与EventBus同样的功能，需要安装该npm包, 并且在main.js中进行`引入 ` ```js import EventProxy from 'vue-event-proxy' Vue.use(EventProxy) // 激活使用 // 完成后即可以使用上面组件中js注释部分的代码代替Bus代码]]></content>
@@ -170,17 +205,6 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[排序]]></title>
-    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
-    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n// 分治// 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>javaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -268,7 +292,7 @@
   <entry>
     <title><![CDATA[Css3属性]]></title>
     <url>%2F2018%2F05%2F04%2FCss3%2F</url>
-    <content type="text"><![CDATA[text-shadow属性介绍: `text-shadow`属性可以给页面上的文字增添阴影效果，`text-shadow`在Css2.1的时候是 被删除了的一个属性，但是呢在3.0的Css中又恢复了使用 使用方法 1&gt; text-shadow : length length length color 注：前两个参数在使用的时候必须给定 第一个length表示阴影离开文字横方向的距离 第二个length表示阴影离开文字纵方向的距离 第二个length表示阴影模糊半径 即模糊范围 color 表示阴影颜色 可以放在三个length之前 也可以放在之后 如果不给值 则使用元素默认color $ 指定多个阴影： 每个阴影用逗号隔开 1text-shadow : 15px 15px 5px #000,30px,30px,5px #f60; background-size属性介绍: 在Css3中可以使用background-size来指定背景图像的尺寸 使用方法 1background-size: auto || length || percentage || cover || contain auto: 默认值 保持背景图片的原始宽高比 length: 设置背景图片的宽度和高度，如果只设置一个值，则第二个值会被设置为auto 按宽高比进行放大缩小 percentage: 以父元素的百分比来设置宽度和高度，如果只设置一个值 同上 cover: 此值是将图片放大，以适合铺满整个容器，这个主要用在当图片小于容器又无法使用background-repeat来实现，就可以采用cover将背景图片放大到适合容器的大小，但是会使图片失真 contain: 与cover相反，将背景图片缩小以适合铺满整个容器，这个主要用在当背景图片大于元素容器时，而又需要将背景图片全部显示出来，就可以用contain将图片缩小到适合容器的大小，这种方法同样会使图片失真 在一个元素中显示多个背景图片介绍:在Css3一个元素可以显示多个背景图像，还可以将多个背景图像进行重叠显示，这样对背景中所用素材调整变得更加容易。使用方法 background-image:url(1.png),url(2,png),url(3.png); 图层的排序方法: 浏览器中显示时叠放的顺序是从上往下指定的，第一个图片放在最上面，最后指定的放在下面 Css3的变形功能transform属性介绍: 在Css3中可以利用transform属性来实现文字或图像的旋转、缩放、倾斜、和移动。但是需要做兼容性处理，如下 1234-webkit-transform: rotateX(60deg);-moz-transform: rotateX(60deg);-ms-transform: rotateX(60deg); /*IE9*/-o-transform: rotateX(60deg); rotate(旋转)： rotate(60deg);顺时针旋转 deg是Css3中的角度单位 1-webkit-transform: rotateX(60deg); rotateX(angle) rotateY(angle) rotateZ(angle) 绕对应的轴进行3D旋转 rotate3D(X,Y,Z,deg) 定义 3D 旋转 scale(缩放)：transform:scale(值) 值所指的是缩(小)放(大)倍率 如果值为负数并没有效果 纯属无聊 scale(x,y) 使元素在x轴 y轴方向同时缩放 scaleX(.5) 你应该懂得 scaleY(.5) 同上 skew(倾斜)transform:skew(deg) 倾斜角度 skew(x,y) 元素在水平和垂直方向上同时倾斜 只有一个参数时，只在水平方向上倾斜 skewX(x) 元素仅在水平方向倾斜 skewY(y) 元素在垂直方向倾斜 translate(值) 指定移动的距离 负值即反方向移动 translate(x,y);在x轴和y轴同时移动，只有一个参数时，仅在水平方向移动; translateX(x);x轴方向移动-translateY(y);y轴方向移动 transform-origin 改变元素基点 属性使用：transform-origin:bottom; 各个基点参考如图： 对一个元素使用多种变形的方法： transform：方法一，方法二，方法三..; 12 /*同样也需要做兼容性处理*/transform: translate(50px),rotate(60deg),scale(2); Css3的动画功能demo transition 支持从一个属性平滑过渡到另外一个属性 语法: 1transition: property duration timing-function delay; transition 主要包含四个属性值: 执行变换的属性: transition-property,属性规定应用过渡效果的CSS属性的名称。(当指定的CSS属性改变时，过渡效果将开始)值有三个类型: A、`none` 没有属性会获得过渡效果。 B、`all`所有属性都将获得过渡效果。 C、`property`定义应用过渡效果的CSS 属性名称列表，列表以逗号分隔。 变换延续的时间: transition-duration规定完成过渡效果需妻花费的时间(以秒或毫秒计》，默认值0没有效果 在延续时间段，变换的速率变化transition-timing-function值:123456A 、ease: (逐渐变慢) 默认值，ease函数等同于贝塞尔曲线(0.25,0.1,0.25,1.0). B、linear: (匀速)，linear 函数等同于贝塞尔曲线(0.0,0.0,1.0,1.0). C、ease-in: (加速)，ease-in 函数等同于贝塞尔曲线(0.42,0,1.0,1.0). D、ease-out: (减速)，ease-out 函数等同于贝塞尔曲线(0,0,0.58,1.0). E 、ease-in-out : (加速然后减速)，ease-in-out 函数等同于贝塞尔曲线(0.42,0,0.58,1.0) F、cubic-bezier(n,n,n,n)在cubic-bezier 函数中定义自己的值。可能的值是0 至1之间的数值。 animation 支持通过关键帧的指定来在页面上产生更复杂的动画效果用 transition和Animations的区别 : 1`transition`和`Animations`的区别在于，`transition`只能通过指定属性的开始值与结束值，然后通过两属性值之间进行垂滑过渡的方式来实现动画效果，所以transition不能实现复杂的动画效果，而Animations功能是是通过关键幀以及每个关键帧中的属性值来实现更为复杂的动画效果。 Animations的使用方法:参考我的飞机Demo更好哦@-webkit-keyframes 关键帧合集名称{ 创建关键帧的代码 } 0%~100%{本关键帧中的样式}关键帧创建好了之后，还要在元素的样式中使用该关键帧。方法如下: 123456789101112131415161718192021 元素&#123; - webkit-animation-name :关键帧合集名称 ; - webkit-animation-duration:5s ; - webkit-animation-timing-function :linear;-webkit-animation-iteration-count:infnite &#125; ``` `-webkit-animation-name`指定合集名称， `-webkit-animation-duration`整个动画执行完成所需的时司、需要的时间， `-webkit-animation-timing-function`实现动画的方法 `-webkit-animation-iteration-count`属性的属性值设定为某个整数值，那么这个动画播放的次数就等于这个整数值(infinite是无限循环播放)。 3、实现动画的方法: A、linear: 匀速进行. B、ease-in: 开始速度很慢，然后沿曲线进行加快， C、ease-out: 开始速度很快，然后沿着曲线进行减速. D、ease: 开始时速度很快，然后沿着曲线进行减速，然后再沿着曲线加速， E、ease-in-out: 开始时速度很慢，然后沿着曲线进行加速，然后再沿着曲线减速.也可以以合集的形式进行样式书写： ```animation: name duration timing-function delay iteration-count direction;]]></content>
+    <content type="text"><![CDATA[text-shadow属性介绍: text-shadow属性可以给页面上的文字增添阴影效果，text-shadow在Css2.1的时候是 被删除了的一个属性，但是呢在3.0的Css中又恢复了使用 使用方法1text-shadow : length length length color 注：前两个参数在使用的时候必须给定 第一个length表示阴影离开文字横方向的距离 第二个length表示阴影离开文字纵方向的距离 第二个length表示阴影模糊半径 即模糊范围 color 表示阴影颜色 可以放在三个length之前 也可以放在之后 如果不给值 则使用元素默认color $ 指定多个阴影： 每个阴影用逗号隔开 1text-shadow : 15px 15px 5px #000,30px,30px,5px #f60; background-size属性介绍: 在Css3中可以使用background-size来指定背景图像的尺寸 使用方法 1background-size: auto || length || percentage || cover || contain auto: 默认值 保持背景图片的原始宽高比 length: 设置背景图片的宽度和高度，如果只设置一个值，则第二个值会被设置为auto 按宽高比进行放大缩小 percentage: 以父元素的百分比来设置宽度和高度，如果只设置一个值 同上 cover: 此值是将图片放大，以适合铺满整个容器，这个主要用在当图片小于容器又无法使用background-repeat来实现，就采用cover将背景图片放大到适合容器的大小，但是会使图片失真 contain: 与cover相反，将背景图片缩小以适合铺满整个容器，这个主要用在当背景图片大于元素容器时，而又需要将背景全部显示出来，就可以用contain将图片缩小到适合容器的大小，这种方法同样会使图片失真 在一个元素中显示多个背景图片介绍: 在Css3一个元素可以显示多个背景图像，还可以将多个背景图像进行重叠显示，这样对背景中所用素材调整变得更加容易。 使用方法1background-image:url(1.png),url(2,png),url(3.png); 图层的排序方法: 浏览器中显示时叠放的顺序是从上往下指定的，第一个图片放在最上面，最后指定的放在下面 Css3的变形功能transform属性 介绍: 在Css3中可以利用transform属性来实现文字或图像的旋转、缩放、倾斜、和移动。但是需要做兼容性处理，如下 1234-webkit-transform: rotateX(60deg);-moz-transform: rotateX(60deg);-ms-transform: rotateX(60deg); /*IE9*/-o-transform: rotateX(60deg); rotate(旋转)： rotate(60deg);顺时针旋转 deg是Css3中的角度单位 1-webkit-transform: rotateX(60deg); rotateX(angle) rotateY(angle) rotateZ(angle) 绕对应的轴进行3D旋转 rotate3D(X,Y,Z,deg) 定义 3D 旋转 scale(缩放)：transform:scale(值) 值所指的是缩(小)放(大)倍率 如果值为负数并没有效果 纯属无聊 scale(x,y) 使元素在x轴 y轴方向同时缩放 scaleX(.5) 你应该懂得 scaleY(.5) 同上 skew(倾斜)transform:skew(deg) 倾斜角度 skew(x,y) 元素在水平和垂直方向上同时倾斜 只有一个参数时，只在水平方向上倾斜 skewX(x) 元素仅在水平方向倾斜 skewY(y) 元素在垂直方向倾斜 translate(值) 指定移动的距离 负值即反方向移动 translate(x,y);在x轴和y轴同时移动，只有一个参数时，仅在水平方向移动; translateX(x);x轴方向移动-translateY(y);y轴方向移动 transform-origin 改变元素基点 属性使用：transform-origin:bottom; 各个基点参考如图： 对一个元素使用多种变形的方法： transform：方法一，方法二，方法三..; 12 /*同样也需要做兼容性处理*/transform: translate(50px),rotate(60deg),scale(2); Css3的动画功能demo transition 支持从一个属性平滑过渡到另外一个属性 语法: 1transition: property duration timing-function delay; transition 主要包含四个属性值: 执行变换的属性: transition-property,属性规定应用过渡效果的CSS属性的名称。(当指定的CSS属性改变时，过渡效果将开始)值有三个类型: A、none 没有属性会获得过渡效果。B、all所有属性都将获得过渡效果。C、property定义应用过渡效果的CSS 属性名称列表，列表以逗号分隔。 变换延续的时间: transition-duration规定完成过渡效果需妻花费的时间(以秒或毫秒计》，默认值0没有效果 在延续时间段，变换的速率变化transition-timing-function值: 123456A. ease: (逐渐变慢) 默认值，ease函数等同于贝塞尔曲线(0.25,0.1,0.25,1.0). B. linear: (匀速)，linear 函数等同于贝塞尔曲线(0.0,0.0,1.0,1.0). C. ease-in: (加速)，ease-in 函数等同于贝塞尔曲线(0.42,0,1.0,1.0). D. ease-out: (减速)，ease-out 函数等同于贝塞尔曲线(0,0,0.58,1.0). E. ease-in-out : (加速然后减速)，ease-in-out 函数等同于贝塞尔曲线(0.42,0,0.58,1.0) F. cubic-bezier(n,n,n,n)在cubic-bezier 函数中定义自己的值。可能的值是0 至1之间的数值。 animation 支持通过关键帧的指定来在页面上产生更复杂的动画效果 用 transition和Animations的区别 : transition和Animations的区别在于，transition只能通过指定属性的开始值与结束值，然后通过两属性值之间进行垂滑过渡的方式来实现动画效果，所以transition不能实现复杂的动画效果，而Animations功能是是通过关键幀以及每个关键帧中的属性值来实现更为复杂的动画效果。 Animations的使用方法:参考我的飞机Demo更好哦 123456789101112131415161718@-webkit-keyframes 关键帧合集名称&#123; 创建关键帧的代码 &#125; 0%~100%&#123; 本关键帧中的样式 &#125; // 关键帧创建好了之后，还要在元素的样式中使用该关键帧。方法如下: 元素&#123; - webkit-animation-name :关键帧合集名称 ; - webkit-animation-duration:5s ; - webkit-animation-timing-function :linear;-webkit-animation-iteration-count:infnite &#125;```css -webkit-animation-name 指定合集名称， -webkit-animation-duration 整个动画执行完成需要的时间， -webkit-animation-timing-function 实现动画的方法 -webkit-animation-iteration-count 属性的属性值设定为某个整数值，那么这个动画播放的次数就等于这个整数值(infinite是无限循环播放)。 实现动画的方式: A、linear: 匀速进行. B、ease-in: 开始速度很慢，然后沿曲线进行加快， C、ease-out: 开始速度很快，然后沿着曲线进行减速. D、ease: 开始时速度很快，然后沿着曲线进行减速，然后再沿着曲线加速， E、ease-in-out: 开始时速度很慢，然后沿着曲线进行加速，然后再沿着曲线减速. 也可以以合集的形式进行样式书写：1animation: name duration timing-function delay iteration-count direction;]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -377,6 +401,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[想把我唱给你听]]></title>
     <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
     <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧12345678910111213141516171819202122232425262728293031323334353637383940414243想把我唱给你听趁现在`年少如花`花儿尽情地开吧装点你的岁月我的枝桠谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我把我唱给你听把你纯真无邪的笑容给我吧我们应该有快乐的幸福的晴朗的时光我把我唱给你听用我炙热的感情感动你好吗岁月是值得怀念的留念的害羞的红色脸庞谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我们应该有快乐的幸福的晴朗的时光]]></content>
@@ -386,10 +415,5 @@
       <tags>
         <tag>随笔</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
