@@ -126,7 +126,7 @@
     <link href="https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/"/>
     <id>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</id>
     <published>2019-08-12T16:00:00.000Z</published>
-    <updated>2019-08-13T04:15:23.819Z</updated>
+    <updated>2019-08-15T10:45:39.124Z</updated>
     
     <content type="html"><![CDATA[<p>这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  </p><p><a href="https://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/" target="_blank" rel="noopener">详情参考</a></p>]]></content>
     
@@ -140,12 +140,10 @@
     
     </summary>
     
-      <category term="Note" scheme="https://heiliu.github.io/categories/Note/"/>
+      <category term="面试" scheme="https://heiliu.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="面试" scheme="https://heiliu.github.io/categories/Note/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="Css" scheme="https://heiliu.github.io/categories/Note/%E9%9D%A2%E8%AF%95/Css/"/>
-    
+      <category term="面试" scheme="https://heiliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
@@ -237,33 +235,6 @@
   </entry>
   
   <entry>
-    <title>react-redux中Provider、connect</title>
-    <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
-    <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:45:33.792Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
-    
-      <category term="Note" scheme="https://heiliu.github.io/categories/React/Note/"/>
-    
-    
-      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>NPM 参数</title>
     <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
     <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
@@ -319,6 +290,33 @@
   </entry>
   
   <entry>
+    <title>react-redux中Provider、connect</title>
+    <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
+    <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:45:33.792Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
+    
+      <category term="Note" scheme="https://heiliu.github.io/categories/React/Note/"/>
+    
+    
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="https://heiliu.github.io/2019/07/28/0722/"/>
     <id>https://heiliu.github.io/2019/07/28/0722/</id>
@@ -365,6 +363,31 @@
     
     
       <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如约而至</title>
+    <link href="https://heiliu.github.io/2018/09/05/appoint/"/>
+    <id>https://heiliu.github.io/2018/09/05/appoint/</id>
+    <published>2018-09-04T16:00:00.000Z</published>
+    <updated>2019-08-16T04:46:52.470Z</updated>
+    
+    <content type="html"><![CDATA[<div style="text-align:center; font-size:18px;"><br>专辑： 寻宝游戏<br>歌手：许嵩<br>作曲 : 许嵩<br>作词 : 许嵩<br><br>如果早知道那天是我们最后一面<br><br>我绝不会和你谈论琐事浪费时间<br><br>人生里看似偶然却又必经的告别<br><br>无约而至 无人可免<br><br>有一回置身某个似曾相识的场景<br><br>那一刻我忽然感应你就在我身边<br><br>过去、当下、未来未必确有其界限<br><br>或许爱能穿越时间 抵达永远<br><br>等到秋叶终于金黄<br><br>等到华发悄然苍苍<br><br>我们相约老地方<br><br>等到人已不再奔忙<br><br>等到心也不再轻狂<br><br>我们相约老地方<br><br>等到记忆只剩精华<br><br>等到笑容不掺伪装<br><br>我们相约老地方<br><br>等到释怀所有悲伤<br><br>等到体谅世事无常<br><br>我们相约老地方<br></div><video src="appoint.mp4" width="100%" height="400" controls="controls"></video>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div style=&quot;text-align:center; font-size:18px;&quot;&gt;&lt;br&gt;专辑： 寻宝游戏&lt;br&gt;歌手：许嵩&lt;br&gt;作曲 : 许嵩&lt;br&gt;作词 : 许嵩&lt;br&gt;&lt;br&gt;如果早知道那天是我们最后一面&lt;br&gt;&lt;br&gt;我绝不会和你谈论琐事浪费时间&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="😊" scheme="https://heiliu.github.io/categories/%F0%9F%98%8A/"/>
+    
+    
+      <category term="生活" scheme="https://heiliu.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -526,34 +549,6 @@
     
     
       <category term="小程序" scheme="https://heiliu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BFC 浅谈</title>
-    <link href="https://heiliu.github.io/2018/06/13/BFC/"/>
-    <id>https://heiliu.github.io/2018/06/13/BFC/</id>
-    <published>2018-06-13T02:58:18.000Z</published>
-    <updated>2019-08-15T05:56:21.088Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><hr><blockquote><p>Block formatting context （块级格式化上下文）  </p></blockquote><p>页面文档由块<code>block</code>构成 每个<code>block</code>在页面上占据自己的位置<br>使用新的元素构建BFC overflow：hidden | auto | scroll； 只要不为<code>visible</code>新的空间<br>告诉浏览器，外面的环境影响不到我了 我重新来进行Block formatting 布局和定位  </p><p><strong>核心：</strong><br>    新的BFC，给出了新的不受外界影响的块级格式化环境<br>    block 块级-&gt; 页面的基础<br>    formatting context 格式化-&gt; 渲染</p><h3 id="浏览器构建文档树的时候-布局和定位元素"><a href="#浏览器构建文档树的时候-布局和定位元素" class="headerlink" title="浏览器构建文档树的时候 布局和定位元素"></a>浏览器构建文档树的时候 布局和定位元素</h3><p>网页的定位（大） 文档流正常，浮动，定位，flex，table<br>广义的定位 块级元素的定位 垂直的定位；行内元素 左右定位 通过内容来确定<br>狭义的定位：<br>float 浮动元素，在一行的开始或者结束<br>flex 弹性布局<br>position</p><p>BFC 在正常的文档流里面重建一个新的上下文环境  </p><h3 id="BFC的约束规则"><a href="#BFC的约束规则" class="headerlink" title="BFC的约束规则"></a>BFC的约束规则</h3><ul><li><p>一、在浏览器进行页面元素布局的时候 同一个BFC的两个相邻的Box的margin 会重叠，与方向无关  </p><blockquote><p>破坏规则 创建新的BFC Context上下文的概念   </p></blockquote><p>  如何创建BFC？=&gt;重新规划一个（独立）渲染区域</p><ul><li>根元素body，天然是一个BFC    </li><li>overflow:hidden;  </li><li>float 不为none  </li><li>display:inline-block | table-cell |table-caption  </li><li>position:absolute | fixed 只要不为static  <blockquote><p>好像只剩块级元素和行内元素不是BFC</p></blockquote></li></ul></li><li><p>二、<code>BFC</code>的高度，浮动元素也要参与计算  </p><blockquote><p>在元素<code>float</code>之后脱离了文档流没有办法计算确切高度，这种情况我们称之为高度塌陷。解决高度塌陷的前提就是<code>能识</code>别并<code>包含</code>到浮动元素。<strong>而<code>BFC</code>就有这个特性</strong>，所以BFC也可以计算浮动元素的高度。新建BFC让浮动元素也参与计算 </p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        *&#123;<span class="attribute">padding</span>: <span class="number">0</span>;<span class="attribute">margin</span>: <span class="number">0</span>;&#125;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.par</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 5<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#fcc</span>;</span></span><br><span class="line">            width: 300px;</span><br><span class="line"><span class="css">            <span class="comment">/*这里的overflow并不是为了超出则隐藏，而是为了创建一个BFC*/</span></span></span><br><span class="line"><span class="css">            <span class="comment">/* overflow: hidden; */</span></span></span><br><span class="line">            display: inline-block;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.child</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 5<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#f66</span>;  </span></span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            float: left;</span><br><span class="line"><span class="css">            <span class="comment">/* clear: both; */</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 网页的定位（大） 文档流正常，浮动，定位，flex，table --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"par"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line">- 三、每个元素的左边，要与包含盒子的左边相接触</span><br><span class="line">- 四、BFC的区域不会与float box重叠  </span><br><span class="line">```html</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        *&#123;<span class="attribute">padding</span>: <span class="number">0</span>;<span class="attribute">margin</span>: <span class="number">0</span>;&#125;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.aside</span>&#123;</span></span><br><span class="line">            float: left;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 150px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#ff6666</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.main</span>&#123;</span></span><br><span class="line">            height: 200px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background</span>: <span class="selector-id">#ffcccc</span>;</span></span><br><span class="line"><span class="css">            <span class="comment">/* clear: left; */</span></span></span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自适应两栏式布局 类似于flex：1；</span></span><br><span class="line"><span class="comment">    aside 和 main 处于同一BFC（body）下 </span></span><br><span class="line"><span class="comment">    BFC布局规则3 规则4 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"aside"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```   </span><br><span class="line">```html</span><br><span class="line">/*BFC在三栏式布局中的应用*/</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        *&#123;<span class="attribute">padding</span>: <span class="number">0</span>;<span class="attribute">margin</span>: <span class="number">0</span>;&#125;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.container</span>&#123;</span></span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.left</span>,<span class="selector-class">.right</span>,<span class="selector-class">.center</span>&#123;</span></span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">            background: pink;</span><br><span class="line">            float: left;</span><br><span class="line">            width: 180px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.right</span>&#123;</span></span><br><span class="line">            background: lightblue;</span><br><span class="line">            width: 180px;</span><br><span class="line">            float: right;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.center</span>&#123;</span></span><br><span class="line">            background: yellow;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 三栏式布局 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 页面的结构与呈现效果不一致？想一下 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>Left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>Right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>Center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">**注意：**  </span><br><span class="line">&gt; 通过 overflow:hidden将元素转换为BFC，固然可以解决高度塌陷的问题，但是大范围的应用在布局上是肯定是行不通的，毕竟overflow会造成溢出隐藏的问题，特别是与JS交互的效果时。  </span><br><span class="line"></span><br><span class="line">那有没有一个更好的高度检测方法呢？</span><br><span class="line">答案是有的，就是我们经常用到的clearfix。  </span><br><span class="line">```css</span><br><span class="line">.clearfix:after&#123;</span><br><span class="line">    content:'';</span><br><span class="line">    display:table;</span><br><span class="line">    clear:both</span><br><span class="line">&#125;</span><br><span class="line">.clearfix&#123;</span><br><span class="line">    *zoom:1;/* IE6,7不支持BFC，所以需要通过专有的CSS属性，触发hasLayout。*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></li></ul><p><a href="https://www.cnblogs.com/meierbao/p/6526247.html" target="_blank" rel="noopener">关于zoom:1</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Block formatting context （块级格式化上下文）  &lt;/p&gt;
-&lt;/
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="css" scheme="https://heiliu.github.io/tags/css/"/>
     
   </entry>
   

@@ -52,11 +52,10 @@
     <url>%2F2019%2F08%2F13%2FspaceBetweenInlineBlock%2F</url>
     <content type="text"><![CDATA[这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。 详情参考]]></content>
       <categories>
-        <category>Note</category>
         <category>面试</category>
-        <category>Css</category>
       </categories>
       <tags>
+        <tag>面试</tag>
         <tag>前端</tag>
       </tags>
   </entry>
@@ -97,18 +96,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[react-redux中Provider、connect]]></title>
-    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
-    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
-      <categories>
-        <category>React</category>
-        <category>Note</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[NPM 参数]]></title>
     <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
     <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
@@ -133,6 +120,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[react-redux中Provider、connect]]></title>
+    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
+    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
+      <categories>
+        <category>React</category>
+        <category>Note</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>%2F2019%2F07%2F28%2F0722%2F</url>
     <content type="text"><![CDATA[前端开发工具整理开发工具:1.代码编辑器 visual studio Code 插件 123456Chinese 中文插件language-Stylus LeetCodeVeturPrettierReact/Redux/react-router Snippets react便捷输入 主题 1one dark pro 2.浏览器及插件 Chrome 浏览器 12345678910111213Ghelper 翻墙插件 可在GitHub上获取ADBlockmarinara（番茄工作法助理）FireShot扩展管理器WEB前端助手划词翻译ImagusOctotreeReact/Vue develop ToolChrono掘金插件Json-handle 3.其他工具 命令行开发工具： iterm2 homebrew oh-my-zsh Git/gitLab &amp;&amp; 配置SSH node &amp;&amp; NVM 123nvm install 8.9.0 // 安装需要的node版本nvm use 8.9.0 // 切换使用相对应的node版本]]></content>
@@ -148,6 +147,17 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如约而至]]></title>
+    <url>%2F2018%2F09%2F05%2Fappoint%2F</url>
+    <content type="text"><![CDATA[专辑： 寻宝游戏歌手：许嵩作曲 : 许嵩作词 : 许嵩如果早知道那天是我们最后一面我绝不会和你谈论琐事浪费时间人生里看似偶然却又必经的告别无约而至 无人可免有一回置身某个似曾相识的场景那一刻我忽然感应你就在我身边过去、当下、未来未必确有其界限或许爱能穿越时间 抵达永远等到秋叶终于金黄等到华发悄然苍苍我们相约老地方等到人已不再奔忙等到心也不再轻狂我们相约老地方等到记忆只剩精华等到笑容不掺伪装我们相约老地方等到释怀所有悲伤等到体谅世事无常我们相约老地方]]></content>
+      <categories>
+        <category>😊</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -263,9 +273,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[stylus之变量与mixin]]></title>
-    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
-    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
+    <title></title>
+    <url>%2F2018%2F05%2F09%2FURL%2F</url>
+    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: HTTP categories: 前端有的研究]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
+    <url>%2F2018%2F05%2F09%2FcssCenter%2F</url>
+    <content type="text"><![CDATA[html代码如下： &lt;div class="book"&gt; &lt;div class="front-cover"&gt; &lt;/div&gt; &lt;/div&gt; Css居中方法 （敲黑板）重点 首先将元素设置成为绝对定位，然后距顶部和左各50%，此时的元素还不是居中的，因此需要通过一定的偏移将其移到理想位置，两种方法的主要思想都是一样的，第一种通过margin-left和margin-top移动元素自身宽高的一半，另一种通过css3的属性transform的translate方法平移元素自身宽高的一半， 代码展示如下： body { color: #ffffff; background: #444444; } .book { width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; /* 第一种 */ /* 兼容性 未使用css3, ie678 */ /* margin-left: -150px; */ /* margin-top: -150px; */ /*第二种*/ -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } 两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -274,14 +289,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F09%2FURL%2F</url>
-    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: ‘’ categories: 前端有的研究]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
-    <url>%2F2018%2F05%2F09%2FcssCenter%2F</url>
-    <content type="text"><![CDATA[html代码如下： &lt;div class="book"&gt; &lt;div class="front-cover"&gt; &lt;/div&gt; &lt;/div&gt; Css居中方法 （敲黑板）重点 首先将元素设置成为绝对定位，然后距顶部和左各50%，此时的元素还不是居中的，因此需要通过一定的偏移将其移到理想位置，两种方法的主要思想都是一样的，第一种通过margin-left和margin-top移动元素自身宽高的一半，另一种通过css3的属性transform的translate方法平移元素自身宽高的一半， 代码展示如下： body { color: #ffffff; background: #444444; } .book { width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; /* 第一种 */ /* 兼容性 未使用css3, ie678 */ /* margin-left: -150px; */ /* margin-top: -150px; */ /*第二种*/ -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } 两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好]]></content>
+    <title><![CDATA[stylus之变量与mixin]]></title>
+    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
+    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -319,7 +329,7 @@
       <tags>
         <tag>🌝</tag>
         <tag>面试</tag>
-        <tag>HTTP协议</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
