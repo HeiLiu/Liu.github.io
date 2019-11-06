@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[WebPack 相关]]></title>
+    <title><![CDATA[记一个伪元素的骚操作]]></title>
+    <url>%2F2019%2F10%2F25%2FbeforeAfter%2F</url>
+    <content type="text"><![CDATA[用伪元素实现气泡框介绍 &nbsp;&nbsp;&nbsp;&nbsp;在项目开发中本来自己负责的基础组件库里面的 Tooltip 组件没有达到预期的效果(有八阿哥)… &nbsp;&nbsp;&nbsp;&nbsp;后来想到其实可以用伪元素实现一个类似的气泡弹窗，但是又想到一个问题：我每个元素的气泡内容不一样这尼玛怎么填进去呢？ &nbsp;&nbsp;&nbsp;&nbsp;于是乎，查文档、还真在文档里让我发现了一点有用的东西，通过 attr() CSS表达式和一个自定义数据属性 data-descr 创建一个纯CSS, 内容提示气泡如下： https://codesandbox.io/s/crazy-chatterjee-9h066?fontsize=14 相关属性： 自定义属性 data-desrc 表达式 attr() 兼容性： 还不错哦！！ 各种链接如下： data-descr_Demo链接 attr() 具体文档 canIUse) Demo地址 相关代码123456&lt;h1&gt;伪元素实现气泡提示&lt;/h1&gt;&lt;p&gt; &lt;span class="tooltip" data-descr="伪元素"&gt;伪元素&lt;/span&gt; &lt;span class="tooltip" data-descr="实现"&gt;实现&lt;/span&gt; &lt;span class="tooltip" data-descr="气泡提示"&gt;气泡提示&lt;/span&gt;&lt;/p&gt; 12345678910111213141516171819202122232425262728293031323334353637383940414243444546body &#123; font-family: sans-serif;&#125;.tooltip &#123; position: relative; display: inline-block; cursor: pointer;&#125;.tooltip[data-descr]:hover::after &#123; content: attr(data-descr); position: absolute; top: -24px; left: 0; min-width: 60px; max-width: 100%; height: 24px; padding: 0 8px; box-sizing: border-box; line-height: 24px; font-size: 10px; text-align: left; color: #fff; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; border-radius: 4px; background: #202020;&#125;.tooltip[data-descr]:hover::before &#123; content: ""; position: absolute; top: 0px; left: 15px; padding: 1px; box-sizing: border-box; border: 5px solid #202020; width: 0; height: 0; border-left-color: transparent; border-right-color: transparent; border-bottom-color: transparent; z-index: 99;&#125;]]></content>
+      <tags>
+        <tag>Skill</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[单行文本换行与多行文本换行]]></title>
+    <url>%2F2019%2F10%2F23%2Ftext-overflow%2F</url>
+    <content type="text"><![CDATA[参考]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[React Poratls --传送门]]></title>
+    <url>%2F2019%2F10%2F22%2Freact_Portal%2F</url>
+    <content type="text"><![CDATA[在项目中常常会需要对话框、下拉列表、悬浮窗等交互的组件，当在父组件中使用一个下拉列表的时候，父组件的大小是固定的、同时还有一些overflow: hidden;子组件想要完全展示就变得比较困难，或者不能完全展示、或者阴影被父组件overflow给hidden掉了，同时在用overflow去清除浮动的影响的时候也要考虑到副作用，当元素比较多或者内容比较大的时候会不会被截断的问题。这个当想让子元素的层级最高而且不用被父元素给截断的时候就需要一个容器或者元素能够脱离父组件，至少从视觉上就得脱离父组件的影响。 Portals 是 react 16 官方提供的解决方案， 使得组件可以脱离父组件从而挂载在页面的任何地方。 在做组件层级的时候 应用的skill文档]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[在 React 中使用 mobx 进行状态管理]]></title>
+    <url>%2F2019%2F10%2F14%2Fmobx-react%2F</url>
+    <content type="text"><![CDATA[observableinjectcomputedaction RunInActionReaction 调试 toJs 需要引入 =&gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧 1234567var array = [&#123;name:'武汉'&#125;, &#123;name: '北京'&#125;, &#123;name:'上海'&#125;, &#123;name:'天津'&#125;];var resultArray = array.sort( function compareFunction(param1, param2) &#123; return param1.name.localeCompare(param2.name,"zh"); &#125;);console.log(resultArray);]]></content>
+      <categories>
+        <category>Note</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[classnames 的用法总结]]></title>
+    <url>%2F2019%2F10%2F13%2Fclassnames%2F</url>
+    <content type="text"><![CDATA[classnames github库]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[VS Code 快捷键]]></title>
+    <url>%2F2019%2F10%2F13%2FVsCodeShortCuts%2F</url>
+    <content type="text"><![CDATA[文档编辑中键盘快捷方式 快速移动光标（按单词跳: option 选中操作: shift 搜索时切换搜索结果: shift Enter 文件相对路径: shift command H 原shortCut =&gt; 自定义 command H 新建未命名文件: command N 搜索光标所在单词: command E 选中所在的代码块(select Bracket)，对花括号的代码块较友好: option command B 切换tab: option commmad 删除整个单词: option backspace 向上下复制整行: option shift 上下方向键 找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): shift command I]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F08%2F29%2FNginxGetStart%2F</url>
+    <content type="text"><![CDATA[参考链接]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[React-router V4]]></title>
+    <url>%2F2019%2F08%2F21%2FreactRouter%2F</url>
+    <content type="text"><![CDATA[React 创建的单页应用中、通过路由来控制页面间的跳转，常用的就是 react-router、react-router-dom React Router中有三类组件 路由组件 BrowserRouter, HashRouter 路由匹配组件 Route, Switch 导航、链接组件 Link 基于 React Router 的 web 应用，根组件应该是一个 router 组件（BrowserRouter，HashRouter ）。 项目中，react-router-dom 提供了和两种路由。两种路由都会创建一个 history 对象。如果我们的应用有服务器响应 web 的请求，我们通常使用组件; 如果使用静态文件服务器，则我们应该使用组件 通常都是使用 DemoLink 组件最终会渲染为 HTML 标签 ，它的 to、query、hash 属性会被组合在一起并渲染为 href 属性。虽然 Link 被渲染为超链接，但在内部实现上使用脚本拦截了浏览器的默认行为，然后调用了history.pushState 方法]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React-router</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Webpack 相关]]></title>
     <url>%2F2019%2F08%2F15%2Fwebpack%2F</url>
     <content type="text"><![CDATA[及时补一篇篇都是欠下的债 参考链接官方文档传送门]]></content>
       <categories>
@@ -9,7 +70,7 @@
         <category>webPack</category>
       </categories>
       <tags>
-        <tag>webPack</tag>
+        <tag>WebPack</tag>
       </tags>
   </entry>
   <entry>
@@ -30,7 +91,7 @@
     <content type="text"><![CDATA[先从fetch讲起一个简单的fetch例子如下： 123456789101112131415161718192021fetch('./api/person.json') .then( function(response) &#123; if (response.status !== 200) &#123; console.log('Looks like there was a problem. Status Code: ' + response.status); return; &#125; // Examine the text in the response // 将返回数据 Json 化 response.json().then(function(data) &#123; console.log(data); &#125;); &#125; ) .catch(function(err) &#123; console.log('Fetch Error :-S', err); &#125;); 1. .json()返回一个被解析为JSON格式的`promise`对象，当获取成功时，我们使用 json() 读取并解析数据 使用async/await简化由于Fetch底层是用Promise实现，我们可以直接用async来优化上面的代码，减少回调，使其更加语义化、容易理解， 代码如下： 12345678910async function geturl()&#123; try&#123; let res = await fetch('./api/some.json') if(res.status == 200)&#123; console.log(await res.text()) &#125; &#125; catch(err)&#123; console.log(err) &#125;&#125; 12345678910// response 其他返回数据fetch('users.json').then(function(response) &#123; console.log(response.headers.get('Content-Type')); console.log(response.headers.get('Date')); console.log(response.status); console.log(response.statusText); console.log(response.type); console.log(response.url);&#125;); Response 类型当我们发起一个Fetch请求时，返回的response响应会自带一个response.type属性（basic、cors、opaque）。response.type属性说明了异步资源的来源，同时还有相应的处理方式。当我们发起一个同源请求时，response.type为basic，而且你可以从response读取全部信息。如果我们访问一个非同源域名，并且有返回相应的CORs响应头时，那么该请求类型是cors。 cors和basic很相似，就除了cors响应里你无法访问Cache-Control，Content-Language，Content-Type，Expires，Last-Modified和Pragma当我们对一个不同源的域名发起请求时，如果返回的响应头部没有CORS信息，那么这个response对应的类型就是opaque类型。一个opaque响应是无法读取返回的数据、状态，甚至无法确定这个请求是否成功。我们可以自定义Fetch请求的模式，要求返回对应类型的响应，有以下几种响应： 1.same-origin 只返回同源请求，其他类型会被reject 2.cors 接收同源、非同源请求，返回有CORs头部的响应 3.cors-with-forced-preflight 在发出请求前会先做一次安全性检查 4.no-cors 用来发起没有CORS头部并且非同源请求，并且会返回opaque响应。但是目前这种类型只能在Service Worker里使用，在window.fetch里不能用 POST请求类型使用Fetch发起Post请求时，需要手动设置method参数和body参数，如下：1234567891011121314fetch(url, &#123; method: 'post', headers: &#123; "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" &#125;, body: 'foo=bar&amp;lorem=ipsum' &#125;) .then(json) .then(function (data) &#123; console.log('Request succeeded with JSON response', data); &#125;) .catch(function (error) &#123; console.log('Request failed', error); &#125;); 带 COOKIE 发送请求在异步请求中带上cookie参数，那么需要显式指定credentials参数： 123fetch(url, &#123; credentials: 'include'&#125;) AxiosAxios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。 特性 从浏览器中创建 XMLHttpRequests 从 node.js 创建 http 请求 支持 Promise API 拦截请求和响应 转换请求数据和响应数据 取消请求 自动转换 JSON 数据 客户端支持防御 XSRF 安装npm 安装：1$ npm install axios 使用cdn:1&lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt; GET 请求POST 请求响应结构响应返回包含信息：12345678910111213141516&#123; // `data` 由服务器提供的响应 data: &#123;&#125;, // `status` 来自服务器响应的 HTTP 状态码 status: 200, // `statusText` 来自服务器响应的 HTTP 状态信息 statusText: 'OK', // `headers` 服务器响应的头 headers: &#123;&#125;, // `config` 是为请求提供的配置信息 config: &#123;&#125;&#125; 文档传送门]]></content>
       <categories>
         <category>Skill</category>
-        <category>javaScript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -44,7 +105,7 @@
         <category>test</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Test</tag>
       </tags>
   </entry>
   <entry>
@@ -60,27 +121,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[利用set提高性能]]></title>
+    <title></title>
     <url>%2F2019%2F08%2F12%2FsetPerformance%2F</url>
-    <content type="text"><![CDATA[详情]]></content>
-      <categories>
-        <category>前端</category>
-        <category>javaScript</category>
-      </categories>
-      <tags>
-        <tag>javaScript</tag>
-      </tags>
+    <content type="text"><![CDATA[title: 利用set提高性能tags: JavaScriptcategories: 前端 JavaScript 详情]]></content>
   </entry>
   <entry>
     <title><![CDATA[数组]]></title>
     <url>%2F2019%2F08%2F05%2FArray%2F</url>
-    <content type="text"><![CDATA[数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。 数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数 123456&lt;!-- 传入一组元素进行数组初始化 --&gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.length); // 5&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 undefined --&gt;var arr1 = new Array(10);print(arr1.length); // 10 通过字面量 [] 创建 123var arr1 = [];var arr2 = [1, 2, 3, 4];print(arr2.length); // 4 区别虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。 1234567console.time('using[]')for(var i=0; i&lt;2000000; i++)&#123;var arr = []&#125;;console.timeEnd('using[]') // using[]: 29.630859375msconsole.time('using new')for(var i=0; i&lt;2000000; i++)&#123;var arr = new Array&#125;;console.timeEnd('using new') // using new: 39.93798828125ms 通过对比会发现使用new关键字来创建数组花费的时间更长，实际上使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然只有在大批量数据的情况下才会有影响. 创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。 数组方法isArray 存取函数 用来访问数组元素的函数，返回目标数组的某种变体 indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1 lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1 数组的字符串表示 join() toString()12345var names = ["David","Cynthia","Raymond","Clayton","Mike","Jennifer"];var namestr = names.join();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifernamestr = names.toString();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifer 由已有数组创建新的数组 concat() 合并多个数组创建一个新数组splice() 截取一个数组的子集创建一个新数组slice() 使用 splice() 方法为数组添加元素，需提供如下参数：• 起始索引（也就是你希望开始添加元素的地方）；• 需要删除的元素个数（添加元素时该参数设为 0）；• 想要添加进数组的元素。1234var nums = [1,2,3,7,8,9];var newElements = [4,5,6];nums.splice(3,0,newElements);print(nums); // 1,2,3,4,5,6,7,8,9 可变函数 能够改变数组的内容的函数 push() 在末尾添加元素pop() 删除末尾的元素 shift()unshift() 添加元素到数组的开头 reverse() 翻转数组sort()对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：123var names = ["David","Mike","Cynthia","Clayton","Bryan","Raymond"];names.sort();print(names); // Bryan,Clayton,Cynthia,David,Mike,Raymond 但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：1var nums = [3,1,2,100,4,200];nums.sort();print(nums); // 1,100,2,200,3,4sort() 方法是按照字典顺序对元素进行排序的，因此它 假定元素都是字符串类型，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。12345function compare(num1, num2) &#123; return num1 - num2;&#125;var nums = [3,1,2,100,4,200];nums.sort(compare);print(nums); // 1,2,3,4,100,200 sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。 迭代器方法 forEach() every() some() map() filter()]]></content>
+    <content type="text"><![CDATA[数组定义： 一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。 数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象 创建数组 通过构造函数 123456&lt;!-- 传入一组元素进行数组初始化 --&gt;var arr = New Array(1, 2, 3, 4, 5);print(arr.length); // 5&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 undefined --&gt;var arr1 = new Array(10);print(arr1.length); // 10 通过字面量 [] 创建 123var arr1 = [];var arr2 = [1, 2, 3, 4];print(arr2.length); // 4 区别虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。 1234567console.time('using[]')for(var i=0; i&lt;2000000; i++)&#123;var arr = []&#125;;console.timeEnd('using[]') // using[]: 29.630859375msconsole.time('using new')for(var i=0; i&lt;2000000; i++)&#123;var arr = new Array&#125;;console.timeEnd('using new') // using new: 39.93798828125ms 通过对比会发现使用new关键字来创建数组花费的时间更长，实际上使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然只有在大批量数据的情况下才会有影响. 创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。 数组方法isArray 存取函数 用来访问数组元素的函数，返回目标数组的某种变体 indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1 lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1 数组的字符串表示 join() toString() 12345var names = ["David","Cynthia","Raymond","Clayton","Mike","Jennifer"];var namestr = names.join();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifernamestr = names.toString();print(namestr); // David,Cynthia,Raymond,Clayton,Mike,Jennifer 由已有数组创建新的数组 concat() 合并多个数组创建一个新数组splice() 截取一个数组的子集创建一个新数组slice() 使用 splice() 方法为数组添加元素，需提供如下参数：• 起始索引（也就是你希望开始添加元素的地方）；• 需要删除的元素个数（添加元素时该参数设为 0）；• 想要添加进数组的元素。1234var nums = [1,2,3,7,8,9];var newElements = [4,5,6];nums.splice(3,0,newElements);print(nums); // 1,2,3,4,5,6,7,8,9 可变函数 能够改变数组的内容的函数 push() 在末尾添加元素pop() 删除末尾的元素 shift()unshift() 添加元素到数组的开头 reverse() 翻转数组sort()对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：123var names = ["David","Mike","Cynthia","Clayton","Bryan","Raymond"];names.sort();print(names); // Bryan,Clayton,Cynthia,David,Mike,Raymond 但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：1var nums = [3,1,2,100,4,200];nums.sort();print(nums); // 1,100,2,200,3,4sort() 方法是按照字典顺序对元素进行排序的，因此它 假定元素都是字符串类型，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。12345function compare(num1, num2) &#123; return num1 - num2;&#125;var nums = [3,1,2,100,4,200];nums.sort(compare);print(nums); // 1,2,3,4,100,200 sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。 迭代器方法 其实可以多展开来讲的 map foreach filter reduce 的区别 forEach() every() some() map() filter()]]></content>
       <categories>
         <category>前端</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>Note</tag>
-        <tag>javaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -96,13 +150,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[NPM 参数]]></title>
-    <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
-    <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
+    <title><![CDATA[react-redux中Provider、connect]]></title>
+    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
+    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
       <categories>
-        <category>Skill</category>
-        <category>前端</category>
-        <category>Node</category>
+        <category>React</category>
+        <category>Note</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -120,12 +173,13 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[react-redux中Provider、connect]]></title>
-    <url>%2F2019%2F07%2F29%2Fprovider%26%26connect%2F</url>
-    <content type="text"><![CDATA[react-redux中Provider详情]]></content>
+    <title><![CDATA[NPM 参数]]></title>
+    <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
+    <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
       <categories>
-        <category>React</category>
-        <category>Note</category>
+        <category>Skill</category>
+        <category>前端</category>
+        <category>Node</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -150,9 +204,20 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ESLint]]></title>
+    <url>%2F2019%2F07%2F07%2FESLint%2F</url>
+    <content type="text"><![CDATA[代码规范的意义ESLint]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>skill</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如约而至]]></title>
     <url>%2F2018%2F09%2F05%2Fappoint%2F</url>
-    <content type="text"><![CDATA[专辑： 寻宝游戏歌手：许嵩作曲 : 许嵩作词 : 许嵩如果早知道那天是我们最后一面我绝不会和你谈论琐事浪费时间人生里看似偶然却又必经的告别无约而至 无人可免有一回置身某个似曾相识的场景那一刻我忽然感应你就在我身边过去、当下、未来未必确有其界限或许爱能穿越时间 抵达永远等到秋叶终于金黄等到华发悄然苍苍我们相约老地方等到人已不再奔忙等到心也不再轻狂我们相约老地方等到记忆只剩精华等到笑容不掺伪装我们相约老地方等到释怀所有悲伤等到体谅世事无常我们相约老地方]]></content>
+    <content type="text"><![CDATA[专辑： 寻宝游戏歌手：许嵩作曲 : 许嵩作词 : 许嵩如果早知道那天是我们最后一面我绝不会和你谈论琐事浪费时间人生里看似偶然却又必经的告别无约而至 无人可免有一回置身某个似曾相识的场景那一刻我忽然感应你就在我身边过去、当下、未来未必确有其界限或许爱能穿越时间 抵达永远等到秋叶终于金黄等到华发悄然苍苍我们相约老地方等到人已不再奔忙等到心也不再轻狂我们相约老地方等到记忆只剩精华等到笑容不掺伪装我们相约老地方等到释怀所有悲伤等到体谅世事无常我们相约老地方 (function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"video":{"url":"appoint.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()]]></content>
       <categories>
         <category>😊</category>
       </categories>
@@ -168,7 +233,7 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>javaScript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -191,18 +256,7 @@
         <category>Note</category>
       </categories>
       <tags>
-        <tag>javaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[排序]]></title>
-    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
-    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n// 分治// 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>javaScript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -215,6 +269,17 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[排序]]></title>
+    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
+    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n// 分治// 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -247,7 +312,7 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>javaScript</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -273,14 +338,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F09%2FURL%2F</url>
-    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: HTTP categories: 前端有的研究]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
-    <url>%2F2018%2F05%2F09%2FcssCenter%2F</url>
-    <content type="text"><![CDATA[html代码如下： &lt;div class="book"&gt; &lt;div class="front-cover"&gt; &lt;/div&gt; &lt;/div&gt; Css居中方法 （敲黑板）重点 首先将元素设置成为绝对定位，然后距顶部和左各50%，此时的元素还不是居中的，因此需要通过一定的偏移将其移到理想位置，两种方法的主要思想都是一样的，第一种通过margin-left和margin-top移动元素自身宽高的一半，另一种通过css3的属性transform的translate方法平移元素自身宽高的一半， 代码展示如下： body { color: #ffffff; background: #444444; } .book { width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; /* 第一种 */ /* 兼容性 未使用css3, ie678 */ /* margin-left: -150px; */ /* margin-top: -150px; */ /*第二种*/ -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } 两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好]]></content>
+    <title><![CDATA[stylus之变量与mixin]]></title>
+    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
+    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -289,9 +349,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[stylus之变量与mixin]]></title>
-    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
-    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
+    <title></title>
+    <url>%2F2018%2F05%2F09%2FURL%2F</url>
+    <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: HTTP categories: 前端有的研究]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[让div在屏幕上居中（水平居中+垂直居中）的方法总结]]></title>
+    <url>%2F2018%2F05%2F09%2FcssCenter%2F</url>
+    <content type="text"><![CDATA[html代码如下： &lt;div class="book"&gt; &lt;div class="front-cover"&gt; &lt;/div&gt; &lt;/div&gt; Css居中方法 （敲黑板）重点 首先将元素设置成为绝对定位，然后距顶部和左各50%，此时的元素还不是居中的，因此需要通过一定的偏移将其移到理想位置，两种方法的主要思想都是一样的，第一种通过margin-left和margin-top移动元素自身宽高的一半，另一种通过css3的属性transform的translate方法平移元素自身宽高的一半， 代码展示如下： body { color: #ffffff; background: #444444; } .book { width: 300px; height: 300px; position: absolute; top: 50%; left: 50%; /* 第一种 */ /* 兼容性 未使用css3, ie678 */ /* margin-left: -150px; */ /* margin-top: -150px; */ /*第二种*/ -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } 两种方法第一种的兼容性更加的好一些，因为其中没有使用Css3的属性 对于ie678的兼容比较友好]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -316,7 +381,7 @@
     <content type="text"><![CDATA[早点写]]></content>
       <categories>
         <category>前端</category>
-        <category>javaScript</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -344,12 +409,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[javascript函数]]></title>
+    <title><![CDATA[Javascript函数]]></title>
     <url>%2F2018%2F05%2F01%2Ffunction_note%2F</url>
     <content type="text"><![CDATA[函数 函数用于指定对象的行为，在其中包含一组语句。用于代码复用、信息隐藏、和组合调用。 函数对象JavaScript 中的函数就是对象。函数对象连接到Function.prototype（该原型对象本身连接到Object.prototype）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。 函数对象在创建时也随配有一个prototype属性。它的值是一个拥有constructor属性且值即为该函数对象。1234567891011121314151617181920212223242526272829 function add(a,b)&#123; return a+b; &#125;``` 因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。函数的与众不同之处在于可以被调用。 ### 函数字面量 函数对象通过函数字面量来创建。函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。```js var add = function(a, b) &#123; return a + b &#125; ``` ### 调用 调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，还有两个附加参数：`this`和`arguments`。参数this在面向对象编程中非常重要，它的值取决于调用的模式。实参和形参个数不匹配时，不会有运行时错误。实参过多时，超出的实参被忽略。形参过多时，缺失的值被替换为undefined。 - 方法调用模式 当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，`this被绑定到该对象`,通过this可以对该对象的属性和方法进行调用和操作。 ```js var myObject = &#123; text: hello, say:function(msg)&#123; console.log(this.text + msg); &#125; &#125; myObject.say(world); 函数调用模式当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。此时this被绑定到全局对象。即时是内部函数也会将this绑定到全局对象。this的指向问题 作用域不一样 this的指向就不一样,可以在函数内创建一个属性并赋值为this来解决这个问题,一般通过var that = this; 1234567891011121314var add = function(a, b) &#123; return a + b&#125;myObject.double = function() &#123; var that = this var helper = function() &#123; that.value = add(that.value, that.value) &#125; helper()&#125;myObject.double()console.log(myObject.value) //8 12345678910111213141516171819202122232425 attachEvent: function () &#123; // attachEvent函数的作用域 // js 里面this总会指向什么 // 对象的方法被执行时 this指向对象 // console.log(this); var that = this; this.staticElement.addEventListener('click', function () &#123; // 这个函数被执行时，并不是对象的方法，而是匿名函数，作为事件处理函数来执行，this会指向事件发生元素 // this的指向跟函数的调用方式有关 // this的指向问题 作用域不一样 this的指向就不一样 // 作用域 事件的回调函数 // console.log(this); // alert(that.value); that.convertToEdit(); &#125;, false); this.filedElement.addEventListener('keydown', function (evt) &#123; // 在事件发生的一刹那 会产生一个临时事件对象 console.log(evt); if (evt.keyCode == 13) &#123; that.staticElement.innerHTML = this.value; console.log(that.staticElement.innerHTML); that.convertToText(); &#125; &#125;, false)&#125; 构造器调用模式JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。如果在一个函数前面带上new来调用，那么背地里将会创建一个连接到该函数的prototype成员的新对象，同时this会被绑定到那个新对象上。 1234567891011121314//创建构造器函数var Quo = function(string) &#123; this.status = string&#125;//给Que的所有实例提供一个公共方法Quo.prototype.getStatus = function() &#123; return this.status&#125;//实例化var myQuo = new Quo('confused')console.log(myQuo.getStatus()) //confused Apply 调用模式apply方法让我们构建一个参数数组传递给调用函数。他也允许我们选择this的值。apply方法接受两个参数，第一个是要绑定给this的值，第二个是参数数组。 123456789101112131415161718192021222324 var arr = [3, 4] var sum = add.apply(null, arr) console.log(sum) //7 var statusObject = &#123; status: 'hello' &#125; var status = Quo.prototype.getStatus.apply(statusObject) console.log(status) //hello``` ### 参数 当函数被调用时，会得到一个`arguments`数组。通过此参数可以访问所有它被调用时传递给它的`参数列表`，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。```js var sum = function() &#123; var i, sum = 0 for (i = 0; i &lt; arguments.length; i++) &#123; sum += arguments[i] &#125; return sum &#125; console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9)//45 因语言的设计错误，arguments并不是一个真正的数组。是一个“类似数组”的对象。有length属性，但没有任何数组的方法。 返回函数执行时遇到关闭函数体的}时结束。然后把控制权交还给调用该函数的程序。 return可以使函数提前返回，当return语句执行时函数立即返回不在执行余下的语句。 函数总是会返回一个值，若没有指定，则返回undefined。 若函数调用时在前面加上了new前缀，且返回值不是一个对象的时候，则返回this（该新对象）。 闭包作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了this和arguments）。12345678910var quo = function(status) &#123; return &#123; get_status: function() &#123; return status; &#125; &#125;&#125;var myQuo = quo('amazed')console.log(myQuo.get_status()) //amazed 狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。status访问的就说对象中的status属性本身,通过闭包可以让一个局部变量驻留在内存中 避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前i值的函数，这样就不会导致混淆了。 回调将一个函数作为参数，一旦接收到响应，再调用这个函数。12345 fs.readFile('demo/02.js','utf8',(error,data)=&gt;&#123; if(error) throw error; //在异步中的错误不能被捕获 通过throw error进行错误的捕获 console.log(data) &gt;&gt;a.txt;&#125;); 模块可以用函数和闭包构造模块。模块是一个提供接口却隐藏与实现的函数或者对象 模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。123456789101112131415161718192021var numberCal = (function() &#123; var half = function(n) &#123; return n / 2 &#125; var double = function(n) &#123; return n * 2 &#125; var tribble = function(n) &#123; return n * 3 &#125; return &#123; half: half, double: double, tribble: tribble &#125;&#125;())console.log(numberCal.half(5)) //2.5console.log(numberCal.half(6)) //3console.log(numberCal.double(7)) //14console.log(numberCal.tribble(7)) //21 级联如果让方法返回this而不是默认的undefined，就可以启用级联，即连续调用。 记忆函数可以将先前操作的结果记录在某个对象或者数组里，从而避免无谓的重复运算。这种优化被称为记忆（memoization）。]]></content>
       <categories>
-        <category>js语言精粹</category>
-        <category>javaScript</category>
+        <category>JS语言精粹</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -411,11 +476,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[想把我唱给你听]]></title>
     <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
     <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧12345678910111213141516171819202122232425262728293031323334353637383940414243想把我唱给你听趁现在`年少如花`花儿尽情地开吧装点你的岁月我的枝桠谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我把我唱给你听把你纯真无邪的笑容给我吧我们应该有快乐的幸福的晴朗的时光我把我唱给你听用我炙热的感情感动你好吗岁月是值得怀念的留念的害羞的红色脸庞谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我们应该有快乐的幸福的晴朗的时光]]></content>
@@ -425,5 +485,10 @@
       <tags>
         <tag>随笔</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>

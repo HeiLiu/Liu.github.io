@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://heiliu.github.io/"/>
-  <updated>2019-08-15T09:48:26.285Z</updated>
+  <updated>2019-10-30T15:05:47.530Z</updated>
   <id>https://heiliu.github.io/</id>
   
   <author>
@@ -17,11 +17,204 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>WebPack 相关</title>
+    <title>记一个伪元素的骚操作</title>
+    <link href="https://heiliu.github.io/2019/10/25/beforeAfter/"/>
+    <id>https://heiliu.github.io/2019/10/25/beforeAfter/</id>
+    <published>2019-10-24T16:00:00.000Z</published>
+    <updated>2019-10-30T15:05:47.530Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="用伪元素实现气泡框"><a href="#用伪元素实现气泡框" class="headerlink" title="用伪元素实现气泡框"></a>用伪元素实现气泡框</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>  &nbsp;&nbsp;&nbsp;&nbsp;在项目开发中本来自己负责的基础组件库里面的 <code>Tooltip</code> 组件没有达到预期的效果(有八阿哥)…<br>  &nbsp;&nbsp;&nbsp;&nbsp;后来想到其实可以用伪元素实现一个类似的气泡弹窗，但是又想到一个问题：我每个元素的气泡内容不一样这尼玛怎么填进去呢？<br>  &nbsp;&nbsp;&nbsp;&nbsp;于是乎，查文档、还真在文档里让我发现了一点有用的东西，通过 <code>attr()</code> CSS表达式和一个<code>自定义数据属性</code> data-descr 创建一个纯CSS, 内容提示气泡如下：  </p>  <iframe src="https://codesandbox.io/embed/crazy-chatterjee-9h066?fontsize=14" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="crazy-chatterjee-9h066" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"><a href="https://codesandbox.io/s/crazy-chatterjee-9h066?fontsize=14" target="_blank" rel="noopener">https://codesandbox.io/s/crazy-chatterjee-9h066?fontsize=14</a></iframe><p>相关属性： 自定义属性 data-desrc 表达式 attr()  </p><p>兼容性： 还不错哦！！</p><h2 id="各种链接如下："><a href="#各种链接如下：" class="headerlink" title="各种链接如下："></a>各种链接如下：</h2><ul><li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/::after" target="_blank" rel="noopener"> data-descr_Demo链接</a></p></li><li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/attr" target="_blank" rel="noopener">attr() 具体文档</a></p></li><li><p><a href="https://caniuse.com/#search=attr(" target="_blank" rel="noopener">canIUse</a>) </p></li><li><a href="https://codesandbox.io/s/crazy-chatterjee-9h066?fontsize=14" target="_blank" rel="noopener">Demo地址</a></li></ul><h2 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>伪元素实现气泡提示<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"tooltip"</span> <span class="attr">data-descr</span>=<span class="string">"伪元素"</span>&gt;</span>伪元素<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"tooltip"</span> <span class="attr">data-descr</span>=<span class="string">"实现"</span>&gt;</span>实现<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"tooltip"</span> <span class="attr">data-descr</span>=<span class="string">"气泡提示"</span>&gt;</span>气泡提示<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.tooltip</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.tooltip</span><span class="selector-attr">[data-descr]</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="built_in">attr</span>(data-descr);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">60px</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#202020</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.tooltip</span><span class="selector-attr">[data-descr]</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#202020</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-left-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-bottom-color</span>: transparent;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;用伪元素实现气泡框&quot;&gt;&lt;a href=&quot;#用伪元素实现气泡框&quot; class=&quot;headerlink&quot; title=&quot;用伪元素实现气泡框&quot;&gt;&lt;/a&gt;用伪元素实现气泡框&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单行文本换行与多行文本换行</title>
+    <link href="https://heiliu.github.io/2019/10/23/text-overflow/"/>
+    <id>https://heiliu.github.io/2019/10/23/text-overflow/</id>
+    <published>2019-10-23T08:23:00.000Z</published>
+    <updated>2019-10-23T08:24:05.434Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://juejin.im/entry/5aa1f4916fb9a028b92cbdcc" target="_blank" rel="noopener">参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://juejin.im/entry/5aa1f4916fb9a028b92cbdcc&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React Poratls --传送门</title>
+    <link href="https://heiliu.github.io/2019/10/22/react_Portal/"/>
+    <id>https://heiliu.github.io/2019/10/22/react_Portal/</id>
+    <published>2019-10-22T09:50:00.000Z</published>
+    <updated>2019-10-31T10:55:25.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>在项目中常常会需要对话框、下拉列表、悬浮窗等交互的组件，当在父组件中使用一个下拉列表的时候，父组件的大小是固定的、同时还有一些overflow: hidden;子组件想要完全展示就变得比较困难，或者不能完全展示、或者阴影被父组件overflow给hidden掉了，同时在用overflow去清除浮动的影响的时候也要考虑到副作用，当元素比较多或者内容比较大的时候会不会被截断的问题。这个当想让子元素的层级最高而且不用被父元素给截断的时候就需要一个容器或者元素能够脱离父组件，至少从视觉上就得脱离父组件的影响。  </p><p>Portals 是 react 16 官方提供的解决方案， 使得组件可以脱离父组件从而挂载在页面的任何地方。</p><p>在做组件层级的时候 应用的skill<br><a href="https://xuzpeng.github.io/2019/05/04/React%E4%BC%A0%E9%80%81%E9%97%A8-Portal/" target="_blank" rel="noopener">文档</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在项目中常常会需要对话框、下拉列表、悬浮窗等交互的组件，当在父组件中使用一个下拉列表的时候，父组件的大小是固定的、同时还有一些overflow: hidden;子组件想要完全展示就变得比较困难，或者不能完全展示、或者阴影被父组件overflow给hidden掉了，同时在用o
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在 React 中使用 mobx 进行状态管理</title>
+    <link href="https://heiliu.github.io/2019/10/14/mobx-react/"/>
+    <id>https://heiliu.github.io/2019/10/14/mobx-react/</id>
+    <published>2019-10-13T16:00:00.000Z</published>
+    <updated>2019-10-17T04:35:13.523Z</updated>
+    
+    <content type="html"><![CDATA[<p>observable<br>inject<br>computed<br>action </p><p>RunInAction<br>Reaction </p><p>调试</p><p>toJs 需要引入 =&gt; 不如直接 JSON.stringify()方便</p><p>不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。</p><p><a href="https://cn.mobx.js.org/best/react-performance.html" target="_blank" rel="noopener">参考技巧</a></p><!-- 中文排序 --><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [&#123;<span class="attr">name</span>:<span class="string">'武汉'</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'北京'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'上海'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'天津'</span>&#125;];</span><br><span class="line"><span class="keyword">var</span> resultArray = array.sort(</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">compareFunction</span>(<span class="params">param1, param2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param1.name.localeCompare(param2.name,<span class="string">"zh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.log(resultArray);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;observable&lt;br&gt;inject&lt;br&gt;computed&lt;br&gt;action &lt;/p&gt;
+&lt;p&gt;RunInAction&lt;br&gt;Reaction &lt;/p&gt;
+&lt;p&gt;调试&lt;/p&gt;
+&lt;p&gt;toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Note" scheme="https://heiliu.github.io/categories/Note/"/>
+    
+    
+      <category term="React" scheme="https://heiliu.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>classnames 的用法总结</title>
+    <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
+    <id>https://heiliu.github.io/2019/10/13/classnames/</id>
+    <published>2019-10-12T16:00:00.000Z</published>
+    <updated>2019-10-13T12:37:59.736Z</updated>
+    
+    <content type="html"><![CDATA[<!-- TODO --><p><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames github库</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- TODO --&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JedWatson/classnames&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;classnames github库&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VS Code 快捷键</title>
+    <link href="https://heiliu.github.io/2019/10/13/VsCodeShortCuts/"/>
+    <id>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</id>
+    <published>2019-10-12T16:00:00.000Z</published>
+    <updated>2019-10-13T13:59:51.530Z</updated>
+    
+    <content type="html"><![CDATA[<!-- TODO --><h1 id="文档编辑中键盘快捷方式"><a href="#文档编辑中键盘快捷方式" class="headerlink" title="文档编辑中键盘快捷方式"></a>文档编辑中键盘快捷方式</h1><ul><li>快速移动光标（按单词跳: option <- -> </-></li><li>选中操作: <strong>shift <- -></-></strong> </li><li>搜索时切换搜索结果: <strong>shift Enter</strong> </li><li>文件相对路径: shift command H 原shortCut =&gt; 自定义 <strong>command H</strong> </li><li>新建未命名文件: command N  </li><li>搜索光标所在单词: command E </li><li>选中所在的代码块(select Bracket)，对花括号的代码块较友好: <strong>option command B</strong> </li><li>切换tab: <strong>option commmad <- -></-></strong> </li><li>删除整个单词: <strong>option backspace</strong></li><li>向上下复制整行: <strong>option shift <- -></-></strong> 上下方向键</li><li>找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): <strong>shift command I</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- TODO --&gt;
+&lt;h1 id=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;a href=&quot;#文档编辑中键盘快捷方式&quot; class=&quot;headerlink&quot; title=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;/a&gt;文档编辑中键盘快捷方式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;快速移动光标（按单词跳: o
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://heiliu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://heiliu.github.io/2019/08/29/NginxGetStart/"/>
+    <id>https://heiliu.github.io/2019/08/29/NginxGetStart/</id>
+    <published>2019-08-29T10:14:41.350Z</published>
+    <updated>2019-08-29T10:14:55.038Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.javaboy.org/2019/0605/nginx-guide.html" target="_blank" rel="noopener">参考链接</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.javaboy.org/2019/0605/nginx-guide.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React-router V4</title>
+    <link href="https://heiliu.github.io/2019/08/21/reactRouter/"/>
+    <id>https://heiliu.github.io/2019/08/21/reactRouter/</id>
+    <published>2019-08-20T16:00:00.000Z</published>
+    <updated>2019-08-21T08:33:57.949Z</updated>
+    
+    <content type="html"><![CDATA[<p>React 创建的单页应用中、通过路由来控制页面间的跳转，常用的就是 react-router、react-router-dom</p><h1 id="React-Router中有三类组件"><a href="#React-Router中有三类组件" class="headerlink" title="React Router中有三类组件"></a>React Router中有三类组件</h1><ul><li>路由组件 BrowserRouter, HashRouter  </li><li>路由匹配组件 Route, Switch  </li><li>导航、链接组件 Link</li></ul><blockquote><p>基于 React Router 的 web 应用，根组件应该是一个 router 组件（BrowserRouter，HashRouter ）。 项目中，react-router-dom 提供了和两种路由。两种路由都会创建一个 history 对象。如果我们的应用有服务器响应 web 的请求，我们通常使用<browserrouter>组件; 如果使用静态文件服务器，则我们应该使用<hashrouter>组件  通常都是使用 <browserrouter></browserrouter></hashrouter></browserrouter></p></blockquote><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>Link 组件最终会渲染为 HTML 标签 <a>，它的 to、query、hash 属性会被组合在一起并渲染为 href 属性。虽然 Link 被渲染为超链接，但在内部实现上使用脚本拦截了浏览器的默认行为，然后调用了history.pushState 方法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;React 创建的单页应用中、通过路由来控制页面间的跳转，常用的就是 react-router、react-router-dom&lt;/p&gt;
+&lt;h1 id=&quot;React-Router中有三类组件&quot;&gt;&lt;a href=&quot;#React-Router中有三类组件&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
+    
+    
+      <category term="React-router" scheme="https://heiliu.github.io/tags/React-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Webpack 相关</title>
     <link href="https://heiliu.github.io/2019/08/15/webpack/"/>
     <id>https://heiliu.github.io/2019/08/15/webpack/</id>
     <published>2019-08-15T09:37:21.189Z</published>
-    <updated>2019-08-15T09:48:26.285Z</updated>
+    <updated>2019-11-06T03:37:30.502Z</updated>
     
     <content type="html"><![CDATA[<h1 id="及时补"><a href="#及时补" class="headerlink" title="及时补"></a>及时补</h1><p>一篇篇都是欠下的债</p><p><a href="https://juejin.im/post/5cea1e1ae51d4510664d1652" target="_blank" rel="noopener">参考链接</a><br><a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">官方文档传送门</a></p>]]></content>
     
@@ -40,7 +233,7 @@
       <category term="webPack" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/webPack/"/>
     
     
-      <category term="webPack" scheme="https://heiliu.github.io/tags/webPack/"/>
+      <category term="WebPack" scheme="https://heiliu.github.io/tags/WebPack/"/>
     
   </entry>
   
@@ -76,7 +269,7 @@
     <link href="https://heiliu.github.io/2019/08/15/Axios/"/>
     <id>https://heiliu.github.io/2019/08/15/Axios/</id>
     <published>2019-08-14T16:00:00.000Z</published>
-    <updated>2019-08-15T05:56:40.198Z</updated>
+    <updated>2019-11-06T03:29:53.239Z</updated>
     
     <content type="html"><![CDATA[<h2 id="先从fetch讲起"><a href="#先从fetch讲起" class="headerlink" title="先从fetch讲起"></a>先从fetch讲起</h2><p>一个简单的fetch例子如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'./api/person.json'</span>)</span><br><span class="line">  .then(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (response.status !== <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Looks like there was a problem. Status Code: '</span> +</span><br><span class="line">          response.status);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// Examine the text in the response</span></span><br><span class="line">      <span class="comment">// 将返回数据 Json 化</span></span><br><span class="line">      response.json().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Fetch Error :-S'</span>, err);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="number">1.</span> .json()返回一个被解析为<span class="built_in">JSON</span>格式的<span class="string">`promise`</span>对象，当获取成功时，我们使用 json() 读取并解析数据</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="使用async-await简化"><a href="#使用async-await简化" class="headerlink" title="使用async/await简化"></a>使用async/await简化</h3><p>由于Fetch底层是用Promise实现，我们可以直接用async来优化上面的代码，减少回调，使其更加语义化、容易理解， 代码如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">geturl</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line"><span class="keyword">let</span> res = <span class="keyword">await</span> fetch(<span class="string">'./api/some.json'</span>)</span><br><span class="line"><span class="keyword">if</span>(res.status == <span class="number">200</span>)&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">await</span> res.text())</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="keyword">catch</span>(err)&#123;</span><br><span class="line"><span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// response 其他返回数据</span></span><br><span class="line">fetch(<span class="string">'users.json'</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response.headers.get(<span class="string">'Content-Type'</span>));</span><br><span class="line">    <span class="built_in">console</span>.log(response.headers.get(<span class="string">'Date'</span>));</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(response.status);</span><br><span class="line">    <span class="built_in">console</span>.log(response.statusText);</span><br><span class="line">    <span class="built_in">console</span>.log(response.type);</span><br><span class="line">    <span class="built_in">console</span>.log(response.url);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h4 id="Response-类型"><a href="#Response-类型" class="headerlink" title="Response 类型"></a>Response 类型</h4><p>当我们发起一个Fetch请求时，返回的response响应会自带一个response.type属性（basic、cors、opaque）。response.type属性说明了异步资源的来源，同时还有相应的处理方式。<br>当我们发起一个同源请求时，response.type为basic，而且你可以从response读取全部信息。<br>如果我们访问一个非同源域名，并且有返回相应的CORs响应头时，那么该请求类型是cors。  cors和basic很相似，就除了cors响应里你无法访问Cache-Control，Content-Language，Content-Type，Expires，Last-Modified和Pragma<br>当我们对一个不同源的域名发起请求时，如果返回的响应头部没有CORS信息，那么这个response对应的类型就是opaque类型。一个opaque响应是无法读取返回的数据、状态，甚至无法确定这个请求是否成功。<br>我们可以自定义Fetch请求的模式，要求返回对应类型的响应，有以下几种响应：</p><ul><li>1.same-origin 只返回同源请求，其他类型会被reject  </li><li>2.cors 接收同源、非同源请求，返回有CORs头部的响应  </li><li>3.cors-with-forced-preflight 在发出请求前会先做一次安全性检查  </li><li>4.no-cors 用来发起没有CORS头部并且非同源请求，并且会返回opaque响应。但是目前这种类型只能在Service Worker里使用，在window.fetch里不能用  </li></ul><h3 id="POST请求类型"><a href="#POST请求类型" class="headerlink" title="POST请求类型"></a>POST请求类型</h3><p>使用Fetch发起Post请求时，需要手动设置method参数和body参数，如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, &#123;</span><br><span class="line">    method: <span class="string">'post'</span>,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">"Content-type"</span>: <span class="string">"application/x-www-form-urlencoded; charset=UTF-8"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    body: <span class="string">'foo=bar&amp;lorem=ipsum'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(json)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Request succeeded with JSON response'</span>, data);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Request failed'</span>, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p><h3 id="带-COOKIE-发送请求"><a href="#带-COOKIE-发送请求" class="headerlink" title="带 COOKIE 发送请求"></a>带 COOKIE 发送请求</h3><p>在异步请求中带上cookie参数，那么需要显式指定credentials参数：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, &#123;</span><br><span class="line">  credentials: <span class="string">'include'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h2><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul><li>从浏览器中创建 XMLHttpRequests  </li><li>从 node.js 创建 http 请求  </li><li>支持 Promise API  </li><li>拦截请求和响应  </li><li>转换请求数据和响应数据  </li><li>取消请求  </li><li>自动转换 JSON 数据  </li><li>客户端支持防御 XSRF  </li></ul><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>npm 安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install axios</span><br></pre></td></tr></table></figure></p><p>使用cdn:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h3 id="GET-请求"><a href="#GET-请求" class="headerlink" title="GET 请求"></a>GET 请求</h3><h3 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h3><h3 id="响应结构"><a href="#响应结构" class="headerlink" title="响应结构"></a>响应结构</h3><p>响应返回包含信息：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// `data` 由服务器提供的响应</span></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `status` 来自服务器响应的 HTTP 状态码</span></span><br><span class="line">  status: <span class="number">200</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `statusText` 来自服务器响应的 HTTP 状态信息</span></span><br><span class="line">  statusText: <span class="string">'OK'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `headers` 服务器响应的头</span></span><br><span class="line">  headers: &#123;&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `config` 是为请求提供的配置信息</span></span><br><span class="line">  config: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener">文档传送门</a></p>]]></content>
     
@@ -89,7 +282,7 @@
     
       <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
     
-      <category term="javaScript" scheme="https://heiliu.github.io/categories/Skill/javaScript/"/>
+      <category term="JavaScript" scheme="https://heiliu.github.io/categories/Skill/JavaScript/"/>
     
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
@@ -101,7 +294,7 @@
     <link href="https://heiliu.github.io/2019/08/14/E2ETest/"/>
     <id>https://heiliu.github.io/2019/08/14/E2ETest/</id>
     <published>2019-08-13T16:00:00.000Z</published>
-    <updated>2019-08-14T05:53:24.168Z</updated>
+    <updated>2019-11-06T03:37:06.974Z</updated>
     
     <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><a href="https://segmentfault.com/a/1190000015724775" target="_blank" rel="noopener">参考链接</a>  </p><h2 id="小程序自动化"><a href="#小程序自动化" class="headerlink" title="小程序自动化"></a>小程序自动化</h2><p>小程序自动化SDK为开发者提供了一套通过外部脚本操控小程序的方案，从而实现小程序自动化测试的目的。  </p><p>通过该 SDK，你可以做到以下事情：</p><ul><li>控制小程序跳转到指定页面  </li><li>获取小程序页面数据  </li><li>获取小程序页面元素状态  </li><li>触发小程序元素绑定事件  </li><li>往 AppService 注入代码片段  </li><li>调用 wx 对象上任意接口  </li></ul><p>安装小程序自动化SDK：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install miniprogram-automator --save-dev</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -117,7 +310,7 @@
       <category term="test" scheme="https://heiliu.github.io/categories/test/"/>
     
     
-      <category term="test" scheme="https://heiliu.github.io/tags/test/"/>
+      <category term="Test" scheme="https://heiliu.github.io/tags/Test/"/>
     
   </entry>
   
@@ -126,16 +319,17 @@
     <link href="https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/"/>
     <id>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</id>
     <published>2019-08-12T16:00:00.000Z</published>
-    <updated>2019-08-15T10:45:39.124Z</updated>
+    <updated>2019-10-13T09:30:57.217Z</updated>
     
-    <content type="html"><![CDATA[<p>这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  </p><p><a href="https://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/" target="_blank" rel="noopener">详情参考</a></p>]]></content>
+    <content type="html"><![CDATA[<p>这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  </p><!-- TODO --><p><a href="https://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/" target="_blank" rel="noopener">详情参考</a></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2012/0
+&lt;!-- TODO --&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wo
       
     
     </summary>
@@ -150,30 +344,31 @@
   </entry>
   
   <entry>
-    <title>利用set提高性能</title>
+    <title></title>
     <link href="https://heiliu.github.io/2019/08/12/setPerformance/"/>
     <id>https://heiliu.github.io/2019/08/12/setPerformance/</id>
     <published>2019-08-12T03:48:34.349Z</published>
-    <updated>2019-08-15T05:59:00.013Z</updated>
+    <updated>2019-11-06T03:30:22.553Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.51cto.com/13957060/2419632" target="_blank" rel="noopener">详情</a></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>title: 利用set提高性能<br>tags: JavaScript<br>categories: </p><ul><li>前端</li><li>JavaScript</li></ul><hr><!-- TODO --><p><a href="https://blog.51cto.com/13957060/2419632" target="_blank" rel="noopener">详情</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://blog.51cto.com/13957060/2419632&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;详情&lt;/a&gt;&lt;/p&gt;
-
+        &lt;hr&gt;
+&lt;p&gt;title: 利用set提高性能&lt;br&gt;tags: JavaScript&lt;br&gt;categories: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前端&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;!-- TODO --&gt;
+&lt;p&gt;&lt;a href=&quot;h
       
     
     </summary>
     
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="javaScript" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/javaScript/"/>
-    
-    
-      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
     
   </entry>
   
@@ -182,9 +377,9 @@
     <link href="https://heiliu.github.io/2019/08/05/Array/"/>
     <id>https://heiliu.github.io/2019/08/05/Array/</id>
     <published>2019-08-04T23:42:00.000Z</published>
-    <updated>2019-08-15T03:57:42.577Z</updated>
+    <updated>2019-11-06T03:32:41.250Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote><p>一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。  </p></blockquote><p>数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象</p><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><ul><li><p>通过<code>构造函数</code> </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 传入一组元素进行数组初始化 --&gt;</span><br><span class="line"><span class="keyword">var</span> arr = New <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">print(arr.length); <span class="comment">// 5</span></span><br><span class="line">&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 <span class="literal">undefined</span> --&gt;</span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br><span class="line">print(arr1.length); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure><a id="more"></a></li><li>通过字面量 <code>[]</code> 创建  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>区别<br>虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'using[]'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = []&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using[]'</span>)  <span class="comment">// using[]: 29.630859375ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'using new'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using new'</span>)  <span class="comment">// using new: 39.93798828125ms</span></span><br></pre></td></tr></table></figure><p>通过对比会发现使用new关键字来创建数组花费的时间更长，<code>实际上</code>使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然<code>只有在大批量数据的情况下才会有影响</code>.</p><p>创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。</p></li></ul><h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p>isArray </p><p>存取函数  </p><blockquote><p>用来访问数组元素的函数，返回目标数组的某种变体  </p></blockquote><p>indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1</p><p>lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1</p><p>数组的字符串表示  </p><p>join()</p><p>toString()<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Raymond"</span>,<span class="string">"Clayton"</span>,<span class="string">"Mike"</span>,<span class="string">"Jennifer"</span>];</span><br><span class="line"><span class="keyword">var</span> namestr = names.join();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br><span class="line">namestr = names.toString();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br></pre></td></tr></table></figure></p><p>由已有数组创建新的数组  </p><p>concat()  合并多个数组创建一个新数组<br>splice()  截取一个数组的子集创建一个新数组<br>slice() </p><p>使用 splice() 方法为数组添加元素，需提供如下参数：<br>• 起始索引（也就是你希望开始添加元素的地方）；<br>• 需要删除的元素个数（<code>添加元素时该参数设为 0</code>）；<br>• 想要添加进数组的元素。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> newElements = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">nums.splice(<span class="number">3</span>,<span class="number">0</span>,newElements);</span><br><span class="line">print(nums); <span class="comment">// 1,2,3,4,5,6,7,8,9</span></span><br></pre></td></tr></table></figure></p><p>可变函数  </p><blockquote><p>能够改变数组的内容的函数  </p></blockquote><p>push() 在末尾添加元素<br>pop() 删除末尾的元素</p><p>shift()<br>unshift() 添加元素到数组的开头</p><p>reverse() 翻转数组<br>sort()<br>对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Mike"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Clayton"</span>,<span class="string">"Bryan"</span>,<span class="string">"Raymond"</span>];</span><br><span class="line">names.sort();</span><br><span class="line">print(names); <span class="comment">// Bryan,Clayton,Cynthia,David,Mike,Raymond</span></span><br></pre></td></tr></table></figure></p><p>但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];nums.sort();print(nums); <span class="comment">// 1,100,2,200,3,4sort()</span></span><br></pre></td></tr></table></figure></p><p>方法是按照<code>字典顺序</code>对元素进行排序的，因此它 <code>假定元素都是字符串类型</code>，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。<br><code>对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];</span><br><span class="line">nums.sort(compare);print(nums); <span class="comment">// 1,2,3,4,100,200</span></span><br></pre></td></tr></table></figure></p><p>sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。</p><p>迭代器方法  </p><ul><li>forEach()  </li><li>every()  </li><li>some()  </li><li>map()  </li><li>filter()  </li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote><p>一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。  </p></blockquote><p>数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象</p><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><ul><li><p>通过<code>构造函数</code> </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 传入一组元素进行数组初始化 --&gt;</span><br><span class="line"><span class="keyword">var</span> arr = New <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">print(arr.length); <span class="comment">// 5</span></span><br><span class="line">&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 <span class="literal">undefined</span> --&gt;</span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br><span class="line">print(arr1.length); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure><a id="more"></a></li><li>通过字面量 <code>[]</code> 创建  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>区别<br>虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'using[]'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = []&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using[]'</span>)  <span class="comment">// using[]: 29.630859375ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'using new'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using new'</span>)  <span class="comment">// using new: 39.93798828125ms</span></span><br></pre></td></tr></table></figure><p>通过对比会发现使用new关键字来创建数组花费的时间更长，<code>实际上</code>使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然<code>只有在大批量数据的情况下才会有影响</code>.</p><p>创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。</p></li></ul><h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p>isArray </p><p>存取函数  </p><blockquote><p>用来访问数组元素的函数，返回目标数组的某种变体  </p></blockquote><p>indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1</p><p>lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1</p><p>数组的字符串表示  </p><p>join()</p><p>toString()</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Raymond"</span>,<span class="string">"Clayton"</span>,<span class="string">"Mike"</span>,<span class="string">"Jennifer"</span>];</span><br><span class="line"><span class="keyword">var</span> namestr = names.join();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br><span class="line">namestr = names.toString();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br></pre></td></tr></table></figure><p>由已有数组创建新的数组  </p><p>concat()  合并多个数组创建一个新数组<br>splice()  截取一个数组的子集创建一个新数组<br>slice() </p><p>使用 splice() 方法为数组添加元素，需提供如下参数：<br>• 起始索引（也就是你希望开始添加元素的地方）；<br>• 需要删除的元素个数（<code>添加元素时该参数设为 0</code>）；<br>• 想要添加进数组的元素。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> newElements = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">nums.splice(<span class="number">3</span>,<span class="number">0</span>,newElements);</span><br><span class="line">print(nums); <span class="comment">// 1,2,3,4,5,6,7,8,9</span></span><br></pre></td></tr></table></figure></p><p>可变函数  </p><blockquote><p>能够改变数组的内容的函数  </p></blockquote><p>push() 在末尾添加元素<br>pop() 删除末尾的元素</p><p>shift()<br>unshift() 添加元素到数组的开头</p><p>reverse() 翻转数组<br>sort()<br>对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Mike"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Clayton"</span>,<span class="string">"Bryan"</span>,<span class="string">"Raymond"</span>];</span><br><span class="line">names.sort();</span><br><span class="line">print(names); <span class="comment">// Bryan,Clayton,Cynthia,David,Mike,Raymond</span></span><br></pre></td></tr></table></figure></p><p>但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];nums.sort();print(nums); <span class="comment">// 1,100,2,200,3,4sort()</span></span><br></pre></td></tr></table></figure></p><p>方法是按照<code>字典顺序</code>对元素进行排序的，因此它 <code>假定元素都是字符串类型</code>，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。<br><code>对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];</span><br><span class="line">nums.sort(compare);print(nums); <span class="comment">// 1,2,3,4,100,200</span></span><br></pre></td></tr></table></figure></p><p>sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。</p><p>迭代器方法  </p><p>其实可以多展开来讲的 map foreach filter reduce 的区别</p><ul><li>forEach()  </li><li>every()  </li><li>some()  </li><li>map()  </li><li>filter()  </li></ul>]]></content>
     
     <summary type="html">
     
@@ -201,9 +396,9 @@
       <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
+      <category term="JavaScript" scheme="https://heiliu.github.io/tags/JavaScript/"/>
     
-      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
+      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
     
   </entry>
   
@@ -235,28 +430,26 @@
   </entry>
   
   <entry>
-    <title>NPM 参数</title>
-    <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
-    <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
+    <title>react-redux中Provider、connect</title>
+    <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
+    <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
     <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:43:44.955Z</updated>
+    <updated>2019-08-03T09:45:33.792Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
+        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
       
     
     </summary>
     
-      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
     
-      <category term="前端" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Node" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+      <category term="Note" scheme="https://heiliu.github.io/categories/React/Note/"/>
     
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
@@ -290,26 +483,28 @@
   </entry>
   
   <entry>
-    <title>react-redux中Provider、connect</title>
-    <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
-    <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
+    <title>NPM 参数</title>
+    <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
+    <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
     <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:45:33.792Z</updated>
+    <updated>2019-08-03T09:43:44.955Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="react-redux中Provider"><a href="#react-redux中Provider" class="headerlink" title="react-redux中Provider"></a>react-redux中Provider</h2><p><a href="https://www.cnblogs.com/sameen/p/9182925.html" target="_blank" rel="noopener">详情</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;react-redux中Provider&quot;&gt;&lt;a href=&quot;#react-redux中Provider&quot; class=&quot;headerlink&quot; title=&quot;react-redux中Provider&quot;&gt;&lt;/a&gt;react-redux中Provider&lt;/h2&gt;&lt;
+        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
       
     
     </summary>
     
-      <category term="React" scheme="https://heiliu.github.io/categories/React/"/>
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
     
-      <category term="Note" scheme="https://heiliu.github.io/categories/React/Note/"/>
+      <category term="前端" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
     
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
@@ -334,221 +529,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Git 笔记</title>
-    <link href="https://heiliu.github.io/2019/07/28/gitNote/"/>
-    <id>https://heiliu.github.io/2019/07/28/gitNote/</id>
-    <published>2019-07-27T16:00:00.000Z</published>
-    <updated>2019-08-13T04:17:03.374Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><h3 id="本地分支重命名"><a href="#本地分支重命名" class="headerlink" title="本地分支重命名"></a>本地分支重命名</h3><p>git branch -m old new</p><h3 id="链接远程仓库"><a href="#链接远程仓库" class="headerlink" title="链接远程仓库"></a>链接远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 仓库地址</span><br><span class="line">仓库地址：https://git.coding.net/xxxxxxxxxxxxx/my-project.git  </span><br><span class="line">git push -u orgin master</span><br></pre></td></tr></table></figure><h3 id="删除远程仓库"><a href="#删除远程仓库" class="headerlink" title="删除远程仓库"></a>删除远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure><h3 id="修改远程仓库（源地址）"><a href="#修改远程仓库（源地址）" class="headerlink" title="修改远程仓库（源地址）"></a>修改远程仓库（源地址）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin []</span><br></pre></td></tr></table></figure><p>如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Project mctDev/cafeteria-supplier-desktop was moved to another location</span><br><span class="line"></span><br><span class="line">The project is now located under cafereria-fe / cafeteria-supplier-desktop</span><br><span class="line"></span><br><span class="line">To update the remote url in your local repository run (for ssh):</span><br><span class="line"></span><br><span class="line">git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.git</span><br><span class="line"></span><br><span class="line">or for http(s):</span><br><span class="line"></span><br><span class="line">git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git</span><br></pre></td></tr></table></figure><h4 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h4><p>  git remote set-url –add origin 就是往当前git项目的config文件里增加一行记录<br>  config文件打开方式有两种：</p><p>  使用命令<code>git config -e</code><br>  在当前git项目的根目录下，文件位于 .git/config (.git目录为隐藏文件)<br>  你每执行一次git remote set-url –add origin 就会增加一行，如下图：</p><p>  <code>git remote -v</code>:显示当前所有远程库的详细信息，显示格式为 远程库名字 url连接(类型)<br>  <a href="https://my.oschina.net/shede333/blog/299032" target="_blank" rel="noopener">参考链接</a></p><h3 id="git-checkout的用法"><a href="#git-checkout的用法" class="headerlink" title="git checkout的用法"></a>git checkout的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态</span><br><span class="line">git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支</span><br><span class="line">git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖</span><br><span class="line">git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） </span><br><span class="line">  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</span><br></pre></td></tr></table></figure><p>  <a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p><h3 id="撤销本地修改的文件"><a href="#撤销本地修改的文件" class="headerlink" title="撤销本地修改的文件"></a>撤销本地修改的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout [filename] // 撤销某个文件的修改</span><br><span class="line">git checkout .  // 撤销所有修改的文件</span><br></pre></td></tr></table></figure><h3 id="撤回-add-commit"><a href="#撤回-add-commit" class="headerlink" title="撤回 add/commit"></a>撤回 add/commit</h3><h4 id="将add到暂存区后的提交撤回"><a href="#将add到暂存区后的提交撤回" class="headerlink" title="将add到暂存区后的提交撤回"></a>将add到暂存区后的提交撤回</h4><p>  git reset head 文件名</p><h4 id="修改commit标注"><a href="#修改commit标注" class="headerlink" title="修改commit标注"></a>修改commit标注</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">commit -m &quot;aaaa&quot; // 提交一个commit</span><br><span class="line">git commit --amend =&gt; 开启vim编辑器 编辑后保存退出</span><br></pre></td></tr></table></figure><h4 id="撤回commit"><a href="#撤回commit" class="headerlink" title="撤回commit"></a>撤回commit</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改</span><br><span class="line">git reset --hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</span><br></pre></td></tr></table></figure><h3 id="拉取远程分支"><a href="#拉取远程分支" class="headerlink" title="拉取远程分支"></a>拉取远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin [分支名]</span><br></pre></td></tr></table></figure><h3 id="添加-删除远程分支"><a href="#添加-删除远程分支" class="headerlink" title="添加/删除远程分支"></a>添加/删除远程分支</h3><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push origin 本地分支名:远程分支名</span><br><span class="line"></span><br><span class="line">$ git push origin test:master         // 提交本地test分支作为远程的master分支 </span><br><span class="line">$ git push origin test:test           // 提交本地test分支作为远程的test分支</span><br><span class="line">//好像只写这一句，远程的github就会自动创建一个test分支</span><br></pre></td></tr></table></figure></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :远程分支名(你要删除的远程分支名)</span><br></pre></td></tr></table></figure></li></ul><h3 id="git-reflog"><a href="#git-reflog" class="headerlink" title="git reflog"></a>git reflog</h3><p> 可以显示已删除的操作</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Git-常用的命令笔记&quot;&gt;&lt;a href=&quot;#Git-常用的命令笔记&quot; class=&quot;headerlink&quot; title=&quot;Git 常用的命令笔记&quot;&gt;&lt;/a&gt;Git 常用的命令笔记&lt;/h2&gt;&lt;p&gt;Commitizen是一个撰写合格 Commit message 的
-      
-    
-    </summary>
-    
-      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
-    
-      <category term="Note" scheme="https://heiliu.github.io/categories/Skill/Note/"/>
-    
-      <category term="Git" scheme="https://heiliu.github.io/categories/Skill/Note/Git/"/>
-    
-    
-      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如约而至</title>
-    <link href="https://heiliu.github.io/2018/09/05/appoint/"/>
-    <id>https://heiliu.github.io/2018/09/05/appoint/</id>
-    <published>2018-09-04T16:00:00.000Z</published>
-    <updated>2019-08-16T04:46:52.470Z</updated>
-    
-    <content type="html"><![CDATA[<div style="text-align:center; font-size:18px;"><br>专辑： 寻宝游戏<br>歌手：许嵩<br>作曲 : 许嵩<br>作词 : 许嵩<br><br>如果早知道那天是我们最后一面<br><br>我绝不会和你谈论琐事浪费时间<br><br>人生里看似偶然却又必经的告别<br><br>无约而至 无人可免<br><br>有一回置身某个似曾相识的场景<br><br>那一刻我忽然感应你就在我身边<br><br>过去、当下、未来未必确有其界限<br><br>或许爱能穿越时间 抵达永远<br><br>等到秋叶终于金黄<br><br>等到华发悄然苍苍<br><br>我们相约老地方<br><br>等到人已不再奔忙<br><br>等到心也不再轻狂<br><br>我们相约老地方<br><br>等到记忆只剩精华<br><br>等到笑容不掺伪装<br><br>我们相约老地方<br><br>等到释怀所有悲伤<br><br>等到体谅世事无常<br><br>我们相约老地方<br></div><video src="appoint.mp4" width="100%" height="400" controls="controls"></video>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;div style=&quot;text-align:center; font-size:18px;&quot;&gt;&lt;br&gt;专辑： 寻宝游戏&lt;br&gt;歌手：许嵩&lt;br&gt;作曲 : 许嵩&lt;br&gt;作词 : 许嵩&lt;br&gt;&lt;br&gt;如果早知道那天是我们最后一面&lt;br&gt;&lt;br&gt;我绝不会和你谈论琐事浪费时间&lt;br&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="😊" scheme="https://heiliu.github.io/categories/%F0%9F%98%8A/"/>
-    
-    
-      <category term="生活" scheme="https://heiliu.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js基本数据类型和引用类型的区别</title>
-    <link href="https://heiliu.github.io/2018/07/30/type/"/>
-    <id>https://heiliu.github.io/2018/07/30/type/</id>
-    <published>2018-07-30T07:01:13.000Z</published>
-    <updated>2019-08-15T05:59:31.949Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Js-基本数据类型"><a href="#Js-基本数据类型" class="headerlink" title="Js 基本数据类型"></a>Js 基本数据类型</h2><p>js基本数据类型包括：undefined,null,number,boolean,string.基本数据类型是按值访问的，就是说我们可以操作保存在变量中的实际的值  </p><h3 id="1-基本数据类型的值是不可改变的"><a href="#1-基本数据类型的值是不可改变的" class="headerlink" title="1.基本数据类型的值是不可改变的"></a>1.基本数据类型的值是不可改变的</h3><p> 任何方法都无法改变一个基本类型的值是不可改变的，比如一个字符串：<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"change"</span>;</span><br><span class="line">name.substr();<span class="comment">//hang</span></span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//change</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;</span><br><span class="line">s.toUpperCase()<span class="comment">//HELLO;</span></span><br><span class="line"><span class="built_in">console</span>.log(s)<span class="comment">//hello</span></span><br></pre></td></tr></table></figure></p><p> 通过这两个例子， 我们原来发现定义的变量name 的值始终没有发生改变，而调用substr() 和 toUpperCase() 方法后返回的是一个新的字符串，跟原先定义的变量name 并没有关系  </p><p> 或许有人会有一下的疑问， 看代码：   </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Js-基本数据类型&quot;&gt;&lt;a href=&quot;#Js-基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;Js 基本数据类型&quot;&gt;&lt;/a&gt;Js 基本数据类型&lt;/h2&gt;&lt;p&gt;js基本数据类型包括：undefined,null,number,boolean,s
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>性能优化之浏览器篇</title>
-    <link href="https://heiliu.github.io/2018/07/20/Better/"/>
-    <id>https://heiliu.github.io/2018/07/20/Better/</id>
-    <published>2018-07-20T01:20:38.000Z</published>
-    <updated>2018-07-21T00:52:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="把-Css-放在head-中加载"><a href="#把-Css-放在head-中加载" class="headerlink" title="把 Css 放在head 中加载"></a>把 Css 放在head 中加载</h2><blockquote><p>在浏览器解析完head 部分后、让浏览器知道需要引入哪些css文件，开始并行的去下载css资源，一边下载Css文件一边解析Html, 能够使页面更早的开始渲染  </p></blockquote><ul><li>让页面更早的开始渲染、避免闪屏  （DOM 结构先加载出来，css慢了一拍 页面重新渲染）</li><li>最好能包含关键渲染路径的样式、首页的样式应该尽快的完成加载、提高用户体验  </li></ul><h2 id="JS放在-body-标签结束前加载"><a href="#JS放在-body-标签结束前加载" class="headerlink" title="JS放在 body 标签结束前加载"></a>JS放在 body 标签结束前加载</h2><blockquote><p>js 资源的加载会阻塞 HTML 的解析 和 Css的渲染</p></blockquote><h2 id="不使用CSS-表达式"><a href="#不使用CSS-表达式" class="headerlink" title="不使用CSS 表达式"></a>不使用CSS 表达式</h2><blockquote><p>看似强大， 实际性能开销很大，可能导致页面卡顿  </p></blockquote><h2 id="用外链的方式引入css-和-js"><a href="#用外链的方式引入css-和-js" class="headerlink" title="用外链的方式引入css 和 js"></a>用外链的方式引入css 和 js</h2><ul><li>通过使用外链可以减少html 文件的体积  </li><li>作为外链文件、Css/Js 可以作为静态资源、通过合理的利用浏览器的缓存对需要的文件进行缓存； 在第二次访问时可以加快页面的加载速度  </li></ul><h2 id="不要重复加载JS"><a href="#不要重复加载JS" class="headerlink" title="不要重复加载JS"></a>不要重复加载JS</h2><ul><li>在IE中，例如在加载一个jquery以后再加载一个jquery，仍然是算作两个不同的请求，不能发挥缓存的优势  </li><li>重复加载js意味着更长的JS执行时间  </li></ul><h2 id="用-Get-方式发起-Ajax-请求"><a href="#用-Get-方式发起-Ajax-请求" class="headerlink" title="用 Get 方式发起 Ajax 请求"></a>用 Get 方式发起 Ajax 请求</h2><ul><li>Get 方式可以缓存  </li><li><p>如果是获取信息 Get 更加语义化  </p><p>如果是提交数据 使用Post 更加语义化  </p></li></ul><h2 id="组件延迟加载"><a href="#组件延迟加载" class="headerlink" title="组件延迟加载"></a>组件延迟加载</h2><blockquote><p>规划页面中引用的姿态资源加载顺序、优先级的能力</p></blockquote><ul><li><p>保障关键页面资源的优先加载: 浏览器的并发数限制  </p><blockquote><p>在同一个域名下面，一般现代浏览器的并发数为6 </p></blockquote></li><li>按需加载 Lazyload 典型： 电商网站  <blockquote><p>在图片比较多的电商网站中，lazyload 十分实用 data-src -&gt; src  </p></blockquote></li></ul><h2 id="避免在页面中使用iFrame"><a href="#避免在页面中使用iFrame" class="headerlink" title="避免在页面中使用iFrame"></a>避免在页面中使用iFrame</h2><ul><li>会阻塞父文档的 <code>onload</code> 事件  </li><li>即使是空白iFrame 也比较耗时</li></ul><h2 id="减少COOKIE体积"><a href="#减少COOKIE体积" class="headerlink" title="减少COOKIE体积"></a>减少COOKIE体积</h2><ul><li>COOKIE每次请求都会全都带上<br><a href="https://segmentfault.com/a/1190000004556040" target="_blank" rel="noopener">COOKIE了解更多</a>   <blockquote><p>每次请求跟主文档相关的信息，所有的cookie都会带上  </p></blockquote></li></ul><h2 id="减少-JS-中的-DOM-访问"><a href="#减少-JS-中的-DOM-访问" class="headerlink" title="减少 JS 中的 DOM 访问"></a>减少 JS 中的 DOM 访问</h2><blockquote><p>JS中对DOM 的访问是不可避免的, 但可以进行一下优化  </p></blockquote><ul><li>对于查找到的元素， 先将其缓存在变量中  </li><li>节点增加时合理利用 <code>DocumentFragment</code>  </li><li>不要用JS 去频繁修改样式</li></ul><h2 id="使用常见的图片优化手段"><a href="#使用常见的图片优化手段" class="headerlink" title="使用常见的图片优化手段"></a>使用常见的图片优化手段</h2><blockquote><p>相比代码， 图片的体积很大  </p></blockquote><h2 id="不要在HTML中缩放图片"><a href="#不要在HTML中缩放图片" class="headerlink" title="不要在HTML中缩放图片"></a>不要在HTML中缩放图片</h2><p>在实际中使用什么尺寸的图片就提供多大尺寸的图片  </p><ul><li>徒增渲染开销， 提供适当尺寸即可  <h2 id="不要把图片的src置空"><a href="#不要把图片的src置空" class="headerlink" title="不要把图片的src置空"></a>不要把图片的src置空</h2></li><li>在主流浏览器中 IE、Chrome、FireFox 都会引发指向当前主文档的额外请求</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;把-Css-放在head-中加载&quot;&gt;&lt;a href=&quot;#把-Css-放在head-中加载&quot; class=&quot;headerlink&quot; title=&quot;把 Css 放在head 中加载&quot;&gt;&lt;/a&gt;把 Css 放在head 中加载&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="性能优化" scheme="https://heiliu.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RegExp 正则表达式</title>
-    <link href="https://heiliu.github.io/2018/07/18/regExp/"/>
-    <id>https://heiliu.github.io/2018/07/18/regExp/</id>
-    <published>2018-07-18T01:47:21.000Z</published>
-    <updated>2019-08-05T15:30:14.974Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="RegRxp-正则表达式"><a href="#RegRxp-正则表达式" class="headerlink" title="RegRxp(正则表达式)"></a>RegRxp(正则表达式)</h1><blockquote><p>简化对字符串的操作  </p></blockquote><p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等</p><h2 id="什么是正则？"><a href="#什么是正则？" class="headerlink" title="什么是正则？"></a>什么是正则？</h2><p>规则、模式; 强大的字符串匹配的工具  </p><h3 id="风格"><a href="#风格" class="headerlink" title="风格"></a>风格</h3><p>  js风格: const reg = new RegExp(‘a’, i)<br>  perl风格: const reg = /a/i  </p><h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><table><thead><tr><th>转义字符</th><th>说明</th></tr></thead><tbody><tr><td>\d</td><td>数字 [0-9]</td></tr><tr><td>\D</td><td>除了数字吃 [^0-9]</td></tr><tr><td>\</td><td>斜杆 \</td></tr><tr><td>\n</td><td>换行</td></tr><tr><td>\w</td><td>英文 数字 下划线 [a-z0-9_]</td></tr><tr><td>\W</td><td>非英文 数字 下划线 [^a-z0-9_]</td></tr><tr><td>\s</td><td>空格</td></tr><tr><td>\S</td><td>非空白字符</td></tr></tbody></table><h3 id="特殊字符-元字符"><a href="#特殊字符-元字符" class="headerlink" title="特殊字符(元字符)"></a>特殊字符(元字符)</h3><ul><li><p>[] 方括号   </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//  [abc] 表示a或者b或者c </span></span><br><span class="line"><span class="keyword">const</span> re = <span class="regexp">/[abc]pc/g</span></span><br><span class="line"><span class="comment">// 范围匹配</span></span><br><span class="line">[a-z] [<span class="number">0</span><span class="number">-9</span>] </span><br><span class="line">[^a-z]  <span class="comment">// 匹配非英文部分</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="限定符-量词"><a href="#限定符-量词" class="headerlink" title="限定符(量词)"></a>限定符(量词)</h3><ul><li><p>基本形式： {n}表示出现的次数  </p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 8位电话号码  </span><br><span class="line">/[1-9]\d&#123;7&#125;/        // 以非零数字开头后面八位随意</span><br></pre></td></tr></table></figure></li><li><p>表示出现次数范围： {n, m}  表示出现最少n次 最多m次  </p></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/[<span class="number">1</span><span class="number">-9</span>]\d&#123;<span class="number">4</span>, <span class="number">10</span>&#125;/  <span class="comment">// QQ 正则</span></span><br></pre></td></tr></table></figure><ul><li><p>不限次数：{n, } 表示最少n次， 最多不限  </p><p>  . 任意字符<br>  *:  =&gt; {0, } 任意次<br>  +: 若干 =&gt; {1, } 最少一次 最多不限<br>  ?: 最少零次 最多一次 =&gt; {0, 1}<br>  ^: 行首<br>  $: 行尾  </p></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">0</span>\d&#123;<span class="number">2</span>,<span class="number">3</span>&#125;-)?[<span class="number">1</span><span class="number">-9</span>]\d&#123;<span class="number">7</span>&#125;  <span class="comment">// 固话区号  010-2473544</span></span><br></pre></td></tr></table></figure><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul><li>search  返回匹配的位置</li><li>match 把所有匹配的东西都提取出来  </li><li>replace 字符串替换,替换所有匹配的字符串，返回替换以后的字符串  </li><li>test   检验字符串是否符合正则 返回Boolean  <blockquote><p>特性 只要字符串一部分符合要求就返回true  </p></blockquote></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 校验邮箱</span></span><br><span class="line"><span class="keyword">const</span> email = <span class="string">'你好啊heiliu@Gmail.com'</span></span><br><span class="line"><span class="keyword">const</span> re = <span class="regexp">/\w+@[a-z0-9]+\.[a-z]+/</span></span><br><span class="line">re.test(email)  <span class="comment">// 后半部分符合 返回 true  </span></span><br><span class="line"><span class="keyword">const</span> re1 = <span class="regexp">/^\w+@[a-z0-9]+\.[a-z]+$/</span> <span class="comment">// 限制首尾</span></span><br></pre></td></tr></table></figure><h3 id="应用例子"><a href="#应用例子" class="headerlink" title="应用例子"></a>应用例子</h3><ul><li>查找字符串中的数字并返回  </li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  查找字符串中的数字  </span></span><br><span class="line"><span class="keyword">const</span> str = <span class="string">'123ask32lks,alf21lksa12e45l3'</span></span><br><span class="line"><span class="keyword">const</span> reg = <span class="regexp">/\d+/g</span>    <span class="comment">// global</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg))</span><br></pre></td></tr></table></figure><ul><li>敏感词过滤  </li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// replace 的用例</span></span><br><span class="line"><span class="keyword">const</span> reg = <span class="regexp">/匹配|出来/</span>;</span><br><span class="line"><span class="keyword">const</span> str = <span class="string">'把所有匹配的东西都提取出来 '</span></span><br><span class="line"><span class="built_in">console</span>.log(str.replace(reg, <span class="string">'***'</span>))  <span class="comment">// 把所有***的东西都提取***</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;RegRxp-正则表达式&quot;&gt;&lt;a href=&quot;#RegRxp-正则表达式&quot; class=&quot;headerlink&quot; title=&quot;RegRxp(正则表达式)&quot;&gt;&lt;/a&gt;RegRxp(正则表达式)&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;简化对字符串的操作  &lt;/p&gt;
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Note" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/Note/"/>
-    
-    
-      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>排序</title>
-    <link href="https://heiliu.github.io/2018/07/15/sorts/"/>
-    <id>https://heiliu.github.io/2018/07/15/sorts/</id>
-    <published>2018-07-15T01:47:21.000Z</published>
-    <updated>2019-08-15T05:59:17.137Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h1><pre><code>如下数字: 35 99 18 76 12  </code></pre><ul><li><p>桶排序<br>  有[100] for初始化数组<br>  将数字放到相应的位置  </p><p>  <strong>思想</strong>： </p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">    利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时</span><br><span class="line">    用待排序的数字坐桶的下标 给相应项+1 类似于做标记的</span><br><span class="line">    myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 </span><br><span class="line">    ```  </span><br><span class="line"></span><br><span class="line">    **时间复杂度:**  </span><br><span class="line">       时间复杂度 循环  </span><br><span class="line">       O(M+N) 一重循环最大值99 100，又一重循环N，  </span><br><span class="line">       之后又有一层循环M 有值的桶子  </span><br><span class="line">       嵌套循环 &gt;= 0 1 2 3有限的，&lt;N   M+N  </span><br><span class="line">         多层循环是最花时间M+N  </span><br><span class="line">         O(M+N+M+N)=O(2*(M+N))  O(M+N)</span><br><span class="line"> </span><br><span class="line">    **缺点:** 占物理内存，因为要分配M个元素的数组  </span><br><span class="line">        </span><br><span class="line">- 冒泡排序  </span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">// 冒泡排序 </span><br><span class="line">// 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序  </span><br><span class="line">const source_arr = [35,18, 99, 18, 76, 12];</span><br><span class="line">function bubbleSort(arr) &#123;</span><br><span class="line">    const len = arr.length;</span><br><span class="line">    for (let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">        for (let j = 0; j &lt; len - 1 - i; j++) &#123;</span><br><span class="line">            if (arr[j] &gt; arr[j+1]) &#123;        // 相邻元素两两对比</span><br><span class="line">                let temp = arr[j+1];        // 元素交换</span><br><span class="line">                arr[j+1] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">console.log(bubbleSort(source_arr));</span><br></pre></td></tr></table></figure></li><li><p>选择排序  </p><blockquote><p>第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// n^2</span></span><br><span class="line"><span class="comment">// 找到数组中最小的值放在第一位，第二小的放在第二位...</span></span><br><span class="line"><span class="comment">// 基址查询</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SelectSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.length</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> minIndex = i</span><br><span class="line">    <span class="comment">// 如果已经选择了， 前面的就一定是有序的</span></span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">let</span> j = i; j &lt; len; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span>( arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">        <span class="comment">// 循环和默认的最小值进行比较， 如果更小纪录下标</span></span><br><span class="line">        minIndex = j</span><br><span class="line">        <span class="built_in">console</span>.log(i, j)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(minIndex !== i) &#123;</span><br><span class="line">      [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(SelectSort([<span class="number">45</span>,<span class="number">21</span>,<span class="number">45</span>,<span class="number">12</span>,<span class="number">56</span>,<span class="number">12</span>,<span class="number">67</span>,<span class="number">32</span>,<span class="number">98</span>]))</span><br></pre></td></tr></table></figure></blockquote></li><li><p>快排排序  </p><blockquote><p>因为采用了分治思想，所以快  形象的例子 三个数之间进行排序 a b c 再加递归  </p></blockquote></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2</span></span><br><span class="line"><span class="comment">// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n</span></span><br><span class="line"><span class="comment">// 分治</span></span><br><span class="line"><span class="comment">// 快排 log2(n)* n for循环 n次</span></span><br><span class="line">  <span class="comment">// 1. 随机选择一个数组中的一个数作为一个基准 一般是中点</span></span><br><span class="line">  <span class="comment">// 2. 其余数字跟他比较， 小的放左边 大的放右边</span></span><br><span class="line">  <span class="comment">// 3. 利用递归的思想， 将左右两边的数重复以上两步</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">QuickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 这里是出口 当数组长度小于等于1的时候结束递归</span></span><br><span class="line">  <span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length /<span class="number">2</span>)</span><br><span class="line">  <span class="comment">// 把中间基准值从数组提出来</span></span><br><span class="line">  pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>]  <span class="comment">// 选出相应位置的值</span></span><br><span class="line">  <span class="built_in">console</span>.log(pivot)</span><br><span class="line">  <span class="keyword">let</span> left = [], right = []</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>, len = arr.length ; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>( arr[i] &lt; pivot) &#123;</span><br><span class="line">      left.push(arr[i])</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.push(arr[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> QuickSort(left).concat(pivot, QuickSort(right))</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(QuickSort([<span class="number">85</span>, <span class="number">24</span>, <span class="number">63</span>, <span class="number">45</span>, <span class="number">17</span>, <span class="number">31</span>, <span class="number">78</span>, <span class="number">56</span>]))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;算法题&quot;&gt;&lt;a href=&quot;#算法题&quot; class=&quot;headerlink&quot; title=&quot;算法题&quot;&gt;&lt;/a&gt;算法题&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;如下数字: 35 99 18 76 12  
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;桶排序&lt;br&gt;  有
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="javaScript" scheme="https://heiliu.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue组件通信</title>
-    <link href="https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/"/>
-    <id>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</id>
-    <published>2018-07-15T01:47:21.000Z</published>
-    <updated>2019-08-15T06:02:05.200Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><blockquote><p>(Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。</p></blockquote><h1 id="通信类型"><a href="#通信类型" class="headerlink" title="通信类型"></a>通信类型</h1><h2 id="父组件与子组件通信"><a href="#父组件与子组件通信" class="headerlink" title="父组件与子组件通信"></a>父组件与子组件通信</h2><ul><li><p>父组件给子组件传递数据  </p><p>  <code>props</code>: 使用props，父组件可以使用props向子组件传递数据  </p></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件 </span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child :msg=<span class="string">"message"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    </span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">    components: &#123;</span></span><br><span class="line"><span class="string">        child</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    data () &#123;</span></span><br><span class="line"><span class="string">        return &#123;</span></span><br><span class="line"><span class="string">            message: '</span>father message<span class="string">';</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子组件</span></span><br><span class="line">  &lt;template&gt;</span><br><span class="line">      &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">    </span><br><span class="line">  &lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// props 另一种写法, 不声明类型与默认值</span></span><br><span class="line">  <span class="comment">// props: ['msg']</span></span><br><span class="line">      props: &#123;</span><br><span class="line">          msg: &#123;</span><br><span class="line">              type: <span class="built_in">String</span>,</span><br><span class="line">              required: <span class="literal">true</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">```  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">- 子组件向父组件通信  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&gt; 在Vue 中子组件一般不具有操作数据和处理事件的权利，所有的数据和事件的处理都要交给父组件进行操作  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">**方法一 :** 在子组件中通过$emit()将组件内部的时间传递给父组件的事件进行   </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">```js  </span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 父组件</span></span><br><span class="line"><span class="regexp">&lt;template&gt;</span></span><br><span class="line"><span class="regexp">&lt;child @msgFunc="func"&gt;&lt;/</span>child&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">import child from './</span>child.vue<span class="string">';</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">components: &#123;</span></span><br><span class="line"><span class="string">    child</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="string">methods: &#123;</span></span><br><span class="line"><span class="string">    func (msg) &#123;</span></span><br><span class="line"><span class="string">        console.log(msg);</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// 子组件  </span></span><br><span class="line"><span class="string">&lt;template&gt;</span></span><br><span class="line"><span class="string">&lt;button @click="handleClick"&gt;点我&lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;script&gt;</span></span><br><span class="line"><span class="string">export default &#123;</span></span><br><span class="line"><span class="string">props: &#123;</span></span><br><span class="line"><span class="string">    msg: &#123;</span></span><br><span class="line"><span class="string">        type: String,</span></span><br><span class="line"><span class="string">        required: true</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="string">methods () &#123;</span></span><br><span class="line"><span class="string">    handleClick () &#123;</span></span><br><span class="line"><span class="string">        // 提交出去的处理方法的名称与父组件接收的需一致</span></span><br><span class="line"><span class="string">        this.$emit('</span>msgFunc<span class="string">');</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;  </span></span><br><span class="line"><span class="string">```  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">**方法二:** 通过修改父组件传递的props来修改父组件数据  </span></span><br><span class="line"><span class="string">&gt; 这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">---  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## 兄弟组件进行通信  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; 刚开始学习使用Vue时, 在Vue项目中的两个兄弟组件之间如果要进行通信， 通常会通过一个父组件进行数据请求再给子组件传递数据。    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Vuex 是官方推荐的状态管理方案, 不过如果只是中小型项目，状态管理也没有很复杂的话，使用 Vuex 有种杀鸡用牛刀的感觉    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- Vue 官方推荐使用一个 Vue 实例作为中央事件总线, 即 `EventBus`  ,在需要使用的地方import该Bus   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &gt; EventBus 解决了兄弟组件之间的事件传递问题，它的本质是订阅发布者模式，同一个事件发布组件发布了，订阅组件就能获得事件的改变摆脱了兄弟组件之间传值需要父组件转达，Vue事件实例，作为中间者不在页面上显示且具有vue的API 如 emit on   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">```js  </span></span><br><span class="line"><span class="string">    // bus.js =&gt; new 一个 Vue 实例</span></span><br><span class="line"><span class="string">    import Vue from '</span>vue<span class="string">'</span></span><br><span class="line"><span class="string">    export default new Vue()  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    // clickComponent.vue 相当于发布者, 在需要的组件中订阅就能进行通信</span></span><br><span class="line"><span class="string">    &lt;template&gt;</span></span><br><span class="line"><span class="string">      &lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;a href="#"class="click" :data-index="index" @click.prevent="doClick($event)"&gt;点我&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;script&gt;</span></span><br><span class="line"><span class="string">    import Bus from '</span>@/common/bus.js<span class="string">'</span></span><br><span class="line"><span class="string">    export default &#123;</span></span><br><span class="line"><span class="string">      props: &#123;</span></span><br><span class="line"><span class="string">        index: Number</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      methods: &#123;</span></span><br><span class="line"><span class="string">        doClick (event) &#123;</span></span><br><span class="line"><span class="string">           // console.log(event.target.dataset.index)</span></span><br><span class="line"><span class="string">           Bus.$emit('</span>getTarget<span class="string">', event.target.dataset.index)</span></span><br><span class="line"><span class="string">          //  this.$emit('</span>global: getTarget<span class="string">', event.target.dataset.index)</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    // showComponents.vue 另一个兄弟组件 进行订阅</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;template&gt;</span></span><br><span class="line"><span class="string">      &lt;div&gt;</span></span><br><span class="line"><span class="string">        &#123;&#123;html&#125;&#125;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/template&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &lt;script&gt;</span></span><br><span class="line"><span class="string">    import Bus from '</span>@/common/bus.js<span class="string">'</span></span><br><span class="line"><span class="string">    export default &#123;</span></span><br><span class="line"><span class="string">      data () &#123;</span></span><br><span class="line"><span class="string">        return &#123;</span></span><br><span class="line"><span class="string">          html: '</span>还没有点击<span class="string">'</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      created () &#123;</span></span><br><span class="line"><span class="string">         Bus.$on('</span>getTarget<span class="string">', index =&gt; &#123;</span></span><br><span class="line"><span class="string">           this.html = `第$&#123;index&#125;个元素`</span></span><br><span class="line"><span class="string">         &#125;)</span></span><br><span class="line"><span class="string">        //this.$on('</span>global: getTarget<span class="string">', index =&gt; &#123;</span></span><br><span class="line"><span class="string">       //   this.html = `第$&#123;index&#125;个元素`</span></span><br><span class="line"><span class="string">       // &#125;)</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string">```  </span></span><br><span class="line"><span class="string">  在node中有一个 `vue-event-proxy` npm包能够实现与EventBus同样的功能，需要安装该npm包, 并且在main.js中进行`引入 `  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">```js</span></span><br><span class="line"><span class="string">  import EventProxy from '</span>vue-event-proxy<span class="string">'</span></span><br><span class="line"><span class="string">  Vue.use(EventProxy)   // 激活使用</span></span><br><span class="line"><span class="string">  // 完成后即可以使用上面组件中js注释部分的代码代替Bus代码</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;组件&quot;&gt;&lt;a href=&quot;#组件&quot; class=&quot;headerlink&quot; title=&quot;组件&quot;&gt;&lt;/a&gt;组件&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;(Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Vue" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/Vue/"/>
-    
-    
-      <category term="Vue" scheme="https://heiliu.github.io/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【轻松集赞】写了个涉嫌混淆微信官方服务的小程序</title>
-    <link href="https://heiliu.github.io/2018/06/13/thumbsUp/"/>
-    <id>https://heiliu.github.io/2018/06/13/thumbsUp/</id>
-    <published>2018-06-13T07:27:26.000Z</published>
-    <updated>2018-06-13T07:27:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p><img src="http://p9utic4op.bkt.clouddn.com/sx.png" alt="此处输入图片的描述">  </p><h3 id="发生背景："><a href="#发生背景：" class="headerlink" title="发生背景："></a>发生背景：</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;随着现在国内的社交软件用户群体的不断扩大，商家打广告的方式（套路）也越来越多了，每次走在大街上都可以看到商家打出来广告牌，”朋友圈点赞超过30享受六折优惠”。在上一次和女盆友出去万达吃个晚饭，终于我们也被这个活动诱惑了一下下，作为口袋钱不多又想好好吃一顿的大三狗，看看望着桌子上一大盆烤鱼，还在犹豫要不要点一份小龙虾的女朋友，还是选择了拍照发朋友圈然后挨个去群里叫亲朋好友点赞，麻烦了一堆好友，真是不好意思。<br>&nbsp;&nbsp;&nbsp;&nbsp;吃饱喝足，两个人扶着腰走在路上炫’腹’、还是女盆友的提醒说，你不是会小程序吗，能不能写一个点赞的小程序来用。哎、还真是，我自己撸一个，说不定还能给其他人用。  </p><h3 id="初局雏形"><a href="#初局雏形" class="headerlink" title="初局雏形"></a>初局雏形</h3><h4 id="分析了一下小程序要的功能："><a href="#分析了一下小程序要的功能：" class="headerlink" title="分析了一下小程序要的功能："></a>分析了一下小程序要的功能：</h4><pre><code>1. 主要功能：点赞（想要多少赞就要多少赞）  2. 微信朋友圈部分功能    </code></pre><h4 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h4><p>感觉这个小程序比较适合想要练手小程序和WeUI的盆友，所以细讲一点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;├── assets 小程序所需的images icon                 </span><br><span class="line">├── pages   页面目录          </span><br><span class="line">|   ├── welcome 欢迎页面      </span><br><span class="line">|   ├── index   内容发布操作页面</span><br><span class="line">|   ├── mian   &apos;朋友圈&apos; </span><br><span class="line">├── style   页面的样式 及weui</span><br><span class="line">└── app.js  小程序逻辑 全局参数</span><br><span class="line">└── app.wxss 小程序公共样式</span><br><span class="line">└── app.json   项目的配置</span><br></pre></td></tr></table></figure></p><p>需要注意的地方：微信朋友圈发布一张图片和多张图片图片宽高比例不一样  </p><h4 id="欢迎页面Welcome"><a href="#欢迎页面Welcome" class="headerlink" title="欢迎页面Welcome"></a>欢迎页面Welcome</h4><p>欢迎页的动画我很喜欢，也许是这一个小程序的亮点<br>   <img src="http://p9utic4op.bkt.clouddn.com/welcome_clip1.gif" alt="此处输入图片的描述"><br>   各位，请原谅我、我也不知道怎么就变成横向的了    </p><h3 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h3><ol><li>小程序在模拟器上实现一些复杂功能和界面效果时，及时在移动设备上进行效果查看，        避免移动端上达不到预期效果，ios和android有时候在样式的显示上有时也会有不同    </li><li></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;&lt;img src=&quot;http://p9utic4op.bkt.clouddn.com/sx.png&quot; alt=&quot;此处输入图片的描述&quot;&gt;  &lt;/p&gt;
-&lt;h3 id=&quot;发生背景：&quot;&gt;&lt;a href=&quot;#发生背景：&quot; class=&quot;headerlink&quot; title=&quot;
-      
-    
-    </summary>
-    
-      <category term="小程序" scheme="https://heiliu.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="小程序" scheme="https://heiliu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
