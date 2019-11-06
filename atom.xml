@@ -116,29 +116,6 @@
   </entry>
   
   <entry>
-    <title>classnames 的用法总结</title>
-    <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
-    <id>https://heiliu.github.io/2019/10/13/classnames/</id>
-    <published>2019-10-12T16:00:00.000Z</published>
-    <updated>2019-11-06T10:22:06.962Z</updated>
-    
-    <content type="html"><![CDATA[<!-- TODO --><p><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames github库</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- TODO --&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/JedWatson/classnames&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;classnames github库&lt;/a&gt;&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>VS Code 快捷键</title>
     <link href="https://heiliu.github.io/2019/10/13/VsCodeShortCuts/"/>
     <id>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</id>
@@ -162,6 +139,29 @@
     
     
       <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>classnames 的用法总结</title>
+    <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
+    <id>https://heiliu.github.io/2019/10/13/classnames/</id>
+    <published>2019-10-12T16:00:00.000Z</published>
+    <updated>2019-11-06T10:22:06.962Z</updated>
+    
+    <content type="html"><![CDATA[<!-- TODO --><p><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames github库</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- TODO --&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JedWatson/classnames&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;classnames github库&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
     
   </entry>
   
@@ -352,24 +352,23 @@
     <link href="https://heiliu.github.io/2019/08/12/setPerformance/"/>
     <id>https://heiliu.github.io/2019/08/12/setPerformance/</id>
     <published>2019-08-12T03:48:34.349Z</published>
-    <updated>2019-11-06T10:20:07.282Z</updated>
+    <updated>2019-11-06T10:50:21.217Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: 利用set提高性能<br>tags:</p><ul><li>JavaScript<br>categories: </li><li>前端</li><li>JavaScript</li></ul><hr><!-- TODO --><p><a href="https://blog.51cto.com/13957060/2419632" target="_blank" rel="noopener">详情</a></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>title: 利用set提高性能<br>tags: JavaScript<br>categories:</p><ul><li>前端</li><li>JavaScript</li></ul><hr><!-- TODO --><p>经过实际比较来说，如何减少重绘和回流比选择数组还是Set来操作数据对于前端性能而言更为重要</p><p><a href="https://juejin.im/post/5d2284dc51882579df4a4cee" target="_blank" rel="noopener">详情</a></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;hr&gt;
-&lt;p&gt;title: 利用set提高性能&lt;br&gt;tags:&lt;/p&gt;
+&lt;p&gt;title: 利用set提高性能&lt;br&gt;tags: JavaScript&lt;br&gt;categories:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;JavaScript&lt;br&gt;categories: &lt;/li&gt;
 &lt;li&gt;前端&lt;/li&gt;
 &lt;li&gt;JavaScript&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;!-- TODO --&gt;
-&lt;p&gt;&lt;
+&lt;p&gt;经过实际比较来说，如何
       
     
     </summary>
@@ -523,25 +522,31 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://heiliu.github.io/2019/07/28/0722/"/>
-    <id>https://heiliu.github.io/2019/07/28/0722/</id>
-    <published>2019-07-28T13:29:50.981Z</published>
-    <updated>2019-11-06T10:22:56.244Z</updated>
+    <title>Git 笔记</title>
+    <link href="https://heiliu.github.io/2019/07/28/gitNote/"/>
+    <id>https://heiliu.github.io/2019/07/28/gitNote/</id>
+    <published>2019-07-27T16:00:00.000Z</published>
+    <updated>2019-11-06T10:15:57.373Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: 前端开发工具整理<br>date: 2019-07-22<br>copyright: true</p><h2 id="tags-Note"><a href="#tags-Note" class="headerlink" title="tags: Note"></a>tags: Note</h2><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具:"></a>开发工具:</h2><p><strong>1.代码编辑器</strong>  </p><ul><li><p>visual studio Code  </p><ul><li><p>插件  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- Chinese 中文插件</span><br><span class="line">- language-Stylus </span><br><span class="line">- LeetCode</span><br><span class="line">- Vetur</span><br><span class="line">- Prettier</span><br><span class="line">- React/Redux/react-router Snippets react便捷输入</span><br><span class="line">- prettier</span><br><span class="line">- GitLens</span><br><span class="line">- Markdown All in One</span><br><span class="line">- npm Intellisense</span><br><span class="line">- Quokka.js</span><br><span class="line">- Relative Path</span><br><span class="line">- JavaScript code snippets</span><br><span class="line">- CSS Peek</span><br><span class="line">- Bracket Pair Colorizer</span><br><span class="line">- Better Comments</span><br></pre></td></tr></table></figure></li><li><p>主题  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">one dark pro</span><br></pre></td></tr></table></figure></li></ul></li></ul><p><strong>2.浏览器及插件</strong></p><p>   Chrome 浏览器</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Ghelper 翻墙插件 可在GitHub上获取</span><br><span class="line">ADBlock</span><br><span class="line">marinara（番茄工作法助理）</span><br><span class="line">FireShot</span><br><span class="line">扩展管理器</span><br><span class="line">WEB前端助手</span><br><span class="line">划词翻译</span><br><span class="line">Imagus</span><br><span class="line">Octotree</span><br><span class="line">React/Vue develop Tool</span><br><span class="line">Chrono</span><br><span class="line">掘金插件</span><br><span class="line">Json-handle</span><br></pre></td></tr></table></figure><p><strong>3.其他工具</strong>  </p><ul><li><p>命令行开发工具：  </p><ul><li>iterm2  </li><li>homebrew</li><li>oh-my-zsh  </li></ul></li><li><p>Git/gitLab &amp;&amp; 配置SSH  </p></li><li><p>node &amp;&amp; NVM  </p> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nvm install <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 安装需要的node版本</span></span><br><span class="line">nvm use <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 切换使用相对应的node版本</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><h3 id="本地分支重命名"><a href="#本地分支重命名" class="headerlink" title="本地分支重命名"></a>本地分支重命名</h3><p>git branch -m old new</p><h3 id="链接远程仓库"><a href="#链接远程仓库" class="headerlink" title="链接远程仓库"></a>链接远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 仓库地址</span><br><span class="line">仓库地址：https://git.coding.net/xxxxxxxxxxxxx/my-project.git  </span><br><span class="line">git push -u orgin master</span><br></pre></td></tr></table></figure><h3 id="删除远程仓库"><a href="#删除远程仓库" class="headerlink" title="删除远程仓库"></a>删除远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure><h3 id="修改远程仓库（源地址）"><a href="#修改远程仓库（源地址）" class="headerlink" title="修改远程仓库（源地址）"></a>修改远程仓库（源地址）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin []</span><br></pre></td></tr></table></figure><p>如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Project mctDev/cafeteria-supplier-desktop was moved to another location</span><br><span class="line"></span><br><span class="line">The project is now located under cafereria-fe / cafeteria-supplier-desktop</span><br><span class="line"></span><br><span class="line">To update the remote url in your local repository run (for ssh):</span><br><span class="line"></span><br><span class="line">git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.git</span><br><span class="line"></span><br><span class="line">or for http(s):</span><br><span class="line"></span><br><span class="line">git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git</span><br></pre></td></tr></table></figure><h4 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h4><p>  git remote set-url –add origin 就是往当前git项目的config文件里增加一行记录<br>  config文件打开方式有两种：</p><p>  使用命令<code>git config -e</code><br>  在当前git项目的根目录下，文件位于 .git/config (.git目录为隐藏文件)<br>  你每执行一次git remote set-url –add origin 就会增加一行，如下图：</p><p>  <code>git remote -v</code>:显示当前所有远程库的详细信息，显示格式为 远程库名字 url连接(类型)<br>  <a href="https://my.oschina.net/shede333/blog/299032" target="_blank" rel="noopener">参考链接</a></p><h3 id="git-checkout的用法"><a href="#git-checkout的用法" class="headerlink" title="git checkout的用法"></a>git checkout的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态</span><br><span class="line">git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支</span><br><span class="line">git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖</span><br><span class="line">git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） </span><br><span class="line">  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</span><br></pre></td></tr></table></figure><p>  <a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p><h3 id="撤销本地修改的文件"><a href="#撤销本地修改的文件" class="headerlink" title="撤销本地修改的文件"></a>撤销本地修改的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout [filename] // 撤销某个文件的修改</span><br><span class="line">git checkout .  // 撤销所有修改的文件</span><br></pre></td></tr></table></figure><h3 id="撤回-add-commit"><a href="#撤回-add-commit" class="headerlink" title="撤回 add/commit"></a>撤回 add/commit</h3><h4 id="将add到暂存区后的提交撤回"><a href="#将add到暂存区后的提交撤回" class="headerlink" title="将add到暂存区后的提交撤回"></a>将add到暂存区后的提交撤回</h4><p>  git reset head 文件名</p><h4 id="修改commit标注"><a href="#修改commit标注" class="headerlink" title="修改commit标注"></a>修改commit标注</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">commit -m &quot;aaaa&quot; // 提交一个commit</span><br><span class="line">git commit --amend =&gt; 开启vim编辑器 编辑后保存退出</span><br></pre></td></tr></table></figure><h4 id="撤回commit"><a href="#撤回commit" class="headerlink" title="撤回commit"></a>撤回commit</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改</span><br><span class="line">git reset --hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</span><br></pre></td></tr></table></figure><h3 id="拉取远程分支"><a href="#拉取远程分支" class="headerlink" title="拉取远程分支"></a>拉取远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin [分支名]</span><br></pre></td></tr></table></figure><h3 id="添加-删除远程分支"><a href="#添加-删除远程分支" class="headerlink" title="添加/删除远程分支"></a>添加/删除远程分支</h3><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push origin 本地分支名:远程分支名</span><br><span class="line"></span><br><span class="line">$ git push origin test:master         // 提交本地test分支作为远程的master分支 </span><br><span class="line">$ git push origin test:test           // 提交本地test分支作为远程的test分支</span><br><span class="line">//好像只写这一句，远程的github就会自动创建一个test分支</span><br></pre></td></tr></table></figure></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :远程分支名(你要删除的远程分支名)</span><br></pre></td></tr></table></figure></li></ul><h3 id="git-reflog"><a href="#git-reflog" class="headerlink" title="git reflog"></a>git reflog</h3><p> 可以显示已删除的操作</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;p&gt;title: 前端开发工具整理&lt;br&gt;date: 2019-07-22&lt;br&gt;copyright: true&lt;/p&gt;
-&lt;h2 id=&quot;tags-Note&quot;&gt;&lt;a href=&quot;#tags-Note&quot; class=&quot;headerlink&quot; title=&quot;tags: N
+        &lt;h2 id=&quot;Git-常用的命令笔记&quot;&gt;&lt;a href=&quot;#Git-常用的命令笔记&quot; class=&quot;headerlink&quot; title=&quot;Git 常用的命令笔记&quot;&gt;&lt;/a&gt;Git 常用的命令笔记&lt;/h2&gt;&lt;p&gt;Commitizen是一个撰写合格 Commit message 的
       
     
     </summary>
     
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+    
+      <category term="Note" scheme="https://heiliu.github.io/categories/Skill/Note/"/>
+    
+      <category term="Git" scheme="https://heiliu.github.io/categories/Skill/Note/Git/"/>
+    
+    
+      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
     
   </entry>
   

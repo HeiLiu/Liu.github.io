@@ -34,11 +34,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[classnames 的用法总结]]></title>
-    <url>%2F2019%2F10%2F13%2Fclassnames%2F</url>
-    <content type="text"><![CDATA[classnames github库]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[VS Code 快捷键]]></title>
     <url>%2F2019%2F10%2F13%2FVsCodeShortCuts%2F</url>
     <content type="text"><![CDATA[文档编辑中键盘快捷方式 快速移动光标（按单词跳: option 选中操作: shift 搜索时切换搜索结果: shift Enter 文件相对路径: shift command H 原shortCut =&gt; 自定义 command H 新建未命名文件: command N 搜索光标所在单词: command E 选中所在的代码块(select Bracket)，对花括号的代码块较友好: option command B 切换tab: option commmad 删除整个单词: option backspace 向上下复制整行: option shift 上下方向键 找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): shift command I]]></content>
@@ -48,6 +43,11 @@
       <tags>
         <tag>Note</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[classnames 的用法总结]]></title>
+    <url>%2F2019%2F10%2F13%2Fclassnames%2F</url>
+    <content type="text"><![CDATA[classnames github库]]></content>
   </entry>
   <entry>
     <title></title>
@@ -127,7 +127,7 @@
   <entry>
     <title></title>
     <url>%2F2019%2F08%2F12%2FsetPerformance%2F</url>
-    <content type="text"><![CDATA[title: 利用set提高性能tags: JavaScriptcategories: 前端 JavaScript 详情]]></content>
+    <content type="text"><![CDATA[title: 利用set提高性能tags: JavaScriptcategories: 前端 JavaScript 经过实际比较来说，如何减少重绘和回流比选择数组还是Set来操作数据对于前端性能而言更为重要 详情]]></content>
   </entry>
   <entry>
     <title><![CDATA[数组]]></title>
@@ -193,11 +193,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2019%2F07%2F28%2F0722%2F</url>
-    <content type="text"><![CDATA[title: 前端开发工具整理date: 2019-07-22copyright: true tags: Note开发工具:1.代码编辑器 visual studio Code 插件 12345678910111213141516- Chinese 中文插件- language-Stylus - LeetCode- Vetur- Prettier- React/Redux/react-router Snippets react便捷输入- prettier- GitLens- Markdown All in One- npm Intellisense- Quokka.js- Relative Path- JavaScript code snippets- CSS Peek- Bracket Pair Colorizer- Better Comments 主题 1one dark pro 2.浏览器及插件 Chrome 浏览器 12345678910111213Ghelper 翻墙插件 可在GitHub上获取ADBlockmarinara（番茄工作法助理）FireShot扩展管理器WEB前端助手划词翻译ImagusOctotreeReact/Vue develop ToolChrono掘金插件Json-handle 3.其他工具 命令行开发工具： iterm2 homebrew oh-my-zsh Git/gitLab &amp;&amp; 配置SSH node &amp;&amp; NVM 123nvm install 8.9.0 // 安装需要的node版本nvm use 8.9.0 // 切换使用相对应的node版本]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Git 笔记]]></title>
     <url>%2F2019%2F07%2F28%2FgitNote%2F</url>
     <content type="text"><![CDATA[Git 常用的命令笔记Commitizen是一个撰写合格 Commit message 的工具。 本地分支重命名git branch -m old new 链接远程仓库123git remote add origin 仓库地址仓库地址：https://git.coding.net/xxxxxxxxxxxxx/my-project.git git push -u orgin master 删除远程仓库1git remote remove origin 修改远程仓库（源地址）1git remote set-url origin [] 如下： 1234567891011Project mctDev/cafeteria-supplier-desktop was moved to another locationThe project is now located under cafereria-fe / cafeteria-supplier-desktopTo update the remote url in your local repository run (for ssh):git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.gitor for http(s):git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git 原理解析 git remote set-url –add origin 就是往当前git项目的config文件里增加一行记录 config文件打开方式有两种： 使用命令git config -e 在当前git项目的根目录下，文件位于 .git/config (.git目录为隐藏文件) 你每执行一次git remote set-url –add origin 就会增加一行，如下图： git remote -v:显示当前所有远程库的详细信息，显示格式为 远程库名字 url连接(类型) 参考链接 git checkout的用法12345git checkout // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支 checkout命令详解参考 撤销本地修改的文件12git checkout [filename] // 撤销某个文件的修改git checkout . // 撤销所有修改的文件 撤回 add/commit将add到暂存区后的提交撤回 git reset head 文件名 修改commit标注12commit -m &quot;aaaa&quot; // 提交一个commitgit commit --amend =&gt; 开启vim编辑器 编辑后保存退出 撤回commit 12git reset --soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改git reset --hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退 拉取远程分支1git pull origin [分支名] 添加/删除远程分支 将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支 12345git push origin 本地分支名:远程分支名$ git push origin test:master // 提交本地test分支作为远程的master分支 $ git push origin test:test // 提交本地test分支作为远程的test分支//好像只写这一句，远程的github就会自动创建一个test分支 如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。 1git push origin :远程分支名(你要删除的远程分支名) git reflog 可以显示已删除的操作]]></content>
@@ -208,6 +203,14 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端开发工具整理]]></title>
+    <url>%2F2019%2F07%2F22%2F0722%2F</url>
+    <content type="text"><![CDATA[开发工具:1.代码编辑器 visual studio Code 插件 12345678910111213141516- Chinese 中文插件- language-Stylus - LeetCode- Vetur- Prettier- React/Redux/react-router Snippets react便捷输入- Prettier- GitLens- Markdown All in One- npm Intellisense- Quokka.js- Relative Path- JavaScript code snippets- CSS Peek- Bracket Pair Colorizer- Better Comments 主题 1one dark pro 2.浏览器及插件 Chrome 浏览器 12345678910111213Ghelper 翻墙插件 可在GitHub上获取ADBlockmarinara（番茄工作法助理）FireShot扩展管理器WEB前端助手划词翻译ImagusOctotreeReact/Vue develop ToolChrono掘金插件Json-handle 3.其他工具 命令行开发工具： iterm2 homebrew oh-my-zsh Git/gitLab &amp;&amp; 配置SSH node &amp;&amp; NVM 123nvm install 8.9.0 // 安装需要的node版本nvm use 8.9.0 // 切换使用相对应的node版本]]></content>
+      <tags>
+        <tag>Note</tag>
       </tags>
   </entry>
   <entry>
@@ -268,17 +271,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[排序]]></title>
-    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
-    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627// 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2// 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n// 分治// 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Vue组件通信]]></title>
     <url>%2F2018%2F07%2F15%2FVueComponentsConnect-md%2F</url>
     <content type="text"><![CDATA[组件 (Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。 通信类型父组件与子组件通信 父组件给子组件传递数据 props: 使用props，父组件可以使用props向子组件传递数据 1234567891011121314151617181920// 父组件 &lt;template&gt; &lt;child :msg="message"&gt;&lt;/child&gt;&lt;/template&gt; &lt;script&gt; import child from './child.vue'; export default &#123; components: &#123; child &#125;, data () &#123; return &#123; message: 'father message'; &#125; &#125;&#125;&lt;/script&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150// 子组件 &lt;template&gt; &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt; &lt;/template&gt; &lt;script&gt; export default &#123; // props 另一种写法, 不声明类型与默认值 // props: ['msg'] props: &#123; msg: &#123; type: String, required: true &#125; &#125; &#125; &lt;/script&gt;``` - 子组件向父组件通信 &gt; 在Vue 中子组件一般不具有操作数据和处理事件的权利，所有的数据和事件的处理都要交给父组件进行操作 **方法一 :** 在子组件中通过$emit()将组件内部的时间传递给父组件的事件进行 ```js // 父组件&lt;template&gt;&lt;child @msgFunc="func"&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt;import child from './child.vue';export default &#123;components: &#123; child&#125;,methods: &#123; func (msg) &#123; console.log(msg); &#125;&#125;&#125;&lt;/script&gt;// 子组件 &lt;template&gt;&lt;button @click="handleClick"&gt;点我&lt;/button&gt;&lt;/template&gt;&lt;script&gt;export default &#123;props: &#123; msg: &#123; type: String, required: true &#125;&#125;,methods () &#123; handleClick () &#123; // 提交出去的处理方法的名称与父组件接收的需一致 this.$emit('msgFunc'); &#125;&#125;&#125;&lt;/script&gt; ``` **方法二:** 通过修改父组件传递的props来修改父组件数据 &gt; 这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。&gt; 但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理 --- ## 兄弟组件进行通信 &gt; 刚开始学习使用Vue时, 在Vue项目中的两个兄弟组件之间如果要进行通信， 通常会通过一个父组件进行数据请求再给子组件传递数据。 - Vuex 是官方推荐的状态管理方案, 不过如果只是中小型项目，状态管理也没有很复杂的话，使用 Vuex 有种杀鸡用牛刀的感觉 - Vue 官方推荐使用一个 Vue 实例作为中央事件总线, 即 `EventBus` ,在需要使用的地方import该Bus &gt; EventBus 解决了兄弟组件之间的事件传递问题，它的本质是订阅发布者模式，同一个事件发布组件发布了，订阅组件就能获得事件的改变摆脱了兄弟组件之间传值需要父组件转达，Vue事件实例，作为中间者不在页面上显示且具有vue的API 如 emit on ```js // bus.js =&gt; new 一个 Vue 实例 import Vue from 'vue' export default new Vue() // clickComponent.vue 相当于发布者, 在需要的组件中订阅就能进行通信 &lt;template&gt; &lt;div&gt; &lt;a href="#"class="click" :data-index="index" @click.prevent="doClick($event)"&gt;点我&lt;/a&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; props: &#123; index: Number &#125;, methods: &#123; doClick (event) &#123; // console.log(event.target.dataset.index) Bus.$emit('getTarget', event.target.dataset.index) // this.$emit('global: getTarget', event.target.dataset.index) &#125; &#125; &#125; &lt;/script&gt; // showComponents.vue 另一个兄弟组件 进行订阅 &lt;template&gt; &lt;div&gt; &#123;&#123;html&#125;&#125; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; data () &#123; return &#123; html: '还没有点击' &#125; &#125;, created () &#123; Bus.$on('getTarget', index =&gt; &#123; this.html = `第$&#123;index&#125;个元素` &#125;) //this.$on('global: getTarget', index =&gt; &#123; // this.html = `第$&#123;index&#125;个元素` // &#125;) &#125; &#125; &lt;/script&gt;``` 在node中有一个 `vue-event-proxy` npm包能够实现与EventBus同样的功能，需要安装该npm包, 并且在main.js中进行`引入 ` ```js import EventProxy from 'vue-event-proxy' Vue.use(EventProxy) // 激活使用 // 完成后即可以使用上面组件中js注释部分的代码代替Bus代码]]></content>
@@ -288,6 +280,17 @@
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[排序]]></title>
+    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
+    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627 // 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2 // 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n // 分治 // 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -354,8 +357,8 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
         <tag>前端</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -500,6 +503,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[想把我唱给你听]]></title>
     <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
     <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧12345678910111213141516171819202122232425262728293031323334353637383940414243想把我唱给你听趁现在`年少如花`花儿尽情地开吧装点你的岁月我的枝桠谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我把我唱给你听把你纯真无邪的笑容给我吧我们应该有快乐的幸福的晴朗的时光我把我唱给你听用我炙热的感情感动你好吗岁月是值得怀念的留念的害羞的红色脸庞谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我们应该有快乐的幸福的晴朗的时光]]></content>
@@ -509,10 +517,5 @@
       <tags>
         <tag>随笔</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
