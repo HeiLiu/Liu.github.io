@@ -6,15 +6,40 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://heiliu.github.io/"/>
-  <updated>2019-11-06T10:22:27.742Z</updated>
+  <updated>2019-11-06T11:11:38.898Z</updated>
   <id>https://heiliu.github.io/</id>
   
   <author>
-    <name>刘江龙</name>
+    <name>青衣诶</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Prettier 相关</title>
+    <link href="https://heiliu.github.io/2019/11/06/prettier/"/>
+    <id>https://heiliu.github.io/2019/11/06/prettier/</id>
+    <published>2019-11-06T11:08:00.000Z</published>
+    <updated>2019-11-06T11:11:38.898Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Prettier-介绍"><a href="#Prettier-介绍" class="headerlink" title="Prettier 介绍"></a>Prettier 介绍</h2><h2 id="Prettier-配置"><a href="#Prettier-配置" class="headerlink" title="Prettier 配置"></a>Prettier 配置</h2><h2 id="Prettier-NPM-包"><a href="#Prettier-NPM-包" class="headerlink" title="Prettier NPM 包"></a>Prettier NPM 包</h2><p>yarn prettier:check;</p><h2 id="Prettier-插件"><a href="#Prettier-插件" class="headerlink" title="Prettier 插件"></a>Prettier 插件</h2><!-- 未完待续 -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Prettier-介绍&quot;&gt;&lt;a href=&quot;#Prettier-介绍&quot; class=&quot;headerlink&quot; title=&quot;Prettier 介绍&quot;&gt;&lt;/a&gt;Prettier 介绍&lt;/h2&gt;&lt;h2 id=&quot;Prettier-配置&quot;&gt;&lt;a href=&quot;#Pretti
+      
+    
+    </summary>
+    
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+    
+    
+      <category term="Prettier" scheme="https://heiliu.github.io/tags/Prettier/"/>
+    
+  </entry>
   
   <entry>
     <title>记一个伪元素的骚操作</title>
@@ -244,7 +269,7 @@
     <link href="https://heiliu.github.io/2019/08/15/DesignPatterns/"/>
     <id>https://heiliu.github.io/2019/08/15/DesignPatterns/</id>
     <published>2019-08-15T06:22:55.389Z</published>
-    <updated>2019-08-15T06:24:07.867Z</updated>
+    <updated>2019-11-06T11:15:53.899Z</updated>
     
     <content type="html"><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1>]]></content>
     
@@ -257,10 +282,12 @@
     
     </summary>
     
-      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+      <category term="设计模式" scheme="https://heiliu.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
       <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
+    
+      <category term="设计模式" scheme="https://heiliu.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
       <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
     
@@ -463,34 +490,6 @@
   </entry>
   
   <entry>
-    <title>serverless了解</title>
-    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
-    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-11-06T10:19:58.748Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h1><blockquote><p>根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;serverless&quot;&gt;&lt;a href=&quot;#serverless&quot; class=&quot;headerlink&quot; title=&quot;serverless&quot;&gt;&lt;/a&gt;serverless&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;根据 CNCF 的定义，Serverless 是指
-      
-    
-    </summary>
-    
-      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
-    
-    
-      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
-    
-      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>NPM 参数</title>
     <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
     <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
@@ -520,31 +519,30 @@
   </entry>
   
   <entry>
-    <title>Git 笔记</title>
-    <link href="https://heiliu.github.io/2019/07/28/gitNote/"/>
-    <id>https://heiliu.github.io/2019/07/28/gitNote/</id>
-    <published>2019-07-27T16:00:00.000Z</published>
-    <updated>2019-11-06T10:15:57.373Z</updated>
+    <title>serverless了解</title>
+    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
+    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-11-06T10:19:58.748Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Git-常用的命令笔记"><a href="#Git-常用的命令笔记" class="headerlink" title="Git 常用的命令笔记"></a>Git 常用的命令笔记</h2><p>Commitizen是一个撰写合格 Commit message 的工具。 </p><h3 id="本地分支重命名"><a href="#本地分支重命名" class="headerlink" title="本地分支重命名"></a>本地分支重命名</h3><p>git branch -m old new</p><h3 id="链接远程仓库"><a href="#链接远程仓库" class="headerlink" title="链接远程仓库"></a>链接远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 仓库地址</span><br><span class="line">仓库地址：https://git.coding.net/xxxxxxxxxxxxx/my-project.git  </span><br><span class="line">git push -u orgin master</span><br></pre></td></tr></table></figure><h3 id="删除远程仓库"><a href="#删除远程仓库" class="headerlink" title="删除远程仓库"></a>删除远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br></pre></td></tr></table></figure><h3 id="修改远程仓库（源地址）"><a href="#修改远程仓库（源地址）" class="headerlink" title="修改远程仓库（源地址）"></a>修改远程仓库（源地址）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin []</span><br></pre></td></tr></table></figure><p>如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Project mctDev/cafeteria-supplier-desktop was moved to another location</span><br><span class="line"></span><br><span class="line">The project is now located under cafereria-fe / cafeteria-supplier-desktop</span><br><span class="line"></span><br><span class="line">To update the remote url in your local repository run (for ssh):</span><br><span class="line"></span><br><span class="line">git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.git</span><br><span class="line"></span><br><span class="line">or for http(s):</span><br><span class="line"></span><br><span class="line">git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git</span><br></pre></td></tr></table></figure><h4 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h4><p>  git remote set-url –add origin 就是往当前git项目的config文件里增加一行记录<br>  config文件打开方式有两种：</p><p>  使用命令<code>git config -e</code><br>  在当前git项目的根目录下，文件位于 .git/config (.git目录为隐藏文件)<br>  你每执行一次git remote set-url –add origin 就会增加一行，如下图：</p><p>  <code>git remote -v</code>:显示当前所有远程库的详细信息，显示格式为 远程库名字 url连接(类型)<br>  <a href="https://my.oschina.net/shede333/blog/299032" target="_blank" rel="noopener">参考链接</a></p><h3 id="git-checkout的用法"><a href="#git-checkout的用法" class="headerlink" title="git checkout的用法"></a>git checkout的用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout  // 不跟参数，则对工作区进行检查 可以返回工作区文件的状态</span><br><span class="line">git checkout -b 分支名 // 切换到对应分支 如果没有则新建一条分支</span><br><span class="line">git checkout -B 分支名 // 强制切换分支 如果存在同名分支会发生覆盖</span><br><span class="line">git checkout commit_id(hash) // 切换到对应的commit版本 （分离头指针） </span><br><span class="line">  //此时的HEAD不指向分支，指向对应的commit_id 通过 git checkout master 切回分支</span><br></pre></td></tr></table></figure><p>  <a href="https://www.cnblogs.com/hutaoer/archive/2013/05/07/git_checkout.html" target="_blank" rel="noopener">checkout命令详解参考</a></p><h3 id="撤销本地修改的文件"><a href="#撤销本地修改的文件" class="headerlink" title="撤销本地修改的文件"></a>撤销本地修改的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout [filename] // 撤销某个文件的修改</span><br><span class="line">git checkout .  // 撤销所有修改的文件</span><br></pre></td></tr></table></figure><h3 id="撤回-add-commit"><a href="#撤回-add-commit" class="headerlink" title="撤回 add/commit"></a>撤回 add/commit</h3><h4 id="将add到暂存区后的提交撤回"><a href="#将add到暂存区后的提交撤回" class="headerlink" title="将add到暂存区后的提交撤回"></a>将add到暂存区后的提交撤回</h4><p>  git reset head 文件名</p><h4 id="修改commit标注"><a href="#修改commit标注" class="headerlink" title="修改commit标注"></a>修改commit标注</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">commit -m &quot;aaaa&quot; // 提交一个commit</span><br><span class="line">git commit --amend =&gt; 开启vim编辑器 编辑后保存退出</span><br></pre></td></tr></table></figure><h4 id="撤回commit"><a href="#撤回commit" class="headerlink" title="撤回commit"></a>撤回commit</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft commit_id // 撤回commit 到commit_id soft 只是撤回commit 本地文件不会修改</span><br><span class="line">git reset --hard commit_id // 撤回commit 到commit_id hard 只是撤回commit 本地文件回退</span><br></pre></td></tr></table></figure><h3 id="拉取远程分支"><a href="#拉取远程分支" class="headerlink" title="拉取远程分支"></a>拉取远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin [分支名]</span><br></pre></td></tr></table></figure><h3 id="添加-删除远程分支"><a href="#添加-删除远程分支" class="headerlink" title="添加/删除远程分支"></a>添加/删除远程分支</h3><ul><li><p>将本地分支推送到远程分支上，如果远程分支不存在，则创建此远程分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push origin 本地分支名:远程分支名</span><br><span class="line"></span><br><span class="line">$ git push origin test:master         // 提交本地test分支作为远程的master分支 </span><br><span class="line">$ git push origin test:test           // 提交本地test分支作为远程的test分支</span><br><span class="line">//好像只写这一句，远程的github就会自动创建一个test分支</span><br></pre></td></tr></table></figure></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :远程分支名(你要删除的远程分支名)</span><br></pre></td></tr></table></figure></li></ul><h3 id="git-reflog"><a href="#git-reflog" class="headerlink" title="git reflog"></a>git reflog</h3><p> 可以显示已删除的操作</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h1><blockquote><p>根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Git-常用的命令笔记&quot;&gt;&lt;a href=&quot;#Git-常用的命令笔记&quot; class=&quot;headerlink&quot; title=&quot;Git 常用的命令笔记&quot;&gt;&lt;/a&gt;Git 常用的命令笔记&lt;/h2&gt;&lt;p&gt;Commitizen是一个撰写合格 Commit message 的
+        &lt;h1 id=&quot;serverless&quot;&gt;&lt;a href=&quot;#serverless&quot; class=&quot;headerlink&quot; title=&quot;serverless&quot;&gt;&lt;/a&gt;serverless&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;根据 CNCF 的定义，Serverless 是指
       
     
     </summary>
     
-      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
-    
-      <category term="Note" scheme="https://heiliu.github.io/categories/Skill/Note/"/>
-    
-      <category term="Git" scheme="https://heiliu.github.io/categories/Skill/Note/Git/"/>
+      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
     
     
-      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
+      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
+    
+      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   
