@@ -506,7 +506,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://heiliu.github.io/2018/05/09/mixin/">
+    <link itemprop="mainEntityOfPage" href="https://heiliu.github.io/2018/05/09/cssCenter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘江龙">
@@ -525,7 +525,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/09/mixin/" itemprop="url">stylus之变量与mixin</a></h1>
+                <a class="post-title-link" href="/2018/05/09/cssCenter/" itemprop="url">让div在屏幕上居中（水平居中+垂直居中）的方法总结</a></h1>
         
 
         <div class="post-meta">
@@ -591,7 +591,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  751
+                  223
                 </span>
               
 
@@ -607,7 +607,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  1
                 </span>
               
             </div>
@@ -630,14 +630,22 @@
       
         
           
-          混合书写(Mixins)
-变量
-在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下：
-12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box    background-color bg_col
+          
+html代码如下：
+&lt;div class="book"&gt;
+        &lt;div class="front-cover"&gt;
+
+        &lt;/div&gt;
+&lt;/div&gt;
+
+
+Css居中方法 （敲黑板）重点  
+
+首先将元素设置成为绝对定位，然后距顶
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/09/mixin/#more" rel="contents">
+            <a class="btn" href="/2018/05/09/cssCenter/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -855,7 +863,7 @@ categories: 前端有的研究
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://heiliu.github.io/2018/05/09/cssCenter/">
+    <link itemprop="mainEntityOfPage" href="https://heiliu.github.io/2018/05/09/mixin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘江龙">
@@ -874,7 +882,7 @@ categories: 前端有的研究
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/09/cssCenter/" itemprop="url">让div在屏幕上居中（水平居中+垂直居中）的方法总结</a></h1>
+                <a class="post-title-link" href="/2018/05/09/mixin/" itemprop="url">stylus之变量与mixin</a></h1>
         
 
         <div class="post-meta">
@@ -940,7 +948,7 @@ categories: 前端有的研究
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  223
+                  751
                 </span>
               
 
@@ -956,7 +964,7 @@ categories: 前端有的研究
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -979,22 +987,14 @@ categories: 前端有的研究
       
         
           
-          
-html代码如下：
-&lt;div class="book"&gt;
-        &lt;div class="front-cover"&gt;
-
-        &lt;/div&gt;
-&lt;/div&gt;
-
-
-Css居中方法 （敲黑板）重点  
-
-首先将元素设置成为绝对定位，然后距顶
+          混合书写(Mixins)
+变量
+在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下：
+12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box    background-color bg_col
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/09/cssCenter/#more" rel="contents">
+            <a class="btn" href="/2018/05/09/mixin/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

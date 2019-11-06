@@ -430,6 +430,35 @@
   </entry>
   
   <entry>
+    <title>NPM 参数</title>
+    <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
+    <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-08-03T09:43:44.955Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
+      
+    
+    </summary>
+    
+      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
+    
+      <category term="前端" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
+    
+    
+      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>react-redux中Provider、connect</title>
     <link href="https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/"/>
     <id>https://heiliu.github.io/2019/07/29/provider&amp;&amp;connect/</id>
@@ -483,48 +512,21 @@
   </entry>
   
   <entry>
-    <title>NPM 参数</title>
-    <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
-    <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-08-03T09:43:44.955Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="npm-参数"><a href="#npm-参数" class="headerlink" title="npm 参数"></a>npm 参数</h2><p>npm install -g webpack<br>npm install prop-types –save-dev</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;npm-参数&quot;&gt;&lt;a href=&quot;#npm-参数&quot; class=&quot;headerlink&quot; title=&quot;npm 参数&quot;&gt;&lt;/a&gt;npm 参数&lt;/h2&gt;&lt;p&gt;npm install -g webpack&lt;br&gt;npm install prop-types –save
-      
-    
-    </summary>
-    
-      <category term="Skill" scheme="https://heiliu.github.io/categories/Skill/"/>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="Node" scheme="https://heiliu.github.io/categories/Skill/%E5%89%8D%E7%AB%AF/Node/"/>
-    
-    
-      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title></title>
     <link href="https://heiliu.github.io/2019/07/28/0722/"/>
     <id>https://heiliu.github.io/2019/07/28/0722/</id>
     <published>2019-07-28T13:29:50.981Z</published>
-    <updated>2019-08-14T10:39:34.911Z</updated>
+    <updated>2019-11-06T10:02:55.767Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前端开发工具整理"><a href="#前端开发工具整理" class="headerlink" title="前端开发工具整理"></a>前端开发工具整理</h1><h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具:"></a>开发工具:</h3><p><strong>1.代码编辑器</strong>  </p><ul><li><p>visual studio Code  </p><ul><li><p>插件  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Chinese 中文插件</span><br><span class="line">language-Stylus </span><br><span class="line">LeetCode</span><br><span class="line">Vetur</span><br><span class="line">Prettier</span><br><span class="line">React/Redux/react-router Snippets react便捷输入</span><br></pre></td></tr></table></figure></li><li><p>主题  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">one dark pro</span><br></pre></td></tr></table></figure></li></ul></li></ul><p><strong>2.浏览器及插件</strong></p><p>   Chrome 浏览器</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Ghelper 翻墙插件 可在GitHub上获取</span><br><span class="line">ADBlock</span><br><span class="line">marinara（番茄工作法助理）</span><br><span class="line">FireShot</span><br><span class="line">扩展管理器</span><br><span class="line">WEB前端助手</span><br><span class="line">划词翻译</span><br><span class="line">Imagus</span><br><span class="line">Octotree</span><br><span class="line">React/Vue develop Tool</span><br><span class="line">Chrono</span><br><span class="line">掘金插件</span><br><span class="line">Json-handle</span><br></pre></td></tr></table></figure><p><strong>3.其他工具</strong>  </p><ul><li><p>命令行开发工具：  </p><ul><li>iterm2  </li><li>homebrew</li><li>oh-my-zsh  </li></ul></li><li><p>Git/gitLab &amp;&amp; 配置SSH  </p></li><li><p>node &amp;&amp; NVM  </p> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nvm install <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 安装需要的node版本</span></span><br><span class="line">nvm use <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 切换使用相对应的node版本</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<hr><p>title: 前端开发工具整理<br>date: 2019-07-22<br>copyright: true</p><h2 id="tag-Note"><a href="#tag-Note" class="headerlink" title="tag: Note"></a>tag: Note</h2><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具:"></a>开发工具:</h2><p><strong>1.代码编辑器</strong>  </p><ul><li><p>visual studio Code  </p><ul><li><p>插件  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- Chinese 中文插件</span><br><span class="line">- language-Stylus </span><br><span class="line">- LeetCode</span><br><span class="line">- Vetur</span><br><span class="line">- Prettier</span><br><span class="line">- React/Redux/react-router Snippets react便捷输入</span><br><span class="line">- prettier</span><br><span class="line">- GitLens</span><br><span class="line">- Markdown All in One</span><br><span class="line">- npm Intellisense</span><br><span class="line">- One Dark Pro</span><br><span class="line">- Quokka.js</span><br><span class="line">- Relative Path</span><br><span class="line">- JavaScript code snippets</span><br><span class="line">- CSS Peek</span><br><span class="line">- Bracket Pair Colorizer</span><br><span class="line">- Better Comments</span><br></pre></td></tr></table></figure></li><li><p>主题  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">one dark pro</span><br></pre></td></tr></table></figure></li></ul></li></ul><p><strong>2.浏览器及插件</strong></p><p>   Chrome 浏览器</p>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Ghelper 翻墙插件 可在GitHub上获取</span><br><span class="line">ADBlock</span><br><span class="line">marinara（番茄工作法助理）</span><br><span class="line">FireShot</span><br><span class="line">扩展管理器</span><br><span class="line">WEB前端助手</span><br><span class="line">划词翻译</span><br><span class="line">Imagus</span><br><span class="line">Octotree</span><br><span class="line">React/Vue develop Tool</span><br><span class="line">Chrono</span><br><span class="line">掘金插件</span><br><span class="line">Json-handle</span><br></pre></td></tr></table></figure><p><strong>3.其他工具</strong>  </p><ul><li><p>命令行开发工具：  </p><ul><li>iterm2  </li><li>homebrew</li><li>oh-my-zsh  </li></ul></li><li><p>Git/gitLab &amp;&amp; 配置SSH  </p></li><li><p>node &amp;&amp; NVM  </p> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nvm install <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 安装需要的node版本</span></span><br><span class="line">nvm use <span class="number">8.9</span><span class="number">.0</span> <span class="comment">// 切换使用相对应的node版本</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;前端开发工具整理&quot;&gt;&lt;a href=&quot;#前端开发工具整理&quot; class=&quot;headerlink&quot; title=&quot;前端开发工具整理&quot;&gt;&lt;/a&gt;前端开发工具整理&lt;/h1&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; 
+        &lt;hr&gt;
+&lt;p&gt;title: 前端开发工具整理&lt;br&gt;date: 2019-07-22&lt;br&gt;copyright: true&lt;/p&gt;
+&lt;h2 id=&quot;tag-Note&quot;&gt;&lt;a href=&quot;#tag-Note&quot; class=&quot;headerlink&quot; title=&quot;tag: Note
       
     
     </summary>
