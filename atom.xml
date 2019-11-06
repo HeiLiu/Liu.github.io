@@ -116,33 +116,6 @@
   </entry>
   
   <entry>
-    <title>VS Code 快捷键</title>
-    <link href="https://heiliu.github.io/2019/10/13/VsCodeShortCuts/"/>
-    <id>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</id>
-    <published>2019-10-12T16:00:00.000Z</published>
-    <updated>2019-10-13T13:59:51.530Z</updated>
-    
-    <content type="html"><![CDATA[<!-- TODO --><h1 id="文档编辑中键盘快捷方式"><a href="#文档编辑中键盘快捷方式" class="headerlink" title="文档编辑中键盘快捷方式"></a>文档编辑中键盘快捷方式</h1><ul><li>快速移动光标（按单词跳: option <- -> </-></li><li>选中操作: <strong>shift <- -></-></strong> </li><li>搜索时切换搜索结果: <strong>shift Enter</strong> </li><li>文件相对路径: shift command H 原shortCut =&gt; 自定义 <strong>command H</strong> </li><li>新建未命名文件: command N  </li><li>搜索光标所在单词: command E </li><li>选中所在的代码块(select Bracket)，对花括号的代码块较友好: <strong>option command B</strong> </li><li>切换tab: <strong>option commmad <- -></-></strong> </li><li>删除整个单词: <strong>option backspace</strong></li><li>向上下复制整行: <strong>option shift <- -></-></strong> 上下方向键</li><li>找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): <strong>shift command I</strong></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- TODO --&gt;
-&lt;h1 id=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;a href=&quot;#文档编辑中键盘快捷方式&quot; class=&quot;headerlink&quot; title=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;/a&gt;文档编辑中键盘快捷方式&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;快速移动光标（按单词跳: o
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://heiliu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
-    
-  </entry>
-  
-  <entry>
     <title>classnames 的用法总结</title>
     <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
     <id>https://heiliu.github.io/2019/10/13/classnames/</id>
@@ -162,6 +135,31 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 快捷键(持续更新)</title>
+    <link href="https://heiliu.github.io/2019/10/13/VsCodeShortCuts/"/>
+    <id>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</id>
+    <published>2019-10-12T16:00:00.000Z</published>
+    <updated>2019-11-06T11:03:40.294Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文档编辑中键盘快捷方式"><a href="#文档编辑中键盘快捷方式" class="headerlink" title="文档编辑中键盘快捷方式"></a>文档编辑中键盘快捷方式</h1><h2 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h2><ul><li>快速移动光标（按单词跳: <strong>option <- -></-></strong> </li><li>行首行尾移动光标 : <strong>command <- -></-></strong></li><li>移动到文件头尾: <strong>commad <- -></-></strong> 上下方向键</li></ul><h2 id="选中"><a href="#选中" class="headerlink" title="选中"></a>选中</h2><ul><li>选中操作: <strong>shift <- -></-></strong> 方向键操作选中方向 </li><li>选中光标所在单词: <strong>command D</strong></li></ul><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul><li>搜索时切换搜索结果: <strong>shift Enter</strong> </li><li>文件相对路径: shift command H 原shortCut =&gt; 自定义 <strong>command H</strong> </li><li>新建未命名文件: command N  </li><li>搜索光标所在单词: command E </li><li>选中所在的代码块(select Bracket)，对花括号的代码块较友好: <strong>option command B</strong> </li><li>切换tab: <strong>option commmad <- -></-></strong> </li><li>删除整个单词: <strong>option backspace</strong></li><li>向上下复制整行: <strong>option shift <- -></-></strong> 上下方向键</li><li>找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): <strong>shift command I</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;a href=&quot;#文档编辑中键盘快捷方式&quot; class=&quot;headerlink&quot; title=&quot;文档编辑中键盘快捷方式&quot;&gt;&lt;/a&gt;文档编辑中键盘快捷方式&lt;/h1&gt;&lt;h2 id=&quot;光标移动&quot;&gt;&lt;a href=&quot;#光标移动&quot; class=&quot;
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://heiliu.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
     
   </entry>
   
@@ -465,6 +463,34 @@
   </entry>
   
   <entry>
+    <title>serverless了解</title>
+    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
+    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
+    <published>2019-07-28T16:00:00.000Z</published>
+    <updated>2019-11-06T10:19:58.748Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h1><blockquote><p>根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;serverless&quot;&gt;&lt;a href=&quot;#serverless&quot; class=&quot;headerlink&quot; title=&quot;serverless&quot;&gt;&lt;/a&gt;serverless&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;根据 CNCF 的定义，Serverless 是指
+      
+    
+    </summary>
+    
+      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
+    
+    
+      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
+    
+      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>NPM 参数</title>
     <link href="https://heiliu.github.io/2019/07/29/npmParams/"/>
     <id>https://heiliu.github.io/2019/07/29/npmParams/</id>
@@ -490,34 +516,6 @@
     
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>serverless了解</title>
-    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
-    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-11-06T10:19:58.748Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h1><blockquote><p>根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;serverless&quot;&gt;&lt;a href=&quot;#serverless&quot; class=&quot;headerlink&quot; title=&quot;serverless&quot;&gt;&lt;/a&gt;serverless&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;根据 CNCF 的定义，Serverless 是指
-      
-    
-    </summary>
-    
-      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
-    
-    
-      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
-    
-      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   

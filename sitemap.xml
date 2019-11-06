@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</loc>
+    
+    <lastmod>2019-11-06T11:03:40.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</loc>
+    
+    <lastmod>2019-11-06T10:53:20.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://heiliu.github.io/2019/08/12/setPerformance/</loc>
     
     <lastmod>2019-11-06T10:50:21.217Z</lastmod>
@@ -282,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://heiliu.github.io/2019/10/13/VsCodeShortCuts/</loc>
-    
-    <lastmod>2019-10-13T13:59:51.530Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</loc>
     
     <lastmod>2019-10-13T09:30:57.217Z</lastmod>
@@ -313,13 +320,6 @@
     <loc>https://heiliu.github.io/2019/08/15/DesignPatterns/</loc>
     
     <lastmod>2019-08-15T06:24:07.867Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heiliu.github.io/2018/07/15/VueComponentsConnect-md/</loc>
-    
-    <lastmod>2019-08-15T06:02:05.200Z</lastmod>
     
   </url>
   

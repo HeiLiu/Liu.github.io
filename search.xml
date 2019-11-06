@@ -34,20 +34,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[VS Code 快捷键]]></title>
+    <title><![CDATA[classnames 的用法总结]]></title>
+    <url>%2F2019%2F10%2F13%2Fclassnames%2F</url>
+    <content type="text"><![CDATA[classnames github库]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[VSCode 快捷键(持续更新)]]></title>
     <url>%2F2019%2F10%2F13%2FVsCodeShortCuts%2F</url>
-    <content type="text"><![CDATA[文档编辑中键盘快捷方式 快速移动光标（按单词跳: option 选中操作: shift 搜索时切换搜索结果: shift Enter 文件相对路径: shift command H 原shortCut =&gt; 自定义 command H 新建未命名文件: command N 搜索光标所在单词: command E 选中所在的代码块(select Bracket)，对花括号的代码块较友好: option command B 切换tab: option commmad 删除整个单词: option backspace 向上下复制整行: option shift 上下方向键 找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): shift command I]]></content>
+    <content type="text"><![CDATA[文档编辑中键盘快捷方式光标移动 快速移动光标（按单词跳: option 行首行尾移动光标 : command 移动到文件头尾: commad 上下方向键 选中 选中操作: shift 方向键操作选中方向 选中光标所在单词: command D 其它 搜索时切换搜索结果: shift Enter 文件相对路径: shift command H 原shortCut =&gt; 自定义 command H 新建未命名文件: command N 搜索光标所在单词: command E 选中所在的代码块(select Bracket)，对花括号的代码块较友好: option command B 切换tab: option commmad 删除整个单词: option backspace 向上下复制整行: option shift 上下方向键 找到当前文件所有与选中相同的文档 达到批量修改的目的(change all ocurrences): shift command I]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
         <tag>Note</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[classnames 的用法总结]]></title>
-    <url>%2F2019%2F10%2F13%2Fclassnames%2F</url>
-    <content type="text"><![CDATA[classnames github库]]></content>
   </entry>
   <entry>
     <title></title>
@@ -168,6 +168,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[serverless了解]]></title>
+    <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
+    <content type="text"><![CDATA[serverless 根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。]]></content>
+      <categories>
+        <category>server</category>
+      </categories>
+      <tags>
+        <tag>Skill</tag>
+        <tag>倒腾</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[NPM 参数]]></title>
     <url>%2F2019%2F07%2F29%2FnpmParams%2F</url>
     <content type="text"><![CDATA[npm 参数npm install -g webpacknpm install prop-types –save-dev]]></content>
@@ -178,18 +190,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[serverless了解]]></title>
-    <url>%2F2019%2F07%2F29%2Fserverless%2F</url>
-    <content type="text"><![CDATA[serverless 根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。]]></content>
-      <categories>
-        <category>server</category>
-      </categories>
-      <tags>
-        <tag>Skill</tag>
-        <tag>倒腾</tag>
       </tags>
   </entry>
   <entry>
@@ -271,6 +271,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[排序]]></title>
+    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
+    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627 // 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2 // 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n // 分治 // 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue组件通信]]></title>
     <url>%2F2018%2F07%2F15%2FVueComponentsConnect-md%2F</url>
     <content type="text"><![CDATA[组件 (Component) 是 Vue.js最强大的功能之一。组件可以扩展，封装可重用的代码。在较高层面上，组件是自定义元素，Vue.js的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。 通信类型父组件与子组件通信 父组件给子组件传递数据 props: 使用props，父组件可以使用props向子组件传递数据 1234567891011121314151617181920// 父组件 &lt;template&gt; &lt;child :msg="message"&gt;&lt;/child&gt;&lt;/template&gt; &lt;script&gt; import child from './child.vue'; export default &#123; components: &#123; child &#125;, data () &#123; return &#123; message: 'father message'; &#125; &#125;&#125;&lt;/script&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150// 子组件 &lt;template&gt; &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt; &lt;/template&gt; &lt;script&gt; export default &#123; // props 另一种写法, 不声明类型与默认值 // props: ['msg'] props: &#123; msg: &#123; type: String, required: true &#125; &#125; &#125; &lt;/script&gt;``` - 子组件向父组件通信 &gt; 在Vue 中子组件一般不具有操作数据和处理事件的权利，所有的数据和事件的处理都要交给父组件进行操作 **方法一 :** 在子组件中通过$emit()将组件内部的时间传递给父组件的事件进行 ```js // 父组件&lt;template&gt;&lt;child @msgFunc="func"&gt;&lt;/child&gt;&lt;/template&gt;&lt;script&gt;import child from './child.vue';export default &#123;components: &#123; child&#125;,methods: &#123; func (msg) &#123; console.log(msg); &#125;&#125;&#125;&lt;/script&gt;// 子组件 &lt;template&gt;&lt;button @click="handleClick"&gt;点我&lt;/button&gt;&lt;/template&gt;&lt;script&gt;export default &#123;props: &#123; msg: &#123; type: String, required: true &#125;&#125;,methods () &#123; handleClick () &#123; // 提交出去的处理方法的名称与父组件接收的需一致 this.$emit('msgFunc'); &#125;&#125;&#125;&lt;/script&gt; ``` **方法二:** 通过修改父组件传递的props来修改父组件数据 &gt; 这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。&gt; 但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理 --- ## 兄弟组件进行通信 &gt; 刚开始学习使用Vue时, 在Vue项目中的两个兄弟组件之间如果要进行通信， 通常会通过一个父组件进行数据请求再给子组件传递数据。 - Vuex 是官方推荐的状态管理方案, 不过如果只是中小型项目，状态管理也没有很复杂的话，使用 Vuex 有种杀鸡用牛刀的感觉 - Vue 官方推荐使用一个 Vue 实例作为中央事件总线, 即 `EventBus` ,在需要使用的地方import该Bus &gt; EventBus 解决了兄弟组件之间的事件传递问题，它的本质是订阅发布者模式，同一个事件发布组件发布了，订阅组件就能获得事件的改变摆脱了兄弟组件之间传值需要父组件转达，Vue事件实例，作为中间者不在页面上显示且具有vue的API 如 emit on ```js // bus.js =&gt; new 一个 Vue 实例 import Vue from 'vue' export default new Vue() // clickComponent.vue 相当于发布者, 在需要的组件中订阅就能进行通信 &lt;template&gt; &lt;div&gt; &lt;a href="#"class="click" :data-index="index" @click.prevent="doClick($event)"&gt;点我&lt;/a&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; props: &#123; index: Number &#125;, methods: &#123; doClick (event) &#123; // console.log(event.target.dataset.index) Bus.$emit('getTarget', event.target.dataset.index) // this.$emit('global: getTarget', event.target.dataset.index) &#125; &#125; &#125; &lt;/script&gt; // showComponents.vue 另一个兄弟组件 进行订阅 &lt;template&gt; &lt;div&gt; &#123;&#123;html&#125;&#125; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import Bus from '@/common/bus.js' export default &#123; data () &#123; return &#123; html: '还没有点击' &#125; &#125;, created () &#123; Bus.$on('getTarget', index =&gt; &#123; this.html = `第$&#123;index&#125;个元素` &#125;) //this.$on('global: getTarget', index =&gt; &#123; // this.html = `第$&#123;index&#125;个元素` // &#125;) &#125; &#125; &lt;/script&gt;``` 在node中有一个 `vue-event-proxy` npm包能够实现与EventBus同样的功能，需要安装该npm包, 并且在main.js中进行`引入 ` ```js import EventProxy from 'vue-event-proxy' Vue.use(EventProxy) // 激活使用 // 完成后即可以使用上面组件中js注释部分的代码代替Bus代码]]></content>
@@ -280,17 +291,6 @@
       </categories>
       <tags>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[排序]]></title>
-    <url>%2F2018%2F07%2F15%2Fsorts%2F</url>
-    <content type="text"><![CDATA[算法题如下数字: 35 99 18 76 12 桶排序 有[100] for初始化数组 将数字放到相应的位置 思想： 1234567891011121314151617181920212223242526272829303132333435 利用数组的下标是有序的,待排序的数字大小在下标的范围内，当数组下标等于要排序的数组时 用待排序的数字坐桶的下标 给相应项+1 类似于做标记的 myIdea:当下标等于待排序的数字大小 即输出下标 相当于输出较小的数字 ``` **时间复杂度:** 时间复杂度 循环 O(M+N) 一重循环最大值99 100，又一重循环N， 之后又有一层循环M 有值的桶子 嵌套循环 &gt;= 0 1 2 3有限的，&lt;N M+N 多层循环是最花时间M+N O(M+N+M+N)=O(2*(M+N)) O(M+N) **缺点:** 占物理内存，因为要分配M个元素的数组 - 冒泡排序 ```js// 冒泡排序 // 思想: 比较相邻的元素。如果第一个比第二个大，就交换两数顺序 const source_arr = [35,18, 99, 18, 76, 12];function bubbleSort(arr) &#123; const len = arr.length; for (let i = 0; i &lt; len; i++) &#123; for (let j = 0; j &lt; len - 1 - i; j++) &#123; if (arr[j] &gt; arr[j+1]) &#123; // 相邻元素两两对比 let temp = arr[j+1]; // 元素交换 arr[j+1] = arr[j]; arr[j] = temp; &#125; &#125; &#125; return arr;&#125;console.log(bubbleSort(source_arr)); 选择排序 第一重循环默认把 i 个作为最小值与后面 j 循环中的的数进行比较，也就是通过第二重循环与后面的值进行比较 12345678910111213141516171819202122// n^2// 找到数组中最小的值放在第一位，第二小的放在第二位...// 基址查询function SelectSort(arr) &#123; let len = arr.length for(let i = 0; i &lt; len; i++) &#123; let minIndex = i // 如果已经选择了， 前面的就一定是有序的 for( let j = i; j &lt; len; j++) &#123; if( arr[j] &lt; arr[minIndex]) &#123; // 循环和默认的最小值进行比较， 如果更小纪录下标 minIndex = j console.log(i, j) &#125; &#125; if(minIndex !== i) &#123; [arr[minIndex], arr[i]] = [arr[i], arr[minIndex]] &#125; &#125; return arr&#125;console.log(SelectSort([45,21,45,12,56,12,67,32,98])) 快排排序 因为采用了分治思想，所以快 形象的例子 三个数之间进行排序 a b c 再加递归 123456789101112131415161718192021222324252627 // 简单排序： 冒泡、选择、插入 时间复杂度都是 n^2 // 复杂排序： 快排、堆排、归并排序 时间复杂度都是 (log2^n)* n // 分治 // 快排 log2(n)* n for循环 n次 // 1. 随机选择一个数组中的一个数作为一个基准 一般是中点 // 2. 其余数字跟他比较， 小的放左边 大的放右边 // 3. 利用递归的思想， 将左右两边的数重复以上两步function QuickSort(arr) &#123; // 这里是出口 当数组长度小于等于1的时候结束递归 if(arr.length &lt;= 1) &#123; return arr &#125; let pivotIndex = Math.floor(arr.length /2) // 把中间基准值从数组提出来 pivot = arr.splice(pivotIndex, 1)[0] // 选出相应位置的值 console.log(pivot) let left = [], right = [] for(let i = 0, len = arr.length ; i &lt; len; i++) &#123; if( arr[i] &lt; pivot) &#123; left.push(arr[i]) &#125; else &#123; right.push(arr[i]) &#125; &#125; return QuickSort(left).concat(pivot, QuickSort(right))&#125;console.log(QuickSort([85, 24, 63, 45, 17, 31, 78, 56]))]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -350,18 +350,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[stylus之变量与mixin]]></title>
-    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
-    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>%2F2018%2F05%2F09%2FURL%2F</url>
     <content type="text"><![CDATA[title: 输入URL之后date: 2018-05-03tags: HTTP categories: 前端有的研究]]></content>
@@ -375,6 +363,18 @@
       </categories>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[stylus之变量与mixin]]></title>
+    <url>%2F2018%2F05%2F09%2Fmixin%2F</url>
+    <content type="text"><![CDATA[混合书写(Mixins) 变量 在stylus中 可以将常用的样式像表达式中变量赋值一样保存给一个变量、如下： 12345678/*进行变量的声明*/bg_color = #123456;box_size = 100px;/* 使用 */.box background-color bg_color width box_size height box_size 编译后： 12345.box &#123; background-color: #123456; width: 100px; height: 100px; &#125; 属性查找Stylus有另外一个很酷的独特功能，不需要分配值给变量就可以定义引用属性。下面是个很好的例子，元素水平垂直居中对齐（典型的方法是使用百分比和margin负值），如下： 12345678#logo position: absolute top: 50% left: 50% width: w = 150px height: h = 80px margin-left: -(w / 2) margin-top: -(h / 2) 在stylus中可以不使用这里的变量w和h, 而是简单地前置@字符在属性名前来访问该属性名对应的值：12345678#logo position: absolute top: 50% left: 50% width: 150px height: 80px margin-left: -(@width / 2) margin-top: -(@height / 2) 混合书写 混合书写和函数定义方法一致，但是应用却大相径庭。 例如，在书写Css3样式时我们经常要进行兼容性处理，需要在属性前加上相应的前缀，下面有定义的border-radius(n)方法，其却作为一个mixin（如，作为状态调用，而非表达式）调用。123456789101112131415161718192021222324 bg_color = #123456; box_size = 100px; /*定义mixin*/ border-radius(n) -webkit-border-radius n -moz-border-radius n -ms-border-radius n -o-border-radius n border-radius n .box background-color bg_color width box_size height box_size border-radius(5px)``` 进一步，我们可以利用arguments这个局部变量，传递可以包含多值的表达式,这样就可以給属性传递多个值。 ```cssborder-radius() -webkit-border-radius arguments -moz-border-radius arguments -ms-border-radius arguments -o-border-radius arguments border-radius arguments Stylus支持通过使用{}字符包围表达式来插入值，其会变成标识符的一部分。例如，-webkit-{‘border’ + ‘-radius’}等同于-webkit-border-radius. 再进一步，在stylus中我们还可以对border-radius再做进一步的处理 类似与js中的函数封装 ，如下(这样对于任何需要做兼容性处理的属性 我们只需要调用两次mixin出入所需参数，大大的简化了一下琐碎代码工作): 12345678910111213141516 vendor(prop,args) -webkit-&#123;prop&#125; args -moz-&#123;prop&#125; args -ms-&#123;prop&#125; args -o-&#123;prop&#125; args &#123;prop&#125; argsborder-radius(n) vendor('border-radius',arguments)box-shadow(n) vendor('boa-shadow',arguments).box background-color bg_color width box_size height box_size border-radius(5px) 编译后： 123456789101112131415 .box &#123; background-color: #123456; width: 100px; height: 100px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -moz-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -ms-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); -o-box-shadow: 1px 1px 10px rgba(0,0,0,0.5); box-shadow: 1px 1px 10px rgba(0,0,0,0.5);&#125;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -503,11 +503,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[想把我唱给你听]]></title>
     <url>%2F2018%2F04%2F19%2Fheihei%2F</url>
     <content type="text"><![CDATA[想把我唱给你听 趁年轻尽情地爱吧最最亲爱的人啊 路途遥远我们在一起吧12345678910111213141516171819202122232425262728293031323334353637383940414243想把我唱给你听趁现在`年少如花`花儿尽情地开吧装点你的岁月我的枝桠谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我把我唱给你听把你纯真无邪的笑容给我吧我们应该有快乐的幸福的晴朗的时光我把我唱给你听用我炙热的感情感动你好吗岁月是值得怀念的留念的害羞的红色脸庞谁能够代替你呢趁年轻尽情的爱吧最最亲爱的人啊路途遥远我们在一起吧我们应该有快乐的幸福的晴朗的时光]]></content>
@@ -517,5 +512,10 @@
       <tags>
         <tag>随笔</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
