@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://heiliu.github.io/"/>
-  <updated>2019-11-07T09:23:59.652Z</updated>
+  <updated>2019-11-15T05:21:17.891Z</updated>
   <id>https://heiliu.github.io/</id>
   
   <author>
@@ -15,6 +15,126 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>待办事项</title>
+    <link href="https://heiliu.github.io/2019/11/15/TODOs/"/>
+    <id>https://heiliu.github.io/2019/11/15/TODOs/</id>
+    <published>2019-11-15T05:20:13.327Z</published>
+    <updated>2019-11-15T05:21:17.891Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>技术胖<ul><li>Rect Hook 实战</li><li>Nginx</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;技术胖&lt;ul&gt;
+&lt;li&gt;Rect Hook 实战&lt;/li&gt;
+&lt;li&gt;Nginx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Iterm2 相关</title>
+    <link href="https://heiliu.github.io/2019/11/13/iterm2/"/>
+    <id>https://heiliu.github.io/2019/11/13/iterm2/</id>
+    <published>2019-11-13T06:19:05.917Z</published>
+    <updated>2019-11-14T08:10:58.971Z</updated>
+    
+    <content type="html"><![CDATA[<p>command + D / command + shift + D 分屏</p><p><a href="https://www.jianshu.com/p/3436bcb17a03" target="_blank" rel="noopener">快捷键参考</a></p><ul><li>发病期有3-5天、不管怎么治疗，吃不吃药都会恶化，所以前期还是要有一个好的心态。</li><li>避免面部吹风、准备口罩围巾啥的裹好一点，骑车漏风的话就打车吧</li><li>多给脸部按摩</li><li>保持积极的心态、保证休息时间</li><li>补充营养、维生素b1、甲钴胺（这个具体得问医生了）</li><li>复诊的时候问清楚医生这个能不能针灸以及针灸有没有用，有用的话可以看看中医，中西结合治疗。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;command + D / command + shift + D 分屏&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/3436bcb17a03&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;快捷键参考&lt;/a&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Homebrew 的使用</title>
+    <link href="https://heiliu.github.io/2019/11/12/homeBrew/"/>
+    <id>https://heiliu.github.io/2019/11/12/homeBrew/</id>
+    <published>2019-11-12T07:11:26.095Z</published>
+    <updated>2019-11-12T07:17:09.534Z</updated>
+    
+    <content type="html"><![CDATA[<p>Homebrew： 家酿</p><!-- TODO --><p><a href="https://crispgm.com/page/dive-in-homebrew.html" target="_blank" rel="noopener">参考</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Homebrew： 家酿&lt;/p&gt;
+&lt;!-- TODO --&gt;
+&lt;p&gt;&lt;a href=&quot;https://crispgm.com/page/dive-in-homebrew.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>不在node 中处理管理前端资源</title>
+    <link href="https://heiliu.github.io/2019/11/12/staticFiles/"/>
+    <id>https://heiliu.github.io/2019/11/12/staticFiles/</id>
+    <published>2019-11-12T03:29:16.640Z</published>
+    <updated>2019-11-12T03:38:13.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>nodebestpractice<br><a href="https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/frontendout.chinese.md" target="_blank" rel="noopener">资源</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;nodebestpractice&lt;br&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/frontendout.chinese.md&quot; ta
+      
+    
+    </summary>
+    
+      <category term="Node最佳实践" scheme="https://heiliu.github.io/categories/Node%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>委托可能的一切</title>
+    <link href="https://heiliu.github.io/2019/11/12/emm/"/>
+    <id>https://heiliu.github.io/2019/11/12/emm/</id>
+    <published>2019-11-12T03:18:30.435Z</published>
+    <updated>2019-11-12T03:25:21.503Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/delegatetoproxy.chinese.md" target="_blank" rel="noopener">委托任何可能的 (例如静态内容，gzip) 到反向代理</a></p><p><a href="http://blog.argteam.com/coding/hardening-node-js-for-production-part-2-using-nginx-to-avoid-node-js-load" target="_blank" rel="noopener">argTeam</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/production/delegatetoproxy.chinese.md&quot; target=&quot;_blank&quot; re
+      
+    
+    </summary>
+    
+      <category term="Node最佳实践" scheme="https://heiliu.github.io/categories/Node%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>九、十月复盘</title>
@@ -67,10 +187,10 @@
   
   <entry>
     <title>React中的Refs</title>
-    <link href="https://heiliu.github.io/2019/10/26/reactRef/"/>
-    <id>https://heiliu.github.io/2019/10/26/reactRef/</id>
+    <link href="https://heiliu.github.io/2019/10/26/reactRefs/"/>
+    <id>https://heiliu.github.io/2019/10/26/reactRefs/</id>
     <published>2019-10-26T14:33:00.000Z</published>
-    <updated>2019-11-07T10:25:50.533Z</updated>
+    <updated>2019-11-07T10:27:07.598Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><p><strong>官方说明</strong>： <code>Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素</code>。</p><p>在React开发中、想要操作元素的状态一般是修改State、或者是修改传入的props。但是有时候一些效果不能通过如此操作实现，例如开发中常常碰到的： </p><ul><li>输入框的焦点获取、比如打开登录界面登录框自动获取焦点 </li><li>动态的根据一个元素的大小/距离 计算另外一个元素的大小 </li></ul><h2 id="使用-Ref"><a href="#使用-Ref" class="headerlink" title="使用 Ref"></a>使用 Ref</h2><p>目前的React版本（16.11.0）中 <code>Refs</code> 的用法如下： </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React form <span class="string">'react'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="comment">// 创建</span></span><br><span class="line">    <span class="keyword">this</span>.myRef = React.createRef();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// 传入</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;this.myRef&#125;</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure><p>对于节点的访问:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> node = <span class="keyword">this</span>.myRef.current;</span><br></pre></td></tr></table></figure></p><p>说明： </p><ul><li>1.通过调用 React.createRef 创建了一个 React ref 并将其赋值给 this.myRef 变量。 </li><li><ol start="2"><li>指定 ref 为 JSX 属性，将this.myRef 传入; ref 和 key 一样不属于 props属性，二者都会被 React 特殊处理和维护。</li></ol></li><li><ol start="3"><li>ref 挂载以后，ref.current 指向 ref 所在节点</li></ol></li></ul><p>如果之前用过 React，你可能了解之前的 ref 可以通过 this.refs.inputRef 来访问 DOM 节点、如下所示，这个 ref 是字符串类型的，在使用上来说似乎更加方便。现在官方版本不建议再使用它，因为 string 类型的 refs 存在问题。它属于<code>过时</code> API 并可能会在未来的版本被移除。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React form <span class="string">'react'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyInput</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  componentDidMount() &#123;</span><br><span class="line">    <span class="keyword">this</span>.refs.inputRef.focus();</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// 还能用 但不建议</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">"inputRef"</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure><h2 id="Ref的值"><a href="#Ref的值" class="headerlink" title="Ref的值"></a>Ref的值</h2><p>官方文档中有说明，ref 的值根据节点的类型不同而有所不同：</p><ul><li>当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。可以访问元素的宽高等属性、input框还可以调用focus方法实现自动聚焦</li><li>当 ref 属性用于自定义 class 组件时，ref 对象接收组件的挂载实例作为其 current 属性。即可以通过 current <code>调用组件中的方法</code></li></ul><p>不能在函数组件上使用 ref 属性，因为他们没有实例。</p><h2 id="回调-Refs"><a href="#回调-Refs" class="headerlink" title="回调 Refs"></a>回调 Refs</h2><p>更加精细的控制 refs 的传递, 可以达到类似 props 的传递效果，在需要的地方传入inputRef </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 官方 Demo</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CustomTextInput</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;input ref=&#123;props.inputRef&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">class Parent extends React.Component &#123;</span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">      &lt;CustomTextInput</span></span><br><span class="line"><span class="regexp">        inputRef=&#123;el =&gt; this.inputElement = el&#125;</span></span><br><span class="line"><span class="regexp">      /</span>&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>官方说明</strong>： </p><p>如果 ref 回调函数是以内联函数的方式定义的，在更新过程中它会被执行两次，第一次传入参数 null，然后第二次会传入参数 DOM 元素。这是因为在每次渲染时会创建一个新的函数实例，所以 React 清空旧的 ref 并且设置新的。通过将 ref 的回调函数定义成 class 的绑定函数的方式可以避免上述问题，但是大多数情况下它是无关紧要的。</p><h2 id="Refs-转发"><a href="#Refs-转发" class="headerlink" title="Refs 转发"></a>Refs 转发</h2><!-- TODO --><p><a href="https://zh-hans.reactjs.org/docs/refs-and-the-dom.html" target="_blank" rel="noopener">官方文档</a></p>]]></content>
     
@@ -167,19 +287,19 @@
     <link href="https://heiliu.github.io/2019/10/14/mobx-react/"/>
     <id>https://heiliu.github.io/2019/10/14/mobx-react/</id>
     <published>2019-10-13T16:00:00.000Z</published>
-    <updated>2019-11-06T10:21:25.460Z</updated>
+    <updated>2019-11-08T10:57:03.480Z</updated>
     
-    <content type="html"><![CDATA[<p>observable<br>inject<br>computed<br>action </p><p>RunInAction<br>Reaction </p><p>调试</p><p>toJs 需要引入 =&gt; 不如直接 JSON.stringify()方便</p><p>不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。</p><p><a href="https://cn.mobx.js.org/best/react-performance.html" target="_blank" rel="noopener">参考技巧</a></p><!-- 中文排序 --><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [&#123;<span class="attr">name</span>:<span class="string">'武汉'</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'北京'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'上海'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'天津'</span>&#125;];</span><br><span class="line"><span class="keyword">var</span> resultArray = array.sort(</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">compareFunction</span>(<span class="params">param1, param2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param1.name.localeCompare(param2.name,<span class="string">"zh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.log(resultArray);</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>observable<br>inject<br>computed<br>action </p><p>autorun<br>RunInAction<br>Reaction </p><p>尽量使用箭头函数</p><p>调试</p><p>toJs 需要引入 =&gt; 不如直接 JSON.stringify()方便</p><p>不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。</p><p><a href="https://cn.mobx.js.org/best/react-performance.html" target="_blank" rel="noopener">参考技巧</a></p><!-- 中文排序 --><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [&#123;<span class="attr">name</span>:<span class="string">'武汉'</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'北京'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'上海'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'天津'</span>&#125;];</span><br><span class="line"><span class="keyword">var</span> resultArray = array.sort(</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">compareFunction</span>(<span class="params">param1, param2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param1.name.localeCompare(param2.name,<span class="string">"zh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.log(resultArray);</span><br></pre></td></tr></table></figure><!-- computed 计算属性 --><p>根据现有的状态或其它计算值衍生出的值，响应式的产生一个可以被其它 observer 使用的值<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;observable, computed&#125; <span class="keyword">from</span> <span class="string">"mobx"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OrderLine</span> </span>&#123;</span><br><span class="line">    @observable price = <span class="number">0</span>;</span><br><span class="line">    @observable amount = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(price) &#123;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment">// computed 不支持箭头函数的写法</span></span><br><span class="line">    @computed <span class="keyword">get</span> total() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.price * <span class="keyword">this</span>.amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><!-- autorun --><p>想不产生一个新值，而达到一个效果，请使用 autorun。 举例来说，效果是像打印日志、发起网络请求等这样命令式的副作用。</p><p>autorun 中的值必须要手动清理才行</p><!-- runInAction --><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 请求底部的 table Plan 绑定数据</span></span><br><span class="line">@action fetchShopPlanList = (): <span class="function"><span class="params">ActionResponse</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [begin, end] = <span class="keyword">this</span>.dateRange;</span><br><span class="line">    <span class="keyword">return</span> http</span><br><span class="line">        .post(ApiBaseinfo_Admin_Restaurant_restaurantID_menuCalendarByDateRange, &#123;</span><br><span class="line">            <span class="string">':restaurantID'</span>: globalStore.currentShopID,</span><br><span class="line">            begin,</span><br><span class="line">            end,</span><br><span class="line">        &#125;)</span><br><span class="line">        .then(<span class="function">(<span class="params">&#123; error, data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (error) &#123;</span><br><span class="line">                <span class="keyword">return</span> &#123; error &#125;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            runInAction(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">const</span> &#123; menuCalendarList &#125; = data;</span><br><span class="line">                <span class="comment">// 遍历筛选绑定菜单项</span></span><br><span class="line">                <span class="keyword">this</span>.boundObj = menuCalendarList.reduce(<span class="function">(<span class="params">preObj, mealPlan</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">const</span> &#123; color, name, date &#125; = mealPlan;</span><br><span class="line">                    <span class="keyword">if</span> (color) &#123;</span><br><span class="line">                        preObj[<span class="string">`<span class="subst">$&#123;date&#125;</span>_<span class="subst">$&#123;name&#125;</span>`</span>] = color;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">return</span> preObj;</span><br><span class="line">                &#125;, &#123;&#125;);</span><br><span class="line">                <span class="comment">// 在一个请求的 action中直接去修改 state,可能会存在mobx 检测不到的情况，需要包裹 runInAction</span></span><br><span class="line">                <span class="keyword">this</span>.shopCalendarList = data.menuCalendarList;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> &#123; data &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;observable&lt;br&gt;inject&lt;br&gt;computed&lt;br&gt;action &lt;/p&gt;
-&lt;p&gt;RunInAction&lt;br&gt;Reaction &lt;/p&gt;
+&lt;p&gt;autorun&lt;br&gt;RunInAction&lt;br&gt;Reaction &lt;/p&gt;
+&lt;p&gt;尽量使用箭头函数&lt;/p&gt;
 &lt;p&gt;调试&lt;/p&gt;
-&lt;p&gt;toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便&lt;/p&gt;
-
+&lt;p&gt;toJs 需要引入 =&amp;gt; 不
       
     
     </summary>
@@ -192,24 +312,46 @@
   </entry>
   
   <entry>
-    <title>classnames 的用法总结</title>
-    <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
-    <id>https://heiliu.github.io/2019/10/13/classnames/</id>
-    <published>2019-10-12T16:00:00.000Z</published>
-    <updated>2019-11-06T10:22:06.962Z</updated>
+    <title></title>
+    <link href="https://heiliu.github.io/2019/10/13/ReactComponent/"/>
+    <id>https://heiliu.github.io/2019/10/13/ReactComponent/</id>
+    <published>2019-10-13T09:35:47.829Z</published>
+    <updated>2019-11-07T10:36:31.788Z</updated>
     
-    <content type="html"><![CDATA[<!-- TODO --><p><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames github库</a></p>]]></content>
+    <content type="html"><![CDATA[<hr><h2 id="title-react中的组件-Component、PureComponent、functionComponent"><a href="#title-react中的组件-Component、PureComponent、functionComponent" class="headerlink" title="title: react中的组件: Component、PureComponent、functionComponent"></a>title: react中的组件: Component、PureComponent、functionComponent</h2><h2 id="React-哲学"><a href="#React-哲学" class="headerlink" title="React 哲学"></a>React 哲学</h2><p>组合优于继承</p><h2 id="class-Component"><a href="#class-Component" class="headerlink" title="class Component"></a>class Component</h2><h2 id="function-Component"><a href="#function-Component" class="headerlink" title="function Component"></a>function Component</h2><h2 id="PureComponent"><a href="#PureComponent" class="headerlink" title="PureComponent"></a>PureComponent</h2><h2 id="组件库中组件的设计"><a href="#组件库中组件的设计" class="headerlink" title="组件库中组件的设计"></a>组件库中组件的设计</h2><p>stateLess<br>常用样式尽量少</p><!-- TODO -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- TODO --&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/JedWatson/classnames&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;classnames github库&lt;/a&gt;&lt;/p&gt;
-
+        &lt;hr&gt;
+&lt;h2 id=&quot;title-react中的组件-Component、PureComponent、functionComponent&quot;&gt;&lt;a href=&quot;#title-react中的组件-Component、PureComponent、functionComponent&quot;
       
     
     </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>classnames 的用法总结</title>
+    <link href="https://heiliu.github.io/2019/10/13/classnames/"/>
+    <id>https://heiliu.github.io/2019/10/13/classnames/</id>
+    <published>2019-10-12T16:00:00.000Z</published>
+    <updated>2019-11-07T15:25:35.708Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="React-和-Vue-class对比"><a href="#React-和-Vue-class对比" class="headerlink" title="React 和 Vue class对比"></a>React 和 Vue class对比</h2><p>在React项目开发中，类名的管理不像 Vue 那么方便;</p><p>如何为组件添加 CSS 的 class？<br>传递一个字符串作为 className 属性：</p><p>render() {<br>  return <span classname="menu navigation-menu">Menu</span><br>}<br>CSS 的 class 依赖组件的 props 或 state 的情况很常见：</p><p>render() {<br>  let className = ‘menu’;<br>  if (this.props.isActive) {<br>    className += ‘ menu-active’;<br>  }<br>  return <span classname="{className}">Menu</span><br>}</p><p>在官方的提示下推荐开发者使用 <a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames</a> npm 包来管理自己的类名会方便很多</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line">  <span class="comment">// =&gt;  Object.hasOwnProperty   用于判断某个成员是否在对象内</span></span><br><span class="line">  <span class="keyword">var</span> hasOwn = &#123;&#125;.hasOwnProperty;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">classNames</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// 存储 className 值</span></span><br><span class="line">    <span class="keyword">var</span> classes = [];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环实参， arguments就是实际调用函数传入的参数，类似数组</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">      <span class="comment">// 获取实参value</span></span><br><span class="line">      <span class="keyword">var</span> arg = <span class="built_in">arguments</span>[i];</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 跳过false条件 =&gt; false, null, undefined, NaN, 空, ...</span></span><br><span class="line">      <span class="keyword">if</span> (!arg) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 判断传入参数的类型</span></span><br><span class="line">      <span class="keyword">var</span> argType = <span class="keyword">typeof</span> arg;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 如果参数的类型是 string 或者 number</span></span><br><span class="line">      <span class="keyword">if</span> (argType === <span class="string">'string'</span> || argType === <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="comment">// 直接追加到classes数组后面</span></span><br><span class="line">        classes.push(arg);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 如果参数是数组并且长度大于0</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(arg) &amp;&amp; arg.length) &#123;</span><br><span class="line">        <span class="comment">// 调用自身函数，利用apply可以将数组转成字符串</span></span><br><span class="line">        <span class="keyword">var</span> inner = classNames.apply(<span class="literal">null</span>, arg);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 现在是一个字符串，隐士判断布尔值</span></span><br><span class="line">        <span class="keyword">if</span> (inner) &#123;</span><br><span class="line">          <span class="comment">// 追加到数组后面</span></span><br><span class="line">          classes.push(inner);</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="comment">// 如果传入的参数是对象</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (argType === <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="comment">// 对object进行遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> arg) &#123;</span><br><span class="line">          <span class="comment">// 判断key是否存在arg对象内并且key的值隐士转换为true</span></span><br><span class="line">          <span class="keyword">if</span> (hasOwn.call(arg, key) &amp;&amp; arg[key]) &#123;</span><br><span class="line">            <span class="comment">// 将值追加到classes数组后面</span></span><br><span class="line">            classes.push(key);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将数组连接成字符串以空格拼接  =&gt; a b c</span></span><br><span class="line">    <span class="keyword">return</span> classes.join(<span class="string">' '</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果是node.js环境运行</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">module</span> !== <span class="string">'undefined'</span> &amp;&amp; <span class="built_in">module</span>.exports) &#123;</span><br><span class="line">    classNames.default = classNames;</span><br><span class="line">    <span class="built_in">module</span>.exports = classNames;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果用的requirejs模块管理 AMD</span></span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> define === <span class="string">'function'</span> &amp;&amp; <span class="keyword">typeof</span> define.amd === <span class="string">'object'</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">    define(<span class="string">'classnames'</span>, [], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> classNames;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 否则运行于浏览器环境</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.classNames = classNames;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure><!-- TODO --><p><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noopener">classnames github库</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;React-和-Vue-class对比&quot;&gt;&lt;a href=&quot;#React-和-Vue-class对比&quot; class=&quot;headerlink&quot; title=&quot;React 和 Vue class对比&quot;&gt;&lt;/a&gt;React 和 Vue class对比&lt;/h2&gt;&lt;p&gt;在R
+      
+    
+    </summary>
+    
+      <category term="NPM" scheme="https://heiliu.github.io/categories/NPM/"/>
     
     
   </entry>
@@ -338,9 +480,9 @@
     
       <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
     
-      <category term="设计模式" scheme="https://heiliu.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
       <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
+    
+      <category term="设计模式" scheme="https://heiliu.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
@@ -366,176 +508,6 @@
     
     
       <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>E2E 测试</title>
-    <link href="https://heiliu.github.io/2019/08/14/E2ETest/"/>
-    <id>https://heiliu.github.io/2019/08/14/E2ETest/</id>
-    <published>2019-08-13T16:00:00.000Z</published>
-    <updated>2019-11-06T10:21:45.695Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><a href="https://segmentfault.com/a/1190000015724775" target="_blank" rel="noopener">参考链接</a>  </p><h2 id="小程序自动化"><a href="#小程序自动化" class="headerlink" title="小程序自动化"></a>小程序自动化</h2><p>小程序自动化SDK为开发者提供了一套通过外部脚本操控小程序的方案，从而实现小程序自动化测试的目的。  </p><p>通过该 SDK，你可以做到以下事情：</p><ul><li>控制小程序跳转到指定页面  </li><li>获取小程序页面数据  </li><li>获取小程序页面元素状态  </li><li>触发小程序元素绑定事件  </li><li>往 AppService 注入代码片段  </li><li>调用 wx 对象上任意接口  </li></ul><p>安装小程序自动化SDK：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install miniprogram-automator --save-dev</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot; title=&quot;测试&quot;&gt;&lt;/a&gt;测试&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000015724775&quot; target=&quot;_blank&quot; 
-      
-    
-    </summary>
-    
-      <category term="Test" scheme="https://heiliu.github.io/categories/Test/"/>
-    
-    
-      <category term="Test" scheme="https://heiliu.github.io/tags/Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去除 inline 元素之间的间距</title>
-    <link href="https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/"/>
-    <id>https://heiliu.github.io/2019/08/13/spaceBetweenInlineBlock/</id>
-    <published>2019-08-12T16:00:00.000Z</published>
-    <updated>2019-10-13T09:30:57.217Z</updated>
-    
-    <content type="html"><![CDATA[<p>这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  </p><!-- TODO --><p><a href="https://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/" target="_blank" rel="noopener">详情参考</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这个问题曾经在哪一次的面试中被问到过，当时只知道是空白的文本节点在作祟，但是问到解决的方法，却没有答上来，今天在项目里碰到了详细了解了一下，记录一下。  &lt;/p&gt;
-&lt;!-- TODO --&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wo
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="https://heiliu.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="前端" scheme="https://heiliu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="面试" scheme="https://heiliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://heiliu.github.io/2019/08/12/setPerformance/"/>
-    <id>https://heiliu.github.io/2019/08/12/setPerformance/</id>
-    <published>2019-08-12T03:48:34.349Z</published>
-    <updated>2019-11-06T10:50:21.217Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p>title: 利用set提高性能<br>tags: JavaScript<br>categories:</p><ul><li>前端</li><li>JavaScript</li></ul><hr><!-- TODO --><p>经过实际比较来说，如何减少重绘和回流比选择数组还是Set来操作数据对于前端性能而言更为重要</p><p><a href="https://juejin.im/post/5d2284dc51882579df4a4cee" target="_blank" rel="noopener">详情</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;p&gt;title: 利用set提高性能&lt;br&gt;tags: JavaScript&lt;br&gt;categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;JavaScript&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;!-- TODO --&gt;
-&lt;p&gt;经过实际比较来说，如何
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数组</title>
-    <link href="https://heiliu.github.io/2019/08/05/Array/"/>
-    <id>https://heiliu.github.io/2019/08/05/Array/</id>
-    <published>2019-08-04T23:42:00.000Z</published>
-    <updated>2019-11-06T10:22:48.362Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote><p>一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。  </p></blockquote><p>数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象</p><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><ul><li><p>通过<code>构造函数</code> </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 传入一组元素进行数组初始化 --&gt;</span><br><span class="line"><span class="keyword">var</span> arr = New <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">print(arr.length); <span class="comment">// 5</span></span><br><span class="line">&lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 <span class="literal">undefined</span> --&gt;</span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">10</span>);</span><br><span class="line">print(arr1.length); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure><a id="more"></a></li><li>通过字面量 <code>[]</code> 创建  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">print(arr2.length); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>区别<br>虽然两种创建数组的方法产生的效果一样，但是还是存在一些细微的差别。而且你会发现，在JS开源库中，通过第一种方法来创建数组基本上看不到。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'using[]'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = []&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using[]'</span>)  <span class="comment">// using[]: 29.630859375ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'using new'</span>)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">2000000</span>; i++)&#123;<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'using new'</span>)  <span class="comment">// using new: 39.93798828125ms</span></span><br></pre></td></tr></table></figure><p>通过对比会发现使用new关键字来创建数组花费的时间更长，<code>实际上</code>使用new来创建会多一个实例化的过程，在Javascript里分配大量的new变量地址是一项很慢的操作，为了效率起见，你应该始终使用对象符号。虽然<code>只有在大批量数据的情况下才会有影响</code>.</p><p>创建一个字符串的方式有：‘字符串’或者是new String(‘字符串’)，一种是直接创建了一个字符串，一个是调用字符串的构造函数创建字符串对象然后再创建这个字符串，中间多了一个创建对象的过程，也许这在一般情况下是看不出什么区别的，但是像上述例子中，当数据足够大的时候，就会发现了问题所在。因此，如果可以通过[]创建一个纯净的数组，就不需要通过new Array()来创建数组。</p></li></ul><h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p>isArray </p><p>存取函数  </p><blockquote><p>用来访问数组元素的函数，返回目标数组的某种变体  </p></blockquote><p>indexOf() 返回第一个与参数相同的元素的索引, 不存在返回 -1</p><p>lastIndexOf 返回相同元素中最后一个元素的索引,不存在返回 -1</p><p>数组的字符串表示  </p><p>join()</p><p>toString()</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Raymond"</span>,<span class="string">"Clayton"</span>,<span class="string">"Mike"</span>,<span class="string">"Jennifer"</span>];</span><br><span class="line"><span class="keyword">var</span> namestr = names.join();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br><span class="line">namestr = names.toString();</span><br><span class="line">print(namestr); <span class="comment">// David,Cynthia,Raymond,Clayton,Mike,Jennifer</span></span><br></pre></td></tr></table></figure><p>由已有数组创建新的数组  </p><p>concat()  合并多个数组创建一个新数组<br>splice()  截取一个数组的子集创建一个新数组<br>slice() </p><p>使用 splice() 方法为数组添加元素，需提供如下参数：<br>• 起始索引（也就是你希望开始添加元素的地方）；<br>• 需要删除的元素个数（<code>添加元素时该参数设为 0</code>）；<br>• 想要添加进数组的元素。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> newElements = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">nums.splice(<span class="number">3</span>,<span class="number">0</span>,newElements);</span><br><span class="line">print(nums); <span class="comment">// 1,2,3,4,5,6,7,8,9</span></span><br></pre></td></tr></table></figure></p><p>可变函数  </p><blockquote><p>能够改变数组的内容的函数  </p></blockquote><p>push() 在末尾添加元素<br>pop() 删除末尾的元素</p><p>shift()<br>unshift() 添加元素到数组的开头</p><p>reverse() 翻转数组<br>sort()<br>对数组进行排序是经常会遇到的需求，如果元素是字符串类型，那么sort() 就非常好使：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> names = [<span class="string">"David"</span>,<span class="string">"Mike"</span>,<span class="string">"Cynthia"</span>,<span class="string">"Clayton"</span>,<span class="string">"Bryan"</span>,<span class="string">"Raymond"</span>];</span><br><span class="line">names.sort();</span><br><span class="line">print(names); <span class="comment">// Bryan,Clayton,Cynthia,David,Mike,Raymond</span></span><br></pre></td></tr></table></figure></p><p>但是如果数组元素是数字类型，sort() 方法的排序结果就不能让人满意了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];nums.sort();print(nums); <span class="comment">// 1,100,2,200,3,4sort()</span></span><br></pre></td></tr></table></figure></p><p>方法是按照<code>字典顺序</code>对元素进行排序的，因此它 <code>假定元素都是字符串类型</code>，在上一个例子中，即使元素是数字类型，也被认为是字符串类型。为了让 sort() 方法也能排序数字类型的元素，可以在调用方法时传入一个大小比较函数，排序时，sort() 方法将会根据该函数比较数组中两个元素的大小，从而决定整个数组的顺序。<br><code>对于数字类型，该函数可以是一个简单的相减操作，从一个数字中减去另外一个数字。如果结果为负，那么被减数小于减数；如果结果为 0，那么被减数与减数相等；如果结果为正，那么被减数大于减数。</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 - num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> nums = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">100</span>,<span class="number">4</span>,<span class="number">200</span>];</span><br><span class="line">nums.sort(compare);print(nums); <span class="comment">// 1,2,3,4,100,200</span></span><br></pre></td></tr></table></figure></p><p>sort() 函数使用了 compare() 函数对数组按照数字大小进行排序，而不是按照字典顺序。</p><p>迭代器方法  </p><p>其实可以多展开来讲的 map foreach filter reduce 的区别</p><ul><li>forEach()  </li><li>every()  </li><li>some()  </li><li>map()  </li><li>filter()  </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h2&gt;&lt;h3 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot; title=&quot;定义：&quot;&gt;&lt;/a&gt;定义：&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;一个存储元素的线性集合， 元素可以通过索引（通常为数字）来任意存取。  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;数字索引在内部被转换为字符串类型、这是因为在javaScript中对象的属性名必须是字符串。而数组只是一种特殊的对象&lt;/p&gt;
-&lt;h3 id=&quot;创建数组&quot;&gt;&lt;a href=&quot;#创建数组&quot; class=&quot;headerlink&quot; title=&quot;创建数组&quot;&gt;&lt;/a&gt;创建数组&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;通过&lt;code&gt;构造函数&lt;/code&gt; &lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- 传入一组元素进行数组初始化 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = New &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(arr.length); &lt;span class=&quot;comment&quot;&gt;// 5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- 只传一个元素，声明数组的初始化长度, 其中每个元素初始化为 &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt; --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(arr1.length); &lt;span class=&quot;comment&quot;&gt;// 10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="https://heiliu.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Note" scheme="https://heiliu.github.io/tags/Note/"/>
-    
-      <category term="JavaScript" scheme="https://heiliu.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>同一台电脑配置多个SSH</title>
-    <link href="https://heiliu.github.io/2019/07/31/multiSSH/"/>
-    <id>https://heiliu.github.io/2019/07/31/multiSSH/</id>
-    <published>2019-07-30T16:00:00.000Z</published>
-    <updated>2019-11-06T10:17:34.476Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="配置多个SSH"><a href="#配置多个SSH" class="headerlink" title="配置多个SSH"></a>配置多个SSH</h2><p>在工作中多访问公司的gitlab仓库，而在生活中又有自己的github仓库<br>记录一下方便日后查找</p><hr><p>一般电脑中的SSH key 存放在 <code>～/.ssh</code>目录中 如果有配置过的话存在 <code>id_rsa</code> \ <code>id_rsa.pub</code> 私钥和公钥, 将公钥配置到需要的代码平台</p><p>生成SSH key</p><h3 id="本地配置多个ssh-key"><a href="#本地配置多个ssh-key" class="headerlink" title="本地配置多个ssh key"></a>本地配置多个ssh key</h3><ul><li><p>1、为公司生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br></pre></td></tr></table></figure></li><li><p>2、为github生成一对秘钥ssh key  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">'yourEmail2@xx.com'</span> -f ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br></pre></td></tr></table></figure></li><li><p>3、在~/.ssh目录下新建名称为<code>config</code>的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># gitlab</span><br><span class="line">Host gitlab.planetmeican.com</span><br><span class="line">    HostName gitlab.planetmeican.com</span><br><span class="line">    Port <span class="number">2345</span></span><br><span class="line">    User git</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~<span class="regexp">/.ssh/gi</span>tlab_id_rsa</span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~<span class="regexp">/.ssh/gi</span>thub_id_rsa</span><br></pre></td></tr></table></figure></li></ul><h3 id="配置文件参数"><a href="#配置文件参数" class="headerlink" title="配置文件参数"></a>配置文件参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件</span><br><span class="line"># port: 端口号，一般不需要配置</span><br><span class="line"># HostName : 要登录主机的主机名</span><br><span class="line">#PreferredAuthentications: 授权验证方式</span><br><span class="line"># User : 登录名</span><br><span class="line"># IdentityFile : 指明上面User对应的identityFile路径</span><br></pre></td></tr></table></figure><ul><li>4、分别往gitlab和github上添加生成的公钥</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;配置多个SSH&quot;&gt;&lt;a href=&quot;#配置多个SSH&quot; class=&quot;headerlink&quot; title=&quot;配置多个SSH&quot;&gt;&lt;/a&gt;配置多个SSH&lt;/h2&gt;&lt;p&gt;在工作中多访问公司的gitlab仓库，而在生活中又有自己的github仓库&lt;br&gt;记录一下方便日后查
-      
-    
-    </summary>
-    
-      <category term="倒腾" scheme="https://heiliu.github.io/categories/%E5%80%92%E8%85%BE/"/>
-    
-      <category term="Note" scheme="https://heiliu.github.io/categories/%E5%80%92%E8%85%BE/Note/"/>
-    
-      <category term="Git" scheme="https://heiliu.github.io/categories/%E5%80%92%E8%85%BE/Note/Git/"/>
-    
-    
-      <category term="Git" scheme="https://heiliu.github.io/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>serverless了解</title>
-    <link href="https://heiliu.github.io/2019/07/29/serverless/"/>
-    <id>https://heiliu.github.io/2019/07/29/serverless/</id>
-    <published>2019-07-28T16:00:00.000Z</published>
-    <updated>2019-11-06T10:19:58.748Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h1><blockquote><p>根据 CNCF 的定义，Serverless 是指构建和运行不需要服务器管理的应用程序的概念。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;serverless&quot;&gt;&lt;a href=&quot;#serverless&quot; class=&quot;headerlink&quot; title=&quot;serverless&quot;&gt;&lt;/a&gt;serverless&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;根据 CNCF 的定义，Serverless 是指
-      
-    
-    </summary>
-    
-      <category term="server" scheme="https://heiliu.github.io/categories/server/"/>
-    
-    
-      <category term="Skill" scheme="https://heiliu.github.io/tags/Skill/"/>
-    
-      <category term="倒腾" scheme="https://heiliu.github.io/tags/%E5%80%92%E8%85%BE/"/>
     
   </entry>
   

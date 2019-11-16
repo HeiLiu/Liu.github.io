@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="observableinjectcomputedaction  RunInActionReaction  调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉&apos;&amp;#125;, &amp;#123;n">
+<meta name="description" content="observableinjectcomputedaction  autorunRunInActionReaction  尽量使用箭头函数 调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 React 中使用 mobx 进行状态管理">
 <meta property="og:url" content="https://heiliu.github.io/2019/10/14/mobx-react/index.html">
 <meta property="og:site_name" content="HeiLiu">
-<meta property="og:description" content="observableinjectcomputedaction  RunInActionReaction  调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉&apos;&amp;#125;, &amp;#123;n">
+<meta property="og:description" content="observableinjectcomputedaction  autorunRunInActionReaction  尽量使用箭头函数 调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-06T10:21:25.460Z">
+<meta property="og:updated_time" content="2019-11-08T10:57:03.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 React 中使用 mobx 进行状态管理">
-<meta name="twitter:description" content="observableinjectcomputedaction  RunInActionReaction  调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉&apos;&amp;#125;, &amp;#123;n">
+<meta name="twitter:description" content="observableinjectcomputedaction  autorunRunInActionReaction  尽量使用箭头函数 调试 toJs 需要引入 =&amp;gt; 不如直接 JSON.stringify()方便 不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。 参考技巧  1234567var array = [&amp;#123;name:&apos;武汉">
 
 
 
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  102
+                  396
                 </span>
               
 
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -436,13 +436,21 @@
 
       
         <p>observable<br>inject<br>computed<br>action </p>
-<p>RunInAction<br>Reaction </p>
+<p>autorun<br>RunInAction<br>Reaction </p>
+<p>尽量使用箭头函数</p>
 <p>调试</p>
 <p>toJs 需要引入 =&gt; 不如直接 JSON.stringify()方便</p>
 <p>不用使用数组索引或者任何将来可能会改变的值作为 key 。如果需要的话为你的对象生成 ids。</p>
 <p><a href="https://cn.mobx.js.org/best/react-performance.html" target="_blank" rel="noopener">参考技巧</a></p>
 <!-- 中文排序 -->
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [&#123;<span class="attr">name</span>:<span class="string">'武汉'</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'北京'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'上海'</span>&#125;, &#123;<span class="attr">name</span>:<span class="string">'天津'</span>&#125;];</span><br><span class="line"><span class="keyword">var</span> resultArray = array.sort(</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">compareFunction</span>(<span class="params">param1, param2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param1.name.localeCompare(param2.name,<span class="string">"zh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">console</span>.log(resultArray);</span><br></pre></td></tr></table></figure>
+<!-- computed 计算属性 -->
+<p>根据现有的状态或其它计算值衍生出的值，响应式的产生一个可以被其它 observer 使用的值<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;observable, computed&#125; <span class="keyword">from</span> <span class="string">"mobx"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OrderLine</span> </span>&#123;</span><br><span class="line">    @observable price = <span class="number">0</span>;</span><br><span class="line">    @observable amount = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(price) &#123;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment">// computed 不支持箭头函数的写法</span></span><br><span class="line">    @computed <span class="keyword">get</span> total() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.price * <span class="keyword">this</span>.amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<!-- autorun -->
+<p>想不产生一个新值，而达到一个效果，请使用 autorun。 举例来说，效果是像打印日志、发起网络请求等这样命令式的副作用。</p>
+<p>autorun 中的值必须要手动清理才行</p>
+<!-- runInAction -->
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 请求底部的 table Plan 绑定数据</span></span><br><span class="line">@action fetchShopPlanList = (): <span class="function"><span class="params">ActionResponse</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [begin, end] = <span class="keyword">this</span>.dateRange;</span><br><span class="line">    <span class="keyword">return</span> http</span><br><span class="line">        .post(ApiBaseinfo_Admin_Restaurant_restaurantID_menuCalendarByDateRange, &#123;</span><br><span class="line">            <span class="string">':restaurantID'</span>: globalStore.currentShopID,</span><br><span class="line">            begin,</span><br><span class="line">            end,</span><br><span class="line">        &#125;)</span><br><span class="line">        .then(<span class="function">(<span class="params">&#123; error, data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (error) &#123;</span><br><span class="line">                <span class="keyword">return</span> &#123; error &#125;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            runInAction(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">const</span> &#123; menuCalendarList &#125; = data;</span><br><span class="line">                <span class="comment">// 遍历筛选绑定菜单项</span></span><br><span class="line">                <span class="keyword">this</span>.boundObj = menuCalendarList.reduce(<span class="function">(<span class="params">preObj, mealPlan</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">const</span> &#123; color, name, date &#125; = mealPlan;</span><br><span class="line">                    <span class="keyword">if</span> (color) &#123;</span><br><span class="line">                        preObj[<span class="string">`<span class="subst">$&#123;date&#125;</span>_<span class="subst">$&#123;name&#125;</span>`</span>] = color;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">return</span> preObj;</span><br><span class="line">                &#125;, &#123;&#125;);</span><br><span class="line">                <span class="comment">// 在一个请求的 action中直接去修改 state,可能会存在mobx 检测不到的情况，需要包裹 runInAction</span></span><br><span class="line">                <span class="keyword">this</span>.shopCalendarList = data.menuCalendarList;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> &#123; data &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -487,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../13/classnames/" rel="next" title="classnames 的用法总结">
-                <i class="fa fa-chevron-left"></i> classnames 的用法总结
+              <a href="../../13/ReactComponent/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -574,7 +582,7 @@
               
                 <a href="../../../../archives/">
               
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -585,7 +593,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="../../../../categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -698,7 +706,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.4k字</span>
+  <span class="post-count">博客全站共25.4k字</span>
 </div>
 
         

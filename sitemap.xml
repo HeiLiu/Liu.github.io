@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://heiliu.github.io/2019/10/26/reactRef/</loc>
+    <loc>https://heiliu.github.io/2019/11/15/TODOs/</loc>
     
-    <lastmod>2019-11-07T10:25:50.533Z</lastmod>
+    <lastmod>2019-11-15T05:21:17.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/11/13/iterm2/</loc>
+    
+    <lastmod>2019-11-14T08:10:58.971Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/11/12/homeBrew/</loc>
+    
+    <lastmod>2019-11-12T07:17:09.534Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/11/12/staticFiles/</loc>
+    
+    <lastmod>2019-11-12T03:38:13.631Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/11/12/emm/</loc>
+    
+    <lastmod>2019-11-12T03:25:21.503Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/10/14/mobx-react/</loc>
+    
+    <lastmod>2019-11-08T10:57:03.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/10/13/classnames/</loc>
+    
+    <lastmod>2019-11-07T15:25:35.708Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/10/13/ReactComponent/</loc>
+    
+    <lastmod>2019-11-07T10:36:31.788Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heiliu.github.io/2019/10/26/reactRefs/</loc>
+    
+    <lastmod>2019-11-07T10:27:07.598Z</lastmod>
     
   </url>
   
@@ -121,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://heiliu.github.io/2019/10/13/classnames/</loc>
-    
-    <lastmod>2019-11-06T10:22:06.962Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://heiliu.github.io/2018/05/04/Css3/</loc>
     
     <lastmod>2019-11-06T10:22:02.040Z</lastmod>
@@ -152,13 +201,6 @@
     <loc>https://heiliu.github.io/2019/07/07/ESLint/</loc>
     
     <lastmod>2019-11-06T10:21:41.335Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heiliu.github.io/2019/10/14/mobx-react/</loc>
-    
-    <lastmod>2019-11-06T10:21:25.460Z</lastmod>
     
   </url>
   
