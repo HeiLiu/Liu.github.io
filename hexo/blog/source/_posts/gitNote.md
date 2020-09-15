@@ -43,11 +43,10 @@ The project is now located under cafereria-fe / cafeteria-supplier-desktop
 
 To update the remote url in your local repository run (for ssh):
 
-git remote set-url origin git@gitlab.planetmeican.com:cafereria-fe/cafeteria-supplier-desktop.git
-
+git remote set-url origin git@gitlab.forever.com/cafereria-fe.git
 or for http(s):
 
-git remote set-url origin https://gitlab.planetmeican.com/cafereria-fe/cafeteria-supplier-desktop.git
+git remote set-url origin https://gitlab.forever.com/cafereria-fe.git
 ```
 
 #### 原理解析  
