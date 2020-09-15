@@ -33,8 +33,8 @@ categories:
 - 3、在~/.ssh目录下新建名称为`config`的文件（无后缀名）。  用于配置多个不同的host使用不同的ssh key，常用内容如下：
 ```js
   # gitlab
-  Host gitlab.planetmeican.com
-      HostName gitlab.planetmeican.com
+  Host gitlab.@fe.com
+      HostName gitlab.@fe.com
       Port 2345
       User git
       PreferredAuthentications publickey
